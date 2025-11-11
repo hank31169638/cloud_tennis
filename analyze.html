@@ -1,0 +1,199 @@
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>影片分析 | 桌球動作分析</title>
+    <link rel="stylesheet" href="index.css">
+  </head>
+  <body>
+    <header class="nav">
+      <div class="brand">🏓 桌球動作分析</div>
+      <nav>
+        <a class="nav-link" href="index.html">首頁</a>
+        <a class="nav-link" href="analyze.html">分析影片</a>
+        <a class="nav-link" href="stats.html">選手數據</a>
+      </nav>
+    </header>
+
+    <main class="page single">
+      <section class="panel">
+        <h1>桌球影片分析</h1>
+        <p class="sub">拖曳影片或點擊選擇檔案，系統會分類為 good · normal · bad。</p>
+
+        <div class="dropzone" id="dropzone">
+          <input id="fileInput" type="file" accept="video/*" hidden />
+          <div class="dz-icon">⬆</div>
+          <div class="dz-text">
+            拖曳影片到這裡，或
+            <button id="chooseBtn" type="button" class="link-btn">選擇檔案</button>
+          </div>
+          <div class="file-info" id="fileInfo">尚未選擇檔案</div>
+        </div>
+
+        <div class="actions">
+          <button id="uploadBtn" class="primary">上傳並分析</button>
+          <span id="status" class="status"></span>
+        </div>
+
+        <div class="preview hidden" id="preview">
+          <video id="videoPreview" controls></video>
+        </div>
+
+        <div class="result-card hidden" id="resultCard">
+          <div class="result-header">
+            <span>分析結果</span>
+            <span class="badge" id="predictedBadge">-</span>
+          </div>
+          <div class="prob-list" id="probList"></div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">© 2025 Table Tennis Analyzer</footer>
+
+    <script>
+      const API_BASE = location.protocol.startsWith('http') ? '' : 'http://127.0.0.1:5000';
+
+      const dropzone = document.getElementById('dropzone');
+      const fileInput = document.getElementById('fileInput');
+      const chooseBtn = document.getElementById('chooseBtn');
+      const uploadBtn = document.getElementById('uploadBtn');
+      const statusEl = document.getElementById('status');
+      const fileInfo = document.getElementById('fileInfo');
+      const preview = document.getElementById('preview');
+      const videoPreview = document.getElementById('videoPreview');
+      const resultCard = document.getElementById('resultCard');
+      const predictedBadge = document.getElementById('predictedBadge');
+      const probList = document.getElementById('probList');
+
+      let currentFile = null;
+
+      // Prevent browser from opening the file when dropped outside the dropzone
+      ['dragenter', 'dragover', 'dragleave', 'drop'].forEach(evt => {
+        window.addEventListener(evt, event => {
+          event.preventDefault();
+          event.stopPropagation();
+        });
+      });
+
+      function resetView() {
+        fileInfo.textContent = '尚未選擇檔案';
+        statusEl.textContent = '';
+        preview.classList.add('hidden');
+        videoPreview.removeAttribute('src');
+        resultCard.classList.add('hidden');
+        probList.innerHTML = '';
+        predictedBadge.textContent = '-';
+      }
+
+      function loadFile(file) {
+        if (!file) {
+          currentFile = null;
+          resetView();
+          return;
+        }
+
+        currentFile = file;
+        const sizeMB = Math.round((file.size / 1024 / 1024) * 10) / 10;
+        fileInfo.textContent = `${file.name} (${sizeMB} MB)`;
+        statusEl.textContent = '檔案已載入，準備分析';
+
+        const url = URL.createObjectURL(file);
+        videoPreview.src = url;
+        preview.classList.remove('hidden');
+        resultCard.classList.add('hidden');
+      }
+
+      chooseBtn.addEventListener('click', () => fileInput.click());
+      fileInput.addEventListener('change', event => {
+        loadFile(event.target.files?.[0] || null);
+      });
+
+      ['dragenter', 'dragover'].forEach(evt => {
+        dropzone.addEventListener(evt, event => {
+          event.preventDefault();
+          event.stopPropagation();
+          dropzone.classList.add('dragover');
+        });
+      });
+
+      ['dragleave', 'drop'].forEach(evt => {
+        dropzone.addEventListener(evt, event => {
+          event.preventDefault();
+          event.stopPropagation();
+          dropzone.classList.remove('dragover');
+        });
+      });
+
+      dropzone.addEventListener('drop', event => {
+        const file = event.dataTransfer?.files?.[0];
+        loadFile(file || null);
+      });
+
+      function renderProbabilities(probabilities = {}) {
+        probList.innerHTML = '';
+        const entries = Object.entries(probabilities);
+        if (!entries.length) {
+          probList.innerHTML = '<div class="error">沒有機率資料</div>';
+          return;
+        }
+
+        entries
+          .sort((a, b) => b[1] - a[1])
+          .forEach(([label, value]) => {
+            const percent = Math.max(0, Math.min(100, value * 100));
+            const row = document.createElement('div');
+            row.className = 'prob-row';
+            row.innerHTML = `
+              <div class="prob-name">${label.toUpperCase()}</div>
+              <div class="prob-bar"><div style="width:${percent}%"></div></div>
+              <div class="prob-val">${percent.toFixed(1)}%</div>
+            `;
+            probList.appendChild(row);
+          });
+      }
+
+      uploadBtn.addEventListener('click', async () => {
+        if (!currentFile) {
+          statusEl.textContent = '請先選擇或拖曳影片';
+          return;
+        }
+
+        statusEl.textContent = '上傳與分析中...';
+        uploadBtn.disabled = true;
+
+        const formData = new FormData();
+        formData.append('file', currentFile);
+
+        try {
+          const response = await fetch(`${API_BASE}/analyze`, {
+            method: 'POST',
+            body: formData
+          });
+          const data = await response.json();
+
+          if (!response.ok) {
+            statusEl.textContent = data.error || '分析失敗';
+            resultCard.classList.remove('hidden');
+            predictedBadge.textContent = 'ERROR';
+            probList.innerHTML = `<div class="error">${data.error || '未知錯誤'}</div>`;
+            return;
+          }
+
+          statusEl.textContent = '分析完成';
+          predictedBadge.textContent = (data.predicted_class || '-').toUpperCase();
+          renderProbabilities(data.probabilities);
+          resultCard.classList.remove('hidden');
+        } catch (error) {
+          console.error(error);
+          statusEl.textContent = '連線失敗，請確認伺服器已啟動';
+        } finally {
+          uploadBtn.disabled = false;
+        }
+      });
+
+      resetView();
+    </script>
+  </body>
+</html>

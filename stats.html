@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>選手數據 | 桌球動作分析</title>
+    <link rel="stylesheet" href="index.css">
+  </head>
+  <body>
+    <header class="nav">
+      <div class="brand">🏓 桌球動作分析</div>
+      <nav>
+        <a class="nav-link" href="index.html">首頁</a>
+        <a class="nav-link" href="analyze.html">分析影片</a>
+        <a class="nav-link" href="stats.html">選手數據</a>
+      </nav>
+    </header>
+
+    <main class="page single">
+      <section class="panel">
+        <h1>桌球選手數據</h1>
+        <p class="sub">示範資料，可擴充為從資料庫或 API 取得真實數據。</p>
+
+        <div class="stats-controls">
+          <input id="playerFilter" type="text" placeholder="搜尋選手名稱..." />
+        </div>
+
+        <div class="stats-grid" id="statsGrid"></div>
+      </section>
+    </main>
+
+    <footer class="footer">© 2025 Table Tennis Analyzer</footer>
+
+    <script>
+      const players = [
+        { name:'Fan Zhendong', country:'中國', hand:'右手', style:'快攻弧圈', wr:1, win:88, lose:12 },
+        { name:'Ma Long', country:'中國', hand:'右手', style:'全面型', wr:2, win:90, lose:10 },
+        { name:'Tomokazu Harimoto', country:'日本', hand:'右手', style:'快攻弧圈', wr:3, win:78, lose:22 },
+        { name:'Hugo Calderano', country:'巴西', hand:'右手', style:'快攻', wr:4, win:75, lose:25 },
+        { name:'Lin Yun-Ju', country:'中華台北', hand:'左手', style:'弧圈控制', wr:5, win:73, lose:27 },
+        { name:'Timo Boll', country:'德國', hand:'左手', style:'弧圈', wr:11, win:68, lose:32 },
+        { name:'Dang Qiu', country:'德國', hand:'右手', style:'削球反攻', wr:9, win:64, lose:28 },
+        { name:'Darko Jorgic', country:'斯洛維尼亞', hand:'右手', style:'快攻', wr:12, win:61, lose:29 },
+      ];
+      const statsGrid = document.getElementById('statsGrid');
+      const playerFilter = document.getElementById('playerFilter');
+
+      function renderPlayers(list){
+        statsGrid.innerHTML = '';
+        list.forEach(p => {
+          const total = p.win + p.lose;
+          const winRate = total ? Math.round(p.win / total * 100) : 0;
+          const card = document.createElement('div');
+          card.className = 'player-card';
+          card.innerHTML = `
+            <div class="pc-top">
+              <div class="pc-name">${p.name}</div>
+              <div class="pc-badge">WR ${p.wr}</div>
+            </div>
+            <div class="pc-meta">${p.country} · ${p.hand} · ${p.style}</div>
+            <div class="pc-stats">
+              <div><span>勝</span><b>${p.win}</b></div>
+              <div><span>負</span><b>${p.lose}</b></div>
+              <div><span>勝率</span><b>${winRate}%</b></div>
+            </div>
+          `;
+          statsGrid.appendChild(card);
+        });
+        if (!list.length){
+          statsGrid.innerHTML = '<div class="empty">查無符合的選手</div>';
+        }
+      }
+
+      renderPlayers(players);
+      playerFilter.addEventListener('input', () => {
+        const q = playerFilter.value.toLowerCase();
+        renderPlayers(players.filter(p => p.name.toLowerCase().includes(q)));
+      });
+    </script>
+  </body>
+</html>
+
+
