@@ -1,0 +1,58 @@
+# Python bytecode and cache
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.Python
+.pytest_cache/
+.cache/
+
+# Build artifacts
+build/
+dist/
+*.egg-info/
+.eggs/
+
+# Virtual environments
+venv/
+.venv/
+ENV/
+env/
+
+# Environment files and secrets
+.env
+.env.*
+*.env
+
+# IDE/editor settings
+.vscode/
+.idea/
+*.code-workspace
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Logs and temp
+logs/
+*.log
+tmp/
+*.tmp
+
+# Flask uploads and generated media
+uploads/
+predict_skeleton.mp4
+predict.mp4
+
+# Generated videos (keep inputs tracked if needed)
+good_output_movid/
+normal_output_movid/
+bad_output_movid/
+
+# Model artifacts
+pose_classifier_model.h5
+scaler.pkl
+
+# Notebooks
+.ipynb_checkpoints/
+
