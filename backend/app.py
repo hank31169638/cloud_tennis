@@ -18,7 +18,14 @@ os.makedirs(DATA_DIR, exist_ok=True)
 
 # Let Flask serve static files from project root so pages work when served by the app
 app = Flask(__name__, static_folder=STATIC_FILES)
-CORS(app)  # allow cross-origin if user opens HTML directly without the server
+
+# Configure CORS based on environment
+allowed_origins = os.environ.get('ALLOWED_ORIGINS', '*')
+if allowed_origins != '*':
+    # 支援多個域名（逗號分隔）
+    allowed_origins = [origin.strip() for origin in allowed_origins.split(',')]
+
+CORS(app, origins=allowed_origins)  # allow cross-origin
 
 # Initialize ranking crawler and scheduler
 from crawler import TableTennisRankingCrawler

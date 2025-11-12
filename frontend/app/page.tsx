@@ -25,9 +25,7 @@ export default function Home() {
   const fetchRankingData = async (category: string) => {
     setLoading(true);
     try {
-      const apiUrl = typeof window !== 'undefined' 
-        ? 'http://localhost:5000' 
-        : 'http://backend:5000';
+      const apiUrl = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:5000';
       const response = await fetch(`${apiUrl}/api/rankings/${category}`);
       if (!response.ok) {
         throw new Error(`HTTP error! status: ${response.status}`);
@@ -46,9 +44,7 @@ export default function Home() {
   const handleManualUpdate = async () => {
     setLoading(true);
     try {
-      const apiUrl = typeof window !== 'undefined' 
-        ? 'http://localhost:5000' 
-        : 'http://backend:5000';
+      const apiUrl = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:5000';
       await fetch(`${apiUrl}/api/update`, { method: 'POST' });
       fetchRankingData(selectedCategory);
     } catch (error) {

@@ -87,10 +87,8 @@ export default function FailureAnalysisPage() {
     formData.append('use_gemini', useGemini.toString())
 
     try {
-      // 使用環境變數或根據環境判斷 API URL
-      const apiUrl = typeof window !== 'undefined' 
-        ? 'http://localhost:5000' 
-        : 'http://backend:5000';
+      // 使用環境變數
+      const apiUrl = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:5000';
       
       const response = await fetch(`${apiUrl}/api/analyze-failure`, {
         method: 'POST',
