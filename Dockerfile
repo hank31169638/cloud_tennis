@@ -1,28 +1,26 @@
 # ==============================================
-# 統一部署 Dockerfile - 前後端一起運行
+# 統一部署 Dockerfile - 使用 Node.js 為基礎
 # ==============================================
 
-FROM python:3.11-slim
+# 使用 Node.js 作為基礎鏡像（已包含 Node 和 npm）
+FROM node:20-slim
 
-# 安裝系統依賴
+# 安裝 Python 和系統依賴
 RUN apt-get update && apt-get install -y \
-    curl \
-    gnupg \
-    ca-certificates \
-    libgl1-mesa-glx \
+    python3 \
+    python3-pip \
+    python3-venv \
+    libgl1 \
     libglib2.0-0 \
+    libgomp1 \
+    && apt-get clean \
     && rm -rf /var/lib/apt/lists/*
-
-# 安裝 Node.js 20
-RUN curl -fsSL https://deb.nodesource.com/setup_20.x | bash - && \
-    apt-get install -y nodejs && \
-    rm -rf /var/lib/apt/lists/*
 
 WORKDIR /app
 
 # ===== 安裝後端依賴 =====
 COPY backend/requirements.txt /app/backend/
-RUN pip install --no-cache-dir -r /app/backend/requirements.txt
+RUN pip3 install --no-cache-dir --break-system-packages -r /app/backend/requirements.txt
 
 # ===== 安裝前端依賴並構建 =====
 COPY frontend/package*.json /app/frontend/
