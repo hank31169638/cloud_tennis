@@ -15,89 +15,54 @@
    - 取得位置: https://makersuite.google.com/app/apikey
    - 用於 AI 失誤分析功能
 
-## 🚀 部署步驟
+## 🚀 部署步驟（簡化版 - 單一服務）
 
-### 方法一：使用 zeabur.json 自動部署（推薦）
+### ✨ 現在只需要一個服務！
 
-本專案已配置 `zeabur.json`，Zeabur 會自動識別前後端服務。
+本專案已配置**根目錄 Dockerfile**，前後端會在同一個容器中運行。
 
 1. **登入 Zeabur Dashboard**
    - 訪問: https://zeabur.com
    - 連結你的 GitHub 帳號
 
-2. **創建新專案**
+2. **創建新專案並部署**
    - 點擊「Create Project」
    - 選擇「Deploy from GitHub」
-   - 選擇倉庫: `Winnie-0917/Table-tennis-AI`
-   - **不要選擇** Root Directory（保持空白）
-   - Zeabur 會自動偵測 `zeabur.json` 並部署兩個服務
+   - 選擇倉庫: `hank31169638/cloud_tennis`
+   - **Root Directory 留空**（使用根目錄的 Dockerfile）
+   - 分支: `main`
 
-3. **配置後端服務環境變數**
-   - 找到 `backend` 服務
-   - 點擊「Variables」
-   - 添加環境變數：
+3. **設定環境變數**
+   - 在服務的「Variables」中添加：
      ```
      GEMINI_API_KEY=你的_Gemini_API_Key
      ```
    
    ⚠️ **注意**: 
-   - Zeabur 會自動注入 `PORT` 環境變數，**不需要**手動設定
-   - Flask 會自動使用 Zeabur 注入的 PORT（通常是 8080）
+   - `PORT` 由 Zeabur 自動注入（通常是 8080）
+   - 前端會自動連接到同容器內的後端（localhost:5000）
+   - 不需要設定 `NEXT_PUBLIC_API_URL`
 
-4. **取得後端 URL**
-   - 後端部署完成後，點擊「Networking」
+4. **生成域名**
+   - 點擊「Networking」
    - 點擊「Generate Domain」
-   - 複製 URL（例如：`https://backend-xxx.zeabur.app`）
+   - 完成！🎉
 
-5. **配置前端服務環境變數**
-   - 找到 `frontend` 服務
-   - 點擊「Variables」
-   - 添加環境變數：
-     ```
-     NEXT_PUBLIC_API_URL=https://backend-xxx.zeabur.app
-     ```
-   - **重要**: 替換成你實際的後端 URL
-   
-   ⚠️ **注意**: 
-   - Zeabur 會自動注入 `PORT` 環境變數，**不需要**手動設定
-   - Next.js standalone 模式會自動使用 Zeabur 注入的 PORT
+### 🎯 優勢
 
-6. **生成前端域名**
-   - 前端服務點擊「Networking」
-   - 點擊「Generate Domain」
+✅ **只需要一個服務** - 不用分別部署前後端  
+✅ **自動內部通信** - 前後端在同一容器，無需配置 CORS  
+✅ **更簡單的環境變數** - 只需要設定 `GEMINI_API_KEY`  
+✅ **更快的部署** - 單一 Docker 鏡像  
+✅ **更便宜** - 只佔用一個服務資源
 
-7. **更新後端 CORS**
-   - 回到後端服務的「Variables」
-   - 添加：
-     ```
-     ALLOWED_ORIGINS=https://frontend-xxx.zeabur.app
-     ```
+### 📋 環境變數總結
 
-### 方法二：手動選擇目錄部署
-
-如果方法一不work，可以分別部署：
-
-#### 2.1 部署後端
-
-1. **創建服務**
-   - 在 Zeabur 專案中點擊「Add Service」
-   - 選擇「Git」
-   - 選擇倉庫: `Winnie-0917/Table-tennis-AI`
-   - **Root Directory**: `backend` ⬅️ 重要！
-   - 服務名稱: `backend`
-
-2. **設定環境變數**（同上）
-
-#### 2.2 部署前端
-
-1. **創建服務**
-   - 在同一專案中再次點擊「Add Service」
-   - 選擇「Git」
-   - 選擇同一倉庫
-   - **Root Directory**: `frontend` ⬅️ 重要！
-   - 服務名稱: `frontend`
-
-2. **設定環境變數**（同上）
+| 變數名 | 是否必填 | 說明 |
+|--------|---------|------|
+| `GEMINI_API_KEY` | ✅ 必填 | Gemini AI API 金鑰 |
+| `PORT` | ❌ 自動 | Zeabur 自動注入 |
+| `NEXT_PUBLIC_API_URL` | ❌ 不需要 | 前端自動使用 localhost:5000 |
 
 ## ✅ 驗證部署
 
