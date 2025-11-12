@@ -31,6 +31,11 @@ COPY frontend/ /app/frontend/
 ENV NEXT_TELEMETRY_DISABLED=1
 RUN npm run build
 
+# 複製 standalone 輸出和靜態資源
+RUN cp -r /app/frontend/.next/standalone/. /app/frontend-dist/ && \
+    cp -r /app/frontend/.next/static /app/frontend-dist/.next/static && \
+    cp -r /app/frontend/public /app/frontend-dist/public
+
 # ===== 複製後端代碼 =====
 WORKDIR /app
 COPY backend/ /app/backend/
@@ -51,7 +56,7 @@ sleep 5\n\
 \n\
 # 啟動前端\n\
 echo "🌐 Starting Frontend on port ${PORT:-8080}..."\n\
-cd /app/frontend\n\
+cd /app/frontend-dist\n\
 export NEXT_PUBLIC_API_URL=http://localhost:5000\n\
 PORT=${PORT:-8080} node server.js &\n\
 FRONTEND_PID=$!\n\
