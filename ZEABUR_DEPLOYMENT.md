@@ -38,9 +38,11 @@
    - 添加環境變數：
      ```
      GEMINI_API_KEY=你的_Gemini_API_Key
-     PORT=5000
-     FLASK_ENV=production
      ```
+   
+   ⚠️ **注意**: 
+   - Zeabur 會自動注入 `PORT` 環境變數，**不需要**手動設定
+   - Flask 會自動使用 Zeabur 注入的 PORT（通常是 8080）
 
 4. **取得後端 URL**
    - 後端部署完成後，點擊「Networking」
@@ -55,6 +57,10 @@
      NEXT_PUBLIC_API_URL=https://backend-xxx.zeabur.app
      ```
    - **重要**: 替換成你實際的後端 URL
+   
+   ⚠️ **注意**: 
+   - Zeabur 會自動注入 `PORT` 環境變數，**不需要**手動設定
+   - Next.js standalone 模式會自動使用 Zeabur 注入的 PORT
 
 6. **生成前端域名**
    - 前端服務點擊「Networking」
