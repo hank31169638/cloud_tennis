@@ -90,7 +90,7 @@ export default function FailureAnalysisPage() {
       // 使用環境變數
       const apiUrl = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:5000';
       
-      const response = await fetch(`${apiUrl}/api/analyze-failure`, {
+      const response = await fetch(`${apiUrl}/analyze-failure`, {
         method: 'POST',
         body: formData
       })

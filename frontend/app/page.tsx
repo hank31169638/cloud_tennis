@@ -23,11 +23,10 @@ export default function Home() {
   }, [selectedCategory]);
 
   const fetchRankingData = async (category: string) => {
-    setLoading(true);
+    setLoading(true)
     try {
-      // 前端和後端在同一容器，直接使用 localhost:5000
-      const apiUrl = 'http://localhost:5000';
-      const response = await fetch(`${apiUrl}/api/rankings/${category}`);
+      const apiUrl = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:5000'
+      const response = await fetch(`${apiUrl}/api/rankings/${category}`)
       if (!response.ok) {
         throw new Error(`HTTP error! status: ${response.status}`);
       }
@@ -43,11 +42,10 @@ export default function Home() {
   };
 
   const handleManualUpdate = async () => {
-    setLoading(true);
+    setLoading(true)
     try {
-      // 前端和後端在同一容器，直接使用 localhost:5000
-      const apiUrl = 'http://localhost:5000';
-      await fetch(`${apiUrl}/api/update`, { method: 'POST' });
+      const apiUrl = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:5000'
+      await fetch(`${apiUrl}/api/update`, { method: 'POST' })
       fetchRankingData(selectedCategory);
     } catch (error) {
       console.error('更新數據失敗:', error);
