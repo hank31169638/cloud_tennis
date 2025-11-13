@@ -25,23 +25,8 @@ export default function Home() {
   const fetchRankingData = async (category: string) => {
     setLoading(true);
     try {
-      // 構造 API URL - 在生產環境使用同域名，本地開發使用 localhost
-      let apiUrl = process.env.NEXT_PUBLIC_API_URL;
-      if (!apiUrl) {
-        // 如果沒有設置環境變量，根據當前域名判斷
-        if (typeof window !== 'undefined') {
-          const hostname = window.location.hostname;
-          const protocol = window.location.protocol;
-          if (hostname === 'localhost' || hostname === '127.0.0.1') {
-            apiUrl = 'http://localhost:5000';
-          } else {
-            // 生產環境：使用相同的域名和協議
-            apiUrl = `${protocol}//${hostname}`;
-          }
-        } else {
-          apiUrl = 'http://localhost:5000';
-        }
-      }
+      // 使用環境變量中的 API URL（Zeabur 上應該設置為後端服務的完整域名）
+      const apiUrl = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:5000';
       const response = await fetch(`${apiUrl}/api/rankings/${category}`);
       if (!response.ok) {
         throw new Error(`HTTP error! status: ${response.status}`);
@@ -60,23 +45,8 @@ export default function Home() {
   const handleManualUpdate = async () => {
     setLoading(true);
     try {
-      // 構造 API URL - 在生產環境使用同域名，本地開發使用 localhost
-      let apiUrl = process.env.NEXT_PUBLIC_API_URL;
-      if (!apiUrl) {
-        // 如果沒有設置環境變量，根據當前域名判斷
-        if (typeof window !== 'undefined') {
-          const hostname = window.location.hostname;
-          const protocol = window.location.protocol;
-          if (hostname === 'localhost' || hostname === '127.0.0.1') {
-            apiUrl = 'http://localhost:5000';
-          } else {
-            // 生產環境：使用相同的域名和協議
-            apiUrl = `${protocol}//${hostname}`;
-          }
-        } else {
-          apiUrl = 'http://localhost:5000';
-        }
-      }
+      // 使用環境變量中的 API URL（Zeabur 上應該設置為後端服務的完整域名）
+      const apiUrl = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:5000';
       await fetch(`${apiUrl}/api/update`, { method: 'POST' });
       fetchRankingData(selectedCategory);
     } catch (error) {
