@@ -29,8 +29,6 @@ RUN npm ci
 
 COPY frontend/ /app/frontend/
 ENV NEXT_TELEMETRY_DISABLED=1
-# 前端構建時設置 API URL 為 localhost:5000（容器內部通信）
-ENV NEXT_PUBLIC_API_URL=http://localhost:5000
 RUN npm run build
 
 # 複製 standalone 輸出和靜態資源
