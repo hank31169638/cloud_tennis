@@ -29,6 +29,8 @@ RUN npm ci
 
 COPY frontend/ /app/frontend/
 ENV NEXT_TELEMETRY_DISABLED=1
+# 在 Zeabur 上，前後端都在同一容器，前端可以通過 /api 代理訪問後端
+ENV NEXT_PUBLIC_API_URL=/api
 RUN npm run build
 
 # 複製 standalone 輸出和靜態資源
