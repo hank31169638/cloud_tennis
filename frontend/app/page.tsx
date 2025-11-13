@@ -27,7 +27,7 @@ export default function Home() {
     try {
       // 使用環境變量中的 API URL（Zeabur 上應該設置為後端服務的完整域名）
       const apiUrl = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:5000';
-      const response = await fetch(`${apiUrl}/rankings/${category}`);
+      const response = await fetch(`${apiUrl}/api/rankings/${category}`);
       if (!response.ok) {
         throw new Error(`HTTP error! status: ${response.status}`);
       }
@@ -47,7 +47,7 @@ export default function Home() {
     try {
       // 使用環境變量中的 API URL（Zeabur 上應該設置為後端服務的完整域名）
       const apiUrl = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:5000';
-      await fetch(`${apiUrl}/update`, { method: 'POST' });
+      await fetch(`${apiUrl}/api/update`, { method: 'POST' });
       fetchRankingData(selectedCategory);
     } catch (error) {
       console.error('更新數據失敗:', error);
