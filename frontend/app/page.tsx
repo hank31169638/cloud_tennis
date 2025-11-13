@@ -25,8 +25,8 @@ export default function Home() {
   const fetchRankingData = async (category: string) => {
     setLoading(true)
     try {
-      const apiUrl = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:5000'
-      const response = await fetch(`${apiUrl}/api/rankings/${category}`)
+      // 使用相對路徑 /api，Next.js 會自動代理到 localhost:5000
+      const response = await fetch(`/api/rankings/${category}`)
       if (!response.ok) {
         throw new Error(`HTTP error! status: ${response.status}`);
       }
@@ -44,8 +44,8 @@ export default function Home() {
   const handleManualUpdate = async () => {
     setLoading(true)
     try {
-      const apiUrl = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:5000'
-      await fetch(`${apiUrl}/api/update`, { method: 'POST' })
+      // 使用相對路徑 /api，Next.js 會自動代理到 localhost:5000
+      await fetch(`/api/update`, { method: 'POST' })
       fetchRankingData(selectedCategory);
     } catch (error) {
       console.error('更新數據失敗:', error);

@@ -87,10 +87,8 @@ export default function FailureAnalysisPage() {
     formData.append('use_gemini', useGemini.toString())
 
     try {
-      // 使用環境變數
-      const apiUrl = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:5000';
-      
-      const response = await fetch(`${apiUrl}/analyze-failure`, {
+      // 使用相對路徑 /api，Next.js 會自動代理到 localhost:5000
+      const response = await fetch(`/api/analyze-failure`, {
         method: 'POST',
         body: formData
       })
