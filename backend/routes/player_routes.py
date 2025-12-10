@@ -123,3 +123,72 @@ def search_player_profiles():
             "success": False,
             "error": str(e)
         }), 500
+
+
+@player_bp.route('/photo/validate', methods=['POST'])
+def save_validated_photo():
+    """儲存已驗證的選手頭像 URL"""
+    try:
+        from services.player_photo_cache import get_photo_cache
+        
+        data = request.get_json()
+        ittf_id = data.get('ittf_id')
+        photo_url = data.get('photo_url')
+        player_name = data.get('player_name')
+        
+        if not ittf_id or not photo_url:
+            return jsonify({
+                "success": False,
+                "error": "Missing ittf_id or photo_url"
+            }), 400
+        
+        cache = get_photo_cache()
+        success = cache.save_validated_photo(ittf_id, photo_url, player_name)
+        
+        return jsonify({
+            "success": success,
+            "message": f"Photo saved for {player_name or ittf_id}"
+        })
+    except Exception as e:
+        return jsonify({
+            "success": False,
+            "error": str(e)
+        }), 500
+
+
+@player_bp.route('/photo/<ittf_id>', methods=['GET'])
+def get_player_photo(ittf_id):
+    """取得選手頭像 URL（優先使用快取）"""
+    try:
+        from services.player_photo_cache import get_photo_cache
+        from services.player_service import get_player_service
+        
+        # 先從快取取
+        cache = get_photo_cache()
+        cached_url = cache.get_validated_photo(ittf_id)
+        if cached_url:
+            return jsonify({
+                "success": True,
+                "photo_url": cached_url,
+                "source": "cache"
+            })
+        
+        # 從排名資料取
+        service = get_player_service()
+        player = service.get_player_details(ittf_id)
+        if player and player.get('photo_url'):
+            return jsonify({
+                "success": True,
+                "photo_url": player['photo_url'],
+                "source": "ranking"
+            })
+        
+        return jsonify({
+            "success": False,
+            "error": "Photo not found"
+        }), 404
+    except Exception as e:
+        return jsonify({
+            "success": False,
+            "error": str(e)
+        }), 500

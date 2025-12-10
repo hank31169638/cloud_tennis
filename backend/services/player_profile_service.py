@@ -90,7 +90,19 @@ class PlayerProfileService:
                 player_service = get_player_service()
                 ittf_player = player_service.find_player_by_name(player_name)
                 if ittf_player:
-                    avatar_url = ittf_player.get('photo_url')
+                    # 優先使用快取的已驗證頭像
+                    try:
+                        from services.player_photo_cache import get_photo_cache
+                        photo_cache = get_photo_cache()
+                        cached_url = photo_cache.get_validated_photo(ittf_player.get('id'))
+                        if cached_url:
+                            avatar_url = cached_url
+                            print(f"📸 使用快取頭像: {ittf_player.get('name')}")
+                        else:
+                            avatar_url = ittf_player.get('photo_url')
+                    except:
+                        avatar_url = ittf_player.get('photo_url')
+                    
                     print(f"🎯 找到世界排名選手: {ittf_player.get('name')} (ITTF ID: {ittf_player.get('id')})")
             except Exception as e:
                 print(f"⚠️ 無法從排名資料庫取得選手資料: {e}")

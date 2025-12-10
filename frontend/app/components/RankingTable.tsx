@@ -9,7 +9,7 @@ interface Player {
   PreviousRank?: number;
   RankingDifference?: number;
   IttfId?: string;
-  
+
   // Doubles fields
   PlayerName1?: string;
   IttfId1?: string;
@@ -84,15 +84,41 @@ const PlayerAvatar = ({ ittfId, playerName, className }: { ittfId?: string, play
     return `https://photofiles.worldtabletennis.com/wtt-media/photos/400px/${id}_Headshot_R_${encodedName}.png`;
   };
 
+  // 儲存驗證成功的頭像 URL 到後端
+  const saveValidatedPhoto = async (photoUrl: string) => {
+    try {
+      const apiUrl = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:5000';
+      await fetch(`${apiUrl}/api/players/photo/validate`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          ittf_id: ittfId,
+          photo_url: photoUrl,
+          player_name: playerName
+        })
+      });
+    } catch (e) {
+      // 儲存失敗不影響顯示
+    }
+  };
+
   return (
     <img
       src={getPlayerPhotoUrl(ittfId, playerName)}
       alt={playerName}
       className={className}
+      onLoad={(e) => {
+        const target = e.currentTarget;
+        // 第一次載入成功時儲存到後端
+        if (!target.dataset.saved) {
+          target.dataset.saved = '1';
+          saveValidatedPhoto(target.src);
+        }
+      }}
       onError={(e) => {
         const target = e.currentTarget;
         const retry = target.dataset.retry || '0';
-        
+
         if (retry === '0') {
           target.dataset.retry = '1';
           target.src = getPlayerPhotoUrlWithUnderscore(ittfId, playerName);
@@ -122,7 +148,7 @@ const PlayerAvatar = ({ ittfId, playerName, className }: { ittfId?: string, play
 
 export default function RankingTable({ data, category }: RankingTableProps) {
   const isDoubles = category.includes('DOUBLES');
-  
+
   // 安全檢查：確保 data 是陣列
   if (!data || !Array.isArray(data)) {
     return (
@@ -194,9 +220,9 @@ export default function RankingTable({ data, category }: RankingTableProps) {
                     {isDoubles ? (
                       <div className="flex flex-col gap-2">
                         <Link href={`/player-analysis?player=${encodeURIComponent(player.PlayerName1 || '')}`} className="flex items-center gap-2 group">
-                          <PlayerAvatar 
-                            ittfId={player.IttfId1} 
-                            playerName={player.PlayerName1} 
+                          <PlayerAvatar
+                            ittfId={player.IttfId1}
+                            playerName={player.PlayerName1}
                             className="w-8 h-8 rounded-full object-cover border border-neutral-700 group-hover:border-neutral-500 transition-colors"
                           />
                           <span className="text-sm font-medium text-neutral-200 group-hover:text-white transition-colors">
@@ -204,9 +230,9 @@ export default function RankingTable({ data, category }: RankingTableProps) {
                           </span>
                         </Link>
                         <Link href={`/player-analysis?player=${encodeURIComponent(player.PlayerName1d || '')}`} className="flex items-center gap-2 group">
-                          <PlayerAvatar 
-                            ittfId={player.IttfId1d} 
-                            playerName={player.PlayerName1d} 
+                          <PlayerAvatar
+                            ittfId={player.IttfId1d}
+                            playerName={player.PlayerName1d}
                             className="w-8 h-8 rounded-full object-cover border border-neutral-700 group-hover:border-neutral-500 transition-colors"
                           />
                           <span className="text-sm font-medium text-neutral-200 group-hover:text-white transition-colors">
@@ -216,9 +242,9 @@ export default function RankingTable({ data, category }: RankingTableProps) {
                       </div>
                     ) : (
                       <Link href={`/player-analysis?player=${encodeURIComponent(player.PlayerName || '')}`} className="flex items-center gap-3 group">
-                        <PlayerAvatar 
-                          ittfId={player.IttfId} 
-                          playerName={player.PlayerName} 
+                        <PlayerAvatar
+                          ittfId={player.IttfId}
+                          playerName={player.PlayerName}
                           className="w-10 h-10 rounded-full object-cover border border-neutral-700 group-hover:border-neutral-500 transition-colors"
                         />
                         <span className="text-sm font-medium text-neutral-200 group-hover:text-white transition-colors">
