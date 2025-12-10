@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import { useState } from 'react';
 
 interface Player {
   CurrentRank: number;
@@ -30,6 +31,7 @@ const getDefaultAvatar = () => {
 };
 
 const PlayerAvatar = ({ ittfId, playerName, className }: { ittfId?: string, playerName?: string, className?: string }) => {
+  const [hasSavedCache, setHasSavedCache] = useState(false);
   if (!ittfId || !playerName) return <img src={getDefaultAvatar()} alt="Default" className={className} />;
 
   // 生成頭像 URL - 方案 1: 空格轉 %20
@@ -84,35 +86,24 @@ const PlayerAvatar = ({ ittfId, playerName, className }: { ittfId?: string, play
     return `https://photofiles.worldtabletennis.com/wtt-media/photos/400px/${id}_Headshot_R_${encodedName}.png`;
   };
 
-  // 儲存驗證成功的頭像 URL 到後端
-  const saveValidatedPhoto = async (photoUrl: string) => {
-    try {
-      const apiUrl = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:5000';
-      await fetch(`${apiUrl}/api/players/photo/validate`, {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          ittf_id: ittfId,
-          photo_url: photoUrl,
-          player_name: playerName
-        })
-      });
-    } catch (e) {
-      // 儲存失敗不影響顯示
-    }
-  };
-
   return (
     <img
       src={getPlayerPhotoUrl(ittfId, playerName)}
       alt={playerName}
       className={className}
       onLoad={(e) => {
-        const target = e.currentTarget;
-        // 第一次載入成功時儲存到後端
-        if (!target.dataset.saved) {
-          target.dataset.saved = '1';
-          saveValidatedPhoto(target.src);
+        const currentSrc = e.currentTarget.src;
+        if (currentSrc && !hasSavedCache && !currentSrc.includes('data:image/svg+xml')) {
+          setHasSavedCache(true);
+          fetch('/api/players/photo/validate', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+              ittf_id: ittfId,
+              name: playerName,
+              photo_url: currentSrc
+            })
+          }).catch(console.error);
         }
       }}
       onError={(e) => {

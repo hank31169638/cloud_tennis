@@ -11,6 +11,7 @@ export default function Navbar() {
   const navItems = [
     { href: '/', label: '世界排名' },
     { href: '/player-analysis', label: '選手分析' },
+    { href: '/action-prediction', label: '動作分析' },
     { href: '/train', label: '模型訓練' },
     { href: '/live-camera', label: '即時鏡頭' },
     { href: '/predict', label: '比賽預測' },

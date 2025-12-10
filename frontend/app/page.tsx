@@ -9,6 +9,7 @@ export default function Home() {
   const [rankingData, setRankingData] = useState<any>(null);
   const [loading, setLoading] = useState(true);
   const [lastUpdate, setLastUpdate] = useState<string>('');
+  const [error, setError] = useState<string>('');
 
   const categories = [
     { key: 'SEN_SINGLES', label: '男子單打' },
@@ -21,18 +22,35 @@ export default function Home() {
 
   const fetchRankingData = async (category: string) => {
     setLoading(true);
+    setError('');
     try {
       const apiUrl = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:5000';
-      const response = await fetch(`${apiUrl}/api/rankings/${category}`);
+      const response = await fetch(`${apiUrl}/api/rankings/${category}`, {
+        method: 'GET',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+      });
       if (!response.ok) {
         throw new Error(`HTTP error! status: ${response.status}`);
       }
       const data = await response.json();
       setRankingData(data);
       setLastUpdate(data.updated_at || new Date().toISOString());
-    } catch (error) {
+      setError('');
+    } catch (error: any) {
       console.error('獲取數據失敗:', error);
       setRankingData(null);
+      
+      // 提供更友好的錯誤訊息
+      if (error.message?.includes('Failed to fetch') || error.name === 'TypeError') {
+        setError(`無法連接到後端服務器。請確認：
+          1. 後端服務器是否正在運行 (${process.env.NEXT_PUBLIC_API_URL || 'http://localhost:5000'})
+          2. 檢查網絡連接
+          3. 檢查 CORS 配置`);
+      } else {
+        setError(error.message || '獲取數據失敗，請稍後再試');
+      }
     } finally {
       setLoading(false);
     }
@@ -174,6 +192,27 @@ export default function Home() {
           </div>
         )}
 
+        {/* Error Message */}
+        {error && (
+          <div className="bg-red-900/20 border border-red-800 rounded-xl p-6 mb-8">
+            <div className="flex items-start gap-3">
+              <svg className="w-5 h-5 text-red-400 flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+              <div className="flex-1">
+                <h3 className="text-red-400 font-semibold mb-2">連接錯誤</h3>
+                <p className="text-red-300 text-sm whitespace-pre-line">{error}</p>
+                <button
+                  onClick={() => fetchRankingData(selectedCategory)}
+                  className="mt-4 px-4 py-2 text-sm bg-red-900/50 text-red-300 rounded-lg hover:bg-red-900/70 transition-colors"
+                >
+                  重試
+                </button>
+              </div>
+            </div>
+          </div>
+        )}
+
         {/* Ranking Table */}
         {loading ? (
           <div className="flex flex-col justify-center items-center h-64">
@@ -190,11 +229,11 @@ export default function Home() {
             </div>
             <RankingTable data={getTopPlayers()} category={selectedCategory} />
           </div>
-        ) : (
+        ) : !error ? (
           <div className="bg-neutral-900 border border-neutral-800 rounded-xl p-12 text-center">
             <p className="text-neutral-500">暫無數據</p>
           </div>
-        )}
+        ) : null}
       </main>
     </div>
   );

@@ -14,6 +14,7 @@ youtube_bp = Blueprint('youtube', __name__, url_prefix='/api')
 player_bp = Blueprint('player', __name__, url_prefix='/api/players')
 auto_train_bp = Blueprint('auto_train', __name__, url_prefix='/api/auto-train')
 predict_bp = Blueprint('predict', __name__, url_prefix='/api/predict')
+action_prediction_bp = Blueprint('action_prediction', __name__, url_prefix='/api')
 
 # 導入路由處理器
 from . import health_routes
@@ -25,6 +26,7 @@ from . import youtube_routes
 from . import player_routes
 from . import auto_train_routes
 from . import predict_routes
+from . import action_prediction_routes
 
 
 def register_blueprints(app):
@@ -36,5 +38,6 @@ def register_blueprints(app):
     app.register_blueprint(failure_bp)
     app.register_blueprint(youtube_bp)
     app.register_blueprint(player_bp)
+    app.register_blueprint(action_prediction_bp)
     # app.register_blueprint(auto_train_bp)  # 在 app.py 中單獨註冊
     # app.register_blueprint(predict_bp)     # 在 app.py 中單獨註冊
