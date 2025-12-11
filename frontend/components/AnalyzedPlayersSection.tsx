@@ -32,7 +32,7 @@ export default function AnalyzedPlayersSection({ onPlayerClick }: AnalyzedPlayer
     const fetchPlayers = async () => {
         try {
             setLoading(true);
-            const apiUrl = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:5000';
+            const apiUrl = process.env.NEXT_PUBLIC_API_URL || 'http://127.0.0.1:5000';
             const response = await fetch(`${apiUrl}/api/players/profiles`);
             const data = await response.json();
 

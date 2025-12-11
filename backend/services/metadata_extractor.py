@@ -11,12 +11,15 @@ class MetadataExtractor:
         import google.generativeai as genai
         from dotenv import load_dotenv
         
-        load_dotenv()
-        self.api_key = api_key or os.getenv('GEMINI_API_KEY')
+        load_dotenv(override=True)
+        # Debug: check key source
+        env_key = os.getenv('GEMINI_API_KEY')
+        print(f"🔍 MetadataExtractor Init - Arg: {api_key is not None}, Env: {env_key[:10] if env_key else 'None'}")
+        self.api_key = api_key or env_key
         
         if self.api_key:
             genai.configure(api_key=self.api_key)
-            self.model = genai.GenerativeModel('gemini-2.0-flash')
+            self.model = genai.GenerativeModel('gemini-3.0-pro-preview')
         else:
             self.model = None
             print("⚠️ Warning: GEMINI_API_KEY not found, auto-detection disabled")

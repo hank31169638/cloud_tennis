@@ -13,7 +13,7 @@ interface PredictionResult {
   filename: string;
 }
 
-const API_URL = process.env.NEXT_PUBLIC_API_URL || "http://localhost:5000";
+const API_URL = process.env.NEXT_PUBLIC_API_URL || "http://127.0.0.1:5000";
 
 export default function ActionPredictionPage() {
   const [selectedFile, setSelectedFile] = useState<File | null>(null);
@@ -104,7 +104,7 @@ export default function ActionPredictionPage() {
       }
 
       const data = await response.json();
-      
+
       if (data.success) {
         setResult(data);
       } else {
@@ -161,11 +161,10 @@ export default function ActionPredictionPage() {
           <div
             onDrop={handleDrop}
             onDragOver={handleDragOver}
-            className={`border-2 border-dashed rounded-2xl p-12 text-center transition-all cursor-pointer ${
-              selectedFile
+            className={`border-2 border-dashed rounded-2xl p-12 text-center transition-all cursor-pointer ${selectedFile
                 ? "border-blue-400 bg-blue-50"
                 : "border-gray-300 hover:border-blue-400 hover:bg-gray-50"
-            }`}
+              }`}
           >
             <input
               type="file"
@@ -251,11 +250,10 @@ export default function ActionPredictionPage() {
           <button
             onClick={handleUpload}
             disabled={!selectedFile || loading}
-            className={`w-full mt-6 px-6 py-3.5 rounded-lg font-medium transition-all duration-200 ${
-              !selectedFile || loading
+            className={`w-full mt-6 px-6 py-3.5 rounded-lg font-medium transition-all duration-200 ${!selectedFile || loading
                 ? "bg-gray-200 text-gray-400 cursor-not-allowed"
                 : "bg-gradient-to-r from-blue-600 to-indigo-600 text-white hover:from-blue-500 hover:to-indigo-500 shadow-lg hover:shadow-xl"
-            }`}
+              }`}
           >
             {loading ? (
               <span className="flex items-center justify-center gap-2">
@@ -299,11 +297,10 @@ export default function ActionPredictionPage() {
                 {result.prediction === "標準" ? "✅" : "❌"}
               </div>
               <div
-                className={`text-4xl font-bold mb-2 ${
-                  result.prediction === "標準"
+                className={`text-4xl font-bold mb-2 ${result.prediction === "標準"
                     ? "text-green-600"
                     : "text-red-600"
-                }`}
+                  }`}
               >
                 {result.prediction}
               </div>
@@ -322,11 +319,10 @@ export default function ActionPredictionPage() {
               </div>
               <div className="bg-gray-200 rounded-full h-3 overflow-hidden">
                 <div
-                  className={`h-full rounded-full transition-all duration-500 ${
-                    result.prediction === "標準"
+                  className={`h-full rounded-full transition-all duration-500 ${result.prediction === "標準"
                       ? "bg-gradient-to-r from-green-500 to-emerald-500"
                       : "bg-gradient-to-r from-red-500 to-rose-500"
-                  }`}
+                    }`}
                   style={{ width: `${result.confidence * 100}%` }}
                 />
               </div>
@@ -348,11 +344,10 @@ export default function ActionPredictionPage() {
                         </span>
                         <div className="flex-1 bg-gray-200 rounded-full h-3 overflow-hidden">
                           <div
-                            className={`h-full rounded-full transition-all duration-500 ${
-                              className === "標準"
+                            className={`h-full rounded-full transition-all duration-500 ${className === "標準"
                                 ? "bg-gradient-to-r from-green-500 to-emerald-500"
                                 : "bg-gradient-to-r from-red-500 to-rose-500"
-                            }`}
+                              }`}
                             style={{ width: `${probability * 100}%` }}
                           />
                         </div>

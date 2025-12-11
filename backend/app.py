@@ -8,6 +8,15 @@ import sys
 # 確保可以導入本地模組
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 
+# 核彈級修復：在所有其他 import 之前強制載入環境變數
+# 這確保了即使是第三方庫在 import 時讀取環境變數，也能讀到正確的值
+from dotenv import load_dotenv
+load_dotenv(override=True)
+
+# Debug: 確認環境變數生效
+_debug_key = os.getenv('GEMINI_API_KEY')
+print(f"🚀 app.py Startup - API Key: {_debug_key[:10] if _debug_key else 'None'}...")
+
 from flask import Flask, send_from_directory, jsonify
 from flask_cors import CORS
 from flask_socketio import SocketIO

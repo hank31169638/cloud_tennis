@@ -209,8 +209,11 @@ class MatchAnalyzer:
         import google.generativeai as genai
         from dotenv import load_dotenv
         
-        load_dotenv()
-        self.api_key = api_key or os.getenv('GEMINI_API_KEY')
+        load_dotenv(override=True)
+        # Debug: check key source
+        env_key = os.getenv('GEMINI_API_KEY')
+        print(f"🔍 YouTubeAnalyzer Init - Arg: {api_key is not None}, Env: {env_key[:10] if env_key else 'None'}")
+        self.api_key = api_key or env_key
         
         if not self.api_key:
             raise ValueError("需要 GEMINI_API_KEY")

@@ -24,7 +24,7 @@ class AppConfig:
     """應用程式基本配置"""
     APP_NAME: str = "Table Tennis AI"
     APP_VERSION: str = "1.0.0"
-    DEBUG: bool = field(default_factory=lambda: os.getenv('DEBUG', 'false').lower() == 'true')
+    DEBUG: bool = field(default_factory=lambda: os.getenv('DEBUG', 'true').lower() == 'true')
     ENV: str = field(default_factory=lambda: os.getenv('FLASK_ENV', 'development'))
 
 

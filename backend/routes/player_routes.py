@@ -23,28 +23,7 @@ def get_players():
             "error": str(e)
         }), 500
 
-@player_bp.route('/<player_id>', methods=['GET'])
-def get_player(player_id):
-    """取得單一選手詳情"""
-    try:
-        service = get_player_service()
-        player = service.get_player_details(player_id)
-        
-        if not player:
-            return jsonify({
-                "success": False,
-                "error": "Player not found"
-            }), 404
-            
-        return jsonify({
-            "success": True,
-            "player": player
-        })
-    except Exception as e:
-        return jsonify({
-            "success": False,
-            "error": str(e)
-        }), 500
+
 
 
 # ==================== 選手檔案 API ====================
@@ -187,6 +166,30 @@ def get_player_photo(ittf_id):
             "success": False,
             "error": "Photo not found"
         }), 404
+    except Exception as e:
+        return jsonify({
+            "success": False,
+            "error": str(e)
+        }), 500
+
+
+@player_bp.route('/<player_id>', methods=['GET'])
+def get_player(player_id):
+    """取得單一選手詳情"""
+    try:
+        service = get_player_service()
+        player = service.get_player_details(player_id)
+        
+        if not player:
+            return jsonify({
+                "success": False,
+                "error": "Player not found"
+            }), 404
+            
+        return jsonify({
+            "success": True,
+            "player": player
+        })
     except Exception as e:
         return jsonify({
             "success": False,

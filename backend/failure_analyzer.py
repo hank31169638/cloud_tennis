@@ -35,11 +35,14 @@ class FailureAnalyzer:
             api_key: Gemini API 金鑰（若無則從環境變數讀取）
         """
         # 直接從 .env 檔案讀取
-        if not api_key:
-            env_config = dotenv_values('.env')
-            api_key = env_config.get('GEMINI_API_KEY') or os.getenv('GEMINI_API_KEY')
+        # 強制從環境變數讀取
+        from dotenv import load_dotenv
+        load_dotenv(override=True)
         
-        self.api_key = api_key
+        real_key = api_key or os.getenv('GEMINI_API_KEY')
+        print(f"🔍 FailureAnalyzer Init - Arg: {api_key is not None}, Env: {str(real_key)[:10] if real_key else 'None'}")
+        
+        self.api_key = real_key
         if self.api_key:
             genai.configure(api_key=self.api_key)
             # 使用 Gemini 2.5 Pro 模型
