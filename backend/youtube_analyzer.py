@@ -284,7 +284,7 @@ class MatchAnalyzer:
         
         # 解析回應
         print(f"DEBUG: Gemini Response Preview: {response.text[:200]}...")  # Debug print
-        analysis = self._parse_response(response.text)
+        analysis = self._parse_response(response.text, player_focus)
         
         # 切割影片片段
         print(f"🎬 開始切割影片片段，來源: {video_path}")
@@ -560,8 +560,18 @@ class MatchAnalyzer:
         # 4. 修復字串結束後缺少逗號
         repaired = re.sub(r'("\s*)\n(\s*")', r'\1,\n\2', repaired)
         
-        # 5. 移除控制字元
+        # 5. 修復布林值後缺少逗號
+        repaired = re.sub(r'(true|false)\s*\n\s*(")', r'\1,\n\2', repaired, flags=re.IGNORECASE)
+        
+        # 6. 修復陣列元素間缺少逗號
+        repaired = re.sub(r'(\})\s*\n\s*(\{)', r'\1,\n\2', repaired)
+        
+        # 7. 移除控制字元
         repaired = re.sub(r'[\x00-\x1f]+', ' ', repaired)
+        
+        # 8. 修復字串中未轉義的引號（保守處理）
+        # 將 "text": "some "quoted" text" 修正為 "text": "some \"quoted\" text"
+        # 這個較複雜，暫時略過，讓 JSON 解析器報錯
         
         return repaired
     
@@ -660,7 +670,7 @@ class MatchAnalyzer:
         print(f"📝 從文字中提取到 {len(points)} 個時間戳")
         return points
     
-    def _parse_response(self, response_text: str) -> Dict[str, Any]:
+    def _parse_response(self, response_text: str, player_focus: str = None) -> Dict[str, Any]:
         """解析 Gemini 回應"""
         import json
         

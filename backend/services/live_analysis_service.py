@@ -1,18 +1,25 @@
 """
 即時比賽分析服務
-使用 Gemini 進行串流分析
+使用 Gemini 進行串流分析 + MediaPipe 骨架偵測
 """
 import os
 import asyncio
 import base64
 import time
 import json
+import cv2
+import numpy as np
 from typing import Optional, Callable, Dict, Any, List
 from dataclasses import dataclass, asdict
 from datetime import datetime
 from enum import Enum
 import google.generativeai as genai
 from dotenv import load_dotenv
+
+# 延遲載入 mediapipe 以避免啟動時間過長
+mp_pose = None
+mp_drawing = None
+mp_drawing_styles = None
 
 load_dotenv()
 
@@ -80,6 +87,10 @@ class LiveAnalysisService:
         # 使用 Gemini 2.0 Flash 進行即時分析
         self.model = genai.GenerativeModel('gemini-2.0-flash-exp')
         
+        # 初始化 MediaPipe Pose
+        self.pose = None
+        self._init_pose_detector()
+        
         # 分析狀態
         self.is_analyzing = False
         self.match_state = MatchState()
@@ -88,6 +99,28 @@ class LiveAnalysisService:
         self.frame_buffer: List[bytes] = []
         self.last_analysis_time = 0
         self.analysis_interval = 3  # 每 3 秒分析一次
+        
+    def _init_pose_detector(self):
+        """初始化姿態偵測器"""
+        global mp_pose, mp_drawing, mp_drawing_styles
+        try:
+            import mediapipe as mp
+            mp_pose = mp.solutions.pose
+            mp_drawing = mp.solutions.drawing_utils
+            mp_drawing_styles = mp.solutions.drawing_styles
+            
+            self.pose = mp_pose.Pose(
+                static_image_mode=False,
+                model_complexity=1,
+                smooth_landmarks=True,
+                enable_segmentation=False,
+                min_detection_confidence=0.5,
+                min_tracking_confidence=0.5
+            )
+            print("✅ MediaPipe Pose 初始化成功")
+        except Exception as e:
+            print(f"⚠️ MediaPipe Pose 初始化失敗: {e}")
+            self.pose = None
         
     def set_alert_callback(self, callback: Callable[[LiveAlert], None]):
         """設定提醒回調函數"""
@@ -299,6 +332,66 @@ class LiveAnalysisService:
                 feedback,
                 None
             )
+    
+    def detect_pose_and_draw(self, frame_data: bytes) -> tuple[bytes, Optional[Dict[str, Any]]]:
+        """
+        偵測人體姿態並繪製骨架
+        
+        Args:
+            frame_data: 原始影像幀（JPEG bytes）
+            
+        Returns:
+            (繪製骨架後的影像, 姿態資訊)
+        """
+        if not self.pose:
+            return frame_data, None
+            
+        try:
+            # 解碼圖片
+            nparr = np.frombuffer(frame_data, np.uint8)
+            image = cv2.imdecode(nparr, cv2.IMREAD_COLOR)
+            
+            if image is None:
+                return frame_data, None
+            
+            # 轉換為 RGB
+            image_rgb = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
+            
+            # 執行姿態偵測
+            results = self.pose.process(image_rgb)
+            
+            pose_data = None
+            if results.pose_landmarks:
+                # 繪製骨架
+                mp_drawing.draw_landmarks(
+                    image,
+                    results.pose_landmarks,
+                    mp_pose.POSE_CONNECTIONS,
+                    landmark_drawing_spec=mp_drawing_styles.get_default_pose_landmarks_style()
+                )
+                
+                # 提取關鍵點資訊
+                landmarks = results.pose_landmarks.landmark
+                pose_data = {
+                    'detected': True,
+                    'landmarks': [
+                        {
+                            'x': lm.x,
+                            'y': lm.y,
+                            'z': lm.z,
+                            'visibility': lm.visibility
+                        }
+                        for lm in landmarks
+                    ]
+                }
+            
+            # 編碼回 JPEG
+            _, encoded = cv2.imencode('.jpg', image)
+            return encoded.tobytes(), pose_data
+            
+        except Exception as e:
+            print(f"❌ 姿態偵測錯誤: {e}")
+            return frame_data, None
     
     def _emit_alert(self, alert_type: AlertType, title: str, message: str, suggestion: str = None):
         """發送提醒"""

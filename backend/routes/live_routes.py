@@ -43,7 +43,7 @@ def init_live_routes(socketio):
     
     @socketio.on('video_frame', namespace='/live')
     def handle_video_frame(data):
-        """處理視訊幀 (支援 Gemini 和 本地模型)"""
+        """處理視訊幀 (支援 Gemini、本地模型和骨架偵測)"""
         session_id = request.sid
         
         if session_id not in analysis_sessions:
@@ -53,21 +53,39 @@ def init_live_routes(socketio):
         service = session['service']
         local_classifier = session.get('local_classifier')
         frame_data = data.get('frame')  # base64 編碼的圖片
+        enable_pose = data.get('enable_pose', True)  # 是否啟用骨架偵測
         
         if frame_data:
+            # 移除 data:image/jpeg;base64, 前綴
+            if ',' in frame_data:
+                base64_data = frame_data.split(',')[1]
+            else:
+                base64_data = frame_data
+            
+            image_bytes = base64.b64decode(base64_data)
+            
+            # 0. 骨架偵測與繪製
+            processed_frame = image_bytes
+            pose_data = None
+            if enable_pose and service.pose:
+                try:
+                    processed_frame, pose_data = service.detect_pose_and_draw(image_bytes)
+                    
+                    # 發送帶骨架的影像回前端
+                    frame_with_pose = base64.b64encode(processed_frame).decode('utf-8')
+                    emit('frame_with_pose', {
+                        'frame': f'data:image/jpeg;base64,{frame_with_pose}',
+                        'pose_data': pose_data
+                    }, namespace='/live', room=session_id)
+                except Exception as e:
+                    print(f"Pose detection error: {e}")
+            
             # 1. 本地模型分析 (同步執行，因為需要即時回饋)
             if local_classifier:
                 try:
                     import cv2
                     import numpy as np
                     
-                    # 移除 data:image/jpeg;base64, 前綴
-                    if ',' in frame_data:
-                        base64_data = frame_data.split(',')[1]
-                    else:
-                        base64_data = frame_data
-                        
-                    image_bytes = base64.b64decode(base64_data)
                     nparr = np.frombuffer(image_bytes, np.uint8)
                     frame = cv2.imdecode(nparr, cv2.IMREAD_COLOR)
                     
