@@ -67,18 +67,29 @@ def init_live_routes(socketio):
             # 0. 骨架偵測與繪製
             processed_frame = image_bytes
             pose_data = None
+            
+            # Debug: 檢查骨架偵測狀態
+            if not enable_pose:
+                print("⚠️ 骨架偵測未啟用 (enable_pose=False)")
+            elif not service.pose:
+                print("⚠️ MediaPipe Pose 未初始化")
+            
             if enable_pose and service.pose:
                 try:
+                    print("🦴 開始骨架偵測...")
                     processed_frame, pose_data = service.detect_pose_and_draw(image_bytes)
                     
                     # 發送帶骨架的影像回前端 (只發送 base64，不含前綴)
                     frame_with_pose = base64.b64encode(processed_frame).decode('utf-8')
+                    print(f"✅ 骨架偵測完成，發送幀 ({len(frame_with_pose)} bytes)")
                     emit('frame_with_pose', {
                         'frame': frame_with_pose,
                         'pose_data': pose_data
                     }, namespace='/live', room=session_id)
                 except Exception as e:
-                    print(f"Pose detection error: {e}")
+                    print(f"❌ Pose detection error: {e}")
+                    import traceback
+                    traceback.print_exc()
             
             # 1. 本地模型分析 (同步執行，因為需要即時回饋)
             if local_classifier:

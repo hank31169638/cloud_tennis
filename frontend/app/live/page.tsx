@@ -126,6 +126,8 @@ export default function LiveAnalysisPage() {
         const jsonStr = data.substring(8);
         const [event, payload] = JSON.parse(jsonStr);
         
+        console.log('📨 收到事件:', event);
+        
         switch (event) {
           case 'alert':
             setAlerts(prev => [...prev.slice(-49), payload]);
@@ -133,9 +135,11 @@ export default function LiveAnalysisPage() {
             playAlertSound(payload.alert_type);
             break;
           case 'analysis_started':
+            console.log('✅ 分析已開始');
             setIsAnalyzing(true);
             break;
           case 'analysis_stopped':
+            console.log('⏹️ 分析已停止');
             setIsAnalyzing(false);
             break;
           case 'state':
@@ -146,10 +150,11 @@ export default function LiveAnalysisPage() {
             break;
           case 'frame_with_pose':
             // 接收帶有骨架的視訊幀
-            console.log('📸 收到骨架幀:', payload.pose_data ? '有姿態資料' : '無姿態資料');
+            console.log('📸 收到骨架幀:', payload.pose_data ? '有姿態資料' : '無姿態資料', 'frame長度:', payload.frame?.length);
             if (payload.frame) {
               const imgUrl = `data:image/jpeg;base64,${payload.frame}`;
               setPoseFrameUrl(imgUrl);
+              console.log('🖼️ 已設置骨架圖片 URL');
             }
             break;
         }
@@ -368,6 +373,13 @@ export default function LiveAnalysisPage() {
                   alt="Pose Detection"
                   className="w-full h-full object-cover"
                 />
+              )}
+              
+              {/* Debug 信息 */}
+              {isAnalyzing && enablePose && !poseFrameUrl && (
+                <div className="absolute bottom-4 left-4 bg-yellow-600 text-white px-3 py-1 rounded text-xs">
+                  等待骨架數據...
+                </div>
               )}
               
               <canvas ref={canvasRef} className="hidden" />

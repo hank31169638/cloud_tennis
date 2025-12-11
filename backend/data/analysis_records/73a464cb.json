@@ -1,0 +1,729 @@
+{
+  "record_id": "73a464cb",
+  "video_id": "qP6HnokOy4w",
+  "video_title": "林昀儒 VS 張本智和｜2025 WTT球星挑戰賽 倫敦站 男單四強",
+  "video_url": "https://www.youtube.com/watch?v=qP6HnokOy4w",
+  "video_duration": 350,
+  "thumbnail_url": "https://img.youtube.com/vi/qP6HnokOy4w/maxresdefault.jpg",
+  "player_focus": "",
+  "player2_focus": "",
+  "analysis_result": {
+    "success": true,
+    "raw_analysis": "## 📊 比賽概況\n- 比賽類型：未知\n- 比分概況：解析失敗\n- 關鍵轉折：無\n\n## 🏆 總結",
+    "structured_data": {
+      "points": [
+        {
+          "id": 1,
+          "start_seconds": 0.0,
+          "end_seconds": 6.0,
+          "timestamp_display": "0:00",
+          "description": "對手失誤",
+          "winner": "選手A",
+          "win_reason": "對手失誤",
+          "key_technique": ""
+        },
+        {
+          "id": 2,
+          "start_seconds": 6.8,
+          "end_seconds": 13.0,
+          "timestamp_display": "0:06",
+          "description": "張本智和發台內短球，選手A直接反手擰拉，球質高，張本智和回擋時直接下網，選手A率先得分。",
+          "winner": "選手A",
+          "win_reason": "對手失誤",
+          "key_technique": "反手擰拉"
+        },
+        {
+          "id": 3,
+          "start_seconds": 21.8,
+          "end_seconds": 27.5,
+          "timestamp_display": "0:21",
+          "description": "選手A發反手位長球，張本智和直接反手起板強攻，選手A回擋後，張本智和再次反手加力攻擊直線，選手A防守不及，回球出界。",
+          "winner": "對手",
+          "win_reason": "主動得分",
+          "key_technique": "反手連續快撕"
+        },
+        {
+          "id": 3,
+          "start_seconds": 31.5,
+          "end_seconds": 39.0,
+          "timestamp_display": "0:31",
+          "description": "選手A發短球，張本智和劈長到反手位，選手A反手拉球，但力量過大直接出界失分。",
+          "winner": "對手",
+          "win_reason": "選手A失誤",
+          "key_technique": "劈長"
+        },
+        {
+          "id": 5,
+          "start_seconds": 58.0,
+          "end_seconds": 106.0,
+          "timestamp_display": "0:58",
+          "description": "選手A發短球，張本智和擺短，選手A反手快帶壓制對方反手位，隨即側身使用正手攻擊張本智和正手大角度空檔得分。",
+          "winner": "選手A",
+          "win_reason": "主動得分",
+          "key_technique": "反手壓制後正手變線"
+        },
+        {
+          "id": 6,
+          "start_seconds": 114.0,
+          "end_seconds": 125.0,
+          "timestamp_display": "1:54",
+          "description": "選手A發短球，張本智和回球到中路，選手A搶先上手反手快撕直線，張本智和完全沒反應過來，直接得分。",
+          "winner": "選手A",
+          "win_reason": "主動得分",
+          "key_technique": "反手快撕直線"
+        },
+        {
+          "id": 7,
+          "start_seconds": 132.5,
+          "end_seconds": 138.0,
+          "timestamp_display": "2:12",
+          "description": "雙方進入遠台對拉，選手A在被動防守下連續放高球，張本智和連續正手爆衝，最終選手A回球過高出界。",
+          "winner": "對手",
+          "win_reason": "選手A失誤",
+          "key_technique": "遠台連續進攻"
+        },
+        {
+          "id": 8,
+          "start_seconds": 145.0,
+          "end_seconds": 151.0,
+          "timestamp_display": "2:25",
+          "description": "選手A發短球，張本智和劈長，選手A反手拉斜線後，下一板突然變直線，張本智和腳步不及，未能接到。",
+          "winner": "選手A",
+          "win_reason": "主動得分",
+          "key_technique": "反手變線"
+        },
+        {
+          "id": 9,
+          "start_seconds": 158.5,
+          "end_seconds": 207.0,
+          "timestamp_display": "2:38",
+          "description": "選手A發球，張本智和回球稍高，選手A直接側身正手搶攻斜線得分，展現極佳的上手意識。",
+          "winner": "選手A",
+          "win_reason": "主動得分",
+          "key_technique": "側身正手搶攻"
+        },
+        {
+          "id": 10,
+          "start_seconds": 224.0,
+          "end_seconds": 230.0,
+          "timestamp_display": "3:44",
+          "description": "張本智和發球後形成反手相持，選手A在連續對拉中節奏被帶亂，回球下網。",
+          "winner": "對手",
+          "win_reason": "選手A失誤",
+          "key_technique": "反手快速相持"
+        },
+        {
+          "id": 11,
+          "start_seconds": 258.0,
+          "end_seconds": 325.0,
+          "timestamp_display": "4:18",
+          "description": "張本智和發台內短球，選手A嘗試反手擰拉，但判斷旋轉失誤，球直接下網。",
+          "winner": "對手",
+          "win_reason": "選手A失誤",
+          "key_technique": "發球搶攻"
+        },
+        {
+          "id": 12,
+          "start_seconds": 337.5,
+          "end_seconds": 346.5,
+          "timestamp_display": "5:37",
+          "description": "本場最精彩一分。雙方從台內鬥短轉為中遠台對拉，選手A多次被逼到遠台放高球，展現驚人防守韌性，在連續多板防守後，張本智和正手爆衝出界。",
+          "winner": "選手A",
+          "win_reason": "對手失誤",
+          "key_technique": "遠台防守放高球"
+        },
+        {
+          "id": 13,
+          "start_seconds": 347.5,
+          "end_seconds": 355.0,
+          "timestamp_display": "5:47",
+          "description": "選手A發球，張本智和劈長，選手A反手拉斜線後突然變直線，張本智和勉強接到，但回球質量不高，直接下網。",
+          "winner": "選手A",
+          "win_reason": "對手失誤",
+          "key_technique": "反手變線"
+        },
+        {
+          "id": 14,
+          "start_seconds": 359.5,
+          "end_seconds": 404.0,
+          "timestamp_display": "5:59",
+          "description": "張本智和發球，選手A回球，張本智和連續兩板正手進攻，第二板攻擊直線空檔得分。",
+          "winner": "對手",
+          "win_reason": "主動得分",
+          "key_technique": "正手連續進攻"
+        },
+        {
+          "id": 15,
+          "start_seconds": 406.5,
+          "end_seconds": 413.0,
+          "timestamp_display": "6:46",
+          "description": "選手A發球，張本智和反手擰拉，選手A反拉回去，但球出界。",
+          "winner": "對手",
+          "win_reason": "選手A失誤",
+          "key_technique": "接發球擰拉"
+        },
+        {
+          "id": 16,
+          "start_seconds": 421.5,
+          "end_seconds": 428.0,
+          "timestamp_display": "7:01",
+          "description": "張本智和發球，選手A擺短，張本智和反手拉球時擦網，改變了球的軌跡，選手A反應不及失分。",
+          "winner": "對手",
+          "win_reason": "運氣球",
+          "key_technique": "擦網球"
+        },
+        {
+          "id": 17,
+          "start_seconds": 429.5,
+          "end_seconds": 444.5,
+          "timestamp_display": "7:09",
+          "description": "張本智和發短球，選手A直接反手擰拉到中路偏正手位，張本智和被球頂住，回球失誤。",
+          "winner": "選手A",
+          "win_reason": "主動得分",
+          "key_technique": "反手擰拉追身"
+        },
+        {
+          "id": 18,
+          "start_seconds": 455.5,
+          "end_seconds": 505.0,
+          "timestamp_display": "7:35",
+          "description": "雙方進入多板相持，選手A在對拉中突然改變節奏，用一個輕巧的反手變線打亂張本智和的防守節奏，張本智和回球出界。",
+          "winner": "選手A",
+          "win_reason": "主動得分",
+          "key_technique": "節奏變化與落點控制"
+        },
+        {
+          "id": 19,
+          "start_seconds": 513.0,
+          "end_seconds": 518.0,
+          "timestamp_display": "8:33",
+          "description": "選手A在相持中率先側身正手進攻，但張本智和防守站位很好，反手直接借力反拉，速度極快，選手A回球出界。",
+          "winner": "對手",
+          "win_reason": "選手A失誤",
+          "key_technique": "反手借力快帶"
+        },
+        {
+          "id": 20,
+          "start_seconds": 539.0,
+          "end_seconds": 548.0,
+          "timestamp_display": "8:59",
+          "description": "賽點。張本智和發短球，選手A反手擰拉，但求勝心切，力量過大直接將球拉出界，輸掉比賽。",
+          "winner": "對手",
+          "win_reason": "選手A失誤",
+          "key_technique": "接發球失誤"
+        }
+      ],
+      "match_overview": {
+        "match_type": "未知",
+        "score_summary": "解析失敗"
+      },
+      "player1_analysis": {
+        "name": "選手A",
+        "strengths": [],
+        "weaknesses": []
+      },
+      "summary": {
+        "overall_assessment": "由於格式問題，僅提取到時間戳資訊"
+      }
+    },
+    "point_wins": [
+      {
+        "id": 1,
+        "start_seconds": 0.0,
+        "end_seconds": 6.0,
+        "timestamp_display": "0:00",
+        "description": "對手失誤",
+        "serve_time": null,
+        "dead_ball_time": null,
+        "winner": "選手A",
+        "win_type": "對手失誤",
+        "key_technique": "",
+        "tactical_value": null,
+        "clip_path": "/uploads/clips/qP6HnokOy4w/win_1.mp4"
+      },
+      {
+        "id": 2,
+        "start_seconds": 6.8,
+        "end_seconds": 13.0,
+        "timestamp_display": "0:06",
+        "description": "張本智和發台內短球，選手A直接反手擰拉，球質高，張本智和回擋時直接下網，選手A率先得分。",
+        "serve_time": null,
+        "dead_ball_time": null,
+        "winner": "選手A",
+        "win_type": "對手失誤",
+        "key_technique": "反手擰拉",
+        "tactical_value": null,
+        "clip_path": "/uploads/clips/qP6HnokOy4w/win_2.mp4"
+      },
+      {
+        "id": 5,
+        "start_seconds": 58.0,
+        "end_seconds": 106.0,
+        "timestamp_display": "0:58",
+        "description": "選手A發短球，張本智和擺短，選手A反手快帶壓制對方反手位，隨即側身使用正手攻擊張本智和正手大角度空檔得分。",
+        "serve_time": null,
+        "dead_ball_time": null,
+        "winner": "選手A",
+        "win_type": "主動得分",
+        "key_technique": "反手壓制後正手變線",
+        "tactical_value": null,
+        "clip_path": "/uploads/clips/qP6HnokOy4w/win_5.mp4"
+      },
+      {
+        "id": 6,
+        "start_seconds": 114.0,
+        "end_seconds": 125.0,
+        "timestamp_display": "1:54",
+        "description": "選手A發短球，張本智和回球到中路，選手A搶先上手反手快撕直線，張本智和完全沒反應過來，直接得分。",
+        "serve_time": null,
+        "dead_ball_time": null,
+        "winner": "選手A",
+        "win_type": "主動得分",
+        "key_technique": "反手快撕直線",
+        "tactical_value": null,
+        "clip_path": "/uploads/clips/qP6HnokOy4w/win_6.mp4"
+      },
+      {
+        "id": 8,
+        "start_seconds": 145.0,
+        "end_seconds": 151.0,
+        "timestamp_display": "2:25",
+        "description": "選手A發短球，張本智和劈長，選手A反手拉斜線後，下一板突然變直線，張本智和腳步不及，未能接到。",
+        "serve_time": null,
+        "dead_ball_time": null,
+        "winner": "選手A",
+        "win_type": "主動得分",
+        "key_technique": "反手變線",
+        "tactical_value": null,
+        "clip_path": "/uploads/clips/qP6HnokOy4w/win_8.mp4"
+      },
+      {
+        "id": 9,
+        "start_seconds": 158.5,
+        "end_seconds": 207.0,
+        "timestamp_display": "2:38",
+        "description": "選手A發球，張本智和回球稍高，選手A直接側身正手搶攻斜線得分，展現極佳的上手意識。",
+        "serve_time": null,
+        "dead_ball_time": null,
+        "winner": "選手A",
+        "win_type": "主動得分",
+        "key_technique": "側身正手搶攻",
+        "tactical_value": null,
+        "clip_path": "/uploads/clips/qP6HnokOy4w/win_9.mp4"
+      },
+      {
+        "id": 12,
+        "start_seconds": 337.5,
+        "end_seconds": 346.5,
+        "timestamp_display": "5:37",
+        "description": "本場最精彩一分。雙方從台內鬥短轉為中遠台對拉，選手A多次被逼到遠台放高球，展現驚人防守韌性，在連續多板防守後，張本智和正手爆衝出界。",
+        "serve_time": null,
+        "dead_ball_time": null,
+        "winner": "選手A",
+        "win_type": "對手失誤",
+        "key_technique": "遠台防守放高球",
+        "tactical_value": null,
+        "clip_path": "/uploads/clips/qP6HnokOy4w/win_12.mp4"
+      },
+      {
+        "id": 13,
+        "start_seconds": 347.5,
+        "end_seconds": 355.0,
+        "timestamp_display": "5:47",
+        "description": "選手A發球，張本智和劈長，選手A反手拉斜線後突然變直線，張本智和勉強接到，但回球質量不高，直接下網。",
+        "serve_time": null,
+        "dead_ball_time": null,
+        "winner": "選手A",
+        "win_type": "對手失誤",
+        "key_technique": "反手變線",
+        "tactical_value": null,
+        "clip_path": "/uploads/clips/qP6HnokOy4w/win_13.mp4"
+      },
+      {
+        "id": 17,
+        "start_seconds": 429.5,
+        "end_seconds": 444.5,
+        "timestamp_display": "7:09",
+        "description": "張本智和發短球，選手A直接反手擰拉到中路偏正手位，張本智和被球頂住，回球失誤。",
+        "serve_time": null,
+        "dead_ball_time": null,
+        "winner": "選手A",
+        "win_type": "主動得分",
+        "key_technique": "反手擰拉追身",
+        "tactical_value": null,
+        "clip_path": "/uploads/clips/qP6HnokOy4w/win_17.mp4"
+      },
+      {
+        "id": 18,
+        "start_seconds": 455.5,
+        "end_seconds": 505.0,
+        "timestamp_display": "7:35",
+        "description": "雙方進入多板相持，選手A在對拉中突然改變節奏，用一個輕巧的反手變線打亂張本智和的防守節奏，張本智和回球出界。",
+        "serve_time": null,
+        "dead_ball_time": null,
+        "winner": "選手A",
+        "win_type": "主動得分",
+        "key_technique": "節奏變化與落點控制",
+        "tactical_value": null,
+        "clip_path": "/uploads/clips/qP6HnokOy4w/win_18.mp4"
+      }
+    ],
+    "point_losses": [
+      {
+        "id": 3,
+        "start_seconds": 21.8,
+        "end_seconds": 27.5,
+        "timestamp_display": "0:21",
+        "description": "選手A發反手位長球，張本智和直接反手起板強攻，選手A回擋後，張本智和再次反手加力攻擊直線，選手A防守不及，回球出界。",
+        "serve_time": null,
+        "dead_ball_time": null,
+        "winner": "對手",
+        "loss_type": "主動得分",
+        "technical_issue": "反手連續快撕",
+        "clip_path": "/uploads/clips/qP6HnokOy4w/loss_3.mp4"
+      },
+      {
+        "id": 3,
+        "start_seconds": 31.5,
+        "end_seconds": 39.0,
+        "timestamp_display": "0:31",
+        "description": "選手A發短球，張本智和劈長到反手位，選手A反手拉球，但力量過大直接出界失分。",
+        "serve_time": null,
+        "dead_ball_time": null,
+        "winner": "對手",
+        "loss_type": "選手A失誤",
+        "technical_issue": "劈長",
+        "clip_path": "/uploads/clips/qP6HnokOy4w/loss_3.mp4"
+      },
+      {
+        "id": 7,
+        "start_seconds": 132.5,
+        "end_seconds": 138.0,
+        "timestamp_display": "2:12",
+        "description": "雙方進入遠台對拉，選手A在被動防守下連續放高球，張本智和連續正手爆衝，最終選手A回球過高出界。",
+        "serve_time": null,
+        "dead_ball_time": null,
+        "winner": "對手",
+        "loss_type": "選手A失誤",
+        "technical_issue": "遠台連續進攻",
+        "clip_path": "/uploads/clips/qP6HnokOy4w/loss_7.mp4"
+      },
+      {
+        "id": 10,
+        "start_seconds": 224.0,
+        "end_seconds": 230.0,
+        "timestamp_display": "3:44",
+        "description": "張本智和發球後形成反手相持，選手A在連續對拉中節奏被帶亂，回球下網。",
+        "serve_time": null,
+        "dead_ball_time": null,
+        "winner": "對手",
+        "loss_type": "選手A失誤",
+        "technical_issue": "反手快速相持",
+        "clip_path": "/uploads/clips/qP6HnokOy4w/loss_10.mp4"
+      },
+      {
+        "id": 11,
+        "start_seconds": 258.0,
+        "end_seconds": 325.0,
+        "timestamp_display": "4:18",
+        "description": "張本智和發台內短球，選手A嘗試反手擰拉，但判斷旋轉失誤，球直接下網。",
+        "serve_time": null,
+        "dead_ball_time": null,
+        "winner": "對手",
+        "loss_type": "選手A失誤",
+        "technical_issue": "發球搶攻",
+        "clip_path": "/uploads/clips/qP6HnokOy4w/loss_11.mp4"
+      },
+      {
+        "id": 14,
+        "start_seconds": 359.5,
+        "end_seconds": 404.0,
+        "timestamp_display": "5:59",
+        "description": "張本智和發球，選手A回球，張本智和連續兩板正手進攻，第二板攻擊直線空檔得分。",
+        "serve_time": null,
+        "dead_ball_time": null,
+        "winner": "對手",
+        "loss_type": "主動得分",
+        "technical_issue": "正手連續進攻",
+        "clip_path": "/uploads/clips/qP6HnokOy4w/loss_14.mp4"
+      },
+      {
+        "id": 15,
+        "start_seconds": 406.5,
+        "end_seconds": 413.0,
+        "timestamp_display": "6:46",
+        "description": "選手A發球，張本智和反手擰拉，選手A反拉回去，但球出界。",
+        "serve_time": null,
+        "dead_ball_time": null,
+        "winner": "對手",
+        "loss_type": "選手A失誤",
+        "technical_issue": "接發球擰拉",
+        "clip_path": "/uploads/clips/qP6HnokOy4w/loss_15.mp4"
+      },
+      {
+        "id": 16,
+        "start_seconds": 421.5,
+        "end_seconds": 428.0,
+        "timestamp_display": "7:01",
+        "description": "張本智和發球，選手A擺短，張本智和反手拉球時擦網，改變了球的軌跡，選手A反應不及失分。",
+        "serve_time": null,
+        "dead_ball_time": null,
+        "winner": "對手",
+        "loss_type": "運氣球",
+        "technical_issue": "擦網球",
+        "clip_path": "/uploads/clips/qP6HnokOy4w/loss_16.mp4"
+      },
+      {
+        "id": 19,
+        "start_seconds": 513.0,
+        "end_seconds": 518.0,
+        "timestamp_display": "8:33",
+        "description": "選手A在相持中率先側身正手進攻，但張本智和防守站位很好，反手直接借力反拉，速度極快，選手A回球出界。",
+        "serve_time": null,
+        "dead_ball_time": null,
+        "winner": "對手",
+        "loss_type": "選手A失誤",
+        "technical_issue": "反手借力快帶",
+        "clip_path": "/uploads/clips/qP6HnokOy4w/loss_19.mp4"
+      },
+      {
+        "id": 20,
+        "start_seconds": 539.0,
+        "end_seconds": 548.0,
+        "timestamp_display": "8:59",
+        "description": "賽點。張本智和發短球，選手A反手擰拉，但求勝心切，力量過大直接將球拉出界，輸掉比賽。",
+        "serve_time": null,
+        "dead_ball_time": null,
+        "winner": "對手",
+        "loss_type": "選手A失誤",
+        "technical_issue": "接發球失誤",
+        "clip_path": "/uploads/clips/qP6HnokOy4w/loss_20.mp4"
+      }
+    ],
+    "points": [
+      {
+        "id": 1,
+        "start_seconds": 0.0,
+        "end_seconds": 6.0,
+        "timestamp_display": "0:00",
+        "description": "對手失誤",
+        "winner": "選手A",
+        "win_reason": "對手失誤",
+        "key_technique": ""
+      },
+      {
+        "id": 2,
+        "start_seconds": 6.8,
+        "end_seconds": 13.0,
+        "timestamp_display": "0:06",
+        "description": "張本智和發台內短球，選手A直接反手擰拉，球質高，張本智和回擋時直接下網，選手A率先得分。",
+        "winner": "選手A",
+        "win_reason": "對手失誤",
+        "key_technique": "反手擰拉"
+      },
+      {
+        "id": 3,
+        "start_seconds": 21.8,
+        "end_seconds": 27.5,
+        "timestamp_display": "0:21",
+        "description": "選手A發反手位長球，張本智和直接反手起板強攻，選手A回擋後，張本智和再次反手加力攻擊直線，選手A防守不及，回球出界。",
+        "winner": "對手",
+        "win_reason": "主動得分",
+        "key_technique": "反手連續快撕"
+      },
+      {
+        "id": 3,
+        "start_seconds": 31.5,
+        "end_seconds": 39.0,
+        "timestamp_display": "0:31",
+        "description": "選手A發短球，張本智和劈長到反手位，選手A反手拉球，但力量過大直接出界失分。",
+        "winner": "對手",
+        "win_reason": "選手A失誤",
+        "key_technique": "劈長"
+      },
+      {
+        "id": 5,
+        "start_seconds": 58.0,
+        "end_seconds": 106.0,
+        "timestamp_display": "0:58",
+        "description": "選手A發短球，張本智和擺短，選手A反手快帶壓制對方反手位，隨即側身使用正手攻擊張本智和正手大角度空檔得分。",
+        "winner": "選手A",
+        "win_reason": "主動得分",
+        "key_technique": "反手壓制後正手變線"
+      },
+      {
+        "id": 6,
+        "start_seconds": 114.0,
+        "end_seconds": 125.0,
+        "timestamp_display": "1:54",
+        "description": "選手A發短球，張本智和回球到中路，選手A搶先上手反手快撕直線，張本智和完全沒反應過來，直接得分。",
+        "winner": "選手A",
+        "win_reason": "主動得分",
+        "key_technique": "反手快撕直線"
+      },
+      {
+        "id": 7,
+        "start_seconds": 132.5,
+        "end_seconds": 138.0,
+        "timestamp_display": "2:12",
+        "description": "雙方進入遠台對拉，選手A在被動防守下連續放高球，張本智和連續正手爆衝，最終選手A回球過高出界。",
+        "winner": "對手",
+        "win_reason": "選手A失誤",
+        "key_technique": "遠台連續進攻"
+      },
+      {
+        "id": 8,
+        "start_seconds": 145.0,
+        "end_seconds": 151.0,
+        "timestamp_display": "2:25",
+        "description": "選手A發短球，張本智和劈長，選手A反手拉斜線後，下一板突然變直線，張本智和腳步不及，未能接到。",
+        "winner": "選手A",
+        "win_reason": "主動得分",
+        "key_technique": "反手變線"
+      },
+      {
+        "id": 9,
+        "start_seconds": 158.5,
+        "end_seconds": 207.0,
+        "timestamp_display": "2:38",
+        "description": "選手A發球，張本智和回球稍高，選手A直接側身正手搶攻斜線得分，展現極佳的上手意識。",
+        "winner": "選手A",
+        "win_reason": "主動得分",
+        "key_technique": "側身正手搶攻"
+      },
+      {
+        "id": 10,
+        "start_seconds": 224.0,
+        "end_seconds": 230.0,
+        "timestamp_display": "3:44",
+        "description": "張本智和發球後形成反手相持，選手A在連續對拉中節奏被帶亂，回球下網。",
+        "winner": "對手",
+        "win_reason": "選手A失誤",
+        "key_technique": "反手快速相持"
+      },
+      {
+        "id": 11,
+        "start_seconds": 258.0,
+        "end_seconds": 325.0,
+        "timestamp_display": "4:18",
+        "description": "張本智和發台內短球，選手A嘗試反手擰拉，但判斷旋轉失誤，球直接下網。",
+        "winner": "對手",
+        "win_reason": "選手A失誤",
+        "key_technique": "發球搶攻"
+      },
+      {
+        "id": 12,
+        "start_seconds": 337.5,
+        "end_seconds": 346.5,
+        "timestamp_display": "5:37",
+        "description": "本場最精彩一分。雙方從台內鬥短轉為中遠台對拉，選手A多次被逼到遠台放高球，展現驚人防守韌性，在連續多板防守後，張本智和正手爆衝出界。",
+        "winner": "選手A",
+        "win_reason": "對手失誤",
+        "key_technique": "遠台防守放高球"
+      },
+      {
+        "id": 13,
+        "start_seconds": 347.5,
+        "end_seconds": 355.0,
+        "timestamp_display": "5:47",
+        "description": "選手A發球，張本智和劈長，選手A反手拉斜線後突然變直線，張本智和勉強接到，但回球質量不高，直接下網。",
+        "winner": "選手A",
+        "win_reason": "對手失誤",
+        "key_technique": "反手變線"
+      },
+      {
+        "id": 14,
+        "start_seconds": 359.5,
+        "end_seconds": 404.0,
+        "timestamp_display": "5:59",
+        "description": "張本智和發球，選手A回球，張本智和連續兩板正手進攻，第二板攻擊直線空檔得分。",
+        "winner": "對手",
+        "win_reason": "主動得分",
+        "key_technique": "正手連續進攻"
+      },
+      {
+        "id": 15,
+        "start_seconds": 406.5,
+        "end_seconds": 413.0,
+        "timestamp_display": "6:46",
+        "description": "選手A發球，張本智和反手擰拉，選手A反拉回去，但球出界。",
+        "winner": "對手",
+        "win_reason": "選手A失誤",
+        "key_technique": "接發球擰拉"
+      },
+      {
+        "id": 16,
+        "start_seconds": 421.5,
+        "end_seconds": 428.0,
+        "timestamp_display": "7:01",
+        "description": "張本智和發球，選手A擺短，張本智和反手拉球時擦網，改變了球的軌跡，選手A反應不及失分。",
+        "winner": "對手",
+        "win_reason": "運氣球",
+        "key_technique": "擦網球"
+      },
+      {
+        "id": 17,
+        "start_seconds": 429.5,
+        "end_seconds": 444.5,
+        "timestamp_display": "7:09",
+        "description": "張本智和發短球，選手A直接反手擰拉到中路偏正手位，張本智和被球頂住，回球失誤。",
+        "winner": "選手A",
+        "win_reason": "主動得分",
+        "key_technique": "反手擰拉追身"
+      },
+      {
+        "id": 18,
+        "start_seconds": 455.5,
+        "end_seconds": 505.0,
+        "timestamp_display": "7:35",
+        "description": "雙方進入多板相持，選手A在對拉中突然改變節奏，用一個輕巧的反手變線打亂張本智和的防守節奏，張本智和回球出界。",
+        "winner": "選手A",
+        "win_reason": "主動得分",
+        "key_technique": "節奏變化與落點控制"
+      },
+      {
+        "id": 19,
+        "start_seconds": 513.0,
+        "end_seconds": 518.0,
+        "timestamp_display": "8:33",
+        "description": "選手A在相持中率先側身正手進攻，但張本智和防守站位很好，反手直接借力反拉，速度極快，選手A回球出界。",
+        "winner": "對手",
+        "win_reason": "選手A失誤",
+        "key_technique": "反手借力快帶"
+      },
+      {
+        "id": 20,
+        "start_seconds": 539.0,
+        "end_seconds": 548.0,
+        "timestamp_display": "8:59",
+        "description": "賽點。張本智和發短球，選手A反手擰拉，但求勝心切，力量過大直接將球拉出界，輸掉比賽。",
+        "winner": "對手",
+        "win_reason": "選手A失誤",
+        "key_technique": "接發球失誤"
+      }
+    ],
+    "player1_analysis": {
+      "name": "選手A",
+      "strengths": [],
+      "weaknesses": []
+    },
+    "player2_analysis": null,
+    "match_overview": {
+      "match_type": "未知",
+      "score_summary": "解析失敗"
+    },
+    "sections": {
+      "match_overview": {
+        "match_type": "未知",
+        "score_summary": "解析失敗"
+      },
+      "strengths": [],
+      "weaknesses": [],
+      "training_suggestions": [],
+      "summary": {
+        "overall_assessment": "由於格式問題，僅提取到時間戳資訊"
+      }
+    }
+  },
+  "created_at": "2025-12-11T14:16:38.642301"
+}
