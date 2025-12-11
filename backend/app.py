@@ -166,10 +166,12 @@ if __name__ == '__main__':
     """)
     
     # 使用 SocketIO 啟動伺服器
+    # 在生產環境或使用深度學習模型時，建議關閉 reloader 避免問題
     socketio.run(
         app,
         host=config.server.HOST,
         port=config.server.PORT,
         debug=config.app.DEBUG,
-        allow_unsafe_werkzeug=True
+        allow_unsafe_werkzeug=True,
+        use_reloader=False  # 關閉自動重載以避免 torch 模組觸發重載
     )

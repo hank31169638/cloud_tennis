@@ -58,12 +58,24 @@ class YouTubeDownloader:
             import yt_dlp
             
             ydl_opts = {
-                'format': 'best[height<=720][ext=mp4]/best[height<=720]/best',
+                # 使用最寬鬆的格式選擇策略，避免 nsig 問題
+                'format': '(bestvideo[height<=720]+bestaudio/best[height<=720])[ext=mp4]/best[ext=mp4]/best',
                 'outtmpl': output_path,
                 'noplaylist': True,
                 'max_filesize': 500 * 1024 * 1024,  # 500MB
-                'quiet': True,
-                'no_warnings': True,
+                'quiet': False,
+                'no_warnings': False,
+                'merge_output_format': 'mp4',
+                'user_agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36',
+                # 允許所有格式轉換
+                'postprocessors': [{
+                    'key': 'FFmpegVideoConvertor',
+                    'preferedformat': 'mp4',
+                }],
+                # 忽略錯誤繼續下載
+                'ignoreerrors': False,
+                # 跳過不可用的格式
+                'skip_unavailable_fragments': True,
             }
             
             with yt_dlp.YoutubeDL(ydl_opts) as ydl:

@@ -434,10 +434,18 @@ class AutoTrainingService:
             import yt_dlp
             
             ydl_opts = {
-                'format': 'best[height<=720]',
+                'format': '(bestvideo[height<=720]+bestaudio/best[height<=720])[ext=mp4]/best[ext=mp4]/best',
                 'outtmpl': output_path.replace('.mp4', '.%(ext)s'),
-                'quiet': True,
-                'no_warnings': True,
+                'quiet': False,
+                'no_warnings': False,
+                'merge_output_format': 'mp4',
+                'user_agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36',
+                'postprocessors': [{
+                    'key': 'FFmpegVideoConvertor',
+                    'preferedformat': 'mp4',
+                }],
+                'ignoreerrors': False,
+                'skip_unavailable_fragments': True,
                 # 下載完整影片後再用 ffmpeg 切割
             }
             
