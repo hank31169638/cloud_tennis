@@ -106,13 +106,18 @@ class AnalysisHistoryService:
         """
         video_id = video_info.get('video_id', '')
         
+        record_id = str(uuid.uuid4())[:8]
+        
         # 重複偵測：檢查是否已有相同 video_id 的紀錄
         existing_record = self.find_by_video_id(video_id)
         if existing_record:
-            print(f"⚠️ 影片已分析過: {video_id}, 返回現有紀錄: {existing_record['record_id']}")
-            return existing_record['record_id']
-        
-        record_id = str(uuid.uuid4())[:8]
+            # 如果已存在，更新現有紀錄
+            record_id = existing_record['record_id']
+            print(f"⚠️ 影片已分析過: {video_id}, 更新現有紀錄: {record_id}")
+            # 為確保更新，我們先刪除舊的（或直接覆蓋檔案）
+            # self.delete_record(record_id) # Optional, but overwriting file is enough
+        else:
+            record_id = str(uuid.uuid4())[:8]
         
         # 建立縮圖 URL
         thumbnail_url = f"https://img.youtube.com/vi/{video_id}/maxresdefault.jpg"

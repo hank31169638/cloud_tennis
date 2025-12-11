@@ -250,6 +250,142 @@ def delete_analysis_record(record_id: str):
         }), 500
 
 
+@youtube_bp.route('/youtube/reclip/<record_id>', methods=['POST'])
+def reclip_video(record_id: str):
+    """
+    重新切割影片片段
+    用於已分析過但片段切割失敗的影片
+    
+    Response:
+        {
+            "success": true,
+            "wins_count": 5,
+            "losses_count": 3
+        }
+    """
+    try:
+        from services.history_service import AnalysisHistoryService
+        from youtube_analyzer import YouTubeDownloader
+        import os
+        import tempfile
+        
+        history_service = AnalysisHistoryService()
+        
+        # 取得分析紀錄
+        record = history_service.get_record(record_id)
+        if not record:
+            return jsonify({
+                'success': False,
+                'error': '找不到該紀錄'
+            }), 404
+        
+        video_url = record.get('video_url', '')
+        video_id = record.get('video_id', '')
+        analysis = record.get('analysis_result', {})
+        
+        if not video_url or not video_id:
+            return jsonify({
+                'success': False,
+                'error': '紀錄中缺少影片資訊'
+            }), 400
+        
+        point_wins = analysis.get('point_wins', [])
+        point_losses = analysis.get('point_losses', [])
+        
+        if not point_wins and not point_losses:
+            return jsonify({
+                'success': False,
+                'error': '紀錄中沒有任何時間戳資訊，請重新分析影片'
+            }), 400
+        
+        print(f"🔄 重新切割片段: {video_id}")
+        print(f"  得分片段: {len(point_wins)} 個")
+        print(f"  失分片段: {len(point_losses)} 個")
+        
+        # 下載影片
+        downloader = YouTubeDownloader(output_dir=tempfile.gettempdir())
+        
+        try:
+            video_info = downloader.download(video_url)
+            video_path = video_info['file_path']
+            print(f"📥 影片已下載: {video_path}")
+        except Exception as e:
+            return jsonify({
+                'success': False,
+                'error': f'影片下載失敗: {str(e)}'
+            }), 500
+        
+        # 定義片段儲存路徑
+        base_clip_dir = os.path.join('uploads', 'clips', video_id)
+        abs_clip_dir = os.path.abspath(base_clip_dir)
+        os.makedirs(abs_clip_dir, exist_ok=True)
+        
+        # 切割得分片段
+        wins_count = 0
+        for point in point_wins:
+            start = point.get('start_seconds')
+            end = point.get('end_seconds')
+            point_id = point.get('id', wins_count + 1)
+            
+            if start is not None and end is not None:
+                clip_filename = f"win_{point_id}.mp4"
+                clip_path = os.path.join(abs_clip_dir, clip_filename)
+                if downloader.cut_local_segment(video_path, start, end, clip_path):
+                    point['clip_path'] = f"/uploads/clips/{video_id}/{clip_filename}"
+                    wins_count += 1
+                    print(f"  ✅ 得分 {point_id}: {start:.1f}s - {end:.1f}s")
+        
+        # 切割失分片段
+        losses_count = 0
+        for point in point_losses:
+            start = point.get('start_seconds')
+            end = point.get('end_seconds')
+            point_id = point.get('id', losses_count + 1)
+            
+            if start is not None and end is not None:
+                clip_filename = f"loss_{point_id}.mp4"
+                clip_path = os.path.join(abs_clip_dir, clip_filename)
+                if downloader.cut_local_segment(video_path, start, end, clip_path):
+                    point['clip_path'] = f"/uploads/clips/{video_id}/{clip_filename}"
+                    losses_count += 1
+                    print(f"  ✅ 失分 {point_id}: {start:.1f}s - {end:.1f}s")
+        
+        # 清理下載的影片
+        try:
+            os.remove(video_path)
+            print("🧹 已清理暫存影片")
+        except:
+            pass
+        
+        # 更新紀錄
+        analysis['point_wins'] = point_wins
+        analysis['point_losses'] = point_losses
+        history_service.save_record(
+            video_info={'video_id': video_id, 'url': video_url, 'title': record.get('video_title', ''), 'duration': record.get('video_duration', 0)},
+            analysis_result=analysis,
+            player_focus=record.get('player_focus'),
+            player2_focus=record.get('player2_focus')
+        )
+        
+        print(f"✅ 片段切割完成: 得分 {wins_count} 個, 失分 {losses_count} 個")
+        
+        return jsonify({
+            'success': True,
+            'wins_count': wins_count,
+            'losses_count': losses_count,
+            'message': f'成功切割 {wins_count + losses_count} 個片段'
+        }), 200
+        
+    except Exception as e:
+        print(f"❌ 重新切割失敗: {str(e)}")
+        import traceback
+        traceback.print_exc()
+        return jsonify({
+            'success': False,
+            'error': str(e)
+        }), 500
+
+
 @youtube_bp.route('/youtube/validate', methods=['POST'])
 def validate_youtube_url():
     """

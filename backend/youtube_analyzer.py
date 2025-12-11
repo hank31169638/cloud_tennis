@@ -219,7 +219,11 @@ class MatchAnalyzer:
             raise ValueError("需要 GEMINI_API_KEY")
         
         genai.configure(api_key=self.api_key)
-        self.model = genai.GenerativeModel('gemini-3-pro-preview')
+        
+        # 使用配置中的模型，如果沒有配置則預設為 gemini-2.5-pro
+        model_name = os.getenv('GEMINI_MODEL', 'gemini-2.5-pro')
+        print(f"🤖 使用 Gemini 模型: {model_name}")
+        self.model = genai.GenerativeModel(model_name)
     
     def analyze_match(self, video_path: str, player_focus: str = None, player2_focus: str = None, description1: str = None, description2: str = None) -> Dict[str, Any]:
         """
@@ -267,6 +271,7 @@ class MatchAnalyzer:
         )
         
         # 解析回應
+        print(f"DEBUG: Gemini Response Preview: {response.text[:200]}...")  # Debug print
         analysis = self._parse_response(response.text)
         
         # 切割影片片段
@@ -520,6 +525,67 @@ class MatchAnalyzer:
 5. **完整分析**：盡可能分析所有可見的完整回合。
 """
 
+    def _repair_json(self, json_str: str) -> str:
+        """嘗試修復常見的 JSON 格式錯誤"""
+        import re
+        
+        repaired = json_str
+        
+        # 1. 移除尾部多餘的逗號 (trailing commas)
+        # 例如: {"a": 1,} -> {"a": 1}
+        repaired = re.sub(r',\s*([}\]])', r'\1', repaired)
+        
+        # 2. 修復缺少逗號的情況 (在 } 或 ] 後面跟著 " 或 { 或 [)
+        # 例如: }{  -> },{
+        repaired = re.sub(r'(\})\s*(\{)', r'\1,\2', repaired)
+        repaired = re.sub(r'(\])\s*(\{)', r'\1,\2', repaired)
+        repaired = re.sub(r'(\})\s*(")', r'\1,\2', repaired)
+        repaired = re.sub(r'(\])\s*(")', r'\1,\2', repaired)
+        
+        # 3. 修復數字後面缺少逗號
+        repaired = re.sub(r'(\d)\s*\n\s*(")', r'\1,\n\2', repaired)
+        
+        # 4. 修復字串結束後缺少逗號
+        repaired = re.sub(r'("\s*)\n(\s*")', r'\1,\n\2', repaired)
+        
+        # 5. 移除控制字元
+        repaired = re.sub(r'[\x00-\x1f]+', ' ', repaired)
+        
+        return repaired
+    
+    def _extract_timestamps_from_text(self, text: str) -> List[Dict[str, Any]]:
+        """從純文字中提取時間戳資訊 (備用方案)"""
+        import re
+        
+        points = []
+        
+        # 嘗試匹配各種時間戳格式
+        # 格式1: MM:SS 或 M:SS
+        # 格式2: start_seconds: XX, end_seconds: XX
+        
+        # 找所有時間戳 (MM:SS 格式)
+        time_pattern = r'(\d{1,2}:\d{2})'
+        times = re.findall(time_pattern, text)
+        
+        # 找所有秒數 (XX.XX 或 XX 秒)
+        seconds_pattern = r'start_seconds["\s:]+([\d.]+).*?end_seconds["\s:]+([\d.]+)'
+        seconds_matches = re.findall(seconds_pattern, text, re.DOTALL)
+        
+        for i, (start, end) in enumerate(seconds_matches):
+            try:
+                points.append({
+                    'id': i + 1,
+                    'start_seconds': float(start),
+                    'end_seconds': float(end),
+                    'timestamp_display': f"{int(float(start))//60}:{int(float(start))%60:02d}",
+                    'description': '自動提取的片段'
+                })
+            except ValueError:
+                continue
+        
+        print(f"📝 從文字中提取到 {len(points)} 個時間戳")
+        return points
+    
     def _parse_response(self, response_text: str) -> Dict[str, Any]:
         """解析 Gemini 回應"""
         import json
@@ -537,11 +603,19 @@ class MatchAnalyzer:
             clean_text = clean_text.strip()
             
             # 解析 JSON
+            parsed = None
+            last_error = None
+            
+            # 嘗試 1: 直接解析
             try:
                 parsed = json.loads(clean_text)
-            except json.JSONDecodeError:
-                # 如果直接解析失敗，嘗試尋找 JSON 區塊
-                # 尋找第一個 { 和最後一個 }
+                print("✅ JSON 直接解析成功")
+            except json.JSONDecodeError as e:
+                last_error = e
+                print(f"⚠️ 直接解析失敗: {e}")
+            
+            # 嘗試 2: 提取 JSON 區塊
+            if parsed is None:
                 start_idx = response_text.find('{')
                 end_idx = response_text.rfind('}')
                 
@@ -550,11 +624,35 @@ class MatchAnalyzer:
                     try:
                         parsed = json.loads(json_str)
                         print("✅ 成功從文字中提取 JSON")
-                    except json.JSONDecodeError:
-                         print(f"⚠️ JSON 提取後解析仍失敗: {json_str[:100]}...")
-                         raise
+                    except json.JSONDecodeError as e:
+                        last_error = e
+                        print(f"⚠️ JSON 提取後解析失敗: {e}")
+                        
+                        # 嘗試 3: 修復 JSON 後再解析
+                        try:
+                            repaired = self._repair_json(json_str)
+                            parsed = json.loads(repaired)
+                            print("✅ JSON 修復後解析成功")
+                        except json.JSONDecodeError as e2:
+                            last_error = e2
+                            print(f"⚠️ JSON 修復後仍失敗: {e2}")
+            
+            # 如果所有 JSON 解析都失敗，嘗試從文字提取時間戳
+            if parsed is None:
+                print(f"⚠️ JSON 解析失敗，嘗試從文字提取時間戳")
+                extracted_points = self._extract_timestamps_from_text(response_text)
+                
+                if extracted_points:
+                    # 建立基本結構
+                    parsed = {
+                        'points': extracted_points,
+                        'match_overview': {'match_type': '未知', 'score_summary': '解析失敗'},
+                        'player1_analysis': {'name': '選手A', 'strengths': [], 'weaknesses': []},
+                        'summary': {'overall_assessment': '由於格式問題，僅提取到時間戳資訊'}
+                    }
+                    print(f"✅ 成功從文字提取 {len(extracted_points)} 個片段")
                 else:
-                    raise
+                    raise json.JSONDecodeError("無法解析 JSON 且無法提取時間戳", str(last_error), 0)
             
             # --- 相容性轉換 ---
             # 新版 Prompt 回傳 'points' 列表，需轉換為舊版的 point_wins / point_losses
@@ -647,12 +745,27 @@ class MatchAnalyzer:
             }
         except json.JSONDecodeError as e:
             print(f"⚠️ JSON 解析失敗，使用原始文字: {e}")
-            # 如果無法解析 JSON，回退到原始文字
+            
+            # 最後嘗試：從文字中提取時間戳
+            extracted_points = self._extract_timestamps_from_text(response_text)
+            
+            # 將提取的點分配為得分/失分 (無法區分時全部當作得分)
+            point_wins = []
+            for i, p in enumerate(extracted_points):
+                point_wins.append({
+                    'id': p.get('id', i+1),
+                    'start_seconds': p.get('start_seconds'),
+                    'end_seconds': p.get('end_seconds'),
+                    'timestamp_display': p.get('timestamp_display', '??:??'),
+                    'description': p.get('description', '自動提取'),
+                    'win_type': '回合片段'
+                })
+            
             return {
                 'success': True,
                 'raw_analysis': response_text,
                 'structured_data': None,
-                'point_wins': [],
+                'point_wins': point_wins,
                 'point_losses': [],
                 'sections': self._extract_sections(response_text)
             }
