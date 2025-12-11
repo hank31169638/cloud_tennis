@@ -29,9 +29,12 @@ export default function LiveAnalysisPage() {
   const [matchState, setMatchState] = useState<MatchState | null>(null);
   const [error, setError] = useState<string | null>(null);
   const [cameraError, setCameraError] = useState<string | null>(null);
+  const [enablePose, setEnablePose] = useState(true);
+  const [poseFrameUrl, setPoseFrameUrl] = useState<string | null>(null);
   
   const videoRef = useRef<HTMLVideoElement>(null);
   const canvasRef = useRef<HTMLCanvasElement>(null);
+  const poseCanvasRef = useRef<HTMLCanvasElement>(null);
   const socketRef = useRef<WebSocket | null>(null);
   const streamRef = useRef<MediaStream | null>(null);
   const frameIntervalRef = useRef<NodeJS.Timeout | null>(null);
@@ -141,6 +144,14 @@ export default function LiveAnalysisPage() {
           case 'error':
             setError(payload.message);
             break;
+          case 'frame_with_pose':
+            // 接收帶有骨架的視訊幀
+            console.log('📸 收到骨架幀:', payload.pose_data ? '有姿態資料' : '無姿態資料');
+            if (payload.frame) {
+              const imgUrl = `data:image/jpeg;base64,${payload.frame}`;
+              setPoseFrameUrl(imgUrl);
+            }
+            break;
         }
       }
     } catch (e) {
@@ -243,8 +254,11 @@ export default function LiveAnalysisPage() {
     // 轉換為 base64
     const frameData = canvas.toDataURL('image/jpeg', 0.7).split(',')[1];
     
-    // 發送幀
-    const payload = JSON.stringify(['video_frame', { frame: frameData }]);
+    // 發送幀 (包含 enable_pose 參數)
+    const payload = JSON.stringify(['video_frame', { 
+      frame: frameData,
+      enable_pose: enablePose 
+    }]);
     socketRef.current.send(`42/live,${payload}`);
   };
 
@@ -339,13 +353,25 @@ export default function LiveAnalysisPage() {
           <div className="lg:col-span-2 space-y-4">
             {/* 視訊畫面 */}
             <div className="bg-black rounded-2xl overflow-hidden shadow-2xl relative aspect-video">
+              {/* 原始視訊 (未分析時顯示) */}
               <video
                 ref={videoRef}
-                className="w-full h-full object-cover"
+                className={`w-full h-full object-cover ${isAnalyzing && enablePose && poseFrameUrl ? 'hidden' : ''}`}
                 playsInline
                 muted
               />
+              
+              {/* 骨架視訊 (分析時顯示) */}
+              {isAnalyzing && enablePose && poseFrameUrl && (
+                <img 
+                  src={poseFrameUrl} 
+                  alt="Pose Detection"
+                  className="w-full h-full object-cover"
+                />
+              )}
+              
               <canvas ref={canvasRef} className="hidden" />
+              <canvas ref={poseCanvasRef} className="hidden" />
               
               {/* 狀態覆蓋層 */}
               {!isAnalyzing && (
@@ -365,6 +391,13 @@ export default function LiveAnalysisPage() {
                     <span className="w-2 h-2 bg-white rounded-full animate-pulse"></span>
                     LIVE 分析中
                   </div>
+                  
+                  {/* 骨架偵測狀態 */}
+                  {enablePose && (
+                    <div className="absolute top-16 left-4 bg-purple-600 text-white px-3 py-1 rounded-lg text-sm flex items-center gap-2">
+                      🦴 骨架偵測中
+                    </div>
+                  )}
                   
                   {/* 比分顯示 */}
                   {matchState && (
@@ -401,6 +434,18 @@ export default function LiveAnalysisPage() {
                     disabled={isAnalyzing}
                   />
                 </div>
+                
+                {/* 骨架開關 */}
+                <label className="flex items-center gap-2 text-white cursor-pointer">
+                  <input
+                    type="checkbox"
+                    checked={enablePose}
+                    onChange={(e) => setEnablePose(e.target.checked)}
+                    disabled={isAnalyzing}
+                    className="w-5 h-5 rounded accent-purple-500"
+                  />
+                  <span className="text-sm">🦴 骨架偵測</span>
+                </label>
                 
                 {/* 開始/停止按鈕 */}
                 {!isAnalyzing ? (

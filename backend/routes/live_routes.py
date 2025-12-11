@@ -71,10 +71,10 @@ def init_live_routes(socketio):
                 try:
                     processed_frame, pose_data = service.detect_pose_and_draw(image_bytes)
                     
-                    # 發送帶骨架的影像回前端
+                    # 發送帶骨架的影像回前端 (只發送 base64，不含前綴)
                     frame_with_pose = base64.b64encode(processed_frame).decode('utf-8')
                     emit('frame_with_pose', {
-                        'frame': f'data:image/jpeg;base64,{frame_with_pose}',
+                        'frame': frame_with_pose,
                         'pose_data': pose_data
                     }, namespace='/live', room=session_id)
                 except Exception as e:

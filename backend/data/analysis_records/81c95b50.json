@@ -1,0 +1,685 @@
+{
+  "record_id": "81c95b50",
+  "video_id": "uWW_zHdyboo",
+  "video_title": "林昀儒 VS 李相秀｜2025 WTT冠軍賽 法蘭克福站 男單16強",
+  "video_url": "https://www.youtube.com/watch?v=uWW_zHdyboo",
+  "video_duration": 446,
+  "thumbnail_url": "https://img.youtube.com/vi/uWW_zHdyboo/maxresdefault.jpg",
+  "player_focus": "林昀儒",
+  "player2_focus": "李相秀",
+  "analysis_result": {
+    "success": true,
+    "raw_analysis": "## 📊 比賽概況\n- 比賽類型：未知\n- 比分概況：解析失敗\n- 關鍵轉折：無\n\n## 🏆 總結",
+    "structured_data": {
+      "points": [
+        {
+          "id": 1,
+          "start_seconds": 5.0,
+          "end_seconds": 11.8,
+          "timestamp_display": "0:05",
+          "description": "林昀儒發反手短球，李相秀搓球過高，林昀儒直接側身正手搶攻得分。",
+          "winner": "林昀儒",
+          "win_reason": "對手接發失誤",
+          "key_technique": ""
+        },
+        {
+          "id": 1,
+          "start_seconds": 19.5,
+          "end_seconds": 25.5,
+          "timestamp_display": "0:19",
+          "description": "林昀儒發反手短球，李相秀搓球過高，林昀儒直接側身正手搶攻得分。",
+          "winner": "林昀儒",
+          "win_reason": "對手接發失誤",
+          "key_technique": "正手搶攻"
+        },
+        {
+          "id": 3,
+          "start_seconds": 25.5,
+          "end_seconds": 31.0,
+          "timestamp_display": "0:25",
+          "description": "林昀儒發正手短球，李相秀反手擰拉至中路，林昀儒回球後，李相秀側身反手變線攻擊直線得分。",
+          "winner": "李相秀",
+          "win_reason": "主動得分",
+          "key_technique": "反手變線"
+        },
+        {
+          "id": 3,
+          "start_seconds": 29.0,
+          "end_seconds": 35.0,
+          "timestamp_display": "0:29",
+          "description": "林昀儒發球，李相秀擺短，林昀儒反手擰拉，但力量過大導致球出界失分。",
+          "winner": "李相秀",
+          "win_reason": "對手失誤",
+          "key_technique": "反手擰拉失誤"
+        },
+        {
+          "id": 4,
+          "start_seconds": 44.0,
+          "end_seconds": 51.0,
+          "timestamp_display": "0:44",
+          "description": "李相秀發球，林昀儒反手擰拉，李相秀防守回球下網。",
+          "winner": "林昀儒",
+          "win_reason": "對手失誤",
+          "key_technique": "反手擰拉接發"
+        },
+        {
+          "id": 6,
+          "start_seconds": 59.5,
+          "end_seconds": 106.0,
+          "timestamp_display": "0:59",
+          "description": "林昀儒發球，李相秀擺短，林昀儒上前正手挑球，但擊中球拍邊緣導致出界。",
+          "winner": "李相秀",
+          "win_reason": "對手失誤",
+          "key_technique": "正手挑球失誤"
+        },
+        {
+          "id": 7,
+          "start_seconds": 119.5,
+          "end_seconds": 127.0,
+          "timestamp_display": "1:59",
+          "description": "林昀儒發球，李相秀擰拉，林昀儒輕帶一板，李相秀直接反手發力攻擊大角度斜線得分。",
+          "winner": "李相秀",
+          "win_reason": "主動得分",
+          "key_technique": "反手發力變線"
+        },
+        {
+          "id": 8,
+          "start_seconds": 138.5,
+          "end_seconds": 150.0,
+          "timestamp_display": "2:18",
+          "description": "林昀儒發球，李相秀擺短，林昀儒反手擰拉，李相秀側身正手反拉，林昀儒快速反應反手回擊得分。",
+          "winner": "林昀儒",
+          "win_reason": "主動得分",
+          "key_technique": "反手快速銜接"
+        },
+        {
+          "id": 9,
+          "start_seconds": 201.5,
+          "end_seconds": 206.0,
+          "timestamp_display": "3:21",
+          "description": "林昀儒發球，雙方進入反手相持對拉，李相秀在多拍來回後回球出界，林昀儒拿下第一局。",
+          "winner": "林昀儒",
+          "win_reason": "對手失誤",
+          "key_technique": "反手相持穩定性"
+        },
+        {
+          "id": 10,
+          "start_seconds": 220.0,
+          "end_seconds": 232.5,
+          "timestamp_display": "3:40",
+          "description": "李相秀發球後側身搶攻，林昀儒防守一板，雙方進入中台對拉，最終李相秀正手回擊下網。",
+          "winner": "林昀儒",
+          "win_reason": "對手失誤",
+          "key_technique": "中台防守反擊"
+        },
+        {
+          "id": 11,
+          "start_seconds": 244.0,
+          "end_seconds": 255.0,
+          "timestamp_display": "4:04",
+          "description": "林昀儒發球後，雙方形成遠台對拉，林昀儒在被動防守中一板反手回球幸運地擦到桌面邊角，李相秀未能接到。",
+          "winner": "林昀儒",
+          "win_reason": "幸運擦邊得分",
+          "key_technique": "遠台防守"
+        },
+        {
+          "id": 12,
+          "start_seconds": 307.0,
+          "end_seconds": 311.0,
+          "timestamp_display": "5:07",
+          "description": "李相秀發球，林昀儒將球回到中路，李相秀側身正手搶攻，林昀儒放高球防守，李相秀追擊高球時攻擊出界。",
+          "winner": "林昀儒",
+          "win_reason": "對手失誤",
+          "key_technique": "防守放高球"
+        },
+        {
+          "id": 13,
+          "start_seconds": 311.0,
+          "end_seconds": 317.0,
+          "timestamp_display": "5:11",
+          "description": "林昀儒發球，李相秀擺短，林昀儒迅速上前反手彈擊直線得分，展現極快的反應速度。",
+          "winner": "林昀儒",
+          "win_reason": "主動得分",
+          "key_technique": "反手彈擊"
+        },
+        {
+          "id": 14,
+          "start_seconds": 317.0,
+          "end_seconds": 321.0,
+          "timestamp_display": "5:17",
+          "description": "林昀儒發短球，李相秀回球稍高，林昀儒直接正手挑打得分，取得局點。",
+          "winner": "林昀儒",
+          "win_reason": "主動得分",
+          "key_technique": "正手挑打"
+        },
+        {
+          "id": 14,
+          "start_seconds": 321.0,
+          "end_seconds": 328.0,
+          "timestamp_display": "5:21",
+          "description": "李相秀發球，林昀儒反手擰拉接發，但球直接飛出界外。",
+          "winner": "李相秀",
+          "win_reason": "對手失誤",
+          "key_technique": "接發球失誤"
+        },
+        {
+          "id": 16,
+          "start_seconds": 345.5,
+          "end_seconds": 355.0,
+          "timestamp_display": "5:45",
+          "description": "李相秀發球，林昀儒反手擰拉，李相秀反拉一板，林昀儒在相持中回球出界。",
+          "winner": "李相秀",
+          "win_reason": "對手失誤",
+          "key_technique": "反手相持失誤"
+        },
+        {
+          "id": 17,
+          "start_seconds": 403.0,
+          "end_seconds": 414.0,
+          "timestamp_display": "6:43",
+          "description": "林昀儒發球後與李相秀形成多拍對拉，在被調動至正手位後，林昀儒回球出界，比分來到10:10。",
+          "winner": "李相秀",
+          "win_reason": "對手失誤",
+          "key_technique": "正手對拉失誤"
+        },
+        {
+          "id": 18,
+          "start_seconds": 430.0,
+          "end_seconds": 435.0,
+          "timestamp_display": "7:10",
+          "description": "李相秀發不轉短球，林昀儒判斷失誤，反手擰拉直接出界，李相秀拿下第二局。",
+          "winner": "李相秀",
+          "win_reason": "對手接發失誤",
+          "key_technique": "接發球判斷失誤"
+        },
+        {
+          "id": 18,
+          "start_seconds": 443.5,
+          "end_seconds": 447.0,
+          "timestamp_display": "7:23",
+          "description": "林昀儒發球，李相秀反手擰拉接發，但球直接出界。",
+          "winner": "林昀儒",
+          "win_reason": "對手接發失誤",
+          "key_technique": "發球壓制"
+        }
+      ],
+      "match_overview": {
+        "match_type": "未知",
+        "score_summary": "解析失敗"
+      },
+      "player1_analysis": {
+        "name": "選手A",
+        "strengths": [],
+        "weaknesses": []
+      },
+      "summary": {
+        "overall_assessment": "由於格式問題，僅提取到時間戳資訊"
+      }
+    },
+    "point_wins": [],
+    "point_losses": [
+      {
+        "id": 1,
+        "start_seconds": 5.0,
+        "end_seconds": 11.8,
+        "timestamp_display": "0:05",
+        "description": "林昀儒發反手短球，李相秀搓球過高，林昀儒直接側身正手搶攻得分。",
+        "serve_time": null,
+        "dead_ball_time": null,
+        "winner": "林昀儒",
+        "loss_type": "對手接發失誤",
+        "technical_issue": "",
+        "clip_path": "/uploads/clips/uWW_zHdyboo/loss_1.mp4"
+      },
+      {
+        "id": 1,
+        "start_seconds": 19.5,
+        "end_seconds": 25.5,
+        "timestamp_display": "0:19",
+        "description": "林昀儒發反手短球，李相秀搓球過高，林昀儒直接側身正手搶攻得分。",
+        "serve_time": null,
+        "dead_ball_time": null,
+        "winner": "林昀儒",
+        "loss_type": "對手接發失誤",
+        "technical_issue": "正手搶攻",
+        "clip_path": "/uploads/clips/uWW_zHdyboo/loss_1.mp4"
+      },
+      {
+        "id": 3,
+        "start_seconds": 25.5,
+        "end_seconds": 31.0,
+        "timestamp_display": "0:25",
+        "description": "林昀儒發正手短球，李相秀反手擰拉至中路，林昀儒回球後，李相秀側身反手變線攻擊直線得分。",
+        "serve_time": null,
+        "dead_ball_time": null,
+        "winner": "李相秀",
+        "loss_type": "主動得分",
+        "technical_issue": "反手變線",
+        "clip_path": "/uploads/clips/uWW_zHdyboo/loss_3.mp4"
+      },
+      {
+        "id": 3,
+        "start_seconds": 29.0,
+        "end_seconds": 35.0,
+        "timestamp_display": "0:29",
+        "description": "林昀儒發球，李相秀擺短，林昀儒反手擰拉，但力量過大導致球出界失分。",
+        "serve_time": null,
+        "dead_ball_time": null,
+        "winner": "李相秀",
+        "loss_type": "對手失誤",
+        "technical_issue": "反手擰拉失誤",
+        "clip_path": "/uploads/clips/uWW_zHdyboo/loss_3.mp4"
+      },
+      {
+        "id": 4,
+        "start_seconds": 44.0,
+        "end_seconds": 51.0,
+        "timestamp_display": "0:44",
+        "description": "李相秀發球，林昀儒反手擰拉，李相秀防守回球下網。",
+        "serve_time": null,
+        "dead_ball_time": null,
+        "winner": "林昀儒",
+        "loss_type": "對手失誤",
+        "technical_issue": "反手擰拉接發",
+        "clip_path": "/uploads/clips/uWW_zHdyboo/loss_4.mp4"
+      },
+      {
+        "id": 6,
+        "start_seconds": 59.5,
+        "end_seconds": 106.0,
+        "timestamp_display": "0:59",
+        "description": "林昀儒發球，李相秀擺短，林昀儒上前正手挑球，但擊中球拍邊緣導致出界。",
+        "serve_time": null,
+        "dead_ball_time": null,
+        "winner": "李相秀",
+        "loss_type": "對手失誤",
+        "technical_issue": "正手挑球失誤",
+        "clip_path": "/uploads/clips/uWW_zHdyboo/loss_6.mp4"
+      },
+      {
+        "id": 7,
+        "start_seconds": 119.5,
+        "end_seconds": 127.0,
+        "timestamp_display": "1:59",
+        "description": "林昀儒發球，李相秀擰拉，林昀儒輕帶一板，李相秀直接反手發力攻擊大角度斜線得分。",
+        "serve_time": null,
+        "dead_ball_time": null,
+        "winner": "李相秀",
+        "loss_type": "主動得分",
+        "technical_issue": "反手發力變線",
+        "clip_path": "/uploads/clips/uWW_zHdyboo/loss_7.mp4"
+      },
+      {
+        "id": 8,
+        "start_seconds": 138.5,
+        "end_seconds": 150.0,
+        "timestamp_display": "2:18",
+        "description": "林昀儒發球，李相秀擺短，林昀儒反手擰拉，李相秀側身正手反拉，林昀儒快速反應反手回擊得分。",
+        "serve_time": null,
+        "dead_ball_time": null,
+        "winner": "林昀儒",
+        "loss_type": "主動得分",
+        "technical_issue": "反手快速銜接",
+        "clip_path": "/uploads/clips/uWW_zHdyboo/loss_8.mp4"
+      },
+      {
+        "id": 9,
+        "start_seconds": 201.5,
+        "end_seconds": 206.0,
+        "timestamp_display": "3:21",
+        "description": "林昀儒發球，雙方進入反手相持對拉，李相秀在多拍來回後回球出界，林昀儒拿下第一局。",
+        "serve_time": null,
+        "dead_ball_time": null,
+        "winner": "林昀儒",
+        "loss_type": "對手失誤",
+        "technical_issue": "反手相持穩定性",
+        "clip_path": "/uploads/clips/uWW_zHdyboo/loss_9.mp4"
+      },
+      {
+        "id": 10,
+        "start_seconds": 220.0,
+        "end_seconds": 232.5,
+        "timestamp_display": "3:40",
+        "description": "李相秀發球後側身搶攻，林昀儒防守一板，雙方進入中台對拉，最終李相秀正手回擊下網。",
+        "serve_time": null,
+        "dead_ball_time": null,
+        "winner": "林昀儒",
+        "loss_type": "對手失誤",
+        "technical_issue": "中台防守反擊",
+        "clip_path": "/uploads/clips/uWW_zHdyboo/loss_10.mp4"
+      },
+      {
+        "id": 11,
+        "start_seconds": 244.0,
+        "end_seconds": 255.0,
+        "timestamp_display": "4:04",
+        "description": "林昀儒發球後，雙方形成遠台對拉，林昀儒在被動防守中一板反手回球幸運地擦到桌面邊角，李相秀未能接到。",
+        "serve_time": null,
+        "dead_ball_time": null,
+        "winner": "林昀儒",
+        "loss_type": "幸運擦邊得分",
+        "technical_issue": "遠台防守",
+        "clip_path": "/uploads/clips/uWW_zHdyboo/loss_11.mp4"
+      },
+      {
+        "id": 12,
+        "start_seconds": 307.0,
+        "end_seconds": 311.0,
+        "timestamp_display": "5:07",
+        "description": "李相秀發球，林昀儒將球回到中路，李相秀側身正手搶攻，林昀儒放高球防守，李相秀追擊高球時攻擊出界。",
+        "serve_time": null,
+        "dead_ball_time": null,
+        "winner": "林昀儒",
+        "loss_type": "對手失誤",
+        "technical_issue": "防守放高球",
+        "clip_path": "/uploads/clips/uWW_zHdyboo/loss_12.mp4"
+      },
+      {
+        "id": 13,
+        "start_seconds": 311.0,
+        "end_seconds": 317.0,
+        "timestamp_display": "5:11",
+        "description": "林昀儒發球，李相秀擺短，林昀儒迅速上前反手彈擊直線得分，展現極快的反應速度。",
+        "serve_time": null,
+        "dead_ball_time": null,
+        "winner": "林昀儒",
+        "loss_type": "主動得分",
+        "technical_issue": "反手彈擊",
+        "clip_path": "/uploads/clips/uWW_zHdyboo/loss_13.mp4"
+      },
+      {
+        "id": 14,
+        "start_seconds": 317.0,
+        "end_seconds": 321.0,
+        "timestamp_display": "5:17",
+        "description": "林昀儒發短球，李相秀回球稍高，林昀儒直接正手挑打得分，取得局點。",
+        "serve_time": null,
+        "dead_ball_time": null,
+        "winner": "林昀儒",
+        "loss_type": "主動得分",
+        "technical_issue": "正手挑打",
+        "clip_path": "/uploads/clips/uWW_zHdyboo/loss_14.mp4"
+      },
+      {
+        "id": 14,
+        "start_seconds": 321.0,
+        "end_seconds": 328.0,
+        "timestamp_display": "5:21",
+        "description": "李相秀發球，林昀儒反手擰拉接發，但球直接飛出界外。",
+        "serve_time": null,
+        "dead_ball_time": null,
+        "winner": "李相秀",
+        "loss_type": "對手失誤",
+        "technical_issue": "接發球失誤",
+        "clip_path": "/uploads/clips/uWW_zHdyboo/loss_14.mp4"
+      },
+      {
+        "id": 16,
+        "start_seconds": 345.5,
+        "end_seconds": 355.0,
+        "timestamp_display": "5:45",
+        "description": "李相秀發球，林昀儒反手擰拉，李相秀反拉一板，林昀儒在相持中回球出界。",
+        "serve_time": null,
+        "dead_ball_time": null,
+        "winner": "李相秀",
+        "loss_type": "對手失誤",
+        "technical_issue": "反手相持失誤",
+        "clip_path": "/uploads/clips/uWW_zHdyboo/loss_16.mp4"
+      },
+      {
+        "id": 17,
+        "start_seconds": 403.0,
+        "end_seconds": 414.0,
+        "timestamp_display": "6:43",
+        "description": "林昀儒發球後與李相秀形成多拍對拉，在被調動至正手位後，林昀儒回球出界，比分來到10:10。",
+        "serve_time": null,
+        "dead_ball_time": null,
+        "winner": "李相秀",
+        "loss_type": "對手失誤",
+        "technical_issue": "正手對拉失誤",
+        "clip_path": "/uploads/clips/uWW_zHdyboo/loss_17.mp4"
+      },
+      {
+        "id": 18,
+        "start_seconds": 430.0,
+        "end_seconds": 435.0,
+        "timestamp_display": "7:10",
+        "description": "李相秀發不轉短球，林昀儒判斷失誤，反手擰拉直接出界，李相秀拿下第二局。",
+        "serve_time": null,
+        "dead_ball_time": null,
+        "winner": "李相秀",
+        "loss_type": "對手接發失誤",
+        "technical_issue": "接發球判斷失誤",
+        "clip_path": "/uploads/clips/uWW_zHdyboo/loss_18.mp4"
+      },
+      {
+        "id": 18,
+        "start_seconds": 443.5,
+        "end_seconds": 447.0,
+        "timestamp_display": "7:23",
+        "description": "林昀儒發球，李相秀反手擰拉接發，但球直接出界。",
+        "serve_time": null,
+        "dead_ball_time": null,
+        "winner": "林昀儒",
+        "loss_type": "對手接發失誤",
+        "technical_issue": "發球壓制",
+        "clip_path": "/uploads/clips/uWW_zHdyboo/loss_18.mp4"
+      }
+    ],
+    "points": [
+      {
+        "id": 1,
+        "start_seconds": 5.0,
+        "end_seconds": 11.8,
+        "timestamp_display": "0:05",
+        "description": "林昀儒發反手短球，李相秀搓球過高，林昀儒直接側身正手搶攻得分。",
+        "winner": "林昀儒",
+        "win_reason": "對手接發失誤",
+        "key_technique": ""
+      },
+      {
+        "id": 1,
+        "start_seconds": 19.5,
+        "end_seconds": 25.5,
+        "timestamp_display": "0:19",
+        "description": "林昀儒發反手短球，李相秀搓球過高，林昀儒直接側身正手搶攻得分。",
+        "winner": "林昀儒",
+        "win_reason": "對手接發失誤",
+        "key_technique": "正手搶攻"
+      },
+      {
+        "id": 3,
+        "start_seconds": 25.5,
+        "end_seconds": 31.0,
+        "timestamp_display": "0:25",
+        "description": "林昀儒發正手短球，李相秀反手擰拉至中路，林昀儒回球後，李相秀側身反手變線攻擊直線得分。",
+        "winner": "李相秀",
+        "win_reason": "主動得分",
+        "key_technique": "反手變線"
+      },
+      {
+        "id": 3,
+        "start_seconds": 29.0,
+        "end_seconds": 35.0,
+        "timestamp_display": "0:29",
+        "description": "林昀儒發球，李相秀擺短，林昀儒反手擰拉，但力量過大導致球出界失分。",
+        "winner": "李相秀",
+        "win_reason": "對手失誤",
+        "key_technique": "反手擰拉失誤"
+      },
+      {
+        "id": 4,
+        "start_seconds": 44.0,
+        "end_seconds": 51.0,
+        "timestamp_display": "0:44",
+        "description": "李相秀發球，林昀儒反手擰拉，李相秀防守回球下網。",
+        "winner": "林昀儒",
+        "win_reason": "對手失誤",
+        "key_technique": "反手擰拉接發"
+      },
+      {
+        "id": 6,
+        "start_seconds": 59.5,
+        "end_seconds": 106.0,
+        "timestamp_display": "0:59",
+        "description": "林昀儒發球，李相秀擺短，林昀儒上前正手挑球，但擊中球拍邊緣導致出界。",
+        "winner": "李相秀",
+        "win_reason": "對手失誤",
+        "key_technique": "正手挑球失誤"
+      },
+      {
+        "id": 7,
+        "start_seconds": 119.5,
+        "end_seconds": 127.0,
+        "timestamp_display": "1:59",
+        "description": "林昀儒發球，李相秀擰拉，林昀儒輕帶一板，李相秀直接反手發力攻擊大角度斜線得分。",
+        "winner": "李相秀",
+        "win_reason": "主動得分",
+        "key_technique": "反手發力變線"
+      },
+      {
+        "id": 8,
+        "start_seconds": 138.5,
+        "end_seconds": 150.0,
+        "timestamp_display": "2:18",
+        "description": "林昀儒發球，李相秀擺短，林昀儒反手擰拉，李相秀側身正手反拉，林昀儒快速反應反手回擊得分。",
+        "winner": "林昀儒",
+        "win_reason": "主動得分",
+        "key_technique": "反手快速銜接"
+      },
+      {
+        "id": 9,
+        "start_seconds": 201.5,
+        "end_seconds": 206.0,
+        "timestamp_display": "3:21",
+        "description": "林昀儒發球，雙方進入反手相持對拉，李相秀在多拍來回後回球出界，林昀儒拿下第一局。",
+        "winner": "林昀儒",
+        "win_reason": "對手失誤",
+        "key_technique": "反手相持穩定性"
+      },
+      {
+        "id": 10,
+        "start_seconds": 220.0,
+        "end_seconds": 232.5,
+        "timestamp_display": "3:40",
+        "description": "李相秀發球後側身搶攻，林昀儒防守一板，雙方進入中台對拉，最終李相秀正手回擊下網。",
+        "winner": "林昀儒",
+        "win_reason": "對手失誤",
+        "key_technique": "中台防守反擊"
+      },
+      {
+        "id": 11,
+        "start_seconds": 244.0,
+        "end_seconds": 255.0,
+        "timestamp_display": "4:04",
+        "description": "林昀儒發球後，雙方形成遠台對拉，林昀儒在被動防守中一板反手回球幸運地擦到桌面邊角，李相秀未能接到。",
+        "winner": "林昀儒",
+        "win_reason": "幸運擦邊得分",
+        "key_technique": "遠台防守"
+      },
+      {
+        "id": 12,
+        "start_seconds": 307.0,
+        "end_seconds": 311.0,
+        "timestamp_display": "5:07",
+        "description": "李相秀發球，林昀儒將球回到中路，李相秀側身正手搶攻，林昀儒放高球防守，李相秀追擊高球時攻擊出界。",
+        "winner": "林昀儒",
+        "win_reason": "對手失誤",
+        "key_technique": "防守放高球"
+      },
+      {
+        "id": 13,
+        "start_seconds": 311.0,
+        "end_seconds": 317.0,
+        "timestamp_display": "5:11",
+        "description": "林昀儒發球，李相秀擺短，林昀儒迅速上前反手彈擊直線得分，展現極快的反應速度。",
+        "winner": "林昀儒",
+        "win_reason": "主動得分",
+        "key_technique": "反手彈擊"
+      },
+      {
+        "id": 14,
+        "start_seconds": 317.0,
+        "end_seconds": 321.0,
+        "timestamp_display": "5:17",
+        "description": "林昀儒發短球，李相秀回球稍高，林昀儒直接正手挑打得分，取得局點。",
+        "winner": "林昀儒",
+        "win_reason": "主動得分",
+        "key_technique": "正手挑打"
+      },
+      {
+        "id": 14,
+        "start_seconds": 321.0,
+        "end_seconds": 328.0,
+        "timestamp_display": "5:21",
+        "description": "李相秀發球，林昀儒反手擰拉接發，但球直接飛出界外。",
+        "winner": "李相秀",
+        "win_reason": "對手失誤",
+        "key_technique": "接發球失誤"
+      },
+      {
+        "id": 16,
+        "start_seconds": 345.5,
+        "end_seconds": 355.0,
+        "timestamp_display": "5:45",
+        "description": "李相秀發球，林昀儒反手擰拉，李相秀反拉一板，林昀儒在相持中回球出界。",
+        "winner": "李相秀",
+        "win_reason": "對手失誤",
+        "key_technique": "反手相持失誤"
+      },
+      {
+        "id": 17,
+        "start_seconds": 403.0,
+        "end_seconds": 414.0,
+        "timestamp_display": "6:43",
+        "description": "林昀儒發球後與李相秀形成多拍對拉，在被調動至正手位後，林昀儒回球出界，比分來到10:10。",
+        "winner": "李相秀",
+        "win_reason": "對手失誤",
+        "key_technique": "正手對拉失誤"
+      },
+      {
+        "id": 18,
+        "start_seconds": 430.0,
+        "end_seconds": 435.0,
+        "timestamp_display": "7:10",
+        "description": "李相秀發不轉短球，林昀儒判斷失誤，反手擰拉直接出界，李相秀拿下第二局。",
+        "winner": "李相秀",
+        "win_reason": "對手接發失誤",
+        "key_technique": "接發球判斷失誤"
+      },
+      {
+        "id": 18,
+        "start_seconds": 443.5,
+        "end_seconds": 447.0,
+        "timestamp_display": "7:23",
+        "description": "林昀儒發球，李相秀反手擰拉接發，但球直接出界。",
+        "winner": "林昀儒",
+        "win_reason": "對手接發失誤",
+        "key_technique": "發球壓制"
+      }
+    ],
+    "player1_analysis": {
+      "name": "選手A",
+      "strengths": [],
+      "weaknesses": []
+    },
+    "player2_analysis": null,
+    "match_overview": {
+      "match_type": "未知",
+      "score_summary": "解析失敗"
+    },
+    "sections": {
+      "match_overview": {
+        "match_type": "未知",
+        "score_summary": "解析失敗"
+      },
+      "strengths": [],
+      "weaknesses": [],
+      "training_suggestions": [],
+      "summary": {
+        "overall_assessment": "由於格式問題，僅提取到時間戳資訊"
+      }
+    }
+  },
+  "created_at": "2025-12-11T13:26:00.582216"
+}
