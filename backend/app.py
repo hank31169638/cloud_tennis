@@ -51,7 +51,7 @@ def create_app() -> Flask:
     socketio = SocketIO(
         app,
         cors_allowed_origins="*",
-        async_mode='threading',
+        async_mode=os.getenv('ASYNC_MODE', 'threading'),
         logger=False,
         engineio_logger=False
     )

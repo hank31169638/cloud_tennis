@@ -1,0 +1,11 @@
+[[services]]
+name = "frontend"
+dir = "frontend"
+command = "npm run start"
+
+[[services]]
+name = "backend"
+dir = "backend"
+# 使用 gunicorn 運行 Flask 應用 (生產環境推薦)
+# 設定 ASYNC_MODE 為 eventlet 以配合 gunicorn worker
+command = "export ASYNC_MODE=eventlet && gunicorn -k eventlet -w 1 app:app" 

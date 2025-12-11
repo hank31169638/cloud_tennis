@@ -74,7 +74,7 @@ class PathConfig:
 class AIConfig:
     """AI 相關配置"""
     GEMINI_API_KEY: Optional[str] = field(default_factory=lambda: os.getenv('GEMINI_API_KEY'))
-    GEMINI_MODEL: str = field(default_factory=lambda: os.getenv('GEMINI_MODEL', 'gemini-2.5-pro'))
+    GEMINI_MODEL: str = field(default_factory=lambda: os.getenv('GEMINI_MODEL', 'gemini-3-pro-preview'))
     MAX_VIDEO_DURATION: int = 10  # 秒
     RECOMMENDED_VIDEO_DURATION: int = 4  # 秒
     SUPPORTED_VIDEO_FORMATS: List[str] = field(default_factory=lambda: ['mp4', 'avi', 'mov', 'mkv'])

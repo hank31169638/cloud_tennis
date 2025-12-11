@@ -46,7 +46,7 @@ class FailureAnalyzer:
         if self.api_key:
             genai.configure(api_key=self.api_key)
             # 使用 Gemini 2.5 Pro 模型
-            self.model = genai.GenerativeModel('gemini-2.5-pro')
+            self.model = genai.GenerativeModel('gemini-3-pro-preview')
         else:
             self.model = None
             print("⚠️  未設定 GEMINI_API_KEY，將使用基礎分析模式")

@@ -219,7 +219,7 @@ class MatchAnalyzer:
             raise ValueError("需要 GEMINI_API_KEY")
         
         genai.configure(api_key=self.api_key)
-        self.model = genai.GenerativeModel('gemini-3.0-pro-preview')
+        self.model = genai.GenerativeModel('gemini-3-pro-preview')
     
     def analyze_match(self, video_path: str, player_focus: str = None, player2_focus: str = None, description1: str = None, description2: str = None) -> Dict[str, Any]:
         """
