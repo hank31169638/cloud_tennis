@@ -778,8 +778,9 @@ class MatchAnalyzer:
                     is_p1_win = False
                     is_unknown = False
                     
-                    # Debug 輸出
-                    print(f"🔍 回合 {p.get('id')}: winner='{winner}', p1_name='{p1_name}', player_focus='{player_focus}'")
+                    # Debug 輸出 (確保 player_focus 有值，避免作用域問題)
+                    focus_display = player_focus if player_focus else 'None'
+                    print(f"🔍 回合 {p.get('id')}: winner='{winner}', p1_name='{p1_name}', player_focus='{focus_display}'")
                     
                     if not winner:
                         # 無法判斷勝負時，全部當作「回合片段」放到 point_wins
