@@ -30,16 +30,20 @@ export default function LiveAnalysisPage() {
   const [error, setError] = useState<string | null>(null);
   const [cameraError, setCameraError] = useState<string | null>(null);
   const [enablePose, setEnablePose] = useState(true);
-  const [poseFrameUrl, setPoseFrameUrl] = useState<string | null>(null);
+  const [poseLoaded, setPoseLoaded] = useState(false);
   
   const videoRef = useRef<HTMLVideoElement>(null);
   const canvasRef = useRef<HTMLCanvasElement>(null);
-  const poseCanvasRef = useRef<HTMLCanvasElement>(null);
+  const overlayCanvasRef = useRef<HTMLCanvasElement>(null);
   const socketRef = useRef<WebSocket | null>(null);
   const streamRef = useRef<MediaStream | null>(null);
   const frameIntervalRef = useRef<NodeJS.Timeout | null>(null);
+  const poseDetectionRef = useRef<NodeJS.Timeout | null>(null);
+  const poseRef = useRef<any>(null);
   
   const alertsEndRef = useRef<HTMLDivElement>(null);
+  const drawingUtilsRef = useRef<any>(null);
+  const poseConnectionsRef = useRef<any>(null);
   
   const apiUrl = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:5000';
   const wsUrl = apiUrl.replace('http', 'ws');
@@ -48,6 +52,113 @@ export default function LiveAnalysisPage() {
   useEffect(() => {
     alertsEndRef.current?.scrollIntoView({ behavior: 'smooth' });
   }, [alerts]);
+
+  // 初始化 MediaPipe Pose (前端)
+  useEffect(() => {
+    const loadMediaPipe = async () => {
+      try {
+        // 動態載入 MediaPipe
+        const poseModule = await import('@mediapipe/pose');
+        const drawingModule = await import('@mediapipe/drawing_utils');
+        
+        const { Pose, POSE_CONNECTIONS } = poseModule;
+        const { drawConnectors, drawLandmarks } = drawingModule;
+        
+        // 保存引用
+        poseConnectionsRef.current = POSE_CONNECTIONS;
+        drawingUtilsRef.current = { drawConnectors, drawLandmarks };
+        
+        const pose = new Pose({
+          locateFile: (file: string) => {
+            return `https://cdn.jsdelivr.net/npm/@mediapipe/pose/${file}`;
+          }
+        });
+        
+        pose.setOptions({
+          modelComplexity: 1,
+          smoothLandmarks: true,
+          enableSegmentation: false,
+          minDetectionConfidence: 0.5,
+          minTrackingConfidence: 0.5
+        });
+        
+        pose.onResults((results: any) => {
+          if (!overlayCanvasRef.current || !videoRef.current) return;
+          
+          const canvas = overlayCanvasRef.current;
+          const ctx = canvas.getContext('2d');
+          if (!ctx) return;
+          
+          // 設置 canvas 尺寸與視訊相同
+          const videoWidth = videoRef.current.videoWidth || 640;
+          const videoHeight = videoRef.current.videoHeight || 480;
+          
+          if (canvas.width !== videoWidth || canvas.height !== videoHeight) {
+            canvas.width = videoWidth;
+            canvas.height = videoHeight;
+          }
+          
+          // 清除 canvas
+          ctx.clearRect(0, 0, canvas.width, canvas.height);
+          
+          // 繪製骨架
+          if (results.poseLandmarks && drawingUtilsRef.current && poseConnectionsRef.current) {
+            const { drawConnectors: dc, drawLandmarks: dl } = drawingUtilsRef.current;
+            
+            dc(ctx, results.poseLandmarks, poseConnectionsRef.current, {
+              color: '#00FF00',
+              lineWidth: 4
+            });
+            dl(ctx, results.poseLandmarks, {
+              color: '#FF0000',
+              lineWidth: 2,
+              radius: 6
+            });
+          }
+        });
+        
+        await pose.initialize();
+        poseRef.current = pose;
+        setPoseLoaded(true);
+        console.log('✅ MediaPipe Pose 已載入');
+      } catch (err) {
+        console.error('❌ MediaPipe Pose 載入失敗:', err);
+        setError('骨架偵測載入失敗: ' + (err as Error).message);
+      }
+    };
+    
+    if (enablePose && !poseLoaded) {
+      loadMediaPipe();
+    }
+  }, [enablePose, poseLoaded]);
+
+  // 即時骨架偵測
+  useEffect(() => {
+    if (!enablePose || !poseLoaded || !isAnalyzing || !poseRef.current) {
+      return;
+    }
+    
+    const detectPose = async () => {
+      if (videoRef.current && poseRef.current && videoRef.current.readyState >= 2) {
+        try {
+          await poseRef.current.send({ image: videoRef.current });
+        } catch (err) {
+          // 忽略偵測錯誤，避免過多 console 輸出
+        }
+      }
+    };
+    
+    // 每 66ms 偵測一次 (約 15 FPS)
+    poseDetectionRef.current = setInterval(detectPose, 66);
+    console.log('🦴 開始即時骨架偵測');
+    
+    return () => {
+      if (poseDetectionRef.current) {
+        clearInterval(poseDetectionRef.current);
+        console.log('⏹️ 停止骨架偵測');
+      }
+    };
+  }, [enablePose, poseLoaded, isAnalyzing]);
 
   // 初始化攝影機
   const initCamera = async () => {
@@ -358,32 +469,37 @@ export default function LiveAnalysisPage() {
           <div className="lg:col-span-2 space-y-4">
             {/* 視訊畫面 */}
             <div className="bg-black rounded-2xl overflow-hidden shadow-2xl relative aspect-video">
-              {/* 原始視訊 (未分析時顯示) */}
+              {/* 原始視訊 */}
               <video
                 ref={videoRef}
-                className={`w-full h-full object-cover ${isAnalyzing && enablePose && poseFrameUrl ? 'hidden' : ''}`}
+                className="w-full h-full object-cover"
                 playsInline
                 muted
               />
               
-              {/* 骨架視訊 (分析時顯示) */}
-              {isAnalyzing && enablePose && poseFrameUrl && (
-                <img 
-                  src={poseFrameUrl} 
-                  alt="Pose Detection"
-                  className="w-full h-full object-cover"
+              {/* 骨架覆蓋層 Canvas - 即時繪製骨架 */}
+              {enablePose && (
+                <canvas 
+                  ref={overlayCanvasRef}
+                  className="absolute top-0 left-0 w-full h-full pointer-events-none"
                 />
               )}
               
-              {/* Debug 信息 */}
-              {isAnalyzing && enablePose && !poseFrameUrl && (
+              {/* 骨架載入狀態 */}
+              {isAnalyzing && enablePose && !poseLoaded && (
                 <div className="absolute bottom-4 left-4 bg-yellow-600 text-white px-3 py-1 rounded text-xs">
-                  等待骨架數據...
+                  載入骨架模型中...
+                </div>
+              )}
+              
+              {/* 骨架偵測狀態 */}
+              {isAnalyzing && enablePose && poseLoaded && (
+                <div className="absolute bottom-4 left-4 bg-green-600 text-white px-3 py-1 rounded text-xs">
+                  🦴 骨架偵測中
                 </div>
               )}
               
               <canvas ref={canvasRef} className="hidden" />
-              <canvas ref={poseCanvasRef} className="hidden" />
               
               {/* 狀態覆蓋層 */}
               {!isAnalyzing && (
