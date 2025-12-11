@@ -110,8 +110,16 @@ def init_live_routes(socketio):
                 except Exception as e:
                     print(f"Local model error: {e}")
 
-            # 2. Gemini 分析 (異步)
-            asyncio.create_task(process_frame_async(service, frame_data, session_id, socketio))
+            # 2. Gemini 分析 (使用後台線程)
+            try:
+                import threading
+                thread = threading.Thread(
+                    target=lambda: asyncio.run(process_frame_async(service, frame_data, session_id, socketio))
+                )
+                thread.daemon = True
+                thread.start()
+            except Exception as e:
+                print(f"Gemini 分析啟動錯誤: {e}")
 
     @socketio.on('start_analysis', namespace='/live')
     def handle_start_analysis(data):
