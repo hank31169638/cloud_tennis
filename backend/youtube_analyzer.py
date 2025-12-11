@@ -764,18 +764,38 @@ class MatchAnalyzer:
                     }
                     
                     # 判斷是 Win 還是 Loss (相對於 Player 1)
-                    # 如果 winner 包含 p1_name (模糊比對)
+                    # 如果 winner 包含 p1_name 或 player_focus (模糊比對)
                     is_p1_win = False
                     is_unknown = False
+                    
+                    # Debug 輸出
+                    print(f"🔍 回合 {p.get('id')}: winner='{winner}', p1_name='{p1_name}', player_focus='{player_focus}'")
                     
                     if not winner:
                         # 無法判斷勝負時，全部當作「回合片段」放到 point_wins
                         is_unknown = True
                         is_p1_win = True
-                    elif p1_name and p1_name in winner:
-                        is_p1_win = True
-                    elif "選手A" in winner: # Default name
-                        is_p1_win = True
+                    else:
+                        # 多重判定策略：檢查 winner 是否包含關注選手的名字
+                        if p1_name and p1_name in winner:
+                            is_p1_win = True
+                        elif player_focus and player_focus in winner:
+                            is_p1_win = True
+                        elif "選手A" in winner:  # Default name
+                            is_p1_win = True
+                        # 特殊處理：若 winner 是「對手」則為失分
+                        elif "對手" in winner or "對方" in winner or "opponent" in winner.lower():
+                            is_p1_win = False
+                        else:
+                            # 預設：如果無法確定，檢查是否有第二位選手
+                            p2_name = parsed.get('player2_analysis', {}).get('name', '')
+                            if p2_name and p2_name in winner:
+                                is_p1_win = False
+                            else:
+                                # 最後預設為得分（保守策略）
+                                is_p1_win = True
+                    
+                    print(f"   → 判定: {'得分' if is_p1_win else '失分'}")
                     
                     if is_p1_win:
                         win_point = base_point.copy()
