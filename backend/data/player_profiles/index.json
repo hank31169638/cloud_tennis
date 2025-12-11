@@ -2,8 +2,8 @@
   "林昀儒": {
     "player_id": "林昀儒",
     "display_name": "林昀儒",
-    "total_matches": 3,
-    "last_updated": "2025-12-11T14:24:22.481095",
+    "total_matches": 4,
+    "last_updated": "2025-12-11T14:32:26.242342",
     "aggregate_ratings": {}
   },
   "松島輝空": {
@@ -24,7 +24,14 @@
     "player_id": "張本智和",
     "display_name": "張本智和",
     "total_matches": 1,
-    "last_updated": "2025-12-11T14:16:38.805673",
+    "last_updated": "2025-12-11T14:31:04.305904",
+    "aggregate_ratings": {}
+  },
+  "benedikt_duda": {
+    "player_id": "benedikt_duda",
+    "display_name": "Benedikt DUDA",
+    "total_matches": 1,
+    "last_updated": "2025-12-11T14:32:26.368886",
     "aggregate_ratings": {}
   }
 }

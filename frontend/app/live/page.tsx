@@ -3,6 +3,7 @@
 import { useState, useRef, useEffect, useCallback } from 'react';
 import Link from 'next/link';
 import Navbar from '../components/Navbar';
+import { io, Socket } from 'socket.io-client';
 
 interface Alert {
   id: string;
@@ -35,7 +36,7 @@ export default function LiveAnalysisPage() {
   const videoRef = useRef<HTMLVideoElement>(null);
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const overlayCanvasRef = useRef<HTMLCanvasElement>(null);
-  const socketRef = useRef<WebSocket | null>(null);
+  const socketRef = useRef<Socket | null>(null);
   const streamRef = useRef<MediaStream | null>(null);
   const frameIntervalRef = useRef<NodeJS.Timeout | null>(null);
   const poseDetectionRef = useRef<NodeJS.Timeout | null>(null);
@@ -199,80 +200,67 @@ export default function LiveAnalysisPage() {
     }
   };
 
-  // 連接 WebSocket
+  // 連接 Socket.IO
   const connectWebSocket = () => {
-    const socket = new WebSocket(`${wsUrl}/socket.io/?EIO=4&transport=websocket`);
+    const socket = io(apiUrl, {
+      path: '/socket.io',
+      transports: ['websocket', 'polling'],
+      reconnection: true,
+      reconnectionAttempts: 5,
+      reconnectionDelay: 1000,
+    });
     
-    socket.onopen = () => {
-      console.log('WebSocket 已連接');
+    // 連接到 /live namespace
+    const liveSocket = io(`${apiUrl}/live`, {
+      path: '/socket.io',
+      transports: ['websocket', 'polling'],
+    });
+    
+    liveSocket.on('connect', () => {
+      console.log('✅ Socket.IO 已連接');
       setIsConnected(true);
       setError(null);
-      
-      // 發送連接事件
-      socket.send('40/live,');
-    };
+    });
     
-    socket.onmessage = (event) => {
-      handleSocketMessage(event.data);
-    };
-    
-    socket.onerror = (err) => {
-      console.error('WebSocket 錯誤:', err);
-      setError('WebSocket 連接失敗');
-    };
-    
-    socket.onclose = () => {
-      console.log('WebSocket 已斷開');
+    liveSocket.on('disconnect', () => {
+      console.log('❌ Socket.IO 已斷開');
       setIsConnected(false);
-    };
+    });
     
-    socketRef.current = socket;
-  };
-
-  // 處理 Socket 訊息
-  const handleSocketMessage = (data: string) => {
-    try {
-      // Socket.IO 協議解析
-      if (data.startsWith('42/live,')) {
-        const jsonStr = data.substring(8);
-        const [event, payload] = JSON.parse(jsonStr);
-        
-        console.log('📨 收到事件:', event);
-        
-        switch (event) {
-          case 'alert':
-            setAlerts(prev => [...prev.slice(-49), payload]);
-            // 播放提示音
-            playAlertSound(payload.alert_type);
-            break;
-          case 'analysis_started':
-            console.log('✅ 分析已開始');
-            setIsAnalyzing(true);
-            break;
-          case 'analysis_stopped':
-            console.log('⏹️ 分析已停止');
-            setIsAnalyzing(false);
-            break;
-          case 'state':
-            setMatchState(payload.match_state);
-            break;
-          case 'error':
-            setError(payload.message);
-            break;
-          case 'frame_with_pose':
-            // 接收帶有骨架的視訊幀
-            console.log('📸 收到骨架幀:', payload.pose_data ? '有姿態資料' : '無姿態資料', 'frame長度:', payload.frame?.length);
-            if (payload.frame) {
-              const imgUrl = `data:image/jpeg;base64,${payload.frame}`;
-              setPoseFrameUrl(imgUrl);
-              console.log('🖼️ 已設置骨架圖片 URL');
-            }
-            break;
-        }
-      }
-    } catch (e) {
-      console.error('訊息解析錯誤:', e);
-    }
+    liveSocket.on('connect_error', (err) => {
+      console.error('Socket.IO 連接錯誤:', err);
+      setError('連接失敗: ' + err.message);
+    });
+    
+    // 監聽事件
+    liveSocket.on('alert', (data) => {
+      setAlerts(prev => [...prev.slice(-49), data]);
+      playAlertSound(data.alert_type);
+    });
+    
+    liveSocket.on('analysis_started', () => {
+      console.log('✅ 分析已開始');
+      setIsAnalyzing(true);
+    });
+    
+    liveSocket.on('analysis_stopped', () => {
+      console.log('⏹️ 分析已停止');
+      setIsAnalyzing(false);
+    });
+    
+    liveSocket.on('state', (data) => {
+      setMatchState(data.match_state);
+    });
+    
+    liveSocket.on('error', (data) => {
+      setError(data.message);
+    });
+    
+    liveSocket.on('prediction', (data) => {
+      console.log('🎯 收到預測:', data);
+    });
+    
+    socketRef.current = liveSocket;
   };
 
   // 播放提示音
@@ -321,20 +309,22 @@ export default function LiveAnalysisPage() {
     const cameraReady = await initCamera();
     if (!cameraReady) return;
     
-    // 連接 WebSocket
-    if (!socketRef.current || socketRef.current.readyState !== WebSocket.OPEN) {
+    // 連接 Socket.IO
+    if (!socketRef.current || !socketRef.current.connected) {
       connectWebSocket();
       // 等待連接
-      await new Promise(resolve => setTimeout(resolve, 1000));
+      await new Promise(resolve => setTimeout(resolve, 1500));
     }
     
     // 發送開始分析事件
-    if (socketRef.current && socketRef.current.readyState === WebSocket.OPEN) {
-      const payload = JSON.stringify(['start_analysis', { player_focus: playerFocus || null }]);
-      socketRef.current.send(`42/live,${payload}`);
+    if (socketRef.current && socketRef.current.connected) {
+      socketRef.current.emit('start_analysis', { player_focus: playerFocus || null });
+      setIsAnalyzing(true);
       
       // 開始發送視訊幀
       startFrameCapture();
+    } else {
+      setError('無法連接到伺服器');
     }
   };
 
@@ -352,7 +342,7 @@ export default function LiveAnalysisPage() {
   // 擷取並發送視訊幀
   const captureAndSendFrame = () => {
     if (!videoRef.current || !canvasRef.current || !socketRef.current) return;
-    if (socketRef.current.readyState !== WebSocket.OPEN) return;
+    if (!socketRef.current.connected) return;
     
     const video = videoRef.current;
     const canvas = canvasRef.current;
@@ -370,12 +360,11 @@ export default function LiveAnalysisPage() {
     // 轉換為 base64
     const frameData = canvas.toDataURL('image/jpeg', 0.7).split(',')[1];
     
-    // 發送幀 (包含 enable_pose 參數)
-    const payload = JSON.stringify(['video_frame', { 
+    // 使用 Socket.IO emit 發送幀
+    socketRef.current.emit('video_frame', { 
       frame: frameData,
       enable_pose: enablePose 
-    }]);
-    socketRef.current.send(`42/live,${payload}`);
+    });
   };
 
   // 停止分析
@@ -387,9 +376,8 @@ export default function LiveAnalysisPage() {
     }
     
     // 發送停止事件
-    if (socketRef.current && socketRef.current.readyState === WebSocket.OPEN) {
-      const payload = JSON.stringify(['stop_analysis', {}]);
-      socketRef.current.send(`42/live,${payload}`);
+    if (socketRef.current && socketRef.current.connected) {
+      socketRef.current.emit('stop_analysis', {});
     }
     
     // 停止攝影機
@@ -410,12 +398,11 @@ export default function LiveAnalysisPage() {
     setMatchState(newState);
     
     // 發送更新
-    if (socketRef.current && socketRef.current.readyState === WebSocket.OPEN) {
-      const payload = JSON.stringify(['update_score', {
+    if (socketRef.current && socketRef.current.connected) {
+      socketRef.current.emit('update_score', {
         player1_score: newState.player1_score,
         player2_score: newState.player2_score
-      }]);
-      socketRef.current.send(`42/live,${payload}`);
+      });
     }
   };
 
@@ -440,10 +427,13 @@ export default function LiveAnalysisPage() {
     return () => {
       stopCamera();
       if (socketRef.current) {
-        socketRef.current.close();
+        socketRef.current.disconnect();
       }
       if (frameIntervalRef.current) {
         clearInterval(frameIntervalRef.current);
+      }
+      if (poseDetectionRef.current) {
+        clearInterval(poseDetectionRef.current);
       }
     };
   }, []);
