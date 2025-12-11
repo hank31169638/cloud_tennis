@@ -90,7 +90,7 @@ def load_model(model_path='table_tennis_model.pth'):
     
     # 載入訓練好的權重
     if os.path.exists(model_path):
-        model.load_state_dict(torch.load(model_path, map_location=device))
+        model.load_state_dict(torch.load(model_path, map_location=device, weights_only=False))
         print(f'✓ 成功載入模型: {model_path}\n')
     else:
         raise FileNotFoundError(f'找不到模型檔案: {model_path}')

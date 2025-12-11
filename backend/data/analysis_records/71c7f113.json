@@ -5,15 +5,297 @@
   "video_url": "https://www.youtube.com/watch?v=IhF6x9PyUp0",
   "video_duration": 299,
   "thumbnail_url": "https://img.youtube.com/vi/IhF6x9PyUp0/maxresdefault.jpg",
-  "player_focus": "",
-  "player2_focus": "",
+  "player_focus": "林昀儒",
+  "player2_focus": "松島輝空",
   "analysis_result": {
     "success": true,
-    "raw_analysis": "```json\n{\n  \"match_overview\": {\n    \"match_type\": \"單打\",\n    \"player1_info\": \"林昀儒 (選手A)，橘紅色上衣，黑色短褲，左手持拍\",\n    \"player2_info\": \"松島輝空 (對手)，黃藍漸層上衣，藍色短褲，左手持拍\",\n    \"score_summary\": \"3:2 (影片節錄第一、二、五局，決勝局 11:8)\",\n    \"total_points_analyzed\": 17,\n    \"key_moments\": \"決勝局，選手A (林昀儒) 在 2:7 落後的情況下，展現強大心理素質，打出一波 9:1 的攻勢，最終以 11:8 逆轉贏得比賽。其招牌反手擰拉和關鍵時刻的發球變化是致勝主因。\"\n  },\n  \"points\": [\n    {\n      \"id\": 1,\n      \"serve_time\": 4.0,\n      \"dead_ball_time\": 10.8,\n      \"start_seconds\": 15.0,\n      \"end_seconds\": 25.5,\n      \"timestamp_display\": \"00:15\",\n      \"server\": \"松島輝空\",\n      \"winner\": \"選手A\",\n      \"win_reason\": \"對手失誤\",\n      \"win_type\": \"對手反手回擊下網\",\n      \"description\": \"松島輝空發球，雙方進入多拍反手相持。在連續的快速對拉中，松島輝空試圖變線直線，但回球掛網失誤。\",\n      \"rally_length\": 10,\n      \"key_technique\": \"反手相持穩定性\",\n      \"tactic\": \"在反手相持中保持穩定，迫使對手先出現失誤。\"\n    },\n    {\n      \"id\": 2,\n      \"serve_time\": 28.5,\n      \"dead_ball_time\": 31.5,\n      \"start_seconds\": 27.0,\n      \"end_seconds\": 33.0,\n      \"timestamp_display\": \"00:27\",\n      \"server\": \"林昀儒\",\n      \"winner\": \"選手A\",\n      \"win_reason\": \"對手失誤\",\n      \"win_type\": \"對手回擊出界\",\n      \"description\": \"選手A發短球，對手擺短，選手A直接上手搶攻，對手回擊球出界。\",\n      \"rally_length\": 4,\n      \"key_technique\": \"發搶戰術\",\n      \"tactic\": \"發球後迅速銜接第三板攻擊，給予對手壓力。\"\n    },\n    {\n      \"id\": 3,\n      \"serve_time\": 40.0,\n      \"dead_ball_time\": 42.8,\n      \"start_seconds\": 38.5,\n      \"end_seconds\": 45.0,\n      \"timestamp_display\": \"00:38\",\n      \"server\": \"林昀儒\",\n      \"winner\": \"選手A\",\n      \"win_reason\": \"對手失誤\",\n      \"win_type\": \"對手接發球下網\",\n      \"description\": \"選手A發台內短球，對手松島輝空嘗試反手擰拉，但直接下網。選手A拿下此局。\",\n      \"rally_length\": 2,\n      \"key_technique\": \"高質量短發球\",\n      \"tactic\": \"利用旋轉和落點俱佳的短發球，直接破壞對手的接發節奏。\"\n    },\n    {\n      \"id\": 4,\n      \"serve_time\": 50.5,\n      \"dead_ball_time\": 53.5,\n      \"start_seconds\": 49.0,\n      \"end_seconds\": 56.0,\n      \"timestamp_display\": \"00:49\",\n      \"server\": \"松島輝空\",\n      \"winner\": \"選手A\",\n      \"win_reason\": \"主動得分\",\n      \"win_type\": \"反手慢擰拉\",\n      \"description\": \"對手發短球至選手A正手位，選手A使用一板帶有強烈側旋的慢節奏擰拉，改變了對抗節奏，導致對手回球判斷失誤而出界。\",\n      \"rally_length\": 3,\n      \"key_technique\": \"接發球節奏變化\",\n      \"tactic\": \"面對短球不盲目發力，利用旋轉和節奏變化創造機會。\"\n    },\n    {\n      \"id\": 5,\n      \"serve_time\": 103.0,\n      \"dead_ball_time\": 105.8,\n      \"start_seconds\": 102.0,\n      \"end_seconds\": 108.0,\n      \"timestamp_display\": \"01:42\",\n      \"server\": \"林昀儒\",\n      \"winner\": \"選手A\",\n      \"win_reason\": \"主動得分\",\n      \"win_type\": \"正手搶攻\",\n      \"description\": \"選手A發短球，對手回球稍高，選手A抓住機會側身正手爆衝得分。\",\n      \"rally_length\": 3,\n      \"key_technique\": \"發搶戰術\",\n      \"tactic\": \"發球後積極準備第三板進攻，不給對手喘息機會。\"\n    },\n    {\n      \"id\": 6,\n      \"serve_time\": 113.5,\n      \"dead_ball_time\": 115.5,\n      \"start_seconds\": 112.0,\n      \"end_seconds\": 118.0,\n      \"timestamp_display\": \"01:52\",\n      \"server\": \"松島輝空\",\n      \"winner\": \"選手A\",\n      \"win_reason\": \"主動得分\",\n      \"win_type\": \"反手擰拉致勝\",\n      \"description\": \"在9:9的關鍵分，對手發短球，選手A果斷使出招牌的反手擰拉，球路刁鑽，直接得分取得局點。\",\n      \"rally_length\": 2,\n      \"key_technique\": \"反手擰拉 (Banana Flick)\",\n      \"tactic\": \"在關鍵分上相信自己的特長技術，果斷出手。\"\n    },\n    {\n      \"id\": 7,\n      \"serve_time\": 126.5,\n      \"dead_ball_time\": 129.5,\n      \"start_seconds\": 125.0,\n      \"end_seconds\": 132.0,\n      \"timestamp_display\": \"02:05\",\n      \"server\": \"林昀儒\",\n      \"winner\": \"選手A\",\n      \"win_reason\": \"主動得分\",\n      \"win_type\": \"反手變線致勝\",\n      \"description\": \"選手A發球，雙方進入反手快速相持，選手A突然變線打直線，對手防守不及，回球出界。選手A拿下此局。\",\n      \"rally_length\": 5,\n      \"key_technique\": \"反手相持中變線\",\n      \"tactic\": \"在高速相持中，利用落點變化突破對手防線。\"\n    },\n    {\n      \"id\": 8,\n      \"serve_time\": 103.5,\n      \"dead_ball_time\": 115.5,\n      \"start_seconds\": 102.0,\n      \"end_seconds\": 117.0,\n      \"timestamp_display\": \"01:42\",\n      \"server\": \"林昀儒\",\n      \"winner\": \"對手\",\n      \"win_reason\": \"對手主動得分\",\n      \"win_type\": \"對手遠台反擊\",\n      \"description\": \"本場最精彩回合。選手A連續正手進攻，將對手逼至遠台。松島輝空展現驚人防守，連續救起險球，甚至包含一板削球過渡，最終抓住機會反拉得分。\",\n      \"rally_length\": 12,\n      \"key_technique\": \"遠台防守反擊\",\n      \"tactic\": \"選手A連續進攻，但對手展現了超強的防守韌性並成功由守轉攻。\"\n    },\n    {\n      \"id\": 9,\n      \"serve_time\": 133.5,\n      \"dead_ball_time\": 135.0,\n      \"start_seconds\": 132.5,\n      \"end_seconds\": 137.0,\n      \"timestamp_display\": \"02:12\",\n      \"server\": \"松島輝空\",\n      \"winner\": \"對手\",\n      \"win_reason\": \"選手A失誤\",\n      \"win_type\": \"接發球下網\",\n      \"description\": \"對手發長球偷襲選手A反手，選手A準備不足，回球直接下網。\",\n      \"rally_length\": 2,\n      \"key_technique\": \"接發球判斷\",\n      \"tactic\": \"對手利用長短結合的發球戰術，成功擾亂選手A的接發節奏。\"\n    },\n    {\n      \"id\": 10,\n      \"serve_time\": 143.5,\n      \"dead_ball_time\": 150.0,\n      \"start_seconds\": 142.0,\n      \"end_seconds\": 152.0,\n      \"timestamp_display\": \"02:22\",\n      \"server\": \"林昀儒\",\n      \"winner\": \"對手\",\n      \"win_reason\": \"選手A失誤\",\n      \"win_type\": \"反手回擊出界\",\n      \"description\": \"選手A發球，雙方進入中遠台對拉。在多拍相持後，選手A的反手回擊力量過大而出界。\",\n      \"rally_length\": 8,\n      \"key_technique\": \"中遠台對拉穩定性\",\n      \"tactic\": \"雙方都試圖在相持中加壓，此回合對手穩定性更勝一籌。\"\n    },\n    {\n      \"id\": 11,\n      \"serve_time\": 169.5,\n      \"dead_ball_time\": 171.8,\n      \"start_seconds\": 168.0,\n      \"end_seconds\": 173.0,\n      \"timestamp_display\": \"02:48\",\n      \"server\": \"松島輝空\",\n      \"winner\": \"對手\",\n      \"win_reason\": \"對手主動得分\",\n      \"win_type\": \"對手反手快撕\",\n      \"description\": \"對手發短球，選手A擰拉，對手準備充分，直接反手快撕得分。\",\n      \"rally_length\": 3,\n      \"key_technique\": \"接發球後連貫\",\n      \"tactic\": \"對手預判了選手A的擰拉，做好了充分的下一板銜接準備。\"\n    },\n    {\n      \"id\": 12,\n      \"serve_time\": 180.0,\n      \"dead_ball_time\": 182.5,\n      \"start_seconds\": 179.0,\n      \"end_seconds\": 184.0,\n      \"timestamp_display\": \"02:59\",\n      \"server\": \"松島輝空\",\n      \"winner\": \"選手A\",\n      \"win_reason\": \"對手失誤\",\n      \"win_type\": \"對手台內球處理下網\",\n      \"description\": \"對手發短球，選手A擺短控制，對手在台內挑球時出現失誤，回球下網。\",\n      \"rally_length\": 3,\n      \"key_technique\": \"台內球控制\",\n      \"tactic\": \"利用精準的擺短控制落點，迫使對手在處理困難球時失誤。\"\n    },\n    {\n      \"id\": 13,\n      \"serve_time\": 194.0,\n      \"dead_ball_time\": 196.5,\n      \"start_seconds\": 193.0,\n      \"end_seconds\": 198.0,\n      \"timestamp_display\": \"03:13\",\n      \"server\": \"林昀儒\",\n      \"winner\": \"選手A\",\n      \"win_reason\": \"對手失誤\",\n      \"win_type\": \"對手回擊出界\",\n      \"description\": \"選手A發長球至對手反手位，形成對拉，對手回球出界。\",\n      \"rally_length\": 4,\n      \"key_technique\": \"發長球搶攻\",\n      \"tactic\": \"在落後時大膽使用長球發動進攻，打亂對手節奏。\"\n    },\n    {\n      \"id\": 14,\n      \"serve_time\": 203.0,\n      \"dead_ball_time\": 204.8,\n      \"start_seconds\": 202.0,\n      \"end_seconds\": 207.0,\n      \"timestamp_display\": \"03:22\",\n      \"server\": \"林昀儒\",\n      \"winner\": \"選手A\",\n      \"win_reason\": \"對手失誤\",\n      \"win_type\": \"對手接發球出界\",\n      \"description\": \"選手A再次發出高質量的長球，直接奔向對手中路偏反手位，對手接發直接出界。\",\n      \"rally_length\": 2,\n      \"key_technique\": \"發球落點變化\",\n      \"tactic\": \"連續使用長球，但改變落點，持續壓制對手。\"\n    },\n    {\n      \"id\": 15,\n      \"serve_time\": 212.5,\n      \"dead_ball_time\": 217.5,\n      \"start_seconds\": 211.0,\n      \"end_seconds\": 220.0,\n      \"timestamp_display\": \"03:31\",\n      \"server\": \"松島輝空\",\n      \"winner\": \"選手A\",\n      \"win_reason\": \"對手失誤\",\n      \"win_type\": \"對手反手回擊下網\",\n      \"description\": \"對手發球，雙方再次進入激烈的反手對拉。選手A在相持中頂住壓力，最終對手回球下網。比分追至8:8平。\",\n      \"rally_length\": 7,\n      \"key_technique\": \"反手相持對抗\",\n      \"tactic\": \"在關鍵的平分時刻，展現了更強的心理素質和相持穩定性。\"\n    },\n    {\n      \"id\": 16,\n      \"serve_time\": 235.0,\n      \"dead_ball_time\": 237.0,\n      \"start_seconds\": 234.0,\n      \"end_seconds\": 240.0,\n      \"timestamp_display\": \"03:54\",\n      \"server\": \"松島輝空\",\n      \"winner\": \"選手A\",\n      \"win_reason\": \"主動得分\",\n      \"win_type\": \"反手擰拉致勝\",\n      \"description\": \"對手發短球，選手A再次使出高質量的反手擰拉，這次是變直線，對手完全沒有反應，直接得分。選手A取得賽點。\",\n      \"rally_length\": 2,\n      \"key_",
-    "structured_data": null,
+    "raw_analysis": "## 📊 比賽概況\n- 比賽類型：未知\n- 比分概況：解析失敗\n- 關鍵轉折：無\n\n## 🏆 總結",
+    "structured_data": {
+      "points": [
+        {
+          "id": 1,
+          "start_seconds": 0.0,
+          "end_seconds": 14.5,
+          "timestamp_display": "0:00",
+          "description": "自動提取的片段"
+        },
+        {
+          "id": 2,
+          "start_seconds": 27.0,
+          "end_seconds": 33.0,
+          "timestamp_display": "0:27",
+          "description": "自動提取的片段"
+        },
+        {
+          "id": 3,
+          "start_seconds": 38.0,
+          "end_seconds": 45.0,
+          "timestamp_display": "0:38",
+          "description": "自動提取的片段"
+        },
+        {
+          "id": 4,
+          "start_seconds": 49.0,
+          "end_seconds": 56.0,
+          "timestamp_display": "0:49",
+          "description": "自動提取的片段"
+        },
+        {
+          "id": 5,
+          "start_seconds": 102.0,
+          "end_seconds": 107.0,
+          "timestamp_display": "1:42",
+          "description": "自動提取的片段"
+        },
+        {
+          "id": 6,
+          "start_seconds": 112.0,
+          "end_seconds": 118.0,
+          "timestamp_display": "1:52",
+          "description": "自動提取的片段"
+        },
+        {
+          "id": 7,
+          "start_seconds": 125.0,
+          "end_seconds": 133.0,
+          "timestamp_display": "2:05",
+          "description": "自動提取的片段"
+        },
+        {
+          "id": 8,
+          "start_seconds": 142.0,
+          "end_seconds": 158.0,
+          "timestamp_display": "2:22",
+          "description": "自動提取的片段"
+        },
+        {
+          "id": 9,
+          "start_seconds": 222.0,
+          "end_seconds": 233.0,
+          "timestamp_display": "3:42",
+          "description": "自動提取的片段"
+        }
+      ],
+      "match_overview": {
+        "match_type": "未知",
+        "score_summary": "解析失敗"
+      },
+      "player1_analysis": {
+        "name": "選手A",
+        "strengths": [],
+        "weaknesses": []
+      },
+      "summary": {
+        "overall_assessment": "由於格式問題，僅提取到時間戳資訊"
+      }
+    },
     "point_wins": [],
-    "point_losses": [],
-    "sections": {}
+    "point_losses": [
+      {
+        "id": 1,
+        "start_seconds": 0.0,
+        "end_seconds": 14.5,
+        "timestamp_display": "0:00",
+        "description": "自動提取的片段",
+        "serve_time": null,
+        "dead_ball_time": null,
+        "winner": "",
+        "loss_type": "失分",
+        "technical_issue": null,
+        "clip_path": "/uploads/clips/IhF6x9PyUp0/loss_1.mp4"
+      },
+      {
+        "id": 2,
+        "start_seconds": 27.0,
+        "end_seconds": 33.0,
+        "timestamp_display": "0:27",
+        "description": "自動提取的片段",
+        "serve_time": null,
+        "dead_ball_time": null,
+        "winner": "",
+        "loss_type": "失分",
+        "technical_issue": null,
+        "clip_path": "/uploads/clips/IhF6x9PyUp0/loss_2.mp4"
+      },
+      {
+        "id": 3,
+        "start_seconds": 38.0,
+        "end_seconds": 45.0,
+        "timestamp_display": "0:38",
+        "description": "自動提取的片段",
+        "serve_time": null,
+        "dead_ball_time": null,
+        "winner": "",
+        "loss_type": "失分",
+        "technical_issue": null,
+        "clip_path": "/uploads/clips/IhF6x9PyUp0/loss_3.mp4"
+      },
+      {
+        "id": 4,
+        "start_seconds": 49.0,
+        "end_seconds": 56.0,
+        "timestamp_display": "0:49",
+        "description": "自動提取的片段",
+        "serve_time": null,
+        "dead_ball_time": null,
+        "winner": "",
+        "loss_type": "失分",
+        "technical_issue": null,
+        "clip_path": "/uploads/clips/IhF6x9PyUp0/loss_4.mp4"
+      },
+      {
+        "id": 5,
+        "start_seconds": 102.0,
+        "end_seconds": 107.0,
+        "timestamp_display": "1:42",
+        "description": "自動提取的片段",
+        "serve_time": null,
+        "dead_ball_time": null,
+        "winner": "",
+        "loss_type": "失分",
+        "technical_issue": null,
+        "clip_path": "/uploads/clips/IhF6x9PyUp0/loss_5.mp4"
+      },
+      {
+        "id": 6,
+        "start_seconds": 112.0,
+        "end_seconds": 118.0,
+        "timestamp_display": "1:52",
+        "description": "自動提取的片段",
+        "serve_time": null,
+        "dead_ball_time": null,
+        "winner": "",
+        "loss_type": "失分",
+        "technical_issue": null,
+        "clip_path": "/uploads/clips/IhF6x9PyUp0/loss_6.mp4"
+      },
+      {
+        "id": 7,
+        "start_seconds": 125.0,
+        "end_seconds": 133.0,
+        "timestamp_display": "2:05",
+        "description": "自動提取的片段",
+        "serve_time": null,
+        "dead_ball_time": null,
+        "winner": "",
+        "loss_type": "失分",
+        "technical_issue": null,
+        "clip_path": "/uploads/clips/IhF6x9PyUp0/loss_7.mp4"
+      },
+      {
+        "id": 8,
+        "start_seconds": 142.0,
+        "end_seconds": 158.0,
+        "timestamp_display": "2:22",
+        "description": "自動提取的片段",
+        "serve_time": null,
+        "dead_ball_time": null,
+        "winner": "",
+        "loss_type": "失分",
+        "technical_issue": null,
+        "clip_path": "/uploads/clips/IhF6x9PyUp0/loss_8.mp4"
+      },
+      {
+        "id": 9,
+        "start_seconds": 222.0,
+        "end_seconds": 233.0,
+        "timestamp_display": "3:42",
+        "description": "自動提取的片段",
+        "serve_time": null,
+        "dead_ball_time": null,
+        "winner": "",
+        "loss_type": "失分",
+        "technical_issue": null,
+        "clip_path": "/uploads/clips/IhF6x9PyUp0/loss_9.mp4"
+      }
+    ],
+    "points": [
+      {
+        "id": 1,
+        "start_seconds": 0.0,
+        "end_seconds": 14.5,
+        "timestamp_display": "0:00",
+        "description": "自動提取的片段"
+      },
+      {
+        "id": 2,
+        "start_seconds": 27.0,
+        "end_seconds": 33.0,
+        "timestamp_display": "0:27",
+        "description": "自動提取的片段"
+      },
+      {
+        "id": 3,
+        "start_seconds": 38.0,
+        "end_seconds": 45.0,
+        "timestamp_display": "0:38",
+        "description": "自動提取的片段"
+      },
+      {
+        "id": 4,
+        "start_seconds": 49.0,
+        "end_seconds": 56.0,
+        "timestamp_display": "0:49",
+        "description": "自動提取的片段"
+      },
+      {
+        "id": 5,
+        "start_seconds": 102.0,
+        "end_seconds": 107.0,
+        "timestamp_display": "1:42",
+        "description": "自動提取的片段"
+      },
+      {
+        "id": 6,
+        "start_seconds": 112.0,
+        "end_seconds": 118.0,
+        "timestamp_display": "1:52",
+        "description": "自動提取的片段"
+      },
+      {
+        "id": 7,
+        "start_seconds": 125.0,
+        "end_seconds": 133.0,
+        "timestamp_display": "2:05",
+        "description": "自動提取的片段"
+      },
+      {
+        "id": 8,
+        "start_seconds": 142.0,
+        "end_seconds": 158.0,
+        "timestamp_display": "2:22",
+        "description": "自動提取的片段"
+      },
+      {
+        "id": 9,
+        "start_seconds": 222.0,
+        "end_seconds": 233.0,
+        "timestamp_display": "3:42",
+        "description": "自動提取的片段"
+      }
+    ],
+    "player1_analysis": {
+      "name": "選手A",
+      "strengths": [],
+      "weaknesses": []
+    },
+    "player2_analysis": null,
+    "match_overview": {
+      "match_type": "未知",
+      "score_summary": "解析失敗"
+    },
+    "sections": {
+      "match_overview": {
+        "match_type": "未知",
+        "score_summary": "解析失敗"
+      },
+      "strengths": [],
+      "weaknesses": [],
+      "training_suggestions": [],
+      "summary": {
+        "overall_assessment": "由於格式問題，僅提取到時間戳資訊"
+      }
+    }
   },
-  "created_at": "2025-12-11T12:17:18.898050"
+  "created_at": "2025-12-11T12:31:15.586638"
 }

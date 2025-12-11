@@ -559,29 +559,91 @@ class MatchAnalyzer:
         
         points = []
         
-        # 嘗試匹配各種時間戳格式
-        # 格式1: MM:SS 或 M:SS
-        # 格式2: start_seconds: XX, end_seconds: XX
+        # 方法1: 嘗試提取完整的 point 區塊（包含描述）
+        # 匹配 "id": X ... "start_seconds": X ... "end_seconds": X 的區塊
+        point_block_pattern = r'"id"\s*:\s*(\d+).*?"start_seconds"\s*:\s*([\d.]+).*?"end_seconds"\s*:\s*([\d.]+).*?(?:"description"\s*:\s*"([^"]*)")?.*?(?:"winner"\s*:\s*"([^"]*)")?.*?(?:"win_reason"\s*:\s*"([^"]*)")?.*?(?:"key_technique"\s*:\s*"([^"]*)")?'
         
-        # 找所有時間戳 (MM:SS 格式)
-        time_pattern = r'(\d{1,2}:\d{2})'
-        times = re.findall(time_pattern, text)
+        # 更寬鬆的匹配，逐個欄位提取
+        # 先找所有 start_seconds 和 end_seconds 配對
+        seconds_pattern = r'"start_seconds"\s*:\s*([\d.]+)\s*,\s*"end_seconds"\s*:\s*([\d.]+)'
+        seconds_matches = list(re.finditer(seconds_pattern, text))
         
-        # 找所有秒數 (XX.XX 或 XX 秒)
-        seconds_pattern = r'start_seconds["\s:]+([\d.]+).*?end_seconds["\s:]+([\d.]+)'
-        seconds_matches = re.findall(seconds_pattern, text, re.DOTALL)
+        for i, match in enumerate(seconds_matches):
+            start = float(match.group(1))
+            end = float(match.group(2))
+            
+            # 取得這個配對前後的文字區塊來找描述
+            block_start = max(0, match.start() - 500)
+            block_end = min(len(text), match.end() + 200)
+            block = text[block_start:block_end]
+            
+            # 嘗試提取各種欄位
+            description = ""
+            winner = ""
+            win_reason = ""
+            key_technique = ""
+            
+            # 提取 description
+            desc_match = re.search(r'"description"\s*:\s*"([^"]*)"', block)
+            if desc_match:
+                description = desc_match.group(1)
+            
+            # 提取 winner
+            winner_match = re.search(r'"winner"\s*:\s*"([^"]*)"', block)
+            if winner_match:
+                winner = winner_match.group(1)
+            
+            # 提取 win_reason
+            reason_match = re.search(r'"win_reason"\s*:\s*"([^"]*)"', block)
+            if reason_match:
+                win_reason = reason_match.group(1)
+            
+            # 提取 key_technique
+            tech_match = re.search(r'"key_technique"\s*:\s*"([^"]*)"', block)
+            if tech_match:
+                key_technique = tech_match.group(1)
+            
+            # 提取 id
+            id_match = re.search(r'"id"\s*:\s*(\d+)', block)
+            point_id = int(id_match.group(1)) if id_match else i + 1
+            
+            # 組合描述
+            full_description = description
+            if not full_description:
+                parts = []
+                if win_reason:
+                    parts.append(win_reason)
+                if key_technique:
+                    parts.append(f"技術: {key_technique}")
+                full_description = " - ".join(parts) if parts else "回合片段"
+            
+            points.append({
+                'id': point_id,
+                'start_seconds': start,
+                'end_seconds': end,
+                'timestamp_display': f"{int(start)//60}:{int(start)%60:02d}",
+                'description': full_description,
+                'winner': winner,
+                'win_reason': win_reason,
+                'key_technique': key_technique
+            })
         
-        for i, (start, end) in enumerate(seconds_matches):
-            try:
-                points.append({
-                    'id': i + 1,
-                    'start_seconds': float(start),
-                    'end_seconds': float(end),
-                    'timestamp_display': f"{int(float(start))//60}:{int(float(start))%60:02d}",
-                    'description': '自動提取的片段'
-                })
-            except ValueError:
-                continue
+        # 如果方法1沒找到，嘗試簡單的秒數匹配
+        if not points:
+            simple_pattern = r'start_seconds["\s:]+([\d.]+).*?end_seconds["\s:]+([\d.]+)'
+            simple_matches = re.findall(simple_pattern, text, re.DOTALL)
+            
+            for i, (start, end) in enumerate(simple_matches):
+                try:
+                    points.append({
+                        'id': i + 1,
+                        'start_seconds': float(start),
+                        'end_seconds': float(end),
+                        'timestamp_display': f"{int(float(start))//60}:{int(float(start))%60:02d}",
+                        'description': '回合片段'
+                    })
+                except ValueError:
+                    continue
         
         print(f"📝 從文字中提取到 {len(points)} 個時間戳")
         return points
@@ -692,21 +754,31 @@ class MatchAnalyzer:
                     # 判斷是 Win 還是 Loss (相對於 Player 1)
                     # 如果 winner 包含 p1_name (模糊比對)
                     is_p1_win = False
-                    if p1_name and p1_name in winner:
+                    is_unknown = False
+                    
+                    if not winner:
+                        # 無法判斷勝負時，全部當作「回合片段」放到 point_wins
+                        is_unknown = True
+                        is_p1_win = True
+                    elif p1_name and p1_name in winner:
                         is_p1_win = True
                     elif "選手A" in winner: # Default name
                         is_p1_win = True
                     
                     if is_p1_win:
                         win_point = base_point.copy()
-                        win_point['win_type'] = p.get('win_reason', '得分')
+                        # 優先使用 win_reason，否則用 description
+                        win_type = p.get('win_reason') or p.get('description') or ('回合片段' if is_unknown else '得分')
+                        win_point['win_type'] = win_type
                         win_point['key_technique'] = p.get('key_technique')
                         win_point['tactical_value'] = p.get('tactic')
                         point_wins.append(win_point)
                     else:
                         loss_point = base_point.copy()
-                        loss_point['loss_type'] = p.get('win_reason', '失分') # 對手的得分原因 = 我的失分原因 (+/-)
-                        loss_point['technical_issue'] = p.get('key_technique') # 對手的技術 = 我的問題? 不一定，先這樣映射
+                        # 優先使用 win_reason，否則用 description
+                        loss_type = p.get('win_reason') or p.get('description') or '失分'
+                        loss_point['loss_type'] = loss_type
+                        loss_point['technical_issue'] = p.get('key_technique')
                         point_losses.append(loss_point)
 
             else:
