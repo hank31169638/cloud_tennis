@@ -537,7 +537,24 @@ class MatchAnalyzer:
             clean_text = clean_text.strip()
             
             # 解析 JSON
-            parsed = json.loads(clean_text)
+            try:
+                parsed = json.loads(clean_text)
+            except json.JSONDecodeError:
+                # 如果直接解析失敗，嘗試尋找 JSON 區塊
+                # 尋找第一個 { 和最後一個 }
+                start_idx = response_text.find('{')
+                end_idx = response_text.rfind('}')
+                
+                if start_idx != -1 and end_idx != -1 and end_idx > start_idx:
+                    json_str = response_text[start_idx : end_idx + 1]
+                    try:
+                        parsed = json.loads(json_str)
+                        print("✅ 成功從文字中提取 JSON")
+                    except json.JSONDecodeError:
+                         print(f"⚠️ JSON 提取後解析仍失敗: {json_str[:100]}...")
+                         raise
+                else:
+                    raise
             
             # --- 相容性轉換 ---
             # 新版 Prompt 回傳 'points' 列表，需轉換為舊版的 point_wins / point_losses

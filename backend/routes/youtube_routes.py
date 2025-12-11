@@ -99,7 +99,7 @@ def analyze_youtube():
                 profile_service = get_player_profile_service()
                 
                 analysis = result.get('analysis', {})
-                structured = analysis.get('structured_data', {})
+                structured = analysis.get('structured_data') or {}
                 sections = analysis.get('sections', {})
                 video_info = result.get('video_info', {})
                 
@@ -127,7 +127,7 @@ def analyze_youtube():
                 
                 # 儲存選手 1 的檔案
                 if p1_name:
-                    p1_analysis = structured.get('player1_analysis', {})
+                    p1_analysis = structured.get('player1_analysis') or {}
                     profile_service.save_player_analysis(
                         player_name=p1_name,
                         match_id=record_id,
@@ -141,7 +141,7 @@ def analyze_youtube():
                 
                 # 儲存選手 2 的檔案
                 if p2_name:
-                    p2_analysis = structured.get('player2_analysis', {})
+                    p2_analysis = structured.get('player2_analysis') or {}
                     profile_service.save_player_analysis(
                         player_name=p2_name,
                         match_id=record_id,
