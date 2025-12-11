@@ -569,9 +569,20 @@ class MatchAnalyzer:
         # 7. 移除控制字元
         repaired = re.sub(r'[\x00-\x1f]+', ' ', repaired)
         
-        # 8. 修復字串中未轉義的引號（保守處理）
-        # 將 "text": "some "quoted" text" 修正為 "text": "some \"quoted\" text"
-        # 這個較複雜，暫時略過，讓 JSON 解析器報錯
+        # 8. 修復未結束的字串 - 截斷到最後一個完整的物件
+        # 找最後一個完整的 } 或 ]
+        last_brace = repaired.rfind('}')
+        last_bracket = repaired.rfind(']')
+        last_valid = max(last_brace, last_bracket)
+        
+        if last_valid > 0:
+            # 計算大括號/中括號是否平衡
+            truncated = repaired[:last_valid + 1]
+            open_braces = truncated.count('{') - truncated.count('}')
+            open_brackets = truncated.count('[') - truncated.count(']')
+            
+            # 補足缺少的結束符號
+            repaired = truncated + ('}' * open_braces) + (']' * open_brackets)
         
         return repaired
     
@@ -783,28 +794,42 @@ class MatchAnalyzer:
                     print(f"🔍 回合 {p.get('id')}: winner='{winner}', p1_name='{p1_name}', player_focus='{focus_display}'")
                     
                     if not winner:
-                        # 無法判斷勝負時，全部當作「回合片段」放到 point_wins
+                        # 無法判斷勝負時，保守處理：檢查描述
                         is_unknown = True
-                        is_p1_win = True
+                        is_p1_win = True  # 預設為得分
                     else:
                         # 多重判定策略：檢查 winner 是否包含關注選手的名字
-                        if p1_name and p1_name in winner:
-                            is_p1_win = True
-                        elif player_focus and player_focus in winner:
-                            is_p1_win = True
-                        elif "選手A" in winner:  # Default name
-                            is_p1_win = True
-                        # 特殊處理：若 winner 是「對手」則為失分
-                        elif "對手" in winner or "對方" in winner or "opponent" in winner.lower():
+                        winner_lower = winner.lower()
+                        
+                        # 先檢查是否明確是對手得分
+                        if "對手" in winner or "對方" in winner or "opponent" in winner_lower:
                             is_p1_win = False
+                        # 檢查是否是第二位選手
+                        elif "player 2" in winner_lower or "p2" in winner_lower:
+                            is_p1_win = False
+                        # 檢查第二位選手名字
                         else:
-                            # 預設：如果無法確定，檢查是否有第二位選手
                             p2_name = parsed.get('player2_analysis', {}).get('name', '')
                             if p2_name and p2_name in winner:
                                 is_p1_win = False
-                            else:
-                                # 最後預設為得分（保守策略）
+                            # 檢查第一位選手名字
+                            elif p1_name and p1_name in winner:
                                 is_p1_win = True
+                            # 檢查 player_focus
+                            elif player_focus and player_focus in winner:
+                                is_p1_win = True
+                            # 檢查是否包含 "選手A" 或 "player 1"
+                            elif "選手a" in winner_lower or "player 1" in winner_lower or "p1" in winner_lower:
+                                is_p1_win = True
+                            else:
+                                # 無法確定時，檢查 win_reason 或 description
+                                desc = p.get('description', '') + ' ' + p.get('win_reason', '')
+                                if '失誤' in desc or '下網' in desc or '出界' in desc:
+                                    # 如果描述中有失誤相關字眼，更可能是對手得分
+                                    is_p1_win = False
+                                else:
+                                    # 最後預設為得分
+                                    is_p1_win = True
                     
                     print(f"   → 判定: {'得分' if is_p1_win else '失分'}")
                     
