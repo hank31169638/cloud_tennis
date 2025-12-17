@@ -3,6 +3,7 @@
 import { useState, useRef, useEffect, useCallback } from 'react';
 import Link from 'next/link';
 import Navbar from '../components/Navbar';
+import { io, Socket } from 'socket.io-client';
 
 interface Alert {
   id: string;
@@ -29,14 +30,21 @@ export default function LiveAnalysisPage() {
   const [matchState, setMatchState] = useState<MatchState | null>(null);
   const [error, setError] = useState<string | null>(null);
   const [cameraError, setCameraError] = useState<string | null>(null);
+  const [enablePose, setEnablePose] = useState(true);
+  const [poseLoaded, setPoseLoaded] = useState(false);
   
   const videoRef = useRef<HTMLVideoElement>(null);
   const canvasRef = useRef<HTMLCanvasElement>(null);
-  const socketRef = useRef<WebSocket | null>(null);
+  const overlayCanvasRef = useRef<HTMLCanvasElement>(null);
+  const socketRef = useRef<Socket | null>(null);
   const streamRef = useRef<MediaStream | null>(null);
   const frameIntervalRef = useRef<NodeJS.Timeout | null>(null);
+  const poseDetectionRef = useRef<NodeJS.Timeout | null>(null);
+  const poseRef = useRef<any>(null);
   
   const alertsEndRef = useRef<HTMLDivElement>(null);
+  const drawingUtilsRef = useRef<any>(null);
+  const poseConnectionsRef = useRef<any>(null);
   
   const apiUrl = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:5000';
   const wsUrl = apiUrl.replace('http', 'ws');
@@ -45,6 +53,113 @@ export default function LiveAnalysisPage() {
   useEffect(() => {
     alertsEndRef.current?.scrollIntoView({ behavior: 'smooth' });
   }, [alerts]);
+
+  // 初始化 MediaPipe Pose (前端)
+  useEffect(() => {
+    const loadMediaPipe = async () => {
+      try {
+        // 動態載入 MediaPipe
+        const poseModule = await import('@mediapipe/pose');
+        const drawingModule = await import('@mediapipe/drawing_utils');
+        
+        const { Pose, POSE_CONNECTIONS } = poseModule;
+        const { drawConnectors, drawLandmarks } = drawingModule;
+        
+        // 保存引用
+        poseConnectionsRef.current = POSE_CONNECTIONS;
+        drawingUtilsRef.current = { drawConnectors, drawLandmarks };
+        
+        const pose = new Pose({
+          locateFile: (file: string) => {
+            return `https://cdn.jsdelivr.net/npm/@mediapipe/pose/${file}`;
+          }
+        });
+        
+        pose.setOptions({
+          modelComplexity: 1,
+          smoothLandmarks: true,
+          enableSegmentation: false,
+          minDetectionConfidence: 0.5,
+          minTrackingConfidence: 0.5
+        });
+        
+        pose.onResults((results: any) => {
+          if (!overlayCanvasRef.current || !videoRef.current) return;
+          
+          const canvas = overlayCanvasRef.current;
+          const ctx = canvas.getContext('2d');
+          if (!ctx) return;
+          
+          // 設置 canvas 尺寸與視訊相同
+          const videoWidth = videoRef.current.videoWidth || 640;
+          const videoHeight = videoRef.current.videoHeight || 480;
+          
+          if (canvas.width !== videoWidth || canvas.height !== videoHeight) {
+            canvas.width = videoWidth;
+            canvas.height = videoHeight;
+          }
+          
+          // 清除 canvas
+          ctx.clearRect(0, 0, canvas.width, canvas.height);
+          
+          // 繪製骨架
+          if (results.poseLandmarks && drawingUtilsRef.current && poseConnectionsRef.current) {
+            const { drawConnectors: dc, drawLandmarks: dl } = drawingUtilsRef.current;
+            
+            dc(ctx, results.poseLandmarks, poseConnectionsRef.current, {
+              color: '#00FF00',
+              lineWidth: 4
+            });
+            dl(ctx, results.poseLandmarks, {
+              color: '#FF0000',
+              lineWidth: 2,
+              radius: 6
+            });
+          }
+        });
+        
+        await pose.initialize();
+        poseRef.current = pose;
+        setPoseLoaded(true);
+        console.log('✅ MediaPipe Pose 已載入');
+      } catch (err) {
+        console.error('❌ MediaPipe Pose 載入失敗:', err);
+        setError('骨架偵測載入失敗: ' + (err as Error).message);
+      }
+    };
+    
+    if (enablePose && !poseLoaded) {
+      loadMediaPipe();
+    }
+  }, [enablePose, poseLoaded]);
+
+  // 即時骨架偵測
+  useEffect(() => {
+    if (!enablePose || !poseLoaded || !isAnalyzing || !poseRef.current) {
+      return;
+    }
+    
+    const detectPose = async () => {
+      if (videoRef.current && poseRef.current && videoRef.current.readyState >= 2) {
+        try {
+          await poseRef.current.send({ image: videoRef.current });
+        } catch (err) {
+          // 忽略偵測錯誤，避免過多 console 輸出
+        }
+      }
+    };
+    
+    // 每 66ms 偵測一次 (約 15 FPS)
+    poseDetectionRef.current = setInterval(detectPose, 66);
+    console.log('🦴 開始即時骨架偵測');
+    
+    return () => {
+      if (poseDetectionRef.current) {
+        clearInterval(poseDetectionRef.current);
+        console.log('⏹️ 停止骨架偵測');
+      }
+    };
+  }, [enablePose, poseLoaded, isAnalyzing]);
 
   // 初始化攝影機
   const initCamera = async () => {
@@ -85,67 +200,67 @@ export default function LiveAnalysisPage() {
     }
   };
 
-  // 連接 WebSocket
+  // 連接 Socket.IO
   const connectWebSocket = () => {
-    const socket = new WebSocket(`${wsUrl}/socket.io/?EIO=4&transport=websocket`);
+    const socket = io(apiUrl, {
+      path: '/socket.io',
+      transports: ['websocket', 'polling'],
+      reconnection: true,
+      reconnectionAttempts: 5,
+      reconnectionDelay: 1000,
+    });
     
-    socket.onopen = () => {
-      console.log('WebSocket 已連接');
+    // 連接到 /live namespace
+    const liveSocket = io(`${apiUrl}/live`, {
+      path: '/socket.io',
+      transports: ['websocket', 'polling'],
+    });
+    
+    liveSocket.on('connect', () => {
+      console.log('✅ Socket.IO 已連接');
       setIsConnected(true);
       setError(null);
-      
-      // 發送連接事件
-      socket.send('40/live,');
-    };
+    });
     
-    socket.onmessage = (event) => {
-      handleSocketMessage(event.data);
-    };
-    
-    socket.onerror = (err) => {
-      console.error('WebSocket 錯誤:', err);
-      setError('WebSocket 連接失敗');
-    };
-    
-    socket.onclose = () => {
-      console.log('WebSocket 已斷開');
+    liveSocket.on('disconnect', () => {
+      console.log('❌ Socket.IO 已斷開');
       setIsConnected(false);
-    };
+    });
     
-    socketRef.current = socket;
-  };
-
-  // 處理 Socket 訊息
-  const handleSocketMessage = (data: string) => {
-    try {
-      // Socket.IO 協議解析
-      if (data.startsWith('42/live,')) {
-        const jsonStr = data.substring(8);
-        const [event, payload] = JSON.parse(jsonStr);
-        
-        switch (event) {
-          case 'alert':
-            setAlerts(prev => [...prev.slice(-49), payload]);
-            // 播放提示音
-            playAlertSound(payload.alert_type);
-            break;
-          case 'analysis_started':
-            setIsAnalyzing(true);
-            break;
-          case 'analysis_stopped':
-            setIsAnalyzing(false);
-            break;
-          case 'state':
-            setMatchState(payload.match_state);
-            break;
-          case 'error':
-            setError(payload.message);
-            break;
-        }
-      }
-    } catch (e) {
-      console.error('訊息解析錯誤:', e);
-    }
+    liveSocket.on('connect_error', (err) => {
+      console.error('Socket.IO 連接錯誤:', err);
+      setError('連接失敗: ' + err.message);
+    });
+    
+    // 監聽事件
+    liveSocket.on('alert', (data) => {
+      setAlerts(prev => [...prev.slice(-49), data]);
+      playAlertSound(data.alert_type);
+    });
+    
+    liveSocket.on('analysis_started', () => {
+      console.log('✅ 分析已開始');
+      setIsAnalyzing(true);
+    });
+    
+    liveSocket.on('analysis_stopped', () => {
+      console.log('⏹️ 分析已停止');
+      setIsAnalyzing(false);
+    });
+    
+    liveSocket.on('state', (data) => {
+      setMatchState(data.match_state);
+    });
+    
+    liveSocket.on('error', (data) => {
+      setError(data.message);
+    });
+    
+    liveSocket.on('prediction', (data) => {
+      console.log('🎯 收到預測:', data);
+    });
+    
+    socketRef.current = liveSocket;
   };
 
   // 播放提示音
@@ -194,20 +309,22 @@ export default function LiveAnalysisPage() {
     const cameraReady = await initCamera();
     if (!cameraReady) return;
     
-    // 連接 WebSocket
-    if (!socketRef.current || socketRef.current.readyState !== WebSocket.OPEN) {
+    // 連接 Socket.IO
+    if (!socketRef.current || !socketRef.current.connected) {
       connectWebSocket();
       // 等待連接
-      await new Promise(resolve => setTimeout(resolve, 1000));
+      await new Promise(resolve => setTimeout(resolve, 1500));
     }
     
     // 發送開始分析事件
-    if (socketRef.current && socketRef.current.readyState === WebSocket.OPEN) {
-      const payload = JSON.stringify(['start_analysis', { player_focus: playerFocus || null }]);
-      socketRef.current.send(`42/live,${payload}`);
+    if (socketRef.current && socketRef.current.connected) {
+      socketRef.current.emit('start_analysis', { player_focus: playerFocus || null });
+      setIsAnalyzing(true);
       
       // 開始發送視訊幀
       startFrameCapture();
+    } else {
+      setError('無法連接到伺服器');
     }
   };
 
@@ -225,7 +342,7 @@ export default function LiveAnalysisPage() {
   // 擷取並發送視訊幀
   const captureAndSendFrame = () => {
     if (!videoRef.current || !canvasRef.current || !socketRef.current) return;
-    if (socketRef.current.readyState !== WebSocket.OPEN) return;
+    if (!socketRef.current.connected) return;
     
     const video = videoRef.current;
     const canvas = canvasRef.current;
@@ -243,9 +360,11 @@ export default function LiveAnalysisPage() {
     // 轉換為 base64
     const frameData = canvas.toDataURL('image/jpeg', 0.7).split(',')[1];
     
-    // 發送幀
-    const payload = JSON.stringify(['video_frame', { frame: frameData }]);
-    socketRef.current.send(`42/live,${payload}`);
+    // 使用 Socket.IO emit 發送幀
+    socketRef.current.emit('video_frame', { 
+      frame: frameData,
+      enable_pose: enablePose 
+    });
   };
 
   // 停止分析
@@ -257,9 +376,8 @@ export default function LiveAnalysisPage() {
     }
     
     // 發送停止事件
-    if (socketRef.current && socketRef.current.readyState === WebSocket.OPEN) {
-      const payload = JSON.stringify(['stop_analysis', {}]);
-      socketRef.current.send(`42/live,${payload}`);
+    if (socketRef.current && socketRef.current.connected) {
+      socketRef.current.emit('stop_analysis', {});
     }
     
     // 停止攝影機
@@ -280,12 +398,11 @@ export default function LiveAnalysisPage() {
     setMatchState(newState);
     
     // 發送更新
-    if (socketRef.current && socketRef.current.readyState === WebSocket.OPEN) {
-      const payload = JSON.stringify(['update_score', {
+    if (socketRef.current && socketRef.current.connected) {
+      socketRef.current.emit('update_score', {
         player1_score: newState.player1_score,
         player2_score: newState.player2_score
-      }]);
-      socketRef.current.send(`42/live,${payload}`);
+      });
     }
   };
 
@@ -310,10 +427,13 @@ export default function LiveAnalysisPage() {
     return () => {
       stopCamera();
       if (socketRef.current) {
-        socketRef.current.close();
+        socketRef.current.disconnect();
       }
       if (frameIntervalRef.current) {
         clearInterval(frameIntervalRef.current);
+      }
+      if (poseDetectionRef.current) {
+        clearInterval(poseDetectionRef.current);
       }
     };
   }, []);
@@ -339,12 +459,36 @@ export default function LiveAnalysisPage() {
           <div className="lg:col-span-2 space-y-4">
             {/* 視訊畫面 */}
             <div className="bg-black rounded-2xl overflow-hidden shadow-2xl relative aspect-video">
+              {/* 原始視訊 */}
               <video
                 ref={videoRef}
                 className="w-full h-full object-cover"
                 playsInline
                 muted
               />
+              
+              {/* 骨架覆蓋層 Canvas - 即時繪製骨架 */}
+              {enablePose && (
+                <canvas 
+                  ref={overlayCanvasRef}
+                  className="absolute top-0 left-0 w-full h-full pointer-events-none"
+                />
+              )}
+              
+              {/* 骨架載入狀態 */}
+              {isAnalyzing && enablePose && !poseLoaded && (
+                <div className="absolute bottom-4 left-4 bg-yellow-600 text-white px-3 py-1 rounded text-xs">
+                  載入骨架模型中...
+                </div>
+              )}
+              
+              {/* 骨架偵測狀態 */}
+              {isAnalyzing && enablePose && poseLoaded && (
+                <div className="absolute bottom-4 left-4 bg-green-600 text-white px-3 py-1 rounded text-xs">
+                  🦴 骨架偵測中
+                </div>
+              )}
+              
               <canvas ref={canvasRef} className="hidden" />
               
               {/* 狀態覆蓋層 */}
@@ -365,6 +509,13 @@ export default function LiveAnalysisPage() {
                     <span className="w-2 h-2 bg-white rounded-full animate-pulse"></span>
                     LIVE 分析中
                   </div>
+                  
+                  {/* 骨架偵測狀態 */}
+                  {enablePose && (
+                    <div className="absolute top-16 left-4 bg-purple-600 text-white px-3 py-1 rounded-lg text-sm flex items-center gap-2">
+                      🦴 骨架偵測中
+                    </div>
+                  )}
                   
                   {/* 比分顯示 */}
                   {matchState && (
@@ -401,6 +552,18 @@ export default function LiveAnalysisPage() {
                     disabled={isAnalyzing}
                   />
                 </div>
+                
+                {/* 骨架開關 */}
+                <label className="flex items-center gap-2 text-white cursor-pointer">
+                  <input
+                    type="checkbox"
+                    checked={enablePose}
+                    onChange={(e) => setEnablePose(e.target.checked)}
+                    disabled={isAnalyzing}
+                    className="w-5 h-5 rounded accent-purple-500"
+                  />
+                  <span className="text-sm">🦴 骨架偵測</span>
+                </label>
                 
                 {/* 開始/停止按鈕 */}
                 {!isAnalyzing ? (

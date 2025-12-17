@@ -11,6 +11,41 @@
   "aggregate_ratings": {},
   "match_history": [
     {
+      "match_id": "cf2ee443",
+      "video_id": "Rtbt_3Zphow",
+      "opponent": "Benedikt DUDA",
+      "date": "2025-12-11",
+      "result": "未知",
+      "ratings": {},
+      "strengths": [],
+      "weaknesses": [],
+      "created_at": "2025-12-11T14:32:26.242342"
+    },
+    {
+      "match_id": "73a464cb",
+      "video_id": "qP6HnokOy4w",
+      "opponent": "張本智和",
+      "date": "2025-12-11",
+      "result": "未知",
+      "ratings": {},
+      "strengths": [],
+      "weaknesses": [],
+      "created_at": "2025-12-11T14:16:38.656460",
+      "updated_at": "2025-12-11T14:31:04.276183"
+    },
+    {
+      "match_id": "81c95b50",
+      "video_id": "uWW_zHdyboo",
+      "opponent": "李相秀",
+      "date": "2025-12-11",
+      "result": "未知",
+      "ratings": {},
+      "strengths": [],
+      "weaknesses": [],
+      "created_at": "2025-12-11T13:26:00.615323",
+      "updated_at": "2025-12-11T14:24:22.481095"
+    },
+    {
       "match_id": "71c7f113",
       "video_id": "IhF6x9PyUp0",
       "opponent": "松島輝空",
@@ -23,7 +58,7 @@
       "updated_at": "2025-12-11T12:31:15.590129"
     }
   ],
-  "total_matches": 1,
+  "total_matches": 4,
   "created_at": "2025-12-11T12:00:48.582363",
-  "last_updated": "2025-12-11T12:31:15.590129"
+  "last_updated": "2025-12-11T14:32:26.242342"
 }

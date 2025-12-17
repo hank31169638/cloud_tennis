@@ -58,12 +58,24 @@ class YouTubeDownloader:
             import yt_dlp
             
             ydl_opts = {
-                'format': 'best[height<=720][ext=mp4]/best[height<=720]/best',
+                # 使用最寬鬆的格式選擇策略，避免 nsig 問題
+                'format': '(bestvideo[height<=720]+bestaudio/best[height<=720])[ext=mp4]/best[ext=mp4]/best',
                 'outtmpl': output_path,
                 'noplaylist': True,
                 'max_filesize': 500 * 1024 * 1024,  # 500MB
-                'quiet': True,
-                'no_warnings': True,
+                'quiet': False,
+                'no_warnings': False,
+                'merge_output_format': 'mp4',
+                'user_agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36',
+                # 允許所有格式轉換
+                'postprocessors': [{
+                    'key': 'FFmpegVideoConvertor',
+                    'preferedformat': 'mp4',
+                }],
+                # 忽略錯誤繼續下載
+                'ignoreerrors': False,
+                # 跳過不可用的格式
+                'skip_unavailable_fragments': True,
             }
             
             with yt_dlp.YoutubeDL(ydl_opts) as ydl:
@@ -272,7 +284,7 @@ class MatchAnalyzer:
         
         # 解析回應
         print(f"DEBUG: Gemini Response Preview: {response.text[:200]}...")  # Debug print
-        analysis = self._parse_response(response.text)
+        analysis = self._parse_response(response.text, player_focus)
         
         # 切割影片片段
         print(f"🎬 開始切割影片片段，來源: {video_path}")
@@ -548,8 +560,29 @@ class MatchAnalyzer:
         # 4. 修復字串結束後缺少逗號
         repaired = re.sub(r'("\s*)\n(\s*")', r'\1,\n\2', repaired)
         
-        # 5. 移除控制字元
+        # 5. 修復布林值後缺少逗號
+        repaired = re.sub(r'(true|false)\s*\n\s*(")', r'\1,\n\2', repaired, flags=re.IGNORECASE)
+        
+        # 6. 修復陣列元素間缺少逗號
+        repaired = re.sub(r'(\})\s*\n\s*(\{)', r'\1,\n\2', repaired)
+        
+        # 7. 移除控制字元
         repaired = re.sub(r'[\x00-\x1f]+', ' ', repaired)
+        
+        # 8. 修復未結束的字串 - 截斷到最後一個完整的物件
+        # 找最後一個完整的 } 或 ]
+        last_brace = repaired.rfind('}')
+        last_bracket = repaired.rfind(']')
+        last_valid = max(last_brace, last_bracket)
+        
+        if last_valid > 0:
+            # 計算大括號/中括號是否平衡
+            truncated = repaired[:last_valid + 1]
+            open_braces = truncated.count('{') - truncated.count('}')
+            open_brackets = truncated.count('[') - truncated.count(']')
+            
+            # 補足缺少的結束符號
+            repaired = truncated + ('}' * open_braces) + (']' * open_brackets)
         
         return repaired
     
@@ -648,7 +681,7 @@ class MatchAnalyzer:
         print(f"📝 從文字中提取到 {len(points)} 個時間戳")
         return points
     
-    def _parse_response(self, response_text: str) -> Dict[str, Any]:
+    def _parse_response(self, response_text: str, player_focus: str = None) -> Dict[str, Any]:
         """解析 Gemini 回應"""
         import json
         
@@ -752,18 +785,53 @@ class MatchAnalyzer:
                     }
                     
                     # 判斷是 Win 還是 Loss (相對於 Player 1)
-                    # 如果 winner 包含 p1_name (模糊比對)
+                    # 如果 winner 包含 p1_name 或 player_focus (模糊比對)
                     is_p1_win = False
                     is_unknown = False
                     
+                    # Debug 輸出 (確保 player_focus 有值，避免作用域問題)
+                    focus_display = player_focus if player_focus else 'None'
+                    print(f"🔍 回合 {p.get('id')}: winner='{winner}', p1_name='{p1_name}', player_focus='{focus_display}'")
+                    
                     if not winner:
-                        # 無法判斷勝負時，全部當作「回合片段」放到 point_wins
+                        # 無法判斷勝負時，保守處理：檢查描述
                         is_unknown = True
-                        is_p1_win = True
-                    elif p1_name and p1_name in winner:
-                        is_p1_win = True
-                    elif "選手A" in winner: # Default name
-                        is_p1_win = True
+                        is_p1_win = True  # 預設為得分
+                    else:
+                        # 多重判定策略：檢查 winner 是否包含關注選手的名字
+                        winner_lower = winner.lower()
+                        
+                        # 先檢查是否明確是對手得分
+                        if "對手" in winner or "對方" in winner or "opponent" in winner_lower:
+                            is_p1_win = False
+                        # 檢查是否是第二位選手
+                        elif "player 2" in winner_lower or "p2" in winner_lower:
+                            is_p1_win = False
+                        # 檢查第二位選手名字
+                        else:
+                            p2_name = parsed.get('player2_analysis', {}).get('name', '')
+                            if p2_name and p2_name in winner:
+                                is_p1_win = False
+                            # 檢查第一位選手名字
+                            elif p1_name and p1_name in winner:
+                                is_p1_win = True
+                            # 檢查 player_focus
+                            elif player_focus and player_focus in winner:
+                                is_p1_win = True
+                            # 檢查是否包含 "選手A" 或 "player 1"
+                            elif "選手a" in winner_lower or "player 1" in winner_lower or "p1" in winner_lower:
+                                is_p1_win = True
+                            else:
+                                # 無法確定時，檢查 win_reason 或 description
+                                desc = p.get('description', '') + ' ' + p.get('win_reason', '')
+                                if '失誤' in desc or '下網' in desc or '出界' in desc:
+                                    # 如果描述中有失誤相關字眼，更可能是對手得分
+                                    is_p1_win = False
+                                else:
+                                    # 最後預設為得分
+                                    is_p1_win = True
+                    
+                    print(f"   → 判定: {'得分' if is_p1_win else '失分'}")
                     
                     if is_p1_win:
                         win_point = base_point.copy()
