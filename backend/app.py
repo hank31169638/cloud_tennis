@@ -29,6 +29,8 @@ from services.ranking_service import RankingService
 # 全域 SocketIO 實例
 socketio = None
 
+# Global model cache
+_model_cache = None
 
 def create_app() -> Flask:
     """

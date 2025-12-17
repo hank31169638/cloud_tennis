@@ -12,15 +12,15 @@ from sklearn.preprocessing import StandardScaler
 from sklearn.utils.class_weight import compute_class_weight
 from sklearn.metrics import confusion_matrix, classification_report
 import tensorflow as tf
-from tensorflow.keras.models import Sequential
-from tensorflow.keras.layers import LSTM, Dense, Dropout, Bidirectional
-from tensorflow.keras.callbacks import (
+from tensorflow.keras.models import Sequential # type: ignore
+from tensorflow.keras.layers import LSTM, Dense, Dropout, Bidirectional # type: ignore
+from tensorflow.keras.callbacks import ( # type: ignore
     EarlyStopping, 
     ModelCheckpoint, 
     ReduceLROnPlateau,
     TensorBoard
 )
-from tensorflow.keras.optimizers import Adam
+from tensorflow.keras.optimizers import Adam # type: ignore
 import os
 import argparse
 import matplotlib.pyplot as plt
@@ -255,7 +255,7 @@ def main(args):
     print(f"✅ Scaler 已儲存至: {scaler_path}")
     
     # 5. One-hot encoding
-    from tensorflow.keras.utils import to_categorical
+    from tensorflow.keras.utils import to_categorical # type: ignore
     y_train_cat = to_categorical(y_train_aug, num_classes=3)
     y_val_cat = to_categorical(y_val, num_classes=3)
     y_test_cat = to_categorical(y_test, num_classes=3)

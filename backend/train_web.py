@@ -8,10 +8,10 @@ import glob
 from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import StandardScaler
 import tensorflow as tf
-from tensorflow.keras.models import Sequential
-from tensorflow.keras.layers import LSTM, Dense, Dropout, Bidirectional
-from tensorflow.keras.callbacks import Callback
-from tensorflow.keras.optimizers import Adam
+from tensorflow.keras.models import Sequential # type: ignore
+from tensorflow.keras.layers import LSTM, Dense, Dropout, Bidirectional # type: ignore
+from tensorflow.keras.callbacks import Callback # type: ignore
+from tensorflow.keras.optimizers import Adam # type: ignore
 import joblib
 from datetime import datetime
 from skeleton import PoseExtractor
@@ -252,7 +252,7 @@ def train_model(config, task_id, training_tasks):
         training_tasks[task_id]['logs'].append('✅ 特徵標準化完成')
         
         # 4. One-hot encoding
-        from tensorflow.keras.utils import to_categorical
+        from tensorflow.keras.utils import to_categorical # type: ignore
         y_train_cat = to_categorical(y_train, num_classes=3)
         y_test_cat = to_categorical(y_test, num_classes=3)
         

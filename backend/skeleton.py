@@ -81,24 +81,6 @@ class PoseExtractor:
             
             cv2.line(image, (start_x, start_y), (end_x, end_y), (0, 255, 0), 2)  # 綠色線條
     
-    def extract_pose(self, frame):
-        """
-        處理單幀影像並返回姿態檢測結果
-        
-        Args:
-            frame: OpenCV 影像幀 (BGR 格式)
-            
-        Returns:
-            MediaPipe 姿態檢測結果
-        """
-        # 轉換為 RGB 格式（MediaPipe 需要）
-        frame_rgb = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
-        
-        # 執行姿態檢測
-        results = self.pose.process(frame_rgb)
-        
-        return results
-    
     def extract_pose_from_video(self, input_video_path, output_video_path=None):
         # 開啟影片
         cap = cv2.VideoCapture(input_video_path)

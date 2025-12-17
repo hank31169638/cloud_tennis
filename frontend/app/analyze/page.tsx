@@ -248,9 +248,9 @@ export default function AnalyzePage() {
                 {getClassEmoji(result.classification)}
               </div>
               <div className={`text-3xl font-semibold mb-2 ${getClassColor(result.classification)}`}>
-                {result.classification === 'good' ? '優良' : 
+                {result.classification === 'good' ? '標準' : 
                  result.classification === 'normal' ? '一般' : 
-                 result.classification === 'bad' ? '不良' : '未知'}
+                 result.classification === 'bad' ? '不標準' : '未知'}
               </div>
               <div className="text-sm text-blue-600 font-light">
                 信心度: {(result.confidence * 100).toFixed(1)}%
@@ -287,7 +287,7 @@ export default function AnalyzePage() {
                     .map(([className, probability]: any) => (
                       <div key={className} className="flex items-center gap-3">
                         <span className="w-16 text-sm text-blue-700 font-medium">
-                          {className === 'good' ? '優良' : className === 'normal' ? '一般' : '不良'}
+                          {className === 'good' ? '標準' : className === 'normal' ? '一般' : '不標準'}
                         </span>
                         <div className="flex-1 bg-blue-100 rounded-full h-2.5 overflow-hidden">
                           <div 

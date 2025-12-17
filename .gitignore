@@ -40,7 +40,10 @@ tmp/
 *.tmp
 
 # Flask uploads and generated media
+**/uploads/*
+!**/uploads/.gitkeep
 uploads/*
+!uploads/.gitkeep
 predict_skeleton.mp4
 predict.mp4
 
