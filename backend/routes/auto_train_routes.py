@@ -82,14 +82,16 @@ def import_player_analysis():
     Request Body:
         - analysis_result: 選手分析結果 (包含 scoring_clips 和 losing_clips)
         - player_name: 選手名稱
-        - auto_approve: 是否自動核准 (預設 False)
+        - auto_approve: 是否自動核准 (預設 True)
+        - auto_process: 是否自動處理並匯出 (預設 True)
         - confidence_threshold: 自動核准門檻 (預設 0.7)
     """
     try:
         data = request.get_json()
         analysis_result = data.get('analysis_result')
         player_name = data.get('player_name', '未知選手')
-        auto_approve = data.get('auto_approve', False)
+        auto_approve = data.get('auto_approve', True)  # 預設改為 True
+        auto_process = data.get('auto_process', True)  # 新增: 預設 True
         confidence_threshold = data.get('confidence_threshold', 0.7)
         
         if not analysis_result:
@@ -103,6 +105,7 @@ def import_player_analysis():
             analysis_result,
             player_name=player_name,
             auto_approve=auto_approve,
+            auto_process=auto_process,  # 傳入新參數
             confidence_threshold=confidence_threshold
         )
         
@@ -119,6 +122,7 @@ def import_player_analysis():
             "scoring_count": scoring_count,
             "losing_count": losing_count,
             "label_stats": label_stats,
+            "auto_processed": auto_process,  # 回傳是否已自動處理
             "clips": [c.to_dict() for c in clips]
         })
     except Exception as e:

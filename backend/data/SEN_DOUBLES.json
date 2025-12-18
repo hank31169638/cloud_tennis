@@ -1,14 +1,14 @@
 {
-  "updated_at": "2025-12-11T14:19:54.720049",
+  "updated_at": "2025-12-17T18:21:06.625885",
   "category": "SEN_DOUBLES",
   "data": {
     "Version": "0.1.0",
     "Source": "ITTF/WTT",
     "System": "Table tennis Sports Data API",
     "StatusCode": 200,
-    "RequestId": "52f5b4b8-844a-4b4e-8115-49ee2005f2aa",
-    "ResponseDate": "12/09/2025",
-    "ResponseTime": "00:55:23",
+    "RequestId": "fa8f588c-2a14-4e29-8b9c-2d9fd465a31e",
+    "ResponseDate": "12/16/2025",
+    "ResponseTime": "00:55:24",
     "Result": [
       {
         "PairId": "53376",
@@ -29,13 +29,13 @@
         "SubEventCode": "MD",
         "RankingYear": "2025",
         "RankingMonth": "12",
-        "RankingWeek": "50",
+        "RankingWeek": "51",
         "Points": "4395",
         "RankingPosition": "1",
         "CurrentRank": "1",
         "PreviousRank": "1",
         "RankingDifference": "0",
-        "PublishDate": "12/09/2025 00:00:00"
+        "PublishDate": "12/16/2025 00:00:00"
       },
       {
         "PairId": "100121691",
@@ -56,13 +56,13 @@
         "SubEventCode": "WD",
         "RankingYear": "2025",
         "RankingMonth": "12",
-        "RankingWeek": "50",
+        "RankingWeek": "51",
         "Points": "6000",
         "RankingPosition": "1",
         "CurrentRank": "1",
         "PreviousRank": "1",
         "RankingDifference": "0",
-        "PublishDate": "12/09/2025 00:00:00"
+        "PublishDate": "12/16/2025 00:00:00"
       },
       {
         "PairId": "46619",
@@ -83,13 +83,13 @@
         "SubEventCode": "XD",
         "RankingYear": "2025",
         "RankingMonth": "12",
-        "RankingWeek": "50",
-        "Points": "6748",
+        "RankingWeek": "51",
+        "Points": "7273",
         "RankingPosition": "1",
         "CurrentRank": "1",
         "PreviousRank": "1",
         "RankingDifference": "0",
-        "PublishDate": "12/09/2025 00:00:00"
+        "PublishDate": "12/16/2025 00:00:00"
       },
       {
         "PairId": "77476",
@@ -110,13 +110,13 @@
         "SubEventCode": "MD",
         "RankingYear": "2025",
         "RankingMonth": "12",
-        "RankingWeek": "50",
+        "RankingWeek": "51",
         "Points": "4095",
         "RankingPosition": "2",
         "CurrentRank": "2",
         "PreviousRank": "2",
         "RankingDifference": "0",
-        "PublishDate": "12/09/2025 00:00:00"
+        "PublishDate": "12/16/2025 00:00:00"
       },
       {
         "PairId": "100156168",
@@ -137,13 +137,13 @@
         "SubEventCode": "WD",
         "RankingYear": "2025",
         "RankingMonth": "12",
-        "RankingWeek": "50",
+        "RankingWeek": "51",
         "Points": "3410",
         "RankingPosition": "2",
         "CurrentRank": "2",
         "PreviousRank": "2",
         "RankingDifference": "0",
-        "PublishDate": "12/09/2025 00:00:00"
+        "PublishDate": "12/16/2025 00:00:00"
       },
       {
         "PairId": "57776",
@@ -164,13 +164,13 @@
         "SubEventCode": "XD",
         "RankingYear": "2025",
         "RankingMonth": "12",
-        "RankingWeek": "50",
-        "Points": "5110",
+        "RankingWeek": "51",
+        "Points": "6610",
         "RankingPosition": "2",
         "CurrentRank": "2",
         "PreviousRank": "2",
         "RankingDifference": "0",
-        "PublishDate": "12/09/2025 00:00:00"
+        "PublishDate": "12/16/2025 00:00:00"
       },
       {
         "PairId": "100129312",
@@ -191,13 +191,13 @@
         "SubEventCode": "MD",
         "RankingYear": "2025",
         "RankingMonth": "12",
-        "RankingWeek": "50",
+        "RankingWeek": "51",
         "Points": "4000",
         "RankingPosition": "3",
         "CurrentRank": "3",
         "PreviousRank": "3",
         "RankingDifference": "0",
-        "PublishDate": "12/09/2025 00:00:00"
+        "PublishDate": "12/16/2025 00:00:00"
       },
       {
         "PairId": "39161",
@@ -218,13 +218,13 @@
         "SubEventCode": "WD",
         "RankingYear": "2025",
         "RankingMonth": "12",
-        "RankingWeek": "50",
+        "RankingWeek": "51",
         "Points": "3400",
         "RankingPosition": "3",
         "CurrentRank": "3",
         "PreviousRank": "3",
         "RankingDifference": "0",
-        "PublishDate": "12/09/2025 00:00:00"
+        "PublishDate": "12/16/2025 00:00:00"
       },
       {
         "PairId": "37085",
@@ -245,13 +245,13 @@
         "SubEventCode": "XD",
         "RankingYear": "2025",
         "RankingMonth": "12",
-        "RankingWeek": "50",
-        "Points": "4511",
+        "RankingWeek": "51",
+        "Points": "5561",
         "RankingPosition": "3",
         "CurrentRank": "3",
         "PreviousRank": "3",
         "RankingDifference": "0",
-        "PublishDate": "12/09/2025 00:00:00"
+        "PublishDate": "12/16/2025 00:00:00"
       },
       {
         "PairId": "46083",
@@ -272,13 +272,13 @@
         "SubEventCode": "MD",
         "RankingYear": "2025",
         "RankingMonth": "12",
-        "RankingWeek": "50",
+        "RankingWeek": "51",
         "Points": "3863",
         "RankingPosition": "4",
         "CurrentRank": "4",
         "PreviousRank": "4",
         "RankingDifference": "0",
-        "PublishDate": "12/09/2025 00:00:00"
+        "PublishDate": "12/16/2025 00:00:00"
       },
       {
         "PairId": "46604",
@@ -299,13 +299,13 @@
         "SubEventCode": "WD",
         "RankingYear": "2025",
         "RankingMonth": "12",
-        "RankingWeek": "50",
+        "RankingWeek": "51",
         "Points": "3285",
         "RankingPosition": "4",
         "CurrentRank": "4",
         "PreviousRank": "4",
         "RankingDifference": "0",
-        "PublishDate": "12/09/2025 00:00:00"
+        "PublishDate": "12/16/2025 00:00:00"
       },
       {
         "PairId": "46298",
@@ -326,13 +326,13 @@
         "SubEventCode": "XD",
         "RankingYear": "2025",
         "RankingMonth": "12",
-        "RankingWeek": "50",
-        "Points": "3665",
+        "RankingWeek": "51",
+        "Points": "4085",
         "RankingPosition": "4",
         "CurrentRank": "4",
         "PreviousRank": "4",
         "RankingDifference": "0",
-        "PublishDate": "12/09/2025 00:00:00"
+        "PublishDate": "12/16/2025 00:00:00"
       },
       {
         "PairId": "100129204",
@@ -353,13 +353,13 @@
         "SubEventCode": "MD",
         "RankingYear": "2025",
         "RankingMonth": "12",
-        "RankingWeek": "50",
+        "RankingWeek": "51",
         "Points": "3160",
         "RankingPosition": "5",
         "CurrentRank": "5",
         "PreviousRank": "5",
         "RankingDifference": "0",
-        "PublishDate": "12/09/2025 00:00:00"
+        "PublishDate": "12/16/2025 00:00:00"
       },
       {
         "PairId": "44898",
@@ -380,13 +380,13 @@
         "SubEventCode": "WD",
         "RankingYear": "2025",
         "RankingMonth": "12",
-        "RankingWeek": "50",
+        "RankingWeek": "51",
         "Points": "3070",
         "RankingPosition": "5",
         "CurrentRank": "5",
         "PreviousRank": "5",
         "RankingDifference": "0",
-        "PublishDate": "12/09/2025 00:00:00"
+        "PublishDate": "12/16/2025 00:00:00"
       },
       {
         "PairId": "36985",
@@ -407,13 +407,13 @@
         "SubEventCode": "XD",
         "RankingYear": "2025",
         "RankingMonth": "12",
-        "RankingWeek": "50",
-        "Points": "3045",
+        "RankingWeek": "51",
+        "Points": "3240",
         "RankingPosition": "5",
         "CurrentRank": "5",
         "PreviousRank": "5",
         "RankingDifference": "0",
-        "PublishDate": "12/09/2025 00:00:00"
+        "PublishDate": "12/16/2025 00:00:00"
       },
       {
         "PairId": "44377",
@@ -434,13 +434,13 @@
         "SubEventCode": "MD",
         "RankingYear": "2025",
         "RankingMonth": "12",
-        "RankingWeek": "50",
+        "RankingWeek": "51",
         "Points": "2520",
         "RankingPosition": "6",
         "CurrentRank": "6",
         "PreviousRank": "6",
         "RankingDifference": "0",
-        "PublishDate": "12/09/2025 00:00:00"
+        "PublishDate": "12/16/2025 00:00:00"
       },
       {
         "PairId": "41630",
@@ -461,13 +461,13 @@
         "SubEventCode": "WD",
         "RankingYear": "2025",
         "RankingMonth": "12",
-        "RankingWeek": "50",
+        "RankingWeek": "51",
         "Points": "2100",
         "RankingPosition": "6",
         "CurrentRank": "6",
         "PreviousRank": "6",
         "RankingDifference": "0",
-        "PublishDate": "12/09/2025 00:00:00"
+        "PublishDate": "12/16/2025 00:00:00"
       },
       {
         "PairId": "37260",
@@ -488,13 +488,13 @@
         "SubEventCode": "XD",
         "RankingYear": "2025",
         "RankingMonth": "12",
-        "RankingWeek": "50",
-        "Points": "2760",
+        "RankingWeek": "51",
+        "Points": "2935",
         "RankingPosition": "6",
         "CurrentRank": "6",
         "PreviousRank": "6",
         "RankingDifference": "0",
-        "PublishDate": "12/09/2025 00:00:00"
+        "PublishDate": "12/16/2025 00:00:00"
       },
       {
         "PairId": "59286",
@@ -515,13 +515,13 @@
         "SubEventCode": "MD",
         "RankingYear": "2025",
         "RankingMonth": "12",
-        "RankingWeek": "50",
+        "RankingWeek": "51",
         "Points": "2495",
         "RankingPosition": "7",
         "CurrentRank": "7",
         "PreviousRank": "7",
         "RankingDifference": "0",
-        "PublishDate": "12/09/2025 00:00:00"
+        "PublishDate": "12/16/2025 00:00:00"
       },
       {
         "PairId": "79593",
@@ -542,13 +542,13 @@
         "SubEventCode": "WD",
         "RankingYear": "2025",
         "RankingMonth": "12",
-        "RankingWeek": "50",
+        "RankingWeek": "51",
         "Points": "2000",
         "RankingPosition": "7",
         "CurrentRank": "7",
         "PreviousRank": "7",
         "RankingDifference": "0",
-        "PublishDate": "12/09/2025 00:00:00"
+        "PublishDate": "12/16/2025 00:00:00"
       },
       {
         "PairId": "41233",
@@ -569,13 +569,13 @@
         "SubEventCode": "XD",
         "RankingYear": "2025",
         "RankingMonth": "12",
-        "RankingWeek": "50",
+        "RankingWeek": "51",
         "Points": "2485",
         "RankingPosition": "7",
         "CurrentRank": "7",
         "PreviousRank": "7",
         "RankingDifference": "0",
-        "PublishDate": "12/09/2025 00:00:00"
+        "PublishDate": "12/16/2025 00:00:00"
       },
       {
         "PairId": "48567",
@@ -596,13 +596,13 @@
         "SubEventCode": "MD",
         "RankingYear": "2025",
         "RankingMonth": "12",
-        "RankingWeek": "50",
+        "RankingWeek": "51",
         "Points": "2190",
         "RankingPosition": "8",
         "CurrentRank": "8",
         "PreviousRank": "8",
         "RankingDifference": "0",
-        "PublishDate": "12/09/2025 00:00:00"
+        "PublishDate": "12/16/2025 00:00:00"
       },
       {
         "PairId": "61872",
@@ -623,13 +623,13 @@
         "SubEventCode": "WD",
         "RankingYear": "2025",
         "RankingMonth": "12",
-        "RankingWeek": "50",
+        "RankingWeek": "51",
         "Points": "1805",
         "RankingPosition": "8",
         "CurrentRank": "8",
         "PreviousRank": "8",
         "RankingDifference": "0",
-        "PublishDate": "12/09/2025 00:00:00"
+        "PublishDate": "12/16/2025 00:00:00"
       },
       {
         "PairId": "37282",
@@ -650,13 +650,13 @@
         "SubEventCode": "XD",
         "RankingYear": "2025",
         "RankingMonth": "12",
-        "RankingWeek": "50",
+        "RankingWeek": "51",
         "Points": "2433",
         "RankingPosition": "8",
         "CurrentRank": "8",
         "PreviousRank": "8",
         "RankingDifference": "0",
-        "PublishDate": "12/09/2025 00:00:00"
+        "PublishDate": "12/16/2025 00:00:00"
       },
       {
         "PairId": "39101",
@@ -677,13 +677,13 @@
         "SubEventCode": "MD",
         "RankingYear": "2025",
         "RankingMonth": "12",
-        "RankingWeek": "50",
+        "RankingWeek": "51",
         "Points": "1750",
         "RankingPosition": "9",
         "CurrentRank": "9",
         "PreviousRank": "9",
         "RankingDifference": "0",
-        "PublishDate": "12/09/2025 00:00:00"
+        "PublishDate": "12/16/2025 00:00:00"
       },
       {
         "PairId": "46599",
@@ -704,13 +704,13 @@
         "SubEventCode": "WD",
         "RankingYear": "2025",
         "RankingMonth": "12",
-        "RankingWeek": "50",
+        "RankingWeek": "51",
         "Points": "1645",
         "RankingPosition": "9",
         "CurrentRank": "9",
         "PreviousRank": "9",
         "RankingDifference": "0",
-        "PublishDate": "12/09/2025 00:00:00"
+        "PublishDate": "12/16/2025 00:00:00"
       },
       {
         "PairId": "100107949",
@@ -731,13 +731,13 @@
         "SubEventCode": "XD",
         "RankingYear": "2025",
         "RankingMonth": "12",
-        "RankingWeek": "50",
+        "RankingWeek": "51",
         "Points": "2395",
         "RankingPosition": "9",
         "CurrentRank": "9",
         "PreviousRank": "9",
         "RankingDifference": "0",
-        "PublishDate": "12/09/2025 00:00:00"
+        "PublishDate": "12/16/2025 00:00:00"
       },
       {
         "PairId": "36265",
@@ -758,13 +758,13 @@
         "SubEventCode": "MD",
         "RankingYear": "2025",
         "RankingMonth": "12",
-        "RankingWeek": "50",
+        "RankingWeek": "51",
         "Points": "1730",
         "RankingPosition": "10",
         "CurrentRank": "10",
         "PreviousRank": "10",
         "RankingDifference": "0",
-        "PublishDate": "12/09/2025 00:00:00"
+        "PublishDate": "12/16/2025 00:00:00"
       },
       {
         "PairId": "100116317",
@@ -785,13 +785,13 @@
         "SubEventCode": "WD",
         "RankingYear": "2025",
         "RankingMonth": "12",
-        "RankingWeek": "50",
+        "RankingWeek": "51",
         "Points": "1400",
         "RankingPosition": "10",
         "CurrentRank": "10",
         "PreviousRank": "10",
         "RankingDifference": "0",
-        "PublishDate": "12/09/2025 00:00:00"
+        "PublishDate": "12/16/2025 00:00:00"
       },
       {
         "PairId": "100123381",
@@ -812,13 +812,13 @@
         "SubEventCode": "XD",
         "RankingYear": "2025",
         "RankingMonth": "12",
-        "RankingWeek": "50",
+        "RankingWeek": "51",
         "Points": "1869",
         "RankingPosition": "10",
         "CurrentRank": "10",
         "PreviousRank": "10",
         "RankingDifference": "0",
-        "PublishDate": "12/09/2025 00:00:00"
+        "PublishDate": "12/16/2025 00:00:00"
       },
       {
         "PairId": "99012",
@@ -839,13 +839,13 @@
         "SubEventCode": "MD",
         "RankingYear": "2025",
         "RankingMonth": "12",
-        "RankingWeek": "50",
+        "RankingWeek": "51",
         "Points": "1470",
         "RankingPosition": "11",
         "CurrentRank": "11",
         "PreviousRank": "11",
         "RankingDifference": "0",
-        "PublishDate": "12/09/2025 00:00:00"
+        "PublishDate": "12/16/2025 00:00:00"
       },
       {
         "PairId": "100185133",
@@ -866,13 +866,13 @@
         "SubEventCode": "WD",
         "RankingYear": "2025",
         "RankingMonth": "12",
-        "RankingWeek": "50",
+        "RankingWeek": "51",
         "Points": "1400",
         "RankingPosition": "11",
         "CurrentRank": "11",
         "PreviousRank": "11",
         "RankingDifference": "0",
-        "PublishDate": "12/09/2025 00:00:00"
+        "PublishDate": "12/16/2025 00:00:00"
       },
       {
         "PairId": "100129839",
@@ -893,13 +893,13 @@
         "SubEventCode": "XD",
         "RankingYear": "2025",
         "RankingMonth": "12",
-        "RankingWeek": "50",
+        "RankingWeek": "51",
         "Points": "1810",
         "RankingPosition": "11",
         "CurrentRank": "11",
         "PreviousRank": "11",
         "RankingDifference": "0",
-        "PublishDate": "12/09/2025 00:00:00"
+        "PublishDate": "12/16/2025 00:00:00"
       },
       {
         "PairId": "100119975",
@@ -920,13 +920,13 @@
         "SubEventCode": "MD",
         "RankingYear": "2025",
         "RankingMonth": "12",
-        "RankingWeek": "50",
+        "RankingWeek": "51",
         "Points": "1430",
         "RankingPosition": "12",
         "CurrentRank": "12",
         "PreviousRank": "12",
         "RankingDifference": "0",
-        "PublishDate": "12/09/2025 00:00:00"
+        "PublishDate": "12/16/2025 00:00:00"
       },
       {
         "PairId": "100155192",
@@ -947,13 +947,13 @@
         "SubEventCode": "WD",
         "RankingYear": "2025",
         "RankingMonth": "12",
-        "RankingWeek": "50",
+        "RankingWeek": "51",
         "Points": "1230",
         "RankingPosition": "12",
         "CurrentRank": "12",
         "PreviousRank": "12",
         "RankingDifference": "0",
-        "PublishDate": "12/09/2025 00:00:00"
+        "PublishDate": "12/16/2025 00:00:00"
       },
       {
         "PairId": "39818",
@@ -974,13 +974,13 @@
         "SubEventCode": "XD",
         "RankingYear": "2025",
         "RankingMonth": "12",
-        "RankingWeek": "50",
+        "RankingWeek": "51",
         "Points": "1588",
         "RankingPosition": "12",
         "CurrentRank": "12",
         "PreviousRank": "12",
         "RankingDifference": "0",
-        "PublishDate": "12/09/2025 00:00:00"
+        "PublishDate": "12/16/2025 00:00:00"
       },
       {
         "PairId": "100179462",
@@ -1001,13 +1001,13 @@
         "SubEventCode": "MD",
         "RankingYear": "2025",
         "RankingMonth": "12",
-        "RankingWeek": "50",
+        "RankingWeek": "51",
         "Points": "1404",
         "RankingPosition": "13",
         "CurrentRank": "13",
         "PreviousRank": "13",
         "RankingDifference": "0",
-        "PublishDate": "12/09/2025 00:00:00"
+        "PublishDate": "12/16/2025 00:00:00"
       },
       {
         "PairId": "36300",
@@ -1028,13 +1028,13 @@
         "SubEventCode": "WD",
         "RankingYear": "2025",
         "RankingMonth": "12",
-        "RankingWeek": "50",
+        "RankingWeek": "51",
         "Points": "1140",
         "RankingPosition": "13",
         "CurrentRank": "13",
         "PreviousRank": "13",
         "RankingDifference": "0",
-        "PublishDate": "12/09/2025 00:00:00"
+        "PublishDate": "12/16/2025 00:00:00"
       },
       {
         "PairId": "100129182",
@@ -1055,13 +1055,13 @@
         "SubEventCode": "XD",
         "RankingYear": "2025",
         "RankingMonth": "12",
-        "RankingWeek": "50",
+        "RankingWeek": "51",
         "Points": "1135",
         "RankingPosition": "13",
         "CurrentRank": "13",
         "PreviousRank": "13",
         "RankingDifference": "0",
-        "PublishDate": "12/09/2025 00:00:00"
+        "PublishDate": "12/16/2025 00:00:00"
       },
       {
         "PairId": "100111454",
@@ -1082,13 +1082,13 @@
         "SubEventCode": "MD",
         "RankingYear": "2025",
         "RankingMonth": "12",
-        "RankingWeek": "50",
+        "RankingWeek": "51",
         "Points": "1196",
         "RankingPosition": "14",
         "CurrentRank": "14",
         "PreviousRank": "14",
         "RankingDifference": "0",
-        "PublishDate": "12/09/2025 00:00:00"
+        "PublishDate": "12/16/2025 00:00:00"
       },
       {
         "PairId": "36036",
@@ -1109,13 +1109,13 @@
         "SubEventCode": "WD",
         "RankingYear": "2025",
         "RankingMonth": "12",
-        "RankingWeek": "50",
+        "RankingWeek": "51",
         "Points": "1065",
         "RankingPosition": "14",
         "CurrentRank": "14",
         "PreviousRank": "14",
         "RankingDifference": "0",
-        "PublishDate": "12/09/2025 00:00:00"
+        "PublishDate": "12/16/2025 00:00:00"
       },
       {
         "PairId": "100129165",
@@ -1136,13 +1136,13 @@
         "SubEventCode": "XD",
         "RankingYear": "2025",
         "RankingMonth": "12",
-        "RankingWeek": "50",
+        "RankingWeek": "51",
         "Points": "1085",
         "RankingPosition": "14",
         "CurrentRank": "14",
         "PreviousRank": "14",
         "RankingDifference": "0",
-        "PublishDate": "12/09/2025 00:00:00"
+        "PublishDate": "12/16/2025 00:00:00"
       },
       {
         "PairId": "43427",
@@ -1163,13 +1163,13 @@
         "SubEventCode": "MD",
         "RankingYear": "2025",
         "RankingMonth": "12",
-        "RankingWeek": "50",
+        "RankingWeek": "51",
         "Points": "1009",
         "RankingPosition": "15",
         "CurrentRank": "15",
         "PreviousRank": "15",
         "RankingDifference": "0",
-        "PublishDate": "12/09/2025 00:00:00"
+        "PublishDate": "12/16/2025 00:00:00"
       },
       {
         "PairId": "100151813",
@@ -1190,13 +1190,13 @@
         "SubEventCode": "WD",
         "RankingYear": "2025",
         "RankingMonth": "12",
-        "RankingWeek": "50",
+        "RankingWeek": "51",
         "Points": "1050",
         "RankingPosition": "15",
         "CurrentRank": "15",
         "PreviousRank": "15",
         "RankingDifference": "0",
-        "PublishDate": "12/09/2025 00:00:00"
+        "PublishDate": "12/16/2025 00:00:00"
       },
       {
         "PairId": "100168802",
@@ -1217,13 +1217,13 @@
         "SubEventCode": "XD",
         "RankingYear": "2025",
         "RankingMonth": "12",
-        "RankingWeek": "50",
+        "RankingWeek": "51",
         "Points": "760",
         "RankingPosition": "15",
         "CurrentRank": "15",
         "PreviousRank": "15",
         "RankingDifference": "0",
-        "PublishDate": "12/09/2025 00:00:00"
+        "PublishDate": "12/16/2025 00:00:00"
       },
       {
         "PairId": "100118869",
@@ -1244,13 +1244,13 @@
         "SubEventCode": "MD",
         "RankingYear": "2025",
         "RankingMonth": "12",
-        "RankingWeek": "50",
+        "RankingWeek": "51",
         "Points": "1000",
         "RankingPosition": "16",
         "CurrentRank": "16",
         "PreviousRank": "16",
         "RankingDifference": "0",
-        "PublishDate": "12/09/2025 00:00:00"
+        "PublishDate": "12/16/2025 00:00:00"
       },
       {
         "PairId": "51708",
@@ -1271,13 +1271,13 @@
         "SubEventCode": "WD",
         "RankingYear": "2025",
         "RankingMonth": "12",
-        "RankingWeek": "50",
+        "RankingWeek": "51",
         "Points": "1007",
         "RankingPosition": "16",
         "CurrentRank": "16",
         "PreviousRank": "16",
         "RankingDifference": "0",
-        "PublishDate": "12/09/2025 00:00:00"
+        "PublishDate": "12/16/2025 00:00:00"
       },
       {
         "PairId": "37347",
@@ -1298,13 +1298,13 @@
         "SubEventCode": "XD",
         "RankingYear": "2025",
         "RankingMonth": "12",
-        "RankingWeek": "50",
+        "RankingWeek": "51",
         "Points": "750",
         "RankingPosition": "16",
         "CurrentRank": "16",
-        "PreviousRank": "18",
-        "RankingDifference": "-2",
-        "PublishDate": "12/09/2025 00:00:00"
+        "PreviousRank": "16",
+        "RankingDifference": "0",
+        "PublishDate": "12/16/2025 00:00:00"
       },
       {
         "PairId": "100118849",
@@ -1325,13 +1325,13 @@
         "SubEventCode": "MD",
         "RankingYear": "2025",
         "RankingMonth": "12",
-        "RankingWeek": "50",
+        "RankingWeek": "51",
         "Points": "980",
         "RankingPosition": "17",
         "CurrentRank": "17",
         "PreviousRank": "17",
         "RankingDifference": "0",
-        "PublishDate": "12/09/2025 00:00:00"
+        "PublishDate": "12/16/2025 00:00:00"
       },
       {
         "PairId": "62777",
@@ -1352,13 +1352,13 @@
         "SubEventCode": "WD",
         "RankingYear": "2025",
         "RankingMonth": "12",
-        "RankingWeek": "50",
+        "RankingWeek": "51",
         "Points": "979",
         "RankingPosition": "17",
         "CurrentRank": "17",
         "PreviousRank": "17",
         "RankingDifference": "0",
-        "PublishDate": "12/09/2025 00:00:00"
+        "PublishDate": "12/16/2025 00:00:00"
       },
       {
         "PairId": "100171533",
@@ -1379,13 +1379,13 @@
         "SubEventCode": "XD",
         "RankingYear": "2025",
         "RankingMonth": "12",
-        "RankingWeek": "50",
+        "RankingWeek": "51",
         "Points": "745",
         "RankingPosition": "17",
         "CurrentRank": "17",
-        "PreviousRank": "16",
-        "RankingDifference": "1",
-        "PublishDate": "12/09/2025 00:00:00"
+        "PreviousRank": "17",
+        "RankingDifference": "0",
+        "PublishDate": "12/16/2025 00:00:00"
       },
       {
         "PairId": "100102873",
@@ -1406,13 +1406,13 @@
         "SubEventCode": "MD",
         "RankingYear": "2025",
         "RankingMonth": "12",
-        "RankingWeek": "50",
+        "RankingWeek": "51",
         "Points": "965",
         "RankingPosition": "18",
         "CurrentRank": "18",
         "PreviousRank": "18",
         "RankingDifference": "0",
-        "PublishDate": "12/09/2025 00:00:00"
+        "PublishDate": "12/16/2025 00:00:00"
       },
       {
         "PairId": "36125",
@@ -1433,13 +1433,13 @@
         "SubEventCode": "WD",
         "RankingYear": "2025",
         "RankingMonth": "12",
-        "RankingWeek": "50",
+        "RankingWeek": "51",
         "Points": "895",
         "RankingPosition": "18",
         "CurrentRank": "18",
         "PreviousRank": "18",
         "RankingDifference": "0",
-        "PublishDate": "12/09/2025 00:00:00"
+        "PublishDate": "12/16/2025 00:00:00"
       },
       {
         "PairId": "63040",
@@ -1460,13 +1460,13 @@
         "SubEventCode": "XD",
         "RankingYear": "2025",
         "RankingMonth": "12",
-        "RankingWeek": "50",
+        "RankingWeek": "51",
         "Points": "740",
         "RankingPosition": "18",
         "CurrentRank": "18",
-        "PreviousRank": "17",
-        "RankingDifference": "1",
-        "PublishDate": "12/09/2025 00:00:00"
+        "PreviousRank": "18",
+        "RankingDifference": "0",
+        "PublishDate": "12/16/2025 00:00:00"
       },
       {
         "PairId": "45610",
@@ -1487,13 +1487,13 @@
         "SubEventCode": "MD",
         "RankingYear": "2025",
         "RankingMonth": "12",
-        "RankingWeek": "50",
+        "RankingWeek": "51",
         "Points": "910",
         "RankingPosition": "19",
         "CurrentRank": "19",
         "PreviousRank": "19",
         "RankingDifference": "0",
-        "PublishDate": "12/09/2025 00:00:00"
+        "PublishDate": "12/16/2025 00:00:00"
       },
       {
         "PairId": "100121685",
@@ -1514,13 +1514,13 @@
         "SubEventCode": "WD",
         "RankingYear": "2025",
         "RankingMonth": "12",
-        "RankingWeek": "50",
+        "RankingWeek": "51",
         "Points": "875",
         "RankingPosition": "19",
         "CurrentRank": "19",
         "PreviousRank": "19",
         "RankingDifference": "0",
-        "PublishDate": "12/09/2025 00:00:00"
+        "PublishDate": "12/16/2025 00:00:00"
       },
       {
         "PairId": "56634",
@@ -1541,13 +1541,13 @@
         "SubEventCode": "XD",
         "RankingYear": "2025",
         "RankingMonth": "12",
-        "RankingWeek": "50",
+        "RankingWeek": "51",
         "Points": "729",
         "RankingPosition": "19",
         "CurrentRank": "19",
         "PreviousRank": "19",
         "RankingDifference": "0",
-        "PublishDate": "12/09/2025 00:00:00"
+        "PublishDate": "12/16/2025 00:00:00"
       },
       {
         "PairId": "35964",
@@ -1568,13 +1568,13 @@
         "SubEventCode": "MD",
         "RankingYear": "2025",
         "RankingMonth": "12",
-        "RankingWeek": "50",
+        "RankingWeek": "51",
         "Points": "885",
         "RankingPosition": "20",
         "CurrentRank": "20",
         "PreviousRank": "20",
         "RankingDifference": "0",
-        "PublishDate": "12/09/2025 00:00:00"
+        "PublishDate": "12/16/2025 00:00:00"
       },
       {
         "PairId": "58428",
@@ -1595,13 +1595,13 @@
         "SubEventCode": "WD",
         "RankingYear": "2025",
         "RankingMonth": "12",
-        "RankingWeek": "50",
+        "RankingWeek": "51",
         "Points": "864",
         "RankingPosition": "20",
         "CurrentRank": "20",
         "PreviousRank": "20",
         "RankingDifference": "0",
-        "PublishDate": "12/09/2025 00:00:00"
+        "PublishDate": "12/16/2025 00:00:00"
       },
       {
         "PairId": "95248",
@@ -1622,13 +1622,13 @@
         "SubEventCode": "XD",
         "RankingYear": "2025",
         "RankingMonth": "12",
-        "RankingWeek": "50",
+        "RankingWeek": "51",
         "Points": "723",
         "RankingPosition": "20",
         "CurrentRank": "20",
         "PreviousRank": "20",
         "RankingDifference": "0",
-        "PublishDate": "12/09/2025 00:00:00"
+        "PublishDate": "12/16/2025 00:00:00"
       },
       {
         "PairId": "46560",
@@ -1649,13 +1649,13 @@
         "SubEventCode": "MD",
         "RankingYear": "2025",
         "RankingMonth": "12",
-        "RankingWeek": "50",
+        "RankingWeek": "51",
         "Points": "880",
         "RankingPosition": "21",
         "CurrentRank": "21",
         "PreviousRank": "21",
         "RankingDifference": "0",
-        "PublishDate": "12/09/2025 00:00:00"
+        "PublishDate": "12/16/2025 00:00:00"
       },
       {
         "PairId": "70444",
@@ -1676,13 +1676,13 @@
         "SubEventCode": "WD",
         "RankingYear": "2025",
         "RankingMonth": "12",
-        "RankingWeek": "50",
+        "RankingWeek": "51",
         "Points": "800",
         "RankingPosition": "21",
         "CurrentRank": "21",
         "PreviousRank": "21",
         "RankingDifference": "0",
-        "PublishDate": "12/09/2025 00:00:00"
+        "PublishDate": "12/16/2025 00:00:00"
       },
       {
         "PairId": "100122100",
@@ -1703,13 +1703,13 @@
         "SubEventCode": "XD",
         "RankingYear": "2025",
         "RankingMonth": "12",
-        "RankingWeek": "50",
+        "RankingWeek": "51",
         "Points": "705",
         "RankingPosition": "21",
         "CurrentRank": "21",
         "PreviousRank": "21",
         "RankingDifference": "0",
-        "PublishDate": "12/09/2025 00:00:00"
+        "PublishDate": "12/16/2025 00:00:00"
       },
       {
         "PairId": "42032",
@@ -1730,13 +1730,13 @@
         "SubEventCode": "MD",
         "RankingYear": "2025",
         "RankingMonth": "12",
-        "RankingWeek": "50",
+        "RankingWeek": "51",
         "Points": "739",
         "RankingPosition": "22",
         "CurrentRank": "22",
         "PreviousRank": "22",
         "RankingDifference": "0",
-        "PublishDate": "12/09/2025 00:00:00"
+        "PublishDate": "12/16/2025 00:00:00"
       },
       {
         "PairId": "41484",
@@ -1757,13 +1757,13 @@
         "SubEventCode": "WD",
         "RankingYear": "2025",
         "RankingMonth": "12",
-        "RankingWeek": "50",
+        "RankingWeek": "51",
         "Points": "790",
         "RankingPosition": "22",
         "CurrentRank": "22",
         "PreviousRank": "22",
         "RankingDifference": "0",
-        "PublishDate": "12/09/2025 00:00:00"
+        "PublishDate": "12/16/2025 00:00:00"
       },
       {
         "PairId": "100173423",
@@ -1784,13 +1784,13 @@
         "SubEventCode": "XD",
         "RankingYear": "2025",
         "RankingMonth": "12",
-        "RankingWeek": "50",
+        "RankingWeek": "51",
         "Points": "700",
         "RankingPosition": "22",
         "CurrentRank": "22",
         "PreviousRank": "22",
         "RankingDifference": "0",
-        "PublishDate": "12/09/2025 00:00:00"
+        "PublishDate": "12/16/2025 00:00:00"
       },
       {
         "PairId": "100171777",
@@ -1811,13 +1811,13 @@
         "SubEventCode": "MD",
         "RankingYear": "2025",
         "RankingMonth": "12",
-        "RankingWeek": "50",
+        "RankingWeek": "51",
         "Points": "710",
         "RankingPosition": "23",
         "CurrentRank": "23",
         "PreviousRank": "23",
         "RankingDifference": "0",
-        "PublishDate": "12/09/2025 00:00:00"
+        "PublishDate": "12/16/2025 00:00:00"
       },
       {
         "PairId": "77171",
@@ -1838,13 +1838,13 @@
         "SubEventCode": "WD",
         "RankingYear": "2025",
         "RankingMonth": "12",
-        "RankingWeek": "50",
+        "RankingWeek": "51",
         "Points": "790",
         "RankingPosition": "23",
         "CurrentRank": "23",
         "PreviousRank": "23",
         "RankingDifference": "0",
-        "PublishDate": "12/09/2025 00:00:00"
+        "PublishDate": "12/16/2025 00:00:00"
       },
       {
         "PairId": "46471",
@@ -1865,13 +1865,13 @@
         "SubEventCode": "XD",
         "RankingYear": "2025",
         "RankingMonth": "12",
-        "RankingWeek": "50",
+        "RankingWeek": "51",
         "Points": "700",
         "RankingPosition": "23",
         "CurrentRank": "23",
         "PreviousRank": "23",
         "RankingDifference": "0",
-        "PublishDate": "12/09/2025 00:00:00"
+        "PublishDate": "12/16/2025 00:00:00"
       },
       {
         "PairId": "100106032",
@@ -1892,13 +1892,13 @@
         "SubEventCode": "MD",
         "RankingYear": "2025",
         "RankingMonth": "12",
-        "RankingWeek": "50",
+        "RankingWeek": "51",
         "Points": "700",
         "RankingPosition": "24",
         "CurrentRank": "24",
         "PreviousRank": "24",
         "RankingDifference": "0",
-        "PublishDate": "12/09/2025 00:00:00"
+        "PublishDate": "12/16/2025 00:00:00"
       },
       {
         "PairId": "36154",
@@ -1919,13 +1919,13 @@
         "SubEventCode": "WD",
         "RankingYear": "2025",
         "RankingMonth": "12",
-        "RankingWeek": "50",
+        "RankingWeek": "51",
         "Points": "728",
         "RankingPosition": "24",
         "CurrentRank": "24",
-        "PreviousRank": "25",
-        "RankingDifference": "-1",
-        "PublishDate": "12/09/2025 00:00:00"
+        "PreviousRank": "24",
+        "RankingDifference": "0",
+        "PublishDate": "12/16/2025 00:00:00"
       },
       {
         "PairId": "45954",
@@ -1946,13 +1946,13 @@
         "SubEventCode": "XD",
         "RankingYear": "2025",
         "RankingMonth": "12",
-        "RankingWeek": "50",
+        "RankingWeek": "51",
         "Points": "700",
         "RankingPosition": "24",
         "CurrentRank": "24",
         "PreviousRank": "24",
         "RankingDifference": "0",
-        "PublishDate": "12/09/2025 00:00:00"
+        "PublishDate": "12/16/2025 00:00:00"
       },
       {
         "PairId": "39154",
@@ -1973,13 +1973,13 @@
         "SubEventCode": "MD",
         "RankingYear": "2025",
         "RankingMonth": "12",
-        "RankingWeek": "50",
+        "RankingWeek": "51",
         "Points": "700",
         "RankingPosition": "25",
         "CurrentRank": "25",
         "PreviousRank": "25",
         "RankingDifference": "0",
-        "PublishDate": "12/09/2025 00:00:00"
+        "PublishDate": "12/16/2025 00:00:00"
       },
       {
         "PairId": "63031",
@@ -2000,13 +2000,13 @@
         "SubEventCode": "WD",
         "RankingYear": "2025",
         "RankingMonth": "12",
-        "RankingWeek": "50",
+        "RankingWeek": "51",
         "Points": "724",
         "RankingPosition": "25",
         "CurrentRank": "25",
-        "PreviousRank": "24",
-        "RankingDifference": "1",
-        "PublishDate": "12/09/2025 00:00:00"
+        "PreviousRank": "25",
+        "RankingDifference": "0",
+        "PublishDate": "12/16/2025 00:00:00"
       },
       {
         "PairId": "45091",
@@ -2027,13 +2027,13 @@
         "SubEventCode": "XD",
         "RankingYear": "2025",
         "RankingMonth": "12",
-        "RankingWeek": "50",
+        "RankingWeek": "51",
         "Points": "600",
         "RankingPosition": "25",
         "CurrentRank": "25",
-        "PreviousRank": "26",
-        "RankingDifference": "-1",
-        "PublishDate": "12/09/2025 00:00:00"
+        "PreviousRank": "25",
+        "RankingDifference": "0",
+        "PublishDate": "12/16/2025 00:00:00"
       },
       {
         "PairId": "63293",
@@ -2054,13 +2054,13 @@
         "SubEventCode": "MD",
         "RankingYear": "2025",
         "RankingMonth": "12",
-        "RankingWeek": "50",
+        "RankingWeek": "51",
         "Points": "700",
         "RankingPosition": "26",
         "CurrentRank": "26",
         "PreviousRank": "26",
         "RankingDifference": "0",
-        "PublishDate": "12/09/2025 00:00:00"
+        "PublishDate": "12/16/2025 00:00:00"
       },
       {
         "PairId": "100185152",
@@ -2081,13 +2081,13 @@
         "SubEventCode": "WD",
         "RankingYear": "2025",
         "RankingMonth": "12",
-        "RankingWeek": "50",
+        "RankingWeek": "51",
         "Points": "700",
         "RankingPosition": "26",
         "CurrentRank": "26",
         "PreviousRank": "26",
         "RankingDifference": "0",
-        "PublishDate": "12/09/2025 00:00:00"
+        "PublishDate": "12/16/2025 00:00:00"
       },
       {
         "PairId": "100113137",
@@ -2108,13 +2108,13 @@
         "SubEventCode": "XD",
         "RankingYear": "2025",
         "RankingMonth": "12",
-        "RankingWeek": "50",
+        "RankingWeek": "51",
         "Points": "570",
         "RankingPosition": "26",
         "CurrentRank": "26",
-        "PreviousRank": "27",
-        "RankingDifference": "-1",
-        "PublishDate": "12/09/2025 00:00:00"
+        "PreviousRank": "26",
+        "RankingDifference": "0",
+        "PublishDate": "12/16/2025 00:00:00"
       },
       {
         "PairId": "100155483",
@@ -2135,13 +2135,13 @@
         "SubEventCode": "MD",
         "RankingYear": "2025",
         "RankingMonth": "12",
-        "RankingWeek": "50",
+        "RankingWeek": "51",
         "Points": "624",
         "RankingPosition": "27",
         "CurrentRank": "27",
         "PreviousRank": "27",
         "RankingDifference": "0",
-        "PublishDate": "12/09/2025 00:00:00"
+        "PublishDate": "12/16/2025 00:00:00"
       },
       {
         "PairId": "42463",
@@ -2162,13 +2162,13 @@
         "SubEventCode": "WD",
         "RankingYear": "2025",
         "RankingMonth": "12",
-        "RankingWeek": "50",
+        "RankingWeek": "51",
         "Points": "639",
         "RankingPosition": "27",
         "CurrentRank": "27",
         "PreviousRank": "27",
         "RankingDifference": "0",
-        "PublishDate": "12/09/2025 00:00:00"
+        "PublishDate": "12/16/2025 00:00:00"
       },
       {
         "PairId": "40403",
@@ -2189,13 +2189,13 @@
         "SubEventCode": "XD",
         "RankingYear": "2025",
         "RankingMonth": "12",
-        "RankingWeek": "50",
+        "RankingWeek": "51",
         "Points": "560",
         "RankingPosition": "27",
         "CurrentRank": "27",
-        "PreviousRank": "25",
-        "RankingDifference": "2",
-        "PublishDate": "12/09/2025 00:00:00"
+        "PreviousRank": "27",
+        "RankingDifference": "0",
+        "PublishDate": "12/16/2025 00:00:00"
       },
       {
         "PairId": "43877",
@@ -2216,13 +2216,13 @@
         "SubEventCode": "MD",
         "RankingYear": "2025",
         "RankingMonth": "12",
-        "RankingWeek": "50",
+        "RankingWeek": "51",
         "Points": "590",
         "RankingPosition": "28",
         "CurrentRank": "28",
         "PreviousRank": "28",
         "RankingDifference": "0",
-        "PublishDate": "12/09/2025 00:00:00"
+        "PublishDate": "12/16/2025 00:00:00"
       },
       {
         "PairId": "100168953",
@@ -2243,13 +2243,13 @@
         "SubEventCode": "WD",
         "RankingYear": "2025",
         "RankingMonth": "12",
-        "RankingWeek": "50",
+        "RankingWeek": "51",
         "Points": "620",
         "RankingPosition": "28",
         "CurrentRank": "28",
         "PreviousRank": "28",
         "RankingDifference": "0",
-        "PublishDate": "12/09/2025 00:00:00"
+        "PublishDate": "12/16/2025 00:00:00"
       },
       {
         "PairId": "42026",
@@ -2270,13 +2270,13 @@
         "SubEventCode": "XD",
         "RankingYear": "2025",
         "RankingMonth": "12",
-        "RankingWeek": "50",
+        "RankingWeek": "51",
         "Points": "546",
         "RankingPosition": "28",
         "CurrentRank": "28",
-        "PreviousRank": "29",
-        "RankingDifference": "-1",
-        "PublishDate": "12/09/2025 00:00:00"
+        "PreviousRank": "28",
+        "RankingDifference": "0",
+        "PublishDate": "12/16/2025 00:00:00"
       },
       {
         "PairId": "37452",
@@ -2297,13 +2297,13 @@
         "SubEventCode": "MD",
         "RankingYear": "2025",
         "RankingMonth": "12",
-        "RankingWeek": "50",
+        "RankingWeek": "51",
         "Points": "580",
         "RankingPosition": "29",
         "CurrentRank": "29",
         "PreviousRank": "29",
         "RankingDifference": "0",
-        "PublishDate": "12/09/2025 00:00:00"
+        "PublishDate": "12/16/2025 00:00:00"
       },
       {
         "PairId": "40687",
@@ -2324,13 +2324,13 @@
         "SubEventCode": "WD",
         "RankingYear": "2025",
         "RankingMonth": "12",
-        "RankingWeek": "50",
+        "RankingWeek": "51",
         "Points": "590",
         "RankingPosition": "29",
         "CurrentRank": "29",
         "PreviousRank": "29",
         "RankingDifference": "0",
-        "PublishDate": "12/09/2025 00:00:00"
+        "PublishDate": "12/16/2025 00:00:00"
       },
       {
         "PairId": "100129157",
@@ -2351,13 +2351,13 @@
         "SubEventCode": "XD",
         "RankingYear": "2025",
         "RankingMonth": "12",
-        "RankingWeek": "50",
+        "RankingWeek": "51",
         "Points": "545",
         "RankingPosition": "29",
         "CurrentRank": "29",
-        "PreviousRank": "28",
-        "RankingDifference": "1",
-        "PublishDate": "12/09/2025 00:00:00"
+        "PreviousRank": "29",
+        "RankingDifference": "0",
+        "PublishDate": "12/16/2025 00:00:00"
       },
       {
         "PairId": "36654",
@@ -2378,13 +2378,13 @@
         "SubEventCode": "MD",
         "RankingYear": "2025",
         "RankingMonth": "12",
-        "RankingWeek": "50",
+        "RankingWeek": "51",
         "Points": "510",
         "RankingPosition": "30",
         "CurrentRank": "30",
         "PreviousRank": "30",
         "RankingDifference": "0",
-        "PublishDate": "12/09/2025 00:00:00"
+        "PublishDate": "12/16/2025 00:00:00"
       },
       {
         "PairId": "35941",
@@ -2405,13 +2405,13 @@
         "SubEventCode": "WD",
         "RankingYear": "2025",
         "RankingMonth": "12",
-        "RankingWeek": "50",
+        "RankingWeek": "51",
         "Points": "580",
         "RankingPosition": "30",
         "CurrentRank": "30",
         "PreviousRank": "30",
         "RankingDifference": "0",
-        "PublishDate": "12/09/2025 00:00:00"
+        "PublishDate": "12/16/2025 00:00:00"
       },
       {
         "PairId": "45201",
@@ -2432,13 +2432,13 @@
         "SubEventCode": "XD",
         "RankingYear": "2025",
         "RankingMonth": "12",
-        "RankingWeek": "50",
+        "RankingWeek": "51",
         "Points": "493",
         "RankingPosition": "30",
         "CurrentRank": "30",
-        "PreviousRank": "36",
-        "RankingDifference": "-6",
-        "PublishDate": "12/09/2025 00:00:00"
+        "PreviousRank": "30",
+        "RankingDifference": "0",
+        "PublishDate": "12/16/2025 00:00:00"
       },
       {
         "PairId": "100129453",
@@ -2459,13 +2459,13 @@
         "SubEventCode": "MD",
         "RankingYear": "2025",
         "RankingMonth": "12",
-        "RankingWeek": "50",
+        "RankingWeek": "51",
         "Points": "510",
         "RankingPosition": "31",
         "CurrentRank": "31",
         "PreviousRank": "31",
         "RankingDifference": "0",
-        "PublishDate": "12/09/2025 00:00:00"
+        "PublishDate": "12/16/2025 00:00:00"
       },
       {
         "PairId": "46053",
@@ -2486,13 +2486,13 @@
         "SubEventCode": "WD",
         "RankingYear": "2025",
         "RankingMonth": "12",
-        "RankingWeek": "50",
+        "RankingWeek": "51",
         "Points": "570",
         "RankingPosition": "31",
         "CurrentRank": "31",
         "PreviousRank": "31",
         "RankingDifference": "0",
-        "PublishDate": "12/09/2025 00:00:00"
+        "PublishDate": "12/16/2025 00:00:00"
       },
       {
         "PairId": "48410",
@@ -2513,13 +2513,13 @@
         "SubEventCode": "XD",
         "RankingYear": "2025",
         "RankingMonth": "12",
-        "RankingWeek": "50",
+        "RankingWeek": "51",
         "Points": "480",
         "RankingPosition": "31",
         "CurrentRank": "31",
-        "PreviousRank": "30",
-        "RankingDifference": "1",
-        "PublishDate": "12/09/2025 00:00:00"
+        "PreviousRank": "31",
+        "RankingDifference": "0",
+        "PublishDate": "12/16/2025 00:00:00"
       },
       {
         "PairId": "76171",
@@ -2540,13 +2540,13 @@
         "SubEventCode": "MD",
         "RankingYear": "2025",
         "RankingMonth": "12",
-        "RankingWeek": "50",
+        "RankingWeek": "51",
         "Points": "460",
         "RankingPosition": "32",
         "CurrentRank": "32",
         "PreviousRank": "32",
         "RankingDifference": "0",
-        "PublishDate": "12/09/2025 00:00:00"
+        "PublishDate": "12/16/2025 00:00:00"
       },
       {
         "PairId": "100118835",
@@ -2567,13 +2567,13 @@
         "SubEventCode": "WD",
         "RankingYear": "2025",
         "RankingMonth": "12",
-        "RankingWeek": "50",
+        "RankingWeek": "51",
         "Points": "550",
         "RankingPosition": "32",
         "CurrentRank": "32",
         "PreviousRank": "32",
         "RankingDifference": "0",
-        "PublishDate": "12/09/2025 00:00:00"
+        "PublishDate": "12/16/2025 00:00:00"
       },
       {
         "PairId": "100178104",
@@ -2594,13 +2594,13 @@
         "SubEventCode": "XD",
         "RankingYear": "2025",
         "RankingMonth": "12",
-        "RankingWeek": "50",
+        "RankingWeek": "51",
         "Points": "475",
         "RankingPosition": "32",
         "CurrentRank": "32",
-        "PreviousRank": "31",
-        "RankingDifference": "1",
-        "PublishDate": "12/09/2025 00:00:00"
+        "PreviousRank": "32",
+        "RankingDifference": "0",
+        "PublishDate": "12/16/2025 00:00:00"
       },
       {
         "PairId": "58911",
@@ -2621,13 +2621,13 @@
         "SubEventCode": "MD",
         "RankingYear": "2025",
         "RankingMonth": "12",
-        "RankingWeek": "50",
+        "RankingWeek": "51",
         "Points": "445",
         "RankingPosition": "33",
         "CurrentRank": "33",
         "PreviousRank": "33",
         "RankingDifference": "0",
-        "PublishDate": "12/09/2025 00:00:00"
+        "PublishDate": "12/16/2025 00:00:00"
       },
       {
         "PairId": "38880",
@@ -2648,13 +2648,13 @@
         "SubEventCode": "WD",
         "RankingYear": "2025",
         "RankingMonth": "12",
-        "RankingWeek": "50",
+        "RankingWeek": "51",
         "Points": "547",
         "RankingPosition": "33",
         "CurrentRank": "33",
         "PreviousRank": "33",
         "RankingDifference": "0",
-        "PublishDate": "12/09/2025 00:00:00"
+        "PublishDate": "12/16/2025 00:00:00"
       },
       {
         "PairId": "79504",
@@ -2675,13 +2675,13 @@
         "SubEventCode": "XD",
         "RankingYear": "2025",
         "RankingMonth": "12",
-        "RankingWeek": "50",
+        "RankingWeek": "51",
         "Points": "420",
         "RankingPosition": "33",
         "CurrentRank": "33",
         "PreviousRank": "33",
         "RankingDifference": "0",
-        "PublishDate": "12/09/2025 00:00:00"
+        "PublishDate": "12/16/2025 00:00:00"
       },
       {
         "PairId": "43383",
@@ -2702,13 +2702,13 @@
         "SubEventCode": "MD",
         "RankingYear": "2025",
         "RankingMonth": "12",
-        "RankingWeek": "50",
+        "RankingWeek": "51",
         "Points": "430",
         "RankingPosition": "34",
         "CurrentRank": "34",
         "PreviousRank": "34",
         "RankingDifference": "0",
-        "PublishDate": "12/09/2025 00:00:00"
+        "PublishDate": "12/16/2025 00:00:00"
       },
       {
         "PairId": "77439",
@@ -2729,13 +2729,13 @@
         "SubEventCode": "WD",
         "RankingYear": "2025",
         "RankingMonth": "12",
-        "RankingWeek": "50",
+        "RankingWeek": "51",
         "Points": "540",
         "RankingPosition": "34",
         "CurrentRank": "34",
         "PreviousRank": "34",
         "RankingDifference": "0",
-        "PublishDate": "12/09/2025 00:00:00"
+        "PublishDate": "12/16/2025 00:00:00"
       },
       {
         "PairId": "100171077",
@@ -2756,13 +2756,13 @@
         "SubEventCode": "XD",
         "RankingYear": "2025",
         "RankingMonth": "12",
-        "RankingWeek": "50",
+        "RankingWeek": "51",
         "Points": "418",
         "RankingPosition": "34",
         "CurrentRank": "34",
         "PreviousRank": "34",
         "RankingDifference": "0",
-        "PublishDate": "12/09/2025 00:00:00"
+        "PublishDate": "12/16/2025 00:00:00"
       },
       {
         "PairId": "100168727",
@@ -2783,13 +2783,13 @@
         "SubEventCode": "MD",
         "RankingYear": "2025",
         "RankingMonth": "12",
-        "RankingWeek": "50",
+        "RankingWeek": "51",
         "Points": "427",
         "RankingPosition": "35",
         "CurrentRank": "35",
         "PreviousRank": "35",
         "RankingDifference": "0",
-        "PublishDate": "12/09/2025 00:00:00"
+        "PublishDate": "12/16/2025 00:00:00"
       },
       {
         "PairId": "100173468",
@@ -2810,13 +2810,13 @@
         "SubEventCode": "WD",
         "RankingYear": "2025",
         "RankingMonth": "12",
-        "RankingWeek": "50",
+        "RankingWeek": "51",
         "Points": "525",
         "RankingPosition": "35",
         "CurrentRank": "35",
         "PreviousRank": "35",
         "RankingDifference": "0",
-        "PublishDate": "12/09/2025 00:00:00"
+        "PublishDate": "12/16/2025 00:00:00"
       },
       {
         "PairId": "58986",
@@ -2837,13 +2837,13 @@
         "SubEventCode": "XD",
         "RankingYear": "2025",
         "RankingMonth": "12",
-        "RankingWeek": "50",
+        "RankingWeek": "51",
         "Points": "403",
         "RankingPosition": "35",
         "CurrentRank": "35",
-        "PreviousRank": "32",
-        "RankingDifference": "3",
-        "PublishDate": "12/09/2025 00:00:00"
+        "PreviousRank": "35",
+        "RankingDifference": "0",
+        "PublishDate": "12/16/2025 00:00:00"
       },
       {
         "PairId": "100168726",
@@ -2864,13 +2864,13 @@
         "SubEventCode": "MD",
         "RankingYear": "2025",
         "RankingMonth": "12",
-        "RankingWeek": "50",
+        "RankingWeek": "51",
         "Points": "415",
         "RankingPosition": "36",
         "CurrentRank": "36",
         "PreviousRank": "36",
         "RankingDifference": "0",
-        "PublishDate": "12/09/2025 00:00:00"
+        "PublishDate": "12/16/2025 00:00:00"
       },
       {
         "PairId": "36308",
@@ -2891,13 +2891,13 @@
         "SubEventCode": "WD",
         "RankingYear": "2025",
         "RankingMonth": "12",
-        "RankingWeek": "50",
+        "RankingWeek": "51",
         "Points": "510",
         "RankingPosition": "36",
         "CurrentRank": "36",
         "PreviousRank": "36",
         "RankingDifference": "0",
-        "PublishDate": "12/09/2025 00:00:00"
+        "PublishDate": "12/16/2025 00:00:00"
       },
       {
         "PairId": "100119287",
@@ -2918,13 +2918,13 @@
         "SubEventCode": "XD",
         "RankingYear": "2025",
         "RankingMonth": "12",
-        "RankingWeek": "50",
+        "RankingWeek": "51",
         "Points": "379",
         "RankingPosition": "36",
         "CurrentRank": "36",
-        "PreviousRank": "35",
-        "RankingDifference": "1",
-        "PublishDate": "12/09/2025 00:00:00"
+        "PreviousRank": "36",
+        "RankingDifference": "0",
+        "PublishDate": "12/16/2025 00:00:00"
       },
       {
         "PairId": "100148305",
@@ -2945,13 +2945,13 @@
         "SubEventCode": "MD",
         "RankingYear": "2025",
         "RankingMonth": "12",
-        "RankingWeek": "50",
+        "RankingWeek": "51",
         "Points": "400",
         "RankingPosition": "37",
         "CurrentRank": "37",
         "PreviousRank": "37",
         "RankingDifference": "0",
-        "PublishDate": "12/09/2025 00:00:00"
+        "PublishDate": "12/16/2025 00:00:00"
       },
       {
         "PairId": "44960",
@@ -2972,13 +2972,13 @@
         "SubEventCode": "WD",
         "RankingYear": "2025",
         "RankingMonth": "12",
-        "RankingWeek": "50",
+        "RankingWeek": "51",
         "Points": "507",
         "RankingPosition": "37",
         "CurrentRank": "37",
         "PreviousRank": "37",
         "RankingDifference": "0",
-        "PublishDate": "12/09/2025 00:00:00"
+        "PublishDate": "12/16/2025 00:00:00"
       },
       {
         "PairId": "100129254",
@@ -2999,13 +2999,13 @@
         "SubEventCode": "XD",
         "RankingYear": "2025",
         "RankingMonth": "12",
-        "RankingWeek": "50",
+        "RankingWeek": "51",
         "Points": "360",
         "RankingPosition": "37",
         "CurrentRank": "37",
         "PreviousRank": "37",
         "RankingDifference": "0",
-        "PublishDate": "12/09/2025 00:00:00"
+        "PublishDate": "12/16/2025 00:00:00"
       },
       {
         "PairId": "100121560",
@@ -3026,13 +3026,13 @@
         "SubEventCode": "MD",
         "RankingYear": "2025",
         "RankingMonth": "12",
-        "RankingWeek": "50",
+        "RankingWeek": "51",
         "Points": "370",
         "RankingPosition": "38",
         "CurrentRank": "38",
         "PreviousRank": "38",
         "RankingDifference": "0",
-        "PublishDate": "12/09/2025 00:00:00"
+        "PublishDate": "12/16/2025 00:00:00"
       },
       {
         "PairId": "36450",
@@ -3053,13 +3053,13 @@
         "SubEventCode": "WD",
         "RankingYear": "2025",
         "RankingMonth": "12",
-        "RankingWeek": "50",
+        "RankingWeek": "51",
         "Points": "479",
         "RankingPosition": "38",
         "CurrentRank": "38",
         "PreviousRank": "38",
         "RankingDifference": "0",
-        "PublishDate": "12/09/2025 00:00:00"
+        "PublishDate": "12/16/2025 00:00:00"
       },
       {
         "PairId": "58854",
@@ -3080,13 +3080,13 @@
         "SubEventCode": "XD",
         "RankingYear": "2025",
         "RankingMonth": "12",
-        "RankingWeek": "50",
+        "RankingWeek": "51",
         "Points": "352",
         "RankingPosition": "38",
         "CurrentRank": "38",
         "PreviousRank": "38",
         "RankingDifference": "0",
-        "PublishDate": "12/09/2025 00:00:00"
+        "PublishDate": "12/16/2025 00:00:00"
       },
       {
         "PairId": "73645",
@@ -3107,13 +3107,13 @@
         "SubEventCode": "MD",
         "RankingYear": "2025",
         "RankingMonth": "12",
-        "RankingWeek": "50",
+        "RankingWeek": "51",
         "Points": "350",
         "RankingPosition": "39",
         "CurrentRank": "39",
         "PreviousRank": "39",
         "RankingDifference": "0",
-        "PublishDate": "12/09/2025 00:00:00"
+        "PublishDate": "12/16/2025 00:00:00"
       },
       {
         "PairId": "41854",
@@ -3134,13 +3134,13 @@
         "SubEventCode": "WD",
         "RankingYear": "2025",
         "RankingMonth": "12",
-        "RankingWeek": "50",
+        "RankingWeek": "51",
         "Points": "443",
         "RankingPosition": "39",
         "CurrentRank": "39",
-        "PreviousRank": "40",
-        "RankingDifference": "-1",
-        "PublishDate": "12/09/2025 00:00:00"
+        "PreviousRank": "39",
+        "RankingDifference": "0",
+        "PublishDate": "12/16/2025 00:00:00"
       },
       {
         "PairId": "100198693",
@@ -3161,13 +3161,13 @@
         "SubEventCode": "XD",
         "RankingYear": "2025",
         "RankingMonth": "12",
-        "RankingWeek": "50",
+        "RankingWeek": "51",
         "Points": "350",
         "RankingPosition": "39",
         "CurrentRank": "39",
         "PreviousRank": "39",
         "RankingDifference": "0",
-        "PublishDate": "12/09/2025 00:00:00"
+        "PublishDate": "12/16/2025 00:00:00"
       },
       {
         "PairId": "36255",
@@ -3188,13 +3188,13 @@
         "SubEventCode": "MD",
         "RankingYear": "2025",
         "RankingMonth": "12",
-        "RankingWeek": "50",
+        "RankingWeek": "51",
         "Points": "350",
         "RankingPosition": "40",
         "CurrentRank": "40",
         "PreviousRank": "40",
         "RankingDifference": "0",
-        "PublishDate": "12/09/2025 00:00:00"
+        "PublishDate": "12/16/2025 00:00:00"
       },
       {
         "PairId": "100129176",
@@ -3215,13 +3215,13 @@
         "SubEventCode": "WD",
         "RankingYear": "2025",
         "RankingMonth": "12",
-        "RankingWeek": "50",
+        "RankingWeek": "51",
         "Points": "440",
         "RankingPosition": "40",
         "CurrentRank": "40",
-        "PreviousRank": "39",
-        "RankingDifference": "1",
-        "PublishDate": "12/09/2025 00:00:00"
+        "PreviousRank": "40",
+        "RankingDifference": "0",
+        "PublishDate": "12/16/2025 00:00:00"
       },
       {
         "PairId": "74027",
@@ -3242,13 +3242,13 @@
         "SubEventCode": "XD",
         "RankingYear": "2025",
         "RankingMonth": "12",
-        "RankingWeek": "50",
+        "RankingWeek": "51",
         "Points": "350",
         "RankingPosition": "40",
         "CurrentRank": "40",
         "PreviousRank": "40",
         "RankingDifference": "0",
-        "PublishDate": "12/09/2025 00:00:00"
+        "PublishDate": "12/16/2025 00:00:00"
       },
       {
         "PairId": "100174557",
@@ -3269,13 +3269,13 @@
         "SubEventCode": "MD",
         "RankingYear": "2025",
         "RankingMonth": "12",
-        "RankingWeek": "50",
+        "RankingWeek": "51",
         "Points": "350",
         "RankingPosition": "41",
         "CurrentRank": "41",
         "PreviousRank": "41",
         "RankingDifference": "0",
-        "PublishDate": "12/09/2025 00:00:00"
+        "PublishDate": "12/16/2025 00:00:00"
       },
       {
         "PairId": "65667",
@@ -3296,13 +3296,13 @@
         "SubEventCode": "WD",
         "RankingYear": "2025",
         "RankingMonth": "12",
-        "RankingWeek": "50",
+        "RankingWeek": "51",
         "Points": "438",
         "RankingPosition": "41",
         "CurrentRank": "41",
         "PreviousRank": "41",
         "RankingDifference": "0",
-        "PublishDate": "12/09/2025 00:00:00"
+        "PublishDate": "12/16/2025 00:00:00"
       },
       {
         "PairId": "100192164",
@@ -3323,13 +3323,13 @@
         "SubEventCode": "XD",
         "RankingYear": "2025",
         "RankingMonth": "12",
-        "RankingWeek": "50",
+        "RankingWeek": "51",
         "Points": "350",
         "RankingPosition": "41",
         "CurrentRank": "41",
         "PreviousRank": "41",
         "RankingDifference": "0",
-        "PublishDate": "12/09/2025 00:00:00"
+        "PublishDate": "12/16/2025 00:00:00"
       },
       {
         "PairId": "100107864",
@@ -3350,13 +3350,13 @@
         "SubEventCode": "MD",
         "RankingYear": "2025",
         "RankingMonth": "12",
-        "RankingWeek": "50",
+        "RankingWeek": "51",
         "Points": "350",
         "RankingPosition": "42",
         "CurrentRank": "42",
         "PreviousRank": "42",
         "RankingDifference": "0",
-        "PublishDate": "12/09/2025 00:00:00"
+        "PublishDate": "12/16/2025 00:00:00"
       },
       {
         "PairId": "69476",
@@ -3377,13 +3377,13 @@
         "SubEventCode": "WD",
         "RankingYear": "2025",
         "RankingMonth": "12",
-        "RankingWeek": "50",
+        "RankingWeek": "51",
         "Points": "420",
         "RankingPosition": "42",
         "CurrentRank": "42",
         "PreviousRank": "42",
         "RankingDifference": "0",
-        "PublishDate": "12/09/2025 00:00:00"
+        "PublishDate": "12/16/2025 00:00:00"
       },
       {
         "PairId": "100129280",
@@ -3404,13 +3404,13 @@
         "SubEventCode": "XD",
         "RankingYear": "2025",
         "RankingMonth": "12",
-        "RankingWeek": "50",
+        "RankingWeek": "51",
         "Points": "350",
         "RankingPosition": "42",
         "CurrentRank": "42",
         "PreviousRank": "42",
         "RankingDifference": "0",
-        "PublishDate": "12/09/2025 00:00:00"
+        "PublishDate": "12/16/2025 00:00:00"
       },
       {
         "PairId": "36508",
@@ -3431,13 +3431,13 @@
         "SubEventCode": "MD",
         "RankingYear": "2025",
         "RankingMonth": "12",
-        "RankingWeek": "50",
+        "RankingWeek": "51",
         "Points": "350",
         "RankingPosition": "43",
         "CurrentRank": "43",
         "PreviousRank": "43",
         "RankingDifference": "0",
-        "PublishDate": "12/09/2025 00:00:00"
+        "PublishDate": "12/16/2025 00:00:00"
       },
       {
         "PairId": "35942",
@@ -3458,13 +3458,13 @@
         "SubEventCode": "WD",
         "RankingYear": "2025",
         "RankingMonth": "12",
-        "RankingWeek": "50",
+        "RankingWeek": "51",
         "Points": "400",
         "RankingPosition": "43",
         "CurrentRank": "43",
         "PreviousRank": "43",
         "RankingDifference": "0",
-        "PublishDate": "12/09/2025 00:00:00"
+        "PublishDate": "12/16/2025 00:00:00"
       },
       {
         "PairId": "100129264",
@@ -3485,13 +3485,13 @@
         "SubEventCode": "XD",
         "RankingYear": "2025",
         "RankingMonth": "12",
-        "RankingWeek": "50",
+        "RankingWeek": "51",
         "Points": "350",
         "RankingPosition": "43",
         "CurrentRank": "43",
         "PreviousRank": "43",
         "RankingDifference": "0",
-        "PublishDate": "12/09/2025 00:00:00"
+        "PublishDate": "12/16/2025 00:00:00"
       },
       {
         "PairId": "100118390",
@@ -3512,13 +3512,13 @@
         "SubEventCode": "MD",
         "RankingYear": "2025",
         "RankingMonth": "12",
-        "RankingWeek": "50",
+        "RankingWeek": "51",
         "Points": "323",
         "RankingPosition": "44",
         "CurrentRank": "44",
         "PreviousRank": "44",
         "RankingDifference": "0",
-        "PublishDate": "12/09/2025 00:00:00"
+        "PublishDate": "12/16/2025 00:00:00"
       },
       {
         "PairId": "44119",
@@ -3539,13 +3539,13 @@
         "SubEventCode": "WD",
         "RankingYear": "2025",
         "RankingMonth": "12",
-        "RankingWeek": "50",
+        "RankingWeek": "51",
         "Points": "395",
         "RankingPosition": "44",
         "CurrentRank": "44",
         "PreviousRank": "44",
         "RankingDifference": "0",
-        "PublishDate": "12/09/2025 00:00:00"
+        "PublishDate": "12/16/2025 00:00:00"
       },
       {
         "PairId": "45666",
@@ -3566,13 +3566,13 @@
         "SubEventCode": "XD",
         "RankingYear": "2025",
         "RankingMonth": "12",
-        "RankingWeek": "50",
+        "RankingWeek": "51",
         "Points": "312",
         "RankingPosition": "44",
         "CurrentRank": "44",
-        "PreviousRank": "139",
-        "RankingDifference": "-95",
-        "PublishDate": "12/09/2025 00:00:00"
+        "PreviousRank": "44",
+        "RankingDifference": "0",
+        "PublishDate": "12/16/2025 00:00:00"
       },
       {
         "PairId": "36004",
@@ -3593,13 +3593,13 @@
         "SubEventCode": "MD",
         "RankingYear": "2025",
         "RankingMonth": "12",
-        "RankingWeek": "50",
+        "RankingWeek": "51",
         "Points": "297",
         "RankingPosition": "45",
         "CurrentRank": "45",
         "PreviousRank": "45",
         "RankingDifference": "0",
-        "PublishDate": "12/09/2025 00:00:00"
+        "PublishDate": "12/16/2025 00:00:00"
       },
       {
         "PairId": "100103915",
@@ -3620,13 +3620,13 @@
         "SubEventCode": "WD",
         "RankingYear": "2025",
         "RankingMonth": "12",
-        "RankingWeek": "50",
+        "RankingWeek": "51",
         "Points": "394",
         "RankingPosition": "45",
         "CurrentRank": "45",
         "PreviousRank": "45",
         "RankingDifference": "0",
-        "PublishDate": "12/09/2025 00:00:00"
+        "PublishDate": "12/16/2025 00:00:00"
       },
       {
         "PairId": "100164122",
@@ -3647,13 +3647,13 @@
         "SubEventCode": "XD",
         "RankingYear": "2025",
         "RankingMonth": "12",
-        "RankingWeek": "50",
+        "RankingWeek": "51",
         "Points": "294",
         "RankingPosition": "45",
         "CurrentRank": "45",
-        "PreviousRank": "44",
-        "RankingDifference": "1",
-        "PublishDate": "12/09/2025 00:00:00"
+        "PreviousRank": "45",
+        "RankingDifference": "0",
+        "PublishDate": "12/16/2025 00:00:00"
       },
       {
         "PairId": "38814",
@@ -3674,13 +3674,13 @@
         "SubEventCode": "MD",
         "RankingYear": "2025",
         "RankingMonth": "12",
-        "RankingWeek": "50",
+        "RankingWeek": "51",
         "Points": "296",
         "RankingPosition": "46",
         "CurrentRank": "46",
         "PreviousRank": "46",
         "RankingDifference": "0",
-        "PublishDate": "12/09/2025 00:00:00"
+        "PublishDate": "12/16/2025 00:00:00"
       },
       {
         "PairId": "100135302",
@@ -3701,13 +3701,13 @@
         "SubEventCode": "WD",
         "RankingYear": "2025",
         "RankingMonth": "12",
-        "RankingWeek": "50",
+        "RankingWeek": "51",
         "Points": "374",
         "RankingPosition": "46",
         "CurrentRank": "46",
         "PreviousRank": "46",
         "RankingDifference": "0",
-        "PublishDate": "12/09/2025 00:00:00"
+        "PublishDate": "12/16/2025 00:00:00"
       },
       {
         "PairId": "74904",
@@ -3728,13 +3728,13 @@
         "SubEventCode": "XD",
         "RankingYear": "2025",
         "RankingMonth": "12",
-        "RankingWeek": "50",
+        "RankingWeek": "51",
         "Points": "289",
         "RankingPosition": "46",
         "CurrentRank": "46",
-        "PreviousRank": "45",
-        "RankingDifference": "1",
-        "PublishDate": "12/09/2025 00:00:00"
+        "PreviousRank": "46",
+        "RankingDifference": "0",
+        "PublishDate": "12/16/2025 00:00:00"
       },
       {
         "PairId": "100151043",
@@ -3755,13 +3755,13 @@
         "SubEventCode": "MD",
         "RankingYear": "2025",
         "RankingMonth": "12",
-        "RankingWeek": "50",
+        "RankingWeek": "51",
         "Points": "295",
         "RankingPosition": "47",
         "CurrentRank": "47",
         "PreviousRank": "47",
         "RankingDifference": "0",
-        "PublishDate": "12/09/2025 00:00:00"
+        "PublishDate": "12/16/2025 00:00:00"
       },
       {
         "PairId": "100139656",
@@ -3782,13 +3782,13 @@
         "SubEventCode": "WD",
         "RankingYear": "2025",
         "RankingMonth": "12",
-        "RankingWeek": "50",
+        "RankingWeek": "51",
         "Points": "370",
         "RankingPosition": "47",
         "CurrentRank": "47",
         "PreviousRank": "47",
         "RankingDifference": "0",
-        "PublishDate": "12/09/2025 00:00:00"
+        "PublishDate": "12/16/2025 00:00:00"
       },
       {
         "PairId": "100158680",
@@ -3809,13 +3809,13 @@
         "SubEventCode": "XD",
         "RankingYear": "2025",
         "RankingMonth": "12",
-        "RankingWeek": "50",
+        "RankingWeek": "51",
         "Points": "280",
         "RankingPosition": "47",
         "CurrentRank": "47",
-        "PreviousRank": "46",
-        "RankingDifference": "1",
-        "PublishDate": "12/09/2025 00:00:00"
+        "PreviousRank": "47",
+        "RankingDifference": "0",
+        "PublishDate": "12/16/2025 00:00:00"
       },
       {
         "PairId": "43122",
@@ -3836,13 +3836,13 @@
         "SubEventCode": "MD",
         "RankingYear": "2025",
         "RankingMonth": "12",
-        "RankingWeek": "50",
+        "RankingWeek": "51",
         "Points": "290",
         "RankingPosition": "48",
         "CurrentRank": "48",
-        "PreviousRank": "66",
-        "RankingDifference": "-18",
-        "PublishDate": "12/09/2025 00:00:00"
+        "PreviousRank": "48",
+        "RankingDifference": "0",
+        "PublishDate": "12/16/2025 00:00:00"
       },
       {
         "PairId": "36612",
@@ -3863,13 +3863,13 @@
         "SubEventCode": "WD",
         "RankingYear": "2025",
         "RankingMonth": "12",
-        "RankingWeek": "50",
+        "RankingWeek": "51",
         "Points": "360",
         "RankingPosition": "48",
         "CurrentRank": "48",
         "PreviousRank": "48",
         "RankingDifference": "0",
-        "PublishDate": "12/09/2025 00:00:00"
+        "PublishDate": "12/16/2025 00:00:00"
       },
       {
         "PairId": "100141765",
@@ -3890,13 +3890,13 @@
         "SubEventCode": "XD",
         "RankingYear": "2025",
         "RankingMonth": "12",
-        "RankingWeek": "50",
+        "RankingWeek": "51",
         "Points": "280",
         "RankingPosition": "48",
         "CurrentRank": "48",
-        "PreviousRank": "47",
-        "RankingDifference": "1",
-        "PublishDate": "12/09/2025 00:00:00"
+        "PreviousRank": "48",
+        "RankingDifference": "0",
+        "PublishDate": "12/16/2025 00:00:00"
       },
       {
         "PairId": "35984",
@@ -3917,13 +3917,13 @@
         "SubEventCode": "MD",
         "RankingYear": "2025",
         "RankingMonth": "12",
-        "RankingWeek": "50",
+        "RankingWeek": "51",
         "Points": "285",
         "RankingPosition": "49",
         "CurrentRank": "49",
         "PreviousRank": "49",
         "RankingDifference": "0",
-        "PublishDate": "12/09/2025 00:00:00"
+        "PublishDate": "12/16/2025 00:00:00"
       },
       {
         "PairId": "100123369",
@@ -3944,13 +3944,13 @@
         "SubEventCode": "WD",
         "RankingYear": "2025",
         "RankingMonth": "12",
-        "RankingWeek": "50",
+        "RankingWeek": "51",
         "Points": "355",
         "RankingPosition": "49",
         "CurrentRank": "49",
         "PreviousRank": "49",
         "RankingDifference": "0",
-        "PublishDate": "12/09/2025 00:00:00"
+        "PublishDate": "12/16/2025 00:00:00"
       },
       {
         "PairId": "100116911",
@@ -3971,13 +3971,13 @@
         "SubEventCode": "XD",
         "RankingYear": "2025",
         "RankingMonth": "12",
-        "RankingWeek": "50",
+        "RankingWeek": "51",
         "Points": "265",
         "RankingPosition": "49",
         "CurrentRank": "49",
-        "PreviousRank": "48",
-        "RankingDifference": "1",
-        "PublishDate": "12/09/2025 00:00:00"
+        "PreviousRank": "49",
+        "RankingDifference": "0",
+        "PublishDate": "12/16/2025 00:00:00"
       },
       {
         "PairId": "100119955",
@@ -3998,13 +3998,13 @@
         "SubEventCode": "MD",
         "RankingYear": "2025",
         "RankingMonth": "12",
-        "RankingWeek": "50",
+        "RankingWeek": "51",
         "Points": "283",
         "RankingPosition": "50",
         "CurrentRank": "50",
         "PreviousRank": "50",
         "RankingDifference": "0",
-        "PublishDate": "12/09/2025 00:00:00"
+        "PublishDate": "12/16/2025 00:00:00"
       },
       {
         "PairId": "100137665",
@@ -4025,13 +4025,13 @@
         "SubEventCode": "WD",
         "RankingYear": "2025",
         "RankingMonth": "12",
-        "RankingWeek": "50",
+        "RankingWeek": "51",
         "Points": "353",
         "RankingPosition": "50",
         "CurrentRank": "50",
         "PreviousRank": "50",
         "RankingDifference": "0",
-        "PublishDate": "12/09/2025 00:00:00"
+        "PublishDate": "12/16/2025 00:00:00"
       },
       {
         "PairId": "37144",
@@ -4052,13 +4052,13 @@
         "SubEventCode": "XD",
         "RankingYear": "2025",
         "RankingMonth": "12",
-        "RankingWeek": "50",
+        "RankingWeek": "51",
         "Points": "260",
         "RankingPosition": "50",
         "CurrentRank": "50",
-        "PreviousRank": "49",
-        "RankingDifference": "1",
-        "PublishDate": "12/09/2025 00:00:00"
+        "PreviousRank": "50",
+        "RankingDifference": "0",
+        "PublishDate": "12/16/2025 00:00:00"
       },
       {
         "PairId": "100125750",
@@ -4079,13 +4079,13 @@
         "SubEventCode": "MD",
         "RankingYear": "2025",
         "RankingMonth": "12",
-        "RankingWeek": "50",
+        "RankingWeek": "51",
         "Points": "280",
         "RankingPosition": "51",
         "CurrentRank": "51",
-        "PreviousRank": "48",
-        "RankingDifference": "3",
-        "PublishDate": "12/09/2025 00:00:00"
+        "PreviousRank": "51",
+        "RankingDifference": "0",
+        "PublishDate": "12/16/2025 00:00:00"
       },
       {
         "PairId": "100119267",
@@ -4106,13 +4106,13 @@
         "SubEventCode": "WD",
         "RankingYear": "2025",
         "RankingMonth": "12",
-        "RankingWeek": "50",
+        "RankingWeek": "51",
         "Points": "350",
         "RankingPosition": "51",
         "CurrentRank": "51",
         "PreviousRank": "51",
         "RankingDifference": "0",
-        "PublishDate": "12/09/2025 00:00:00"
+        "PublishDate": "12/16/2025 00:00:00"
       },
       {
         "PairId": "74077",
@@ -4133,13 +4133,13 @@
         "SubEventCode": "XD",
         "RankingYear": "2025",
         "RankingMonth": "12",
-        "RankingWeek": "50",
+        "RankingWeek": "51",
         "Points": "249",
         "RankingPosition": "51",
         "CurrentRank": "51",
-        "PreviousRank": "50",
-        "RankingDifference": "1",
-        "PublishDate": "12/09/2025 00:00:00"
+        "PreviousRank": "51",
+        "RankingDifference": "0",
+        "PublishDate": "12/16/2025 00:00:00"
       },
       {
         "PairId": "100130153",
@@ -4160,13 +4160,13 @@
         "SubEventCode": "MD",
         "RankingYear": "2025",
         "RankingMonth": "12",
-        "RankingWeek": "50",
+        "RankingWeek": "51",
         "Points": "270",
         "RankingPosition": "52",
         "CurrentRank": "52",
-        "PreviousRank": "53",
-        "RankingDifference": "-1",
-        "PublishDate": "12/09/2025 00:00:00"
+        "PreviousRank": "52",
+        "RankingDifference": "0",
+        "PublishDate": "12/16/2025 00:00:00"
       },
       {
         "PairId": "100165154",
@@ -4187,13 +4187,13 @@
         "SubEventCode": "WD",
         "RankingYear": "2025",
         "RankingMonth": "12",
-        "RankingWeek": "50",
+        "RankingWeek": "51",
         "Points": "350",
         "RankingPosition": "52",
         "CurrentRank": "52",
         "PreviousRank": "52",
         "RankingDifference": "0",
-        "PublishDate": "12/09/2025 00:00:00"
+        "PublishDate": "12/16/2025 00:00:00"
       },
       {
         "PairId": "55425",
@@ -4214,13 +4214,13 @@
         "SubEventCode": "XD",
         "RankingYear": "2025",
         "RankingMonth": "12",
-        "RankingWeek": "50",
+        "RankingWeek": "51",
         "Points": "245",
         "RankingPosition": "52",
         "CurrentRank": "52",
-        "PreviousRank": "51",
-        "RankingDifference": "1",
-        "PublishDate": "12/09/2025 00:00:00"
+        "PreviousRank": "52",
+        "RankingDifference": "0",
+        "PublishDate": "12/16/2025 00:00:00"
       },
       {
         "PairId": "41620",
@@ -4241,13 +4241,13 @@
         "SubEventCode": "MD",
         "RankingYear": "2025",
         "RankingMonth": "12",
-        "RankingWeek": "50",
+        "RankingWeek": "51",
         "Points": "267",
         "RankingPosition": "53",
         "CurrentRank": "53",
-        "PreviousRank": "55",
-        "RankingDifference": "-2",
-        "PublishDate": "12/09/2025 00:00:00"
+        "PreviousRank": "53",
+        "RankingDifference": "0",
+        "PublishDate": "12/16/2025 00:00:00"
       },
       {
         "PairId": "100174520",
@@ -4268,13 +4268,13 @@
         "SubEventCode": "WD",
         "RankingYear": "2025",
         "RankingMonth": "12",
-        "RankingWeek": "50",
+        "RankingWeek": "51",
         "Points": "350",
         "RankingPosition": "53",
         "CurrentRank": "53",
         "PreviousRank": "53",
         "RankingDifference": "0",
-        "PublishDate": "12/09/2025 00:00:00"
+        "PublishDate": "12/16/2025 00:00:00"
       },
       {
         "PairId": "100128075",
@@ -4295,13 +4295,13 @@
         "SubEventCode": "XD",
         "RankingYear": "2025",
         "RankingMonth": "12",
-        "RankingWeek": "50",
+        "RankingWeek": "51",
         "Points": "234",
         "RankingPosition": "53",
         "CurrentRank": "53",
-        "PreviousRank": "52",
-        "RankingDifference": "1",
-        "PublishDate": "12/09/2025 00:00:00"
+        "PreviousRank": "53",
+        "RankingDifference": "0",
+        "PublishDate": "12/16/2025 00:00:00"
       },
       {
         "PairId": "36662",
@@ -4322,13 +4322,13 @@
         "SubEventCode": "MD",
         "RankingYear": "2025",
         "RankingMonth": "12",
-        "RankingWeek": "50",
+        "RankingWeek": "51",
         "Points": "252",
         "RankingPosition": "54",
         "CurrentRank": "54",
-        "PreviousRank": "51",
-        "RankingDifference": "3",
-        "PublishDate": "12/09/2025 00:00:00"
+        "PreviousRank": "54",
+        "RankingDifference": "0",
+        "PublishDate": "12/16/2025 00:00:00"
       },
       {
         "PairId": "100119268",
@@ -4349,13 +4349,13 @@
         "SubEventCode": "WD",
         "RankingYear": "2025",
         "RankingMonth": "12",
-        "RankingWeek": "50",
+        "RankingWeek": "51",
         "Points": "350",
         "RankingPosition": "54",
         "CurrentRank": "54",
         "PreviousRank": "54",
         "RankingDifference": "0",
-        "PublishDate": "12/09/2025 00:00:00"
+        "PublishDate": "12/16/2025 00:00:00"
       },
       {
         "PairId": "100129795",
@@ -4376,13 +4376,13 @@
         "SubEventCode": "XD",
         "RankingYear": "2025",
         "RankingMonth": "12",
-        "RankingWeek": "50",
+        "RankingWeek": "51",
         "Points": "233",
         "RankingPosition": "54",
         "CurrentRank": "54",
-        "PreviousRank": "91",
-        "RankingDifference": "-37",
-        "PublishDate": "12/09/2025 00:00:00"
+        "PreviousRank": "54",
+        "RankingDifference": "0",
+        "PublishDate": "12/16/2025 00:00:00"
       },
       {
         "PairId": "58174",
@@ -4403,13 +4403,13 @@
         "SubEventCode": "MD",
         "RankingYear": "2025",
         "RankingMonth": "12",
-        "RankingWeek": "50",
+        "RankingWeek": "51",
         "Points": "247",
         "RankingPosition": "55",
         "CurrentRank": "55",
-        "PreviousRank": "52",
-        "RankingDifference": "3",
-        "PublishDate": "12/09/2025 00:00:00"
+        "PreviousRank": "55",
+        "RankingDifference": "0",
+        "PublishDate": "12/16/2025 00:00:00"
       },
       {
         "PairId": "100119722",
@@ -4430,13 +4430,13 @@
         "SubEventCode": "WD",
         "RankingYear": "2025",
         "RankingMonth": "12",
-        "RankingWeek": "50",
+        "RankingWeek": "51",
         "Points": "350",
         "RankingPosition": "55",
         "CurrentRank": "55",
         "PreviousRank": "55",
         "RankingDifference": "0",
-        "PublishDate": "12/09/2025 00:00:00"
+        "PublishDate": "12/16/2025 00:00:00"
       },
       {
         "PairId": "100121629",
@@ -4457,13 +4457,13 @@
         "SubEventCode": "XD",
         "RankingYear": "2025",
         "RankingMonth": "12",
-        "RankingWeek": "50",
+        "RankingWeek": "51",
         "Points": "230",
         "RankingPosition": "55",
         "CurrentRank": "55",
-        "PreviousRank": "53",
-        "RankingDifference": "2",
-        "PublishDate": "12/09/2025 00:00:00"
+        "PreviousRank": "55",
+        "RankingDifference": "0",
+        "PublishDate": "12/16/2025 00:00:00"
       },
       {
         "PairId": "36547",
@@ -4484,13 +4484,13 @@
         "SubEventCode": "MD",
         "RankingYear": "2025",
         "RankingMonth": "12",
-        "RankingWeek": "50",
+        "RankingWeek": "51",
         "Points": "245",
         "RankingPosition": "56",
         "CurrentRank": "56",
-        "PreviousRank": "54",
-        "RankingDifference": "2",
-        "PublishDate": "12/09/2025 00:00:00"
+        "PreviousRank": "56",
+        "RankingDifference": "0",
+        "PublishDate": "12/16/2025 00:00:00"
       },
       {
         "PairId": "46506",
@@ -4511,13 +4511,13 @@
         "SubEventCode": "WD",
         "RankingYear": "2025",
         "RankingMonth": "12",
-        "RankingWeek": "50",
+        "RankingWeek": "51",
         "Points": "343",
         "RankingPosition": "56",
         "CurrentRank": "56",
         "PreviousRank": "56",
         "RankingDifference": "0",
-        "PublishDate": "12/09/2025 00:00:00"
+        "PublishDate": "12/16/2025 00:00:00"
       },
       {
         "PairId": "58342",
@@ -4538,13 +4538,13 @@
         "SubEventCode": "XD",
         "RankingYear": "2025",
         "RankingMonth": "12",
-        "RankingWeek": "50",
+        "RankingWeek": "51",
         "Points": "219",
         "RankingPosition": "56",
         "CurrentRank": "56",
-        "PreviousRank": "54",
-        "RankingDifference": "2",
-        "PublishDate": "12/09/2025 00:00:00"
+        "PreviousRank": "56",
+        "RankingDifference": "0",
+        "PublishDate": "12/16/2025 00:00:00"
       },
       {
         "PairId": "37281",
@@ -4565,13 +4565,13 @@
         "SubEventCode": "MD",
         "RankingYear": "2025",
         "RankingMonth": "12",
-        "RankingWeek": "50",
+        "RankingWeek": "51",
         "Points": "230",
         "RankingPosition": "57",
         "CurrentRank": "57",
-        "PreviousRank": "56",
-        "RankingDifference": "1",
-        "PublishDate": "12/09/2025 00:00:00"
+        "PreviousRank": "57",
+        "RankingDifference": "0",
+        "PublishDate": "12/16/2025 00:00:00"
       },
       {
         "PairId": "100122329",
@@ -4592,13 +4592,13 @@
         "SubEventCode": "WD",
         "RankingYear": "2025",
         "RankingMonth": "12",
-        "RankingWeek": "50",
+        "RankingWeek": "51",
         "Points": "317",
         "RankingPosition": "57",
         "CurrentRank": "57",
         "PreviousRank": "57",
         "RankingDifference": "0",
-        "PublishDate": "12/09/2025 00:00:00"
+        "PublishDate": "12/16/2025 00:00:00"
       },
       {
         "PairId": "100121567",
@@ -4619,13 +4619,13 @@
         "SubEventCode": "XD",
         "RankingYear": "2025",
         "RankingMonth": "12",
-        "RankingWeek": "50",
+        "RankingWeek": "51",
         "Points": "215",
         "RankingPosition": "57",
         "CurrentRank": "57",
-        "PreviousRank": "55",
-        "RankingDifference": "2",
-        "PublishDate": "12/09/2025 00:00:00"
+        "PreviousRank": "57",
+        "RankingDifference": "0",
+        "PublishDate": "12/16/2025 00:00:00"
       },
       {
         "PairId": "100129130",
@@ -4646,13 +4646,13 @@
         "SubEventCode": "MD",
         "RankingYear": "2025",
         "RankingMonth": "12",
-        "RankingWeek": "50",
+        "RankingWeek": "51",
         "Points": "214",
         "RankingPosition": "58",
         "CurrentRank": "58",
-        "PreviousRank": "57",
-        "RankingDifference": "1",
-        "PublishDate": "12/09/2025 00:00:00"
+        "PreviousRank": "58",
+        "RankingDifference": "0",
+        "PublishDate": "12/16/2025 00:00:00"
       },
       {
         "PairId": "42303",
@@ -4673,13 +4673,13 @@
         "SubEventCode": "WD",
         "RankingYear": "2025",
         "RankingMonth": "12",
-        "RankingWeek": "50",
+        "RankingWeek": "51",
         "Points": "280",
         "RankingPosition": "58",
         "CurrentRank": "58",
         "PreviousRank": "58",
         "RankingDifference": "0",
-        "PublishDate": "12/09/2025 00:00:00"
+        "PublishDate": "12/16/2025 00:00:00"
       },
       {
         "PairId": "53210",
@@ -4700,13 +4700,13 @@
         "SubEventCode": "XD",
         "RankingYear": "2025",
         "RankingMonth": "12",
-        "RankingWeek": "50",
+        "RankingWeek": "51",
         "Points": "210",
         "RankingPosition": "58",
         "CurrentRank": "58",
-        "PreviousRank": "56",
-        "RankingDifference": "2",
-        "PublishDate": "12/09/2025 00:00:00"
+        "PreviousRank": "58",
+        "RankingDifference": "0",
+        "PublishDate": "12/16/2025 00:00:00"
       },
       {
         "PairId": "100157101",
@@ -4727,13 +4727,13 @@
         "SubEventCode": "MD",
         "RankingYear": "2025",
         "RankingMonth": "12",
-        "RankingWeek": "50",
+        "RankingWeek": "51",
         "Points": "213",
         "RankingPosition": "59",
         "CurrentRank": "59",
-        "PreviousRank": "58",
-        "RankingDifference": "1",
-        "PublishDate": "12/09/2025 00:00:00"
+        "PreviousRank": "59",
+        "RankingDifference": "0",
+        "PublishDate": "12/16/2025 00:00:00"
       },
       {
         "PairId": "100171042",
@@ -4754,13 +4754,13 @@
         "SubEventCode": "WD",
         "RankingYear": "2025",
         "RankingMonth": "12",
-        "RankingWeek": "50",
+        "RankingWeek": "51",
         "Points": "280",
         "RankingPosition": "59",
         "CurrentRank": "59",
         "PreviousRank": "59",
         "RankingDifference": "0",
-        "PublishDate": "12/09/2025 00:00:00"
+        "PublishDate": "12/16/2025 00:00:00"
       },
       {
         "PairId": "100192723",
@@ -4781,13 +4781,13 @@
         "SubEventCode": "XD",
         "RankingYear": "2025",
         "RankingMonth": "12",
-        "RankingWeek": "50",
+        "RankingWeek": "51",
         "Points": "210",
         "RankingPosition": "59",
         "CurrentRank": "59",
-        "PreviousRank": "57",
-        "RankingDifference": "2",
-        "PublishDate": "12/09/2025 00:00:00"
+        "PreviousRank": "59",
+        "RankingDifference": "0",
+        "PublishDate": "12/16/2025 00:00:00"
       },
       {
         "PairId": "46631",
@@ -4808,13 +4808,13 @@
         "SubEventCode": "MD",
         "RankingYear": "2025",
         "RankingMonth": "12",
-        "RankingWeek": "50",
+        "RankingWeek": "51",
         "Points": "213",
         "RankingPosition": "60",
         "CurrentRank": "60",
-        "PreviousRank": "59",
-        "RankingDifference": "1",
-        "PublishDate": "12/09/2025 00:00:00"
+        "PreviousRank": "60",
+        "RankingDifference": "0",
+        "PublishDate": "12/16/2025 00:00:00"
       },
       {
         "PairId": "100129137",
@@ -4835,13 +4835,13 @@
         "SubEventCode": "WD",
         "RankingYear": "2025",
         "RankingMonth": "12",
-        "RankingWeek": "50",
+        "RankingWeek": "51",
         "Points": "250",
         "RankingPosition": "60",
         "CurrentRank": "60",
-        "PreviousRank": "105",
-        "RankingDifference": "-45",
-        "PublishDate": "12/09/2025 00:00:00"
+        "PreviousRank": "60",
+        "RankingDifference": "0",
+        "PublishDate": "12/16/2025 00:00:00"
       },
       {
         "PairId": "100157530",
@@ -4862,13 +4862,13 @@
         "SubEventCode": "XD",
         "RankingYear": "2025",
         "RankingMonth": "12",
-        "RankingWeek": "50",
+        "RankingWeek": "51",
         "Points": "210",
         "RankingPosition": "60",
         "CurrentRank": "60",
-        "PreviousRank": "58",
-        "RankingDifference": "2",
-        "PublishDate": "12/09/2025 00:00:00"
+        "PreviousRank": "60",
+        "RankingDifference": "0",
+        "PublishDate": "12/16/2025 00:00:00"
       },
       {
         "PairId": "100135303",
@@ -4889,13 +4889,13 @@
         "SubEventCode": "MD",
         "RankingYear": "2025",
         "RankingMonth": "12",
-        "RankingWeek": "50",
+        "RankingWeek": "51",
         "Points": "211",
         "RankingPosition": "61",
         "CurrentRank": "61",
-        "PreviousRank": "60",
-        "RankingDifference": "1",
-        "PublishDate": "12/09/2025 00:00:00"
+        "PreviousRank": "61",
+        "RankingDifference": "0",
+        "PublishDate": "12/16/2025 00:00:00"
       },
       {
         "PairId": "100155189",
@@ -4916,13 +4916,13 @@
         "SubEventCode": "WD",
         "RankingYear": "2025",
         "RankingMonth": "12",
-        "RankingWeek": "50",
+        "RankingWeek": "51",
         "Points": "245",
         "RankingPosition": "61",
         "CurrentRank": "61",
-        "PreviousRank": "60",
-        "RankingDifference": "1",
-        "PublishDate": "12/09/2025 00:00:00"
+        "PreviousRank": "61",
+        "RankingDifference": "0",
+        "PublishDate": "12/16/2025 00:00:00"
       },
       {
         "PairId": "100174558",
@@ -4943,13 +4943,13 @@
         "SubEventCode": "XD",
         "RankingYear": "2025",
         "RankingMonth": "12",
-        "RankingWeek": "50",
+        "RankingWeek": "51",
         "Points": "205",
         "RankingPosition": "61",
         "CurrentRank": "61",
-        "PreviousRank": "59",
-        "RankingDifference": "2",
-        "PublishDate": "12/09/2025 00:00:00"
+        "PreviousRank": "61",
+        "RankingDifference": "0",
+        "PublishDate": "12/16/2025 00:00:00"
       },
       {
         "PairId": "100119618",
@@ -4970,13 +4970,13 @@
         "SubEventCode": "MD",
         "RankingYear": "2025",
         "RankingMonth": "12",
-        "RankingWeek": "50",
+        "RankingWeek": "51",
         "Points": "210",
         "RankingPosition": "62",
         "CurrentRank": "62",
-        "PreviousRank": "61",
-        "RankingDifference": "1",
-        "PublishDate": "12/09/2025 00:00:00"
+        "PreviousRank": "62",
+        "RankingDifference": "0",
+        "PublishDate": "12/16/2025 00:00:00"
       },
       {
         "PairId": "76468",
@@ -4997,13 +4997,13 @@
         "SubEventCode": "WD",
         "RankingYear": "2025",
         "RankingMonth": "12",
-        "RankingWeek": "50",
+        "RankingWeek": "51",
         "Points": "230",
         "RankingPosition": "62",
         "CurrentRank": "62",
-        "PreviousRank": "61",
-        "RankingDifference": "1",
-        "PublishDate": "12/09/2025 00:00:00"
+        "PreviousRank": "62",
+        "RankingDifference": "0",
+        "PublishDate": "12/16/2025 00:00:00"
       },
       {
         "PairId": "100121435",
@@ -5024,13 +5024,13 @@
         "SubEventCode": "XD",
         "RankingYear": "2025",
         "RankingMonth": "12",
-        "RankingWeek": "50",
+        "RankingWeek": "51",
         "Points": "201",
         "RankingPosition": "62",
         "CurrentRank": "62",
-        "PreviousRank": "96",
-        "RankingDifference": "-34",
-        "PublishDate": "12/09/2025 00:00:00"
+        "PreviousRank": "62",
+        "RankingDifference": "0",
+        "PublishDate": "12/16/2025 00:00:00"
       },
       {
         "PairId": "100119521",
@@ -5051,13 +5051,13 @@
         "SubEventCode": "MD",
         "RankingYear": "2025",
         "RankingMonth": "12",
-        "RankingWeek": "50",
+        "RankingWeek": "51",
         "Points": "210",
         "RankingPosition": "63",
         "CurrentRank": "63",
-        "PreviousRank": "147",
-        "RankingDifference": "-84",
-        "PublishDate": "12/09/2025 00:00:00"
+        "PreviousRank": "63",
+        "RankingDifference": "0",
+        "PublishDate": "12/16/2025 00:00:00"
       },
       {
         "PairId": "58942",
@@ -5078,13 +5078,13 @@
         "SubEventCode": "WD",
         "RankingYear": "2025",
         "RankingMonth": "12",
-        "RankingWeek": "50",
+        "RankingWeek": "51",
         "Points": "223",
         "RankingPosition": "63",
         "CurrentRank": "63",
-        "PreviousRank": "75",
-        "RankingDifference": "-12",
-        "PublishDate": "12/09/2025 00:00:00"
+        "PreviousRank": "63",
+        "RankingDifference": "0",
+        "PublishDate": "12/16/2025 00:00:00"
       },
       {
         "PairId": "67212",
@@ -5105,13 +5105,13 @@
         "SubEventCode": "XD",
         "RankingYear": "2025",
         "RankingMonth": "12",
-        "RankingWeek": "50",
+        "RankingWeek": "51",
         "Points": "195",
         "RankingPosition": "63",
         "CurrentRank": "63",
-        "PreviousRank": "60",
-        "RankingDifference": "3",
-        "PublishDate": "12/09/2025 00:00:00"
+        "PreviousRank": "63",
+        "RankingDifference": "0",
+        "PublishDate": "12/16/2025 00:00:00"
       },
       {
         "PairId": "100129266",
@@ -5132,13 +5132,13 @@
         "SubEventCode": "MD",
         "RankingYear": "2025",
         "RankingMonth": "12",
-        "RankingWeek": "50",
+        "RankingWeek": "51",
         "Points": "204",
         "RankingPosition": "64",
         "CurrentRank": "64",
-        "PreviousRank": "63",
-        "RankingDifference": "1",
-        "PublishDate": "12/09/2025 00:00:00"
+        "PreviousRank": "64",
+        "RankingDifference": "0",
+        "PublishDate": "12/16/2025 00:00:00"
       },
       {
         "PairId": "36050",
@@ -5159,13 +5159,13 @@
         "SubEventCode": "WD",
         "RankingYear": "2025",
         "RankingMonth": "12",
-        "RankingWeek": "50",
+        "RankingWeek": "51",
         "Points": "216",
         "RankingPosition": "64",
         "CurrentRank": "64",
-        "PreviousRank": "62",
-        "RankingDifference": "2",
-        "PublishDate": "12/09/2025 00:00:00"
+        "PreviousRank": "64",
+        "RankingDifference": "0",
+        "PublishDate": "12/16/2025 00:00:00"
       },
       {
         "PairId": "46296",
@@ -5186,13 +5186,13 @@
         "SubEventCode": "XD",
         "RankingYear": "2025",
         "RankingMonth": "12",
-        "RankingWeek": "50",
+        "RankingWeek": "51",
         "Points": "186",
         "RankingPosition": "64",
         "CurrentRank": "64",
-        "PreviousRank": "61",
-        "RankingDifference": "3",
-        "PublishDate": "12/09/2025 00:00:00"
+        "PreviousRank": "64",
+        "RankingDifference": "0",
+        "PublishDate": "12/16/2025 00:00:00"
       },
       {
         "PairId": "42422",
@@ -5213,13 +5213,13 @@
         "SubEventCode": "MD",
         "RankingYear": "2025",
         "RankingMonth": "12",
-        "RankingWeek": "50",
+        "RankingWeek": "51",
         "Points": "204",
         "RankingPosition": "65",
         "CurrentRank": "65",
-        "PreviousRank": "64",
-        "RankingDifference": "1",
-        "PublishDate": "12/09/2025 00:00:00"
+        "PreviousRank": "65",
+        "RankingDifference": "0",
+        "PublishDate": "12/16/2025 00:00:00"
       },
       {
         "PairId": "100133719",
@@ -5240,13 +5240,13 @@
         "SubEventCode": "WD",
         "RankingYear": "2025",
         "RankingMonth": "12",
-        "RankingWeek": "50",
+        "RankingWeek": "51",
         "Points": "210",
         "RankingPosition": "65",
         "CurrentRank": "65",
-        "PreviousRank": "63",
-        "RankingDifference": "2",
-        "PublishDate": "12/09/2025 00:00:00"
+        "PreviousRank": "65",
+        "RankingDifference": "0",
+        "PublishDate": "12/16/2025 00:00:00"
       },
       {
         "PairId": "100124559",
@@ -5267,13 +5267,13 @@
         "SubEventCode": "XD",
         "RankingYear": "2025",
         "RankingMonth": "12",
-        "RankingWeek": "50",
+        "RankingWeek": "51",
         "Points": "185",
         "RankingPosition": "65",
         "CurrentRank": "65",
-        "PreviousRank": "62",
-        "RankingDifference": "3",
-        "PublishDate": "12/09/2025 00:00:00"
+        "PreviousRank": "65",
+        "RankingDifference": "0",
+        "PublishDate": "12/16/2025 00:00:00"
       },
       {
         "PairId": "39554",
@@ -5294,13 +5294,13 @@
         "SubEventCode": "MD",
         "RankingYear": "2025",
         "RankingMonth": "12",
-        "RankingWeek": "50",
+        "RankingWeek": "51",
         "Points": "203",
         "RankingPosition": "66",
         "CurrentRank": "66",
-        "PreviousRank": "65",
-        "RankingDifference": "1",
-        "PublishDate": "12/09/2025 00:00:00"
+        "PreviousRank": "66",
+        "RankingDifference": "0",
+        "PublishDate": "12/16/2025 00:00:00"
       },
       {
         "PairId": "100198739",
@@ -5321,13 +5321,13 @@
         "SubEventCode": "WD",
         "RankingYear": "2025",
         "RankingMonth": "12",
-        "RankingWeek": "50",
+        "RankingWeek": "51",
         "Points": "210",
         "RankingPosition": "66",
         "CurrentRank": "66",
-        "PreviousRank": "64",
-        "RankingDifference": "2",
-        "PublishDate": "12/09/2025 00:00:00"
+        "PreviousRank": "66",
+        "RankingDifference": "0",
+        "PublishDate": "12/16/2025 00:00:00"
       },
       {
         "PairId": "100163060",
@@ -5348,13 +5348,13 @@
         "SubEventCode": "XD",
         "RankingYear": "2025",
         "RankingMonth": "12",
-        "RankingWeek": "50",
+        "RankingWeek": "51",
         "Points": "185",
         "RankingPosition": "66",
         "CurrentRank": "66",
-        "PreviousRank": "63",
-        "RankingDifference": "3",
-        "PublishDate": "12/09/2025 00:00:00"
+        "PreviousRank": "66",
+        "RankingDifference": "0",
+        "PublishDate": "12/16/2025 00:00:00"
       },
       {
         "PairId": "95393",
@@ -5375,13 +5375,13 @@
         "SubEventCode": "MD",
         "RankingYear": "2025",
         "RankingMonth": "12",
-        "RankingWeek": "50",
+        "RankingWeek": "51",
         "Points": "197",
         "RankingPosition": "67",
         "CurrentRank": "67",
         "PreviousRank": "67",
         "RankingDifference": "0",
-        "PublishDate": "12/09/2025 00:00:00"
+        "PublishDate": "12/16/2025 00:00:00"
       },
       {
         "PairId": "44789",
@@ -5402,13 +5402,13 @@
         "SubEventCode": "WD",
         "RankingYear": "2025",
         "RankingMonth": "12",
-        "RankingWeek": "50",
+        "RankingWeek": "51",
         "Points": "202",
         "RankingPosition": "67",
         "CurrentRank": "67",
-        "PreviousRank": "65",
-        "RankingDifference": "2",
-        "PublishDate": "12/09/2025 00:00:00"
+        "PreviousRank": "67",
+        "RankingDifference": "0",
+        "PublishDate": "12/16/2025 00:00:00"
       },
       {
         "PairId": "100168739",
@@ -5429,13 +5429,13 @@
         "SubEventCode": "XD",
         "RankingYear": "2025",
         "RankingMonth": "12",
-        "RankingWeek": "50",
+        "RankingWeek": "51",
         "Points": "185",
         "RankingPosition": "67",
         "CurrentRank": "67",
-        "PreviousRank": "64",
-        "RankingDifference": "3",
-        "PublishDate": "12/09/2025 00:00:00"
+        "PreviousRank": "67",
+        "RankingDifference": "0",
+        "PublishDate": "12/16/2025 00:00:00"
       },
       {
         "PairId": "56245",
@@ -5456,13 +5456,13 @@
         "SubEventCode": "MD",
         "RankingYear": "2025",
         "RankingMonth": "12",
-        "RankingWeek": "50",
+        "RankingWeek": "51",
         "Points": "195",
         "RankingPosition": "68",
         "CurrentRank": "68",
         "PreviousRank": "68",
         "RankingDifference": "0",
-        "PublishDate": "12/09/2025 00:00:00"
+        "PublishDate": "12/16/2025 00:00:00"
       },
       {
         "PairId": "100102689",
@@ -5483,13 +5483,13 @@
         "SubEventCode": "WD",
         "RankingYear": "2025",
         "RankingMonth": "12",
-        "RankingWeek": "50",
+        "RankingWeek": "51",
         "Points": "198",
         "RankingPosition": "68",
         "CurrentRank": "68",
-        "PreviousRank": "66",
-        "RankingDifference": "2",
-        "PublishDate": "12/09/2025 00:00:00"
+        "PreviousRank": "68",
+        "RankingDifference": "0",
+        "PublishDate": "12/16/2025 00:00:00"
       },
       {
         "PairId": "62350",
@@ -5510,13 +5510,13 @@
         "SubEventCode": "XD",
         "RankingYear": "2025",
         "RankingMonth": "12",
-        "RankingWeek": "50",
+        "RankingWeek": "51",
         "Points": "185",
         "RankingPosition": "68",
         "CurrentRank": "68",
-        "PreviousRank": "65",
-        "RankingDifference": "3",
-        "PublishDate": "12/09/2025 00:00:00"
+        "PreviousRank": "68",
+        "RankingDifference": "0",
+        "PublishDate": "12/16/2025 00:00:00"
       },
       {
         "PairId": "100115785",
@@ -5537,13 +5537,13 @@
         "SubEventCode": "MD",
         "RankingYear": "2025",
         "RankingMonth": "12",
-        "RankingWeek": "50",
+        "RankingWeek": "51",
         "Points": "195",
         "RankingPosition": "69",
         "CurrentRank": "69",
         "PreviousRank": "69",
         "RankingDifference": "0",
-        "PublishDate": "12/09/2025 00:00:00"
+        "PublishDate": "12/16/2025 00:00:00"
       },
       {
         "PairId": "42491",
@@ -5564,13 +5564,13 @@
         "SubEventCode": "WD",
         "RankingYear": "2025",
         "RankingMonth": "12",
-        "RankingWeek": "50",
+        "RankingWeek": "51",
         "Points": "194",
         "RankingPosition": "69",
         "CurrentRank": "69",
-        "PreviousRank": "67",
-        "RankingDifference": "2",
-        "PublishDate": "12/09/2025 00:00:00"
+        "PreviousRank": "69",
+        "RankingDifference": "0",
+        "PublishDate": "12/16/2025 00:00:00"
       },
       {
         "PairId": "41165",
@@ -5591,13 +5591,13 @@
         "SubEventCode": "XD",
         "RankingYear": "2025",
         "RankingMonth": "12",
-        "RankingWeek": "50",
+        "RankingWeek": "51",
         "Points": "183",
         "RankingPosition": "69",
         "CurrentRank": "69",
-        "PreviousRank": "86",
-        "RankingDifference": "-17",
-        "PublishDate": "12/09/2025 00:00:00"
+        "PreviousRank": "69",
+        "RankingDifference": "0",
+        "PublishDate": "12/16/2025 00:00:00"
       },
       {
         "PairId": "100116873",
@@ -5618,13 +5618,13 @@
         "SubEventCode": "MD",
         "RankingYear": "2025",
         "RankingMonth": "12",
-        "RankingWeek": "50",
+        "RankingWeek": "51",
         "Points": "185",
         "RankingPosition": "70",
         "CurrentRank": "70",
         "PreviousRank": "70",
         "RankingDifference": "0",
-        "PublishDate": "12/09/2025 00:00:00"
+        "PublishDate": "12/16/2025 00:00:00"
       },
       {
         "PairId": "100118296",
@@ -5645,13 +5645,13 @@
         "SubEventCode": "WD",
         "RankingYear": "2025",
         "RankingMonth": "12",
-        "RankingWeek": "50",
+        "RankingWeek": "51",
         "Points": "190",
         "RankingPosition": "70",
         "CurrentRank": "70",
-        "PreviousRank": "68",
-        "RankingDifference": "2",
-        "PublishDate": "12/09/2025 00:00:00"
+        "PreviousRank": "70",
+        "RankingDifference": "0",
+        "PublishDate": "12/16/2025 00:00:00"
       },
       {
         "PairId": "100122103",
@@ -5672,13 +5672,13 @@
         "SubEventCode": "XD",
         "RankingYear": "2025",
         "RankingMonth": "12",
-        "RankingWeek": "50",
+        "RankingWeek": "51",
         "Points": "180",
         "RankingPosition": "70",
         "CurrentRank": "70",
-        "PreviousRank": "66",
-        "RankingDifference": "4",
-        "PublishDate": "12/09/2025 00:00:00"
+        "PreviousRank": "70",
+        "RankingDifference": "0",
+        "PublishDate": "12/16/2025 00:00:00"
       },
       {
         "PairId": "43343",
@@ -5699,13 +5699,13 @@
         "SubEventCode": "MD",
         "RankingYear": "2025",
         "RankingMonth": "12",
-        "RankingWeek": "50",
+        "RankingWeek": "51",
         "Points": "185",
         "RankingPosition": "71",
         "CurrentRank": "71",
         "PreviousRank": "71",
         "RankingDifference": "0",
-        "PublishDate": "12/09/2025 00:00:00"
+        "PublishDate": "12/16/2025 00:00:00"
       },
       {
         "PairId": "100121686",
@@ -5726,13 +5726,13 @@
         "SubEventCode": "WD",
         "RankingYear": "2025",
         "RankingMonth": "12",
-        "RankingWeek": "50",
+        "RankingWeek": "51",
         "Points": "190",
         "RankingPosition": "71",
         "CurrentRank": "71",
-        "PreviousRank": "69",
-        "RankingDifference": "2",
-        "PublishDate": "12/09/2025 00:00:00"
+        "PreviousRank": "71",
+        "RankingDifference": "0",
+        "PublishDate": "12/16/2025 00:00:00"
       },
       {
         "PairId": "100139640",
@@ -5753,13 +5753,13 @@
         "SubEventCode": "XD",
         "RankingYear": "2025",
         "RankingMonth": "12",
-        "RankingWeek": "50",
+        "RankingWeek": "51",
         "Points": "180",
         "RankingPosition": "71",
         "CurrentRank": "71",
-        "PreviousRank": "67",
-        "RankingDifference": "4",
-        "PublishDate": "12/09/2025 00:00:00"
+        "PreviousRank": "71",
+        "RankingDifference": "0",
+        "PublishDate": "12/16/2025 00:00:00"
       },
       {
         "PairId": "100129285",
@@ -5780,13 +5780,13 @@
         "SubEventCode": "MD",
         "RankingYear": "2025",
         "RankingMonth": "12",
-        "RankingWeek": "50",
+        "RankingWeek": "51",
         "Points": "185",
         "RankingPosition": "72",
         "CurrentRank": "72",
         "PreviousRank": "72",
         "RankingDifference": "0",
-        "PublishDate": "12/09/2025 00:00:00"
+        "PublishDate": "12/16/2025 00:00:00"
       },
       {
         "PairId": "100119951",
@@ -5807,13 +5807,13 @@
         "SubEventCode": "WD",
         "RankingYear": "2025",
         "RankingMonth": "12",
-        "RankingWeek": "50",
+        "RankingWeek": "51",
         "Points": "187",
         "RankingPosition": "72",
         "CurrentRank": "72",
-        "PreviousRank": "70",
-        "RankingDifference": "2",
-        "PublishDate": "12/09/2025 00:00:00"
+        "PreviousRank": "72",
+        "RankingDifference": "0",
+        "PublishDate": "12/16/2025 00:00:00"
       },
       {
         "PairId": "100179746",
@@ -5834,13 +5834,13 @@
         "SubEventCode": "XD",
         "RankingYear": "2025",
         "RankingMonth": "12",
-        "RankingWeek": "50",
+        "RankingWeek": "51",
         "Points": "177",
         "RankingPosition": "72",
         "CurrentRank": "72",
-        "PreviousRank": "77",
-        "RankingDifference": "-5",
-        "PublishDate": "12/09/2025 00:00:00"
+        "PreviousRank": "72",
+        "RankingDifference": "0",
+        "PublishDate": "12/16/2025 00:00:00"
       },
       {
         "PairId": "57462",
@@ -5861,13 +5861,13 @@
         "SubEventCode": "MD",
         "RankingYear": "2025",
         "RankingMonth": "12",
-        "RankingWeek": "50",
+        "RankingWeek": "51",
         "Points": "185",
         "RankingPosition": "73",
         "CurrentRank": "73",
         "PreviousRank": "73",
         "RankingDifference": "0",
-        "PublishDate": "12/09/2025 00:00:00"
+        "PublishDate": "12/16/2025 00:00:00"
       },
       {
         "PairId": "100129295",
@@ -5888,13 +5888,13 @@
         "SubEventCode": "WD",
         "RankingYear": "2025",
         "RankingMonth": "12",
-        "RankingWeek": "50",
+        "RankingWeek": "51",
         "Points": "185",
         "RankingPosition": "73",
         "CurrentRank": "73",
-        "PreviousRank": "71",
-        "RankingDifference": "2",
-        "PublishDate": "12/09/2025 00:00:00"
+        "PreviousRank": "73",
+        "RankingDifference": "0",
+        "PublishDate": "12/16/2025 00:00:00"
       },
       {
         "PairId": "100120327",
@@ -5915,13 +5915,13 @@
         "SubEventCode": "XD",
         "RankingYear": "2025",
         "RankingMonth": "12",
-        "RankingWeek": "50",
+        "RankingWeek": "51",
         "Points": "176",
         "RankingPosition": "73",
         "CurrentRank": "73",
-        "PreviousRank": "68",
-        "RankingDifference": "5",
-        "PublishDate": "12/09/2025 00:00:00"
+        "PreviousRank": "73",
+        "RankingDifference": "0",
+        "PublishDate": "12/16/2025 00:00:00"
       },
       {
         "PairId": "100129582",
@@ -5942,13 +5942,13 @@
         "SubEventCode": "MD",
         "RankingYear": "2025",
         "RankingMonth": "12",
-        "RankingWeek": "50",
+        "RankingWeek": "51",
         "Points": "185",
         "RankingPosition": "74",
         "CurrentRank": "74",
         "PreviousRank": "74",
         "RankingDifference": "0",
-        "PublishDate": "12/09/2025 00:00:00"
+        "PublishDate": "12/16/2025 00:00:00"
       },
       {
         "PairId": "100173465",
@@ -5969,13 +5969,13 @@
         "SubEventCode": "WD",
         "RankingYear": "2025",
         "RankingMonth": "12",
-        "RankingWeek": "50",
+        "RankingWeek": "51",
         "Points": "185",
         "RankingPosition": "74",
         "CurrentRank": "74",
-        "PreviousRank": "72",
-        "RankingDifference": "2",
-        "PublishDate": "12/09/2025 00:00:00"
+        "PreviousRank": "74",
+        "RankingDifference": "0",
+        "PublishDate": "12/16/2025 00:00:00"
       },
       {
         "PairId": "100120080",
@@ -5996,13 +5996,13 @@
         "SubEventCode": "XD",
         "RankingYear": "2025",
         "RankingMonth": "12",
-        "RankingWeek": "50",
+        "RankingWeek": "51",
         "Points": "175",
         "RankingPosition": "74",
         "CurrentRank": "74",
-        "PreviousRank": "69",
-        "RankingDifference": "5",
-        "PublishDate": "12/09/2025 00:00:00"
+        "PreviousRank": "74",
+        "RankingDifference": "0",
+        "PublishDate": "12/16/2025 00:00:00"
       },
       {
         "PairId": "100167491",
@@ -6023,13 +6023,13 @@
         "SubEventCode": "MD",
         "RankingYear": "2025",
         "RankingMonth": "12",
-        "RankingWeek": "50",
+        "RankingWeek": "51",
         "Points": "180",
         "RankingPosition": "75",
         "CurrentRank": "75",
         "PreviousRank": "75",
         "RankingDifference": "0",
-        "PublishDate": "12/09/2025 00:00:00"
+        "PublishDate": "12/16/2025 00:00:00"
       },
       {
         "PairId": "100116900",
@@ -6050,13 +6050,13 @@
         "SubEventCode": "WD",
         "RankingYear": "2025",
         "RankingMonth": "12",
-        "RankingWeek": "50",
+        "RankingWeek": "51",
         "Points": "185",
         "RankingPosition": "75",
         "CurrentRank": "75",
-        "PreviousRank": "73",
-        "RankingDifference": "2",
-        "PublishDate": "12/09/2025 00:00:00"
+        "PreviousRank": "75",
+        "RankingDifference": "0",
+        "PublishDate": "12/16/2025 00:00:00"
       },
       {
         "PairId": "100118792",
@@ -6077,13 +6077,13 @@
         "SubEventCode": "XD",
         "RankingYear": "2025",
         "RankingMonth": "12",
-        "RankingWeek": "50",
+        "RankingWeek": "51",
         "Points": "175",
         "RankingPosition": "75",
         "CurrentRank": "75",
-        "PreviousRank": "70",
-        "RankingDifference": "5",
-        "PublishDate": "12/09/2025 00:00:00"
+        "PreviousRank": "75",
+        "RankingDifference": "0",
+        "PublishDate": "12/16/2025 00:00:00"
       },
       {
         "PairId": "100124500",
@@ -6104,13 +6104,13 @@
         "SubEventCode": "MD",
         "RankingYear": "2025",
         "RankingMonth": "12",
-        "RankingWeek": "50",
+        "RankingWeek": "51",
         "Points": "175",
         "RankingPosition": "76",
         "CurrentRank": "76",
         "PreviousRank": "76",
         "RankingDifference": "0",
-        "PublishDate": "12/09/2025 00:00:00"
+        "PublishDate": "12/16/2025 00:00:00"
       },
       {
         "PairId": "46539",
@@ -6131,13 +6131,13 @@
         "SubEventCode": "WD",
         "RankingYear": "2025",
         "RankingMonth": "12",
-        "RankingWeek": "50",
+        "RankingWeek": "51",
         "Points": "180",
         "RankingPosition": "76",
         "CurrentRank": "76",
-        "PreviousRank": "74",
-        "RankingDifference": "2",
-        "PublishDate": "12/09/2025 00:00:00"
+        "PreviousRank": "76",
+        "RankingDifference": "0",
+        "PublishDate": "12/16/2025 00:00:00"
       },
       {
         "PairId": "100112056",
@@ -6158,13 +6158,13 @@
         "SubEventCode": "XD",
         "RankingYear": "2025",
         "RankingMonth": "12",
-        "RankingWeek": "50",
+        "RankingWeek": "51",
         "Points": "175",
         "RankingPosition": "76",
         "CurrentRank": "76",
-        "PreviousRank": "71",
-        "RankingDifference": "5",
-        "PublishDate": "12/09/2025 00:00:00"
+        "PreviousRank": "76",
+        "RankingDifference": "0",
+        "PublishDate": "12/16/2025 00:00:00"
       },
       {
         "PairId": "42418",
@@ -6185,13 +6185,13 @@
         "SubEventCode": "MD",
         "RankingYear": "2025",
         "RankingMonth": "12",
-        "RankingWeek": "50",
+        "RankingWeek": "51",
         "Points": "175",
         "RankingPosition": "77",
         "CurrentRank": "77",
         "PreviousRank": "77",
         "RankingDifference": "0",
-        "PublishDate": "12/09/2025 00:00:00"
+        "PublishDate": "12/16/2025 00:00:00"
       },
       {
         "PairId": "100146432",
@@ -6212,13 +6212,13 @@
         "SubEventCode": "WD",
         "RankingYear": "2025",
         "RankingMonth": "12",
-        "RankingWeek": "50",
+        "RankingWeek": "51",
         "Points": "175",
         "RankingPosition": "77",
         "CurrentRank": "77",
-        "PreviousRank": "76",
-        "RankingDifference": "1",
-        "PublishDate": "12/09/2025 00:00:00"
+        "PreviousRank": "77",
+        "RankingDifference": "0",
+        "PublishDate": "12/16/2025 00:00:00"
       },
       {
         "PairId": "100167275",
@@ -6239,13 +6239,13 @@
         "SubEventCode": "XD",
         "RankingYear": "2025",
         "RankingMonth": "12",
-        "RankingWeek": "50",
+        "RankingWeek": "51",
         "Points": "175",
         "RankingPosition": "77",
         "CurrentRank": "77",
-        "PreviousRank": "72",
-        "RankingDifference": "5",
-        "PublishDate": "12/09/2025 00:00:00"
+        "PreviousRank": "77",
+        "RankingDifference": "0",
+        "PublishDate": "12/16/2025 00:00:00"
       },
       {
         "PairId": "100129313",
@@ -6266,13 +6266,13 @@
         "SubEventCode": "MD",
         "RankingYear": "2025",
         "RankingMonth": "12",
-        "RankingWeek": "50",
+        "RankingWeek": "51",
         "Points": "175",
         "RankingPosition": "78",
         "CurrentRank": "78",
         "PreviousRank": "78",
         "RankingDifference": "0",
-        "PublishDate": "12/09/2025 00:00:00"
+        "PublishDate": "12/16/2025 00:00:00"
       },
       {
         "PairId": "100122091",
@@ -6293,13 +6293,13 @@
         "SubEventCode": "WD",
         "RankingYear": "2025",
         "RankingMonth": "12",
-        "RankingWeek": "50",
+        "RankingWeek": "51",
         "Points": "175",
         "RankingPosition": "78",
         "CurrentRank": "78",
-        "PreviousRank": "77",
-        "RankingDifference": "1",
-        "PublishDate": "12/09/2025 00:00:00"
+        "PreviousRank": "78",
+        "RankingDifference": "0",
+        "PublishDate": "12/16/2025 00:00:00"
       },
       {
         "PairId": "58870",
@@ -6320,13 +6320,13 @@
         "SubEventCode": "XD",
         "RankingYear": "2025",
         "RankingMonth": "12",
-        "RankingWeek": "50",
+        "RankingWeek": "51",
         "Points": "175",
         "RankingPosition": "78",
         "CurrentRank": "78",
-        "PreviousRank": "73",
-        "RankingDifference": "5",
-        "PublishDate": "12/09/2025 00:00:00"
+        "PreviousRank": "78",
+        "RankingDifference": "0",
+        "PublishDate": "12/16/2025 00:00:00"
       },
       {
         "PairId": "100167267",
@@ -6347,13 +6347,13 @@
         "SubEventCode": "MD",
         "RankingYear": "2025",
         "RankingMonth": "12",
-        "RankingWeek": "50",
+        "RankingWeek": "51",
         "Points": "175",
         "RankingPosition": "79",
         "CurrentRank": "79",
         "PreviousRank": "79",
         "RankingDifference": "0",
-        "PublishDate": "12/09/2025 00:00:00"
+        "PublishDate": "12/16/2025 00:00:00"
       },
       {
         "PairId": "100119333",
@@ -6374,13 +6374,13 @@
         "SubEventCode": "WD",
         "RankingYear": "2025",
         "RankingMonth": "12",
-        "RankingWeek": "50",
+        "RankingWeek": "51",
         "Points": "175",
         "RankingPosition": "79",
         "CurrentRank": "79",
-        "PreviousRank": "78",
-        "RankingDifference": "1",
-        "PublishDate": "12/09/2025 00:00:00"
+        "PreviousRank": "79",
+        "RankingDifference": "0",
+        "PublishDate": "12/16/2025 00:00:00"
       },
       {
         "PairId": "37061",
@@ -6401,13 +6401,13 @@
         "SubEventCode": "XD",
         "RankingYear": "2025",
         "RankingMonth": "12",
-        "RankingWeek": "50",
+        "RankingWeek": "51",
         "Points": "175",
         "RankingPosition": "79",
         "CurrentRank": "79",
-        "PreviousRank": "74",
-        "RankingDifference": "5",
-        "PublishDate": "12/09/2025 00:00:00"
+        "PreviousRank": "79",
+        "RankingDifference": "0",
+        "PublishDate": "12/16/2025 00:00:00"
       },
       {
         "PairId": "100167268",
@@ -6428,13 +6428,13 @@
         "SubEventCode": "MD",
         "RankingYear": "2025",
         "RankingMonth": "12",
-        "RankingWeek": "50",
+        "RankingWeek": "51",
         "Points": "175",
         "RankingPosition": "80",
         "CurrentRank": "80",
         "PreviousRank": "80",
         "RankingDifference": "0",
-        "PublishDate": "12/09/2025 00:00:00"
+        "PublishDate": "12/16/2025 00:00:00"
       },
       {
         "PairId": "100129271",
@@ -6455,13 +6455,13 @@
         "SubEventCode": "WD",
         "RankingYear": "2025",
         "RankingMonth": "12",
-        "RankingWeek": "50",
+        "RankingWeek": "51",
         "Points": "175",
         "RankingPosition": "80",
         "CurrentRank": "80",
-        "PreviousRank": "79",
-        "RankingDifference": "1",
-        "PublishDate": "12/09/2025 00:00:00"
+        "PreviousRank": "80",
+        "RankingDifference": "0",
+        "PublishDate": "12/16/2025 00:00:00"
       },
       {
         "PairId": "100129339",
@@ -6482,13 +6482,13 @@
         "SubEventCode": "XD",
         "RankingYear": "2025",
         "RankingMonth": "12",
-        "RankingWeek": "50",
+        "RankingWeek": "51",
         "Points": "175",
         "RankingPosition": "80",
         "CurrentRank": "80",
-        "PreviousRank": "75",
-        "RankingDifference": "5",
-        "PublishDate": "12/09/2025 00:00:00"
+        "PreviousRank": "80",
+        "RankingDifference": "0",
+        "PublishDate": "12/16/2025 00:00:00"
       },
       {
         "PairId": "100119640",
@@ -6509,13 +6509,13 @@
         "SubEventCode": "MD",
         "RankingYear": "2025",
         "RankingMonth": "12",
-        "RankingWeek": "50",
+        "RankingWeek": "51",
         "Points": "175",
         "RankingPosition": "81",
         "CurrentRank": "81",
         "PreviousRank": "81",
         "RankingDifference": "0",
-        "PublishDate": "12/09/2025 00:00:00"
+        "PublishDate": "12/16/2025 00:00:00"
       },
       {
         "PairId": "100129231",
@@ -6536,13 +6536,13 @@
         "SubEventCode": "WD",
         "RankingYear": "2025",
         "RankingMonth": "12",
-        "RankingWeek": "50",
+        "RankingWeek": "51",
         "Points": "175",
         "RankingPosition": "81",
         "CurrentRank": "81",
-        "PreviousRank": "80",
-        "RankingDifference": "1",
-        "PublishDate": "12/09/2025 00:00:00"
+        "PreviousRank": "81",
+        "RankingDifference": "0",
+        "PublishDate": "12/16/2025 00:00:00"
       },
       {
         "PairId": "100129268",
@@ -6563,13 +6563,13 @@
         "SubEventCode": "XD",
         "RankingYear": "2025",
         "RankingMonth": "12",
-        "RankingWeek": "50",
+        "RankingWeek": "51",
         "Points": "175",
         "RankingPosition": "81",
         "CurrentRank": "81",
-        "PreviousRank": "76",
-        "RankingDifference": "5",
-        "PublishDate": "12/09/2025 00:00:00"
+        "PreviousRank": "81",
+        "RankingDifference": "0",
+        "PublishDate": "12/16/2025 00:00:00"
       },
       {
         "PairId": "100129129",
@@ -6590,13 +6590,13 @@
         "SubEventCode": "MD",
         "RankingYear": "2025",
         "RankingMonth": "12",
-        "RankingWeek": "50",
+        "RankingWeek": "51",
         "Points": "175",
         "RankingPosition": "82",
         "CurrentRank": "82",
-        "PreviousRank": "62",
-        "RankingDifference": "20",
-        "PublishDate": "12/09/2025 00:00:00"
+        "PreviousRank": "82",
+        "RankingDifference": "0",
+        "PublishDate": "12/16/2025 00:00:00"
       },
       {
         "PairId": "100165158",
@@ -6617,13 +6617,13 @@
         "SubEventCode": "WD",
         "RankingYear": "2025",
         "RankingMonth": "12",
-        "RankingWeek": "50",
+        "RankingWeek": "51",
         "Points": "175",
         "RankingPosition": "82",
         "CurrentRank": "82",
-        "PreviousRank": "81",
-        "RankingDifference": "1",
-        "PublishDate": "12/09/2025 00:00:00"
+        "PreviousRank": "82",
+        "RankingDifference": "0",
+        "PublishDate": "12/16/2025 00:00:00"
       },
       {
         "PairId": "100185146",
@@ -6644,13 +6644,13 @@
         "SubEventCode": "XD",
         "RankingYear": "2025",
         "RankingMonth": "12",
-        "RankingWeek": "50",
+        "RankingWeek": "51",
         "Points": "175",
         "RankingPosition": "82",
         "CurrentRank": "82",
-        "PreviousRank": "78",
-        "RankingDifference": "4",
-        "PublishDate": "12/09/2025 00:00:00"
+        "PreviousRank": "82",
+        "RankingDifference": "0",
+        "PublishDate": "12/16/2025 00:00:00"
       },
       {
         "PairId": "100165122",
@@ -6671,13 +6671,13 @@
         "SubEventCode": "MD",
         "RankingYear": "2025",
         "RankingMonth": "12",
-        "RankingWeek": "50",
+        "RankingWeek": "51",
         "Points": "175",
         "RankingPosition": "83",
         "CurrentRank": "83",
-        "PreviousRank": "82",
-        "RankingDifference": "1",
-        "PublishDate": "12/09/2025 00:00:00"
+        "PreviousRank": "83",
+        "RankingDifference": "0",
+        "PublishDate": "12/16/2025 00:00:00"
       },
       {
         "PairId": "100179745",
@@ -6698,13 +6698,13 @@
         "SubEventCode": "WD",
         "RankingYear": "2025",
         "RankingMonth": "12",
-        "RankingWeek": "50",
+        "RankingWeek": "51",
         "Points": "175",
         "RankingPosition": "83",
         "CurrentRank": "83",
-        "PreviousRank": "82",
-        "RankingDifference": "1",
-        "PublishDate": "12/09/2025 00:00:00"
+        "PreviousRank": "83",
+        "RankingDifference": "0",
+        "PublishDate": "12/16/2025 00:00:00"
       },
       {
         "PairId": "100185143",
@@ -6725,13 +6725,13 @@
         "SubEventCode": "XD",
         "RankingYear": "2025",
         "RankingMonth": "12",
-        "RankingWeek": "50",
+        "RankingWeek": "51",
         "Points": "175",
         "RankingPosition": "83",
         "CurrentRank": "83",
-        "PreviousRank": "79",
-        "RankingDifference": "4",
-        "PublishDate": "12/09/2025 00:00:00"
+        "PreviousRank": "83",
+        "RankingDifference": "0",
+        "PublishDate": "12/16/2025 00:00:00"
       },
       {
         "PairId": "39136",
@@ -6752,13 +6752,13 @@
         "SubEventCode": "MD",
         "RankingYear": "2025",
         "RankingMonth": "12",
-        "RankingWeek": "50",
+        "RankingWeek": "51",
         "Points": "175",
         "RankingPosition": "84",
         "CurrentRank": "84",
-        "PreviousRank": "83",
-        "RankingDifference": "1",
-        "PublishDate": "12/09/2025 00:00:00"
+        "PreviousRank": "84",
+        "RankingDifference": "0",
+        "PublishDate": "12/16/2025 00:00:00"
       },
       {
         "PairId": "100192162",
@@ -6779,13 +6779,13 @@
         "SubEventCode": "WD",
         "RankingYear": "2025",
         "RankingMonth": "12",
-        "RankingWeek": "50",
+        "RankingWeek": "51",
         "Points": "175",
         "RankingPosition": "84",
         "CurrentRank": "84",
-        "PreviousRank": "83",
-        "RankingDifference": "1",
-        "PublishDate": "12/09/2025 00:00:00"
+        "PreviousRank": "84",
+        "RankingDifference": "0",
+        "PublishDate": "12/16/2025 00:00:00"
       },
       {
         "PairId": "100185140",
@@ -6806,13 +6806,13 @@
         "SubEventCode": "XD",
         "RankingYear": "2025",
         "RankingMonth": "12",
-        "RankingWeek": "50",
+        "RankingWeek": "51",
         "Points": "175",
         "RankingPosition": "84",
         "CurrentRank": "84",
-        "PreviousRank": "80",
-        "RankingDifference": "4",
-        "PublishDate": "12/09/2025 00:00:00"
+        "PreviousRank": "84",
+        "RankingDifference": "0",
+        "PublishDate": "12/16/2025 00:00:00"
       },
       {
         "PairId": "44523",
@@ -6833,13 +6833,13 @@
         "SubEventCode": "MD",
         "RankingYear": "2025",
         "RankingMonth": "12",
-        "RankingWeek": "50",
+        "RankingWeek": "51",
         "Points": "175",
         "RankingPosition": "85",
         "CurrentRank": "85",
-        "PreviousRank": "84",
-        "RankingDifference": "1",
-        "PublishDate": "12/09/2025 00:00:00"
+        "PreviousRank": "85",
+        "RankingDifference": "0",
+        "PublishDate": "12/16/2025 00:00:00"
       },
       {
         "PairId": "100167191",
@@ -6860,13 +6860,13 @@
         "SubEventCode": "WD",
         "RankingYear": "2025",
         "RankingMonth": "12",
-        "RankingWeek": "50",
+        "RankingWeek": "51",
         "Points": "175",
         "RankingPosition": "85",
         "CurrentRank": "85",
-        "PreviousRank": "84",
-        "RankingDifference": "1",
-        "PublishDate": "12/09/2025 00:00:00"
+        "PreviousRank": "85",
+        "RankingDifference": "0",
+        "PublishDate": "12/16/2025 00:00:00"
       },
       {
         "PairId": "100120357",
@@ -6887,13 +6887,13 @@
         "SubEventCode": "XD",
         "RankingYear": "2025",
         "RankingMonth": "12",
-        "RankingWeek": "50",
+        "RankingWeek": "51",
         "Points": "170",
         "RankingPosition": "85",
         "CurrentRank": "85",
-        "PreviousRank": "81",
-        "RankingDifference": "4",
-        "PublishDate": "12/09/2025 00:00:00"
+        "PreviousRank": "85",
+        "RankingDifference": "0",
+        "PublishDate": "12/16/2025 00:00:00"
       },
       {
         "PairId": "100185151",
@@ -6914,13 +6914,13 @@
         "SubEventCode": "MD",
         "RankingYear": "2025",
         "RankingMonth": "12",
-        "RankingWeek": "50",
+        "RankingWeek": "51",
         "Points": "175",
         "RankingPosition": "86",
         "CurrentRank": "86",
-        "PreviousRank": "85",
-        "RankingDifference": "1",
-        "PublishDate": "12/09/2025 00:00:00"
+        "PreviousRank": "86",
+        "RankingDifference": "0",
+        "PublishDate": "12/16/2025 00:00:00"
       },
       {
         "PairId": "40151",
@@ -6941,13 +6941,13 @@
         "SubEventCode": "WD",
         "RankingYear": "2025",
         "RankingMonth": "12",
-        "RankingWeek": "50",
+        "RankingWeek": "51",
         "Points": "168",
         "RankingPosition": "86",
         "CurrentRank": "86",
-        "PreviousRank": "85",
-        "RankingDifference": "1",
-        "PublishDate": "12/09/2025 00:00:00"
+        "PreviousRank": "86",
+        "RankingDifference": "0",
+        "PublishDate": "12/16/2025 00:00:00"
       },
       {
         "PairId": "61858",
@@ -6968,13 +6968,13 @@
         "SubEventCode": "XD",
         "RankingYear": "2025",
         "RankingMonth": "12",
-        "RankingWeek": "50",
+        "RankingWeek": "51",
         "Points": "169",
         "RankingPosition": "86",
         "CurrentRank": "86",
-        "PreviousRank": "82",
-        "RankingDifference": "4",
-        "PublishDate": "12/09/2025 00:00:00"
+        "PreviousRank": "86",
+        "RankingDifference": "0",
+        "PublishDate": "12/16/2025 00:00:00"
       },
       {
         "PairId": "100118771",
@@ -6995,13 +6995,13 @@
         "SubEventCode": "MD",
         "RankingYear": "2025",
         "RankingMonth": "12",
-        "RankingWeek": "50",
+        "RankingWeek": "51",
         "Points": "175",
         "RankingPosition": "87",
         "CurrentRank": "87",
-        "PreviousRank": "86",
-        "RankingDifference": "1",
-        "PublishDate": "12/09/2025 00:00:00"
+        "PreviousRank": "87",
+        "RankingDifference": "0",
+        "PublishDate": "12/16/2025 00:00:00"
       },
       {
         "PairId": "39097",
@@ -7022,13 +7022,13 @@
         "SubEventCode": "WD",
         "RankingYear": "2025",
         "RankingMonth": "12",
-        "RankingWeek": "50",
+        "RankingWeek": "51",
         "Points": "156",
         "RankingPosition": "87",
         "CurrentRank": "87",
-        "PreviousRank": "86",
-        "RankingDifference": "1",
-        "PublishDate": "12/09/2025 00:00:00"
+        "PreviousRank": "87",
+        "RankingDifference": "0",
+        "PublishDate": "12/16/2025 00:00:00"
       },
       {
         "PairId": "100141298",
@@ -7049,13 +7049,13 @@
         "SubEventCode": "XD",
         "RankingYear": "2025",
         "RankingMonth": "12",
-        "RankingWeek": "50",
+        "RankingWeek": "51",
         "Points": "168",
         "RankingPosition": "87",
         "CurrentRank": "87",
-        "PreviousRank": "83",
-        "RankingDifference": "4",
-        "PublishDate": "12/09/2025 00:00:00"
+        "PreviousRank": "87",
+        "RankingDifference": "0",
+        "PublishDate": "12/16/2025 00:00:00"
       },
       {
         "PairId": "100115410",
@@ -7076,13 +7076,13 @@
         "SubEventCode": "MD",
         "RankingYear": "2025",
         "RankingMonth": "12",
-        "RankingWeek": "50",
+        "RankingWeek": "51",
         "Points": "160",
         "RankingPosition": "88",
         "CurrentRank": "88",
-        "PreviousRank": "87",
-        "RankingDifference": "1",
-        "PublishDate": "12/09/2025 00:00:00"
+        "PreviousRank": "88",
+        "RankingDifference": "0",
+        "PublishDate": "12/16/2025 00:00:00"
       },
       {
         "PairId": "100167200",
@@ -7103,13 +7103,13 @@
         "SubEventCode": "WD",
         "RankingYear": "2025",
         "RankingMonth": "12",
-        "RankingWeek": "50",
+        "RankingWeek": "51",
         "Points": "155",
         "RankingPosition": "88",
         "CurrentRank": "88",
-        "PreviousRank": "87",
-        "RankingDifference": "1",
-        "PublishDate": "12/09/2025 00:00:00"
+        "PreviousRank": "88",
+        "RankingDifference": "0",
+        "PublishDate": "12/16/2025 00:00:00"
       },
       {
         "PairId": "41762",
@@ -7130,13 +7130,13 @@
         "SubEventCode": "XD",
         "RankingYear": "2025",
         "RankingMonth": "12",
-        "RankingWeek": "50",
+        "RankingWeek": "51",
         "Points": "165",
         "RankingPosition": "88",
         "CurrentRank": "88",
-        "PreviousRank": "84",
-        "RankingDifference": "4",
-        "PublishDate": "12/09/2025 00:00:00"
+        "PreviousRank": "88",
+        "RankingDifference": "0",
+        "PublishDate": "12/16/2025 00:00:00"
       },
       {
         "PairId": "100168720",
@@ -7157,13 +7157,13 @@
         "SubEventCode": "MD",
         "RankingYear": "2025",
         "RankingMonth": "12",
-        "RankingWeek": "50",
+        "RankingWeek": "51",
         "Points": "155",
         "RankingPosition": "89",
         "CurrentRank": "89",
-        "PreviousRank": "88",
-        "RankingDifference": "1",
-        "PublishDate": "12/09/2025 00:00:00"
+        "PreviousRank": "89",
+        "RankingDifference": "0",
+        "PublishDate": "12/16/2025 00:00:00"
       },
       {
         "PairId": "100106939",
@@ -7184,13 +7184,13 @@
         "SubEventCode": "WD",
         "RankingYear": "2025",
         "RankingMonth": "12",
-        "RankingWeek": "50",
+        "RankingWeek": "51",
         "Points": "154",
         "RankingPosition": "89",
         "CurrentRank": "89",
-        "PreviousRank": "88",
-        "RankingDifference": "1",
-        "PublishDate": "12/09/2025 00:00:00"
+        "PreviousRank": "89",
+        "RankingDifference": "0",
+        "PublishDate": "12/16/2025 00:00:00"
       },
       {
         "PairId": "58208",
@@ -7211,13 +7211,13 @@
         "SubEventCode": "XD",
         "RankingYear": "2025",
         "RankingMonth": "12",
-        "RankingWeek": "50",
+        "RankingWeek": "51",
         "Points": "164",
         "RankingPosition": "89",
         "CurrentRank": "89",
-        "PreviousRank": "85",
-        "RankingDifference": "4",
-        "PublishDate": "12/09/2025 00:00:00"
+        "PreviousRank": "89",
+        "RankingDifference": "0",
+        "PublishDate": "12/16/2025 00:00:00"
       },
       {
         "PairId": "77955",
@@ -7238,13 +7238,13 @@
         "SubEventCode": "MD",
         "RankingYear": "2025",
         "RankingMonth": "12",
-        "RankingWeek": "50",
+        "RankingWeek": "51",
         "Points": "150",
         "RankingPosition": "90",
         "CurrentRank": "90",
-        "PreviousRank": "89",
-        "RankingDifference": "1",
-        "PublishDate": "12/09/2025 00:00:00"
+        "PreviousRank": "90",
+        "RankingDifference": "0",
+        "PublishDate": "12/16/2025 00:00:00"
       },
       {
         "PairId": "36453",
@@ -7265,13 +7265,13 @@
         "SubEventCode": "WD",
         "RankingYear": "2025",
         "RankingMonth": "12",
-        "RankingWeek": "50",
+        "RankingWeek": "51",
         "Points": "149",
         "RankingPosition": "90",
         "CurrentRank": "90",
-        "PreviousRank": "89",
-        "RankingDifference": "1",
-        "PublishDate": "12/09/2025 00:00:00"
+        "PreviousRank": "90",
+        "RankingDifference": "0",
+        "PublishDate": "12/16/2025 00:00:00"
       },
       {
         "PairId": "100199021",
@@ -7292,13 +7292,13 @@
         "SubEventCode": "XD",
         "RankingYear": "2025",
         "RankingMonth": "12",
-        "RankingWeek": "50",
+        "RankingWeek": "51",
         "Points": "158",
         "RankingPosition": "90",
         "CurrentRank": "90",
-        "PreviousRank": "268",
-        "RankingDifference": "-178",
-        "PublishDate": "12/09/2025 00:00:00"
+        "PreviousRank": "90",
+        "RankingDifference": "0",
+        "PublishDate": "12/16/2025 00:00:00"
       },
       {
         "PairId": "39108",
@@ -7319,13 +7319,13 @@
         "SubEventCode": "MD",
         "RankingYear": "2025",
         "RankingMonth": "12",
-        "RankingWeek": "50",
+        "RankingWeek": "51",
         "Points": "145",
         "RankingPosition": "91",
         "CurrentRank": "91",
-        "PreviousRank": "90",
-        "RankingDifference": "1",
-        "PublishDate": "12/09/2025 00:00:00"
+        "PreviousRank": "91",
+        "RankingDifference": "0",
+        "PublishDate": "12/16/2025 00:00:00"
       },
       {
         "PairId": "100148335",
@@ -7346,13 +7346,13 @@
         "SubEventCode": "WD",
         "RankingYear": "2025",
         "RankingMonth": "12",
-        "RankingWeek": "50",
+        "RankingWeek": "51",
         "Points": "146",
         "RankingPosition": "91",
         "CurrentRank": "91",
-        "PreviousRank": "90",
-        "RankingDifference": "1",
-        "PublishDate": "12/09/2025 00:00:00"
+        "PreviousRank": "91",
+        "RankingDifference": "0",
+        "PublishDate": "12/16/2025 00:00:00"
       },
       {
         "PairId": "100110969",
@@ -7373,13 +7373,13 @@
         "SubEventCode": "XD",
         "RankingYear": "2025",
         "RankingMonth": "12",
-        "RankingWeek": "50",
+        "RankingWeek": "51",
         "Points": "158",
         "RankingPosition": "91",
         "CurrentRank": "91",
-        "PreviousRank": "119",
-        "RankingDifference": "-28",
-        "PublishDate": "12/09/2025 00:00:00"
+        "PreviousRank": "91",
+        "RankingDifference": "0",
+        "PublishDate": "12/16/2025 00:00:00"
       },
       {
         "PairId": "100141766",
@@ -7400,13 +7400,13 @@
         "SubEventCode": "MD",
         "RankingYear": "2025",
         "RankingMonth": "12",
-        "RankingWeek": "50",
+        "RankingWeek": "51",
         "Points": "144",
         "RankingPosition": "92",
         "CurrentRank": "92",
-        "PreviousRank": "91",
-        "RankingDifference": "1",
-        "PublishDate": "12/09/2025 00:00:00"
+        "PreviousRank": "92",
+        "RankingDifference": "0",
+        "PublishDate": "12/16/2025 00:00:00"
       },
       {
         "PairId": "58973",
@@ -7427,13 +7427,13 @@
         "SubEventCode": "WD",
         "RankingYear": "2025",
         "RankingMonth": "12",
-        "RankingWeek": "50",
+        "RankingWeek": "51",
         "Points": "145",
         "RankingPosition": "92",
         "CurrentRank": "92",
-        "PreviousRank": "91",
-        "RankingDifference": "1",
-        "PublishDate": "12/09/2025 00:00:00"
+        "PreviousRank": "92",
+        "RankingDifference": "0",
+        "PublishDate": "12/16/2025 00:00:00"
       },
       {
         "PairId": "46592",
@@ -7454,13 +7454,13 @@
         "SubEventCode": "XD",
         "RankingYear": "2025",
         "RankingMonth": "12",
-        "RankingWeek": "50",
+        "RankingWeek": "51",
         "Points": "157",
         "RankingPosition": "92",
         "CurrentRank": "92",
-        "PreviousRank": null,
-        "RankingDifference": null,
-        "PublishDate": "12/09/2025 00:00:00"
+        "PreviousRank": "92",
+        "RankingDifference": "0",
+        "PublishDate": "12/16/2025 00:00:00"
       },
       {
         "PairId": "100173060",
@@ -7481,13 +7481,13 @@
         "SubEventCode": "MD",
         "RankingYear": "2025",
         "RankingMonth": "12",
-        "RankingWeek": "50",
+        "RankingWeek": "51",
         "Points": "143",
         "RankingPosition": "93",
         "CurrentRank": "93",
-        "PreviousRank": "92",
-        "RankingDifference": "1",
-        "PublishDate": "12/09/2025 00:00:00"
+        "PreviousRank": "93",
+        "RankingDifference": "0",
+        "PublishDate": "12/16/2025 00:00:00"
       },
       {
         "PairId": "100129345",
@@ -7508,13 +7508,13 @@
         "SubEventCode": "WD",
         "RankingYear": "2025",
         "RankingMonth": "12",
-        "RankingWeek": "50",
+        "RankingWeek": "51",
         "Points": "144",
         "RankingPosition": "93",
         "CurrentRank": "93",
-        "PreviousRank": "92",
-        "RankingDifference": "1",
-        "PublishDate": "12/09/2025 00:00:00"
+        "PreviousRank": "93",
+        "RankingDifference": "0",
+        "PublishDate": "12/16/2025 00:00:00"
       },
       {
         "PairId": "54272",
@@ -7535,13 +7535,13 @@
         "SubEventCode": "XD",
         "RankingYear": "2025",
         "RankingMonth": "12",
-        "RankingWeek": "50",
+        "RankingWeek": "51",
         "Points": "153",
         "RankingPosition": "93",
         "CurrentRank": "93",
-        "PreviousRank": "88",
-        "RankingDifference": "5",
-        "PublishDate": "12/09/2025 00:00:00"
+        "PreviousRank": "93",
+        "RankingDifference": "0",
+        "PublishDate": "12/16/2025 00:00:00"
       },
       {
         "PairId": "100121753",
@@ -7562,13 +7562,13 @@
         "SubEventCode": "MD",
         "RankingYear": "2025",
         "RankingMonth": "12",
-        "RankingWeek": "50",
+        "RankingWeek": "51",
         "Points": "142",
         "RankingPosition": "94",
         "CurrentRank": "94",
-        "PreviousRank": "93",
-        "RankingDifference": "1",
-        "PublishDate": "12/09/2025 00:00:00"
+        "PreviousRank": "94",
+        "RankingDifference": "0",
+        "PublishDate": "12/16/2025 00:00:00"
       },
       {
         "PairId": "100121919",
@@ -7589,13 +7589,13 @@
         "SubEventCode": "WD",
         "RankingYear": "2025",
         "RankingMonth": "12",
-        "RankingWeek": "50",
+        "RankingWeek": "51",
         "Points": "140",
         "RankingPosition": "94",
         "CurrentRank": "94",
-        "PreviousRank": "93",
-        "RankingDifference": "1",
-        "PublishDate": "12/09/2025 00:00:00"
+        "PreviousRank": "94",
+        "RankingDifference": "0",
+        "PublishDate": "12/16/2025 00:00:00"
       },
       {
         "PairId": "100172006",
@@ -7616,13 +7616,13 @@
         "SubEventCode": "XD",
         "RankingYear": "2025",
         "RankingMonth": "12",
-        "RankingWeek": "50",
+        "RankingWeek": "51",
         "Points": "150",
         "RankingPosition": "94",
         "CurrentRank": "94",
-        "PreviousRank": "87",
-        "RankingDifference": "7",
-        "PublishDate": "12/09/2025 00:00:00"
+        "PreviousRank": "94",
+        "RankingDifference": "0",
+        "PublishDate": "12/16/2025 00:00:00"
       },
       {
         "PairId": "55038",
@@ -7643,13 +7643,13 @@
         "SubEventCode": "MD",
         "RankingYear": "2025",
         "RankingMonth": "12",
-        "RankingWeek": "50",
+        "RankingWeek": "51",
         "Points": "140",
         "RankingPosition": "95",
         "CurrentRank": "95",
-        "PreviousRank": "94",
-        "RankingDifference": "1",
-        "PublishDate": "12/09/2025 00:00:00"
+        "PreviousRank": "95",
+        "RankingDifference": "0",
+        "PublishDate": "12/16/2025 00:00:00"
       },
       {
         "PairId": "100121649",
@@ -7670,13 +7670,13 @@
         "SubEventCode": "WD",
         "RankingYear": "2025",
         "RankingMonth": "12",
-        "RankingWeek": "50",
+        "RankingWeek": "51",
         "Points": "140",
         "RankingPosition": "95",
         "CurrentRank": "95",
-        "PreviousRank": "94",
-        "RankingDifference": "1",
-        "PublishDate": "12/09/2025 00:00:00"
+        "PreviousRank": "95",
+        "RankingDifference": "0",
+        "PublishDate": "12/16/2025 00:00:00"
       },
       {
         "PairId": "100120470",
@@ -7697,13 +7697,13 @@
         "SubEventCode": "XD",
         "RankingYear": "2025",
         "RankingMonth": "12",
-        "RankingWeek": "50",
+        "RankingWeek": "51",
         "Points": "149",
         "RankingPosition": "95",
         "CurrentRank": "95",
-        "PreviousRank": "89",
-        "RankingDifference": "6",
-        "PublishDate": "12/09/2025 00:00:00"
+        "PreviousRank": "95",
+        "RankingDifference": "0",
+        "PublishDate": "12/16/2025 00:00:00"
       },
       {
         "PairId": "100122027",
@@ -7724,13 +7724,13 @@
         "SubEventCode": "MD",
         "RankingYear": "2025",
         "RankingMonth": "12",
-        "RankingWeek": "50",
+        "RankingWeek": "51",
         "Points": "139",
         "RankingPosition": "96",
         "CurrentRank": "96",
-        "PreviousRank": "95",
-        "RankingDifference": "1",
-        "PublishDate": "12/09/2025 00:00:00"
+        "PreviousRank": "96",
+        "RankingDifference": "0",
+        "PublishDate": "12/16/2025 00:00:00"
       },
       {
         "PairId": "100154792",
@@ -7751,13 +7751,13 @@
         "SubEventCode": "WD",
         "RankingYear": "2025",
         "RankingMonth": "12",
-        "RankingWeek": "50",
+        "RankingWeek": "51",
         "Points": "140",
         "RankingPosition": "96",
         "CurrentRank": "96",
-        "PreviousRank": "95",
-        "RankingDifference": "1",
-        "PublishDate": "12/09/2025 00:00:00"
+        "PreviousRank": "96",
+        "RankingDifference": "0",
+        "PublishDate": "12/16/2025 00:00:00"
       },
       {
         "PairId": "100122320",
@@ -7778,13 +7778,13 @@
         "SubEventCode": "XD",
         "RankingYear": "2025",
         "RankingMonth": "12",
-        "RankingWeek": "50",
+        "RankingWeek": "51",
         "Points": "144",
         "RankingPosition": "96",
         "CurrentRank": "96",
-        "PreviousRank": "90",
-        "RankingDifference": "6",
-        "PublishDate": "12/09/2025 00:00:00"
+        "PreviousRank": "96",
+        "RankingDifference": "0",
+        "PublishDate": "12/16/2025 00:00:00"
       },
       {
         "PairId": "100192466",
@@ -7805,13 +7805,13 @@
         "SubEventCode": "MD",
         "RankingYear": "2025",
         "RankingMonth": "12",
-        "RankingWeek": "50",
+        "RankingWeek": "51",
         "Points": "133",
         "RankingPosition": "97",
         "CurrentRank": "97",
-        "PreviousRank": "96",
-        "RankingDifference": "1",
-        "PublishDate": "12/09/2025 00:00:00"
+        "PreviousRank": "97",
+        "RankingDifference": "0",
+        "PublishDate": "12/16/2025 00:00:00"
       },
       {
         "PairId": "76730",
@@ -7832,13 +7832,13 @@
         "SubEventCode": "WD",
         "RankingYear": "2025",
         "RankingMonth": "12",
-        "RankingWeek": "50",
+        "RankingWeek": "51",
         "Points": "140",
         "RankingPosition": "97",
         "CurrentRank": "97",
-        "PreviousRank": "96",
-        "RankingDifference": "1",
-        "PublishDate": "12/09/2025 00:00:00"
+        "PreviousRank": "97",
+        "RankingDifference": "0",
+        "PublishDate": "12/16/2025 00:00:00"
       },
       {
         "PairId": "100137503",
@@ -7859,13 +7859,13 @@
         "SubEventCode": "XD",
         "RankingYear": "2025",
         "RankingMonth": "12",
-        "RankingWeek": "50",
+        "RankingWeek": "51",
         "Points": "142",
         "RankingPosition": "97",
         "CurrentRank": "97",
-        "PreviousRank": "92",
-        "RankingDifference": "5",
-        "PublishDate": "12/09/2025 00:00:00"
+        "PreviousRank": "97",
+        "RankingDifference": "0",
+        "PublishDate": "12/16/2025 00:00:00"
       },
       {
         "PairId": "39524",
@@ -7886,13 +7886,13 @@
         "SubEventCode": "MD",
         "RankingYear": "2025",
         "RankingMonth": "12",
-        "RankingWeek": "50",
+        "RankingWeek": "51",
         "Points": "128",
         "RankingPosition": "98",
         "CurrentRank": "98",
-        "PreviousRank": "97",
-        "RankingDifference": "1",
-        "PublishDate": "12/09/2025 00:00:00"
+        "PreviousRank": "98",
+        "RankingDifference": "0",
+        "PublishDate": "12/16/2025 00:00:00"
       },
       {
         "PairId": "100176255",
@@ -7913,13 +7913,13 @@
         "SubEventCode": "WD",
         "RankingYear": "2025",
         "RankingMonth": "12",
-        "RankingWeek": "50",
+        "RankingWeek": "51",
         "Points": "135",
         "RankingPosition": "98",
         "CurrentRank": "98",
-        "PreviousRank": "97",
-        "RankingDifference": "1",
-        "PublishDate": "12/09/2025 00:00:00"
+        "PreviousRank": "98",
+        "RankingDifference": "0",
+        "PublishDate": "12/16/2025 00:00:00"
       },
       {
         "PairId": "100145108",
@@ -7940,13 +7940,13 @@
         "SubEventCode": "XD",
         "RankingYear": "2025",
         "RankingMonth": "12",
-        "RankingWeek": "50",
+        "RankingWeek": "51",
         "Points": "140",
         "RankingPosition": "98",
         "CurrentRank": "98",
-        "PreviousRank": "93",
-        "RankingDifference": "5",
-        "PublishDate": "12/09/2025 00:00:00"
+        "PreviousRank": "98",
+        "RankingDifference": "0",
+        "PublishDate": "12/16/2025 00:00:00"
       },
       {
         "PairId": "76460",
@@ -7967,13 +7967,13 @@
         "SubEventCode": "MD",
         "RankingYear": "2025",
         "RankingMonth": "12",
-        "RankingWeek": "50",
+        "RankingWeek": "51",
         "Points": "127",
         "RankingPosition": "99",
         "CurrentRank": "99",
-        "PreviousRank": "98",
-        "RankingDifference": "1",
-        "PublishDate": "12/09/2025 00:00:00"
+        "PreviousRank": "99",
+        "RankingDifference": "0",
+        "PublishDate": "12/16/2025 00:00:00"
       },
       {
         "PairId": "100120478",
@@ -7994,13 +7994,13 @@
         "SubEventCode": "WD",
         "RankingYear": "2025",
         "RankingMonth": "12",
-        "RankingWeek": "50",
+        "RankingWeek": "51",
         "Points": "134",
         "RankingPosition": "99",
         "CurrentRank": "99",
-        "PreviousRank": "98",
-        "RankingDifference": "1",
-        "PublishDate": "12/09/2025 00:00:00"
+        "PreviousRank": "99",
+        "RankingDifference": "0",
+        "PublishDate": "12/16/2025 00:00:00"
       },
       {
         "PairId": "100158576",
@@ -8021,13 +8021,13 @@
         "SubEventCode": "XD",
         "RankingYear": "2025",
         "RankingMonth": "12",
-        "RankingWeek": "50",
+        "RankingWeek": "51",
         "Points": "140",
         "RankingPosition": "99",
         "CurrentRank": "99",
-        "PreviousRank": "94",
-        "RankingDifference": "5",
-        "PublishDate": "12/09/2025 00:00:00"
+        "PreviousRank": "99",
+        "RankingDifference": "0",
+        "PublishDate": "12/16/2025 00:00:00"
       },
       {
         "PairId": "43023",
@@ -8048,13 +8048,13 @@
         "SubEventCode": "MD",
         "RankingYear": "2025",
         "RankingMonth": "12",
-        "RankingWeek": "50",
+        "RankingWeek": "51",
         "Points": "125",
         "RankingPosition": "100",
         "CurrentRank": "100",
-        "PreviousRank": "99",
-        "RankingDifference": "1",
-        "PublishDate": "12/09/2025 00:00:00"
+        "PreviousRank": "100",
+        "RankingDifference": "0",
+        "PublishDate": "12/16/2025 00:00:00"
       },
       {
         "PairId": "100112873",
@@ -8075,13 +8075,13 @@
         "SubEventCode": "WD",
         "RankingYear": "2025",
         "RankingMonth": "12",
-        "RankingWeek": "50",
+        "RankingWeek": "51",
         "Points": "134",
         "RankingPosition": "100",
         "CurrentRank": "100",
-        "PreviousRank": "99",
-        "RankingDifference": "1",
-        "PublishDate": "12/09/2025 00:00:00"
+        "PreviousRank": "100",
+        "RankingDifference": "0",
+        "PublishDate": "12/16/2025 00:00:00"
       },
       {
         "PairId": "37336",
@@ -8102,13 +8102,13 @@
         "SubEventCode": "XD",
         "RankingYear": "2025",
         "RankingMonth": "12",
-        "RankingWeek": "50",
+        "RankingWeek": "51",
         "Points": "140",
         "RankingPosition": "100",
         "CurrentRank": "100",
-        "PreviousRank": "95",
-        "RankingDifference": "5",
-        "PublishDate": "12/09/2025 00:00:00"
+        "PreviousRank": "100",
+        "RankingDifference": "0",
+        "PublishDate": "12/16/2025 00:00:00"
       }
     ]
   }

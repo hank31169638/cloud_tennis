@@ -13,11 +13,36 @@ from enum import Enum
 import uuid
 
 
-class ActionLabel(Enum):
-    """動作標籤"""
-    BAD = "bad"        # 失誤動作
-    GOOD = "good"      # 好的動作（得分）
-    NORMAL = "normal"  # 一般動作
+class TechniqueType(Enum):
+    """技術類型分類"""
+    # 攻擊技術
+    FOREHAND_ATTACK = "forehand_attack"
+    BACKHAND_ATTACK = "backhand_attack"
+    SMASH = "smash"
+    LOOP_DRIVE = "loop_drive"
+    # 防守技術
+    BLOCK = "block"
+    CHOP = "chop"
+    LOB = "lob"
+    # 發球接發
+    SERVE_ACE = "serve_ace"
+    SERVE_ATTACK = "serve_attack"
+    RECEIVE_ATTACK = "receive_attack"
+    RECEIVE_CONTROL = "receive_control"
+    # 失誤類型
+    FOREHAND_ERROR = "forehand_error"
+    BACKHAND_ERROR = "backhand_error"
+    SERVE_ERROR = "serve_error"
+    RECEIVE_ERROR = "receive_error"
+    NET_ERROR = "net_error"
+    OUT_OF_BOUNDS = "out_of_bounds"
+    FOOTWORK_ERROR = "footwork_error"
+    JUDGMENT_ERROR = "judgment_error"
+    # 其他
+    OTHER = "other"
+
+# 保留舊的 ActionLabel 別名以保持向後相容
+ActionLabel = TechniqueType
 
 
 @dataclass
@@ -36,6 +61,7 @@ class TrainingClip:
     created_at: str
     processed_at: Optional[str]
     skeleton_path: Optional[str]  # 骨架資料路徑
+    clip_path: Optional[str] = None  # 已切割的片段路徑 (來自選手分析)
     
     def to_dict(self) -> Dict[str, Any]:
         return asdict(self)
@@ -59,30 +85,6 @@ class AutoTrainingService:
         self.clips: Dict[str, TrainingClip] = {}
         self._load_clips()
         
-        # 失誤類型到標籤的映射
-        self.error_to_label = {
-            # 明確的失誤 → bad
-            "正手失誤": ActionLabel.BAD,
-            "反手失誤": ActionLabel.BAD,
-            "發球失誤": ActionLabel.BAD,
-            "接發球失誤": ActionLabel.BAD,
-            "網前失誤": ActionLabel.BAD,
-            "擊球出界": ActionLabel.BAD,
-            "掛網": ActionLabel.BAD,
-            "腳步不到位": ActionLabel.BAD,
-            "判斷失誤": ActionLabel.BAD,
-            "技術失誤": ActionLabel.BAD,
-            
-            # 得分動作 → good
-            "制勝球": ActionLabel.GOOD,
-            "得分": ActionLabel.GOOD,
-            "ACE球": ActionLabel.GOOD,
-            "扣殺得分": ActionLabel.GOOD,
-            
-            # 一般情況 → normal
-            "對手得分": ActionLabel.NORMAL,
-            "運氣球": ActionLabel.NORMAL,
-        }
     
     def _load_clips(self):
         """載入片段資料"""
@@ -203,7 +205,8 @@ class AutoTrainingService:
         self,
         analysis_result: Dict[str, Any],
         player_name: str,
-        auto_approve: bool = False,
+        auto_approve: bool = True,
+        auto_process: bool = True,
         confidence_threshold: float = 0.7
     ) -> List[TrainingClip]:
         """
@@ -212,7 +215,8 @@ class AutoTrainingService:
         Args:
             analysis_result: 選手分析的結果 (包含 scoring_clips 和 losing_clips)
             player_name: 選手名稱
-            auto_approve: 是否自動核准高信心度片段
+            auto_approve: 是否自動核准高信心度片段 (預設 True)
+            auto_process: 是否自動處理並匯出到訓練資料夾 (預設 True)
             confidence_threshold: 自動核准的信心度門檻
         
         Returns:
@@ -243,6 +247,13 @@ class AutoTrainingService:
             new_clips.append(training_clip)
         
         self._save_clips()
+        
+        # 自動處理：匯出到訓練資料夾
+        if auto_process and auto_approve:
+            print(f"🔄 自動處理：匯出 {len(new_clips)} 個片段到訓練資料夾...")
+            export_result = self.export_approved_clips()
+            print(f"✅ 匯出完成: good={export_result.get('good', 0)}, bad={export_result.get('bad', 0)}, normal={export_result.get('normal', 0)}")
+        
         return new_clips
     
     def _create_clip_from_performance(
@@ -280,27 +291,32 @@ class AutoTrainingService:
         else:
             end_time = start_time + 8  # 預設 8 秒（一個完整回合）
         
-        # 使用 AI 標籤（quality_label）
-        quality_label = clip_data.get('quality_label', 'normal')
+        # 使用 AI 標註的技術類型 (technique_type)
+        technique_type = clip_data.get('technique_type', 'other')
         
-        # 驗證標籤
-        if quality_label not in ['good', 'normal', 'bad']:
-            # 根據是否得分給予預設標籤
-            quality_label = 'good' if is_scoring else 'bad'
+        # 驗證技術類型
+        valid_techniques = [t.value for t in TechniqueType]
+        if technique_type not in valid_techniques:
+            # 根據是否得分給予預設類別
+            if is_scoring:
+                technique_type = 'forehand_attack'  # 得分預設正手進攻
+            else:
+                technique_type = 'forehand_error'   # 失分預設正手失誤
         
         # 設定信心度（AI 標籤有一定的信心度）
-        confidence = 0.85  # AI 標籤預設信心度
+        quality_score = clip_data.get('quality_score', 7)
+        confidence = quality_score / 10.0  # 轉換為 0-1
         
         # 建立描述
-        technique = clip_data.get('technique', '')
+        point_type = clip_data.get('point_type', '')
         quality_reason = clip_data.get('quality_reason', '')
         description = clip_data.get('description', '')
         
         full_description = f"[{player_name}] "
         if is_scoring:
-            full_description += f"得分 - {technique}"
+            full_description += f"得分 - {point_type}"
         else:
-            full_description += f"失分 - {technique}"
+            full_description += f"失分 - {point_type}"
         
         if quality_reason:
             full_description += f" ({quality_reason})"
@@ -314,14 +330,15 @@ class AutoTrainingService:
             source_type="youtube",
             start_time=start_time,
             end_time=end_time,
-            label=quality_label,
+            label=technique_type,  # 使用技術類型作為標籤
             label_confidence=confidence,
             description=full_description,
-            error_type=technique if not is_scoring else None,
+            error_type=technique_type if not is_scoring else None,
             status="approved" if (auto_approve and confidence >= confidence_threshold) else "pending",
             created_at=datetime.now().isoformat(),
             processed_at=None,
-            skeleton_path=None
+            skeleton_path=None,
+            clip_path=clip_data.get('clip_path')  # 使用已切割的片段路徑
         )
     
     def _parse_timestamp(self, timestamp: str) -> float:
@@ -563,58 +580,75 @@ class AutoTrainingService:
     
     def export_approved_clips(self) -> Dict[str, int]:
         """
-        將已核准的片段匯出到訓練資料夾 (下載並移動影片檔)
+        將已核准的片段匯出到訓練資料夾 (優先使用已切割的片段)
         
         Returns:
             匯出統計
         """
-        counts = {"bad": 0, "good": 0, "normal": 0, "errors": 0}
+        counts = {}
         
-        # 訓練資料夾路徑
-        folders = {
-            "bad": os.path.join(self.base_dir, "bad_input_movid"),
-            "good": os.path.join(self.base_dir, "good_input_movid"),
-            "normal": os.path.join(self.base_dir, "normal_input_movid"),
-        }
+        # 訓練資料夾根目錄
+        training_data_dir = os.path.join(self.base_dir, "training_data")
+        os.makedirs(training_data_dir, exist_ok=True)
         
-        # 確保資料夾存在
-        for folder in folders.values():
-            os.makedirs(folder, exist_ok=True)
+        # 所有可用的技術類別
+        all_techniques = [t.value for t in TechniqueType]
+        
+        # 為每個技術類別建立資料夾
+        for technique in all_techniques:
+            folder_path = os.path.join(training_data_dir, technique)
+            os.makedirs(folder_path, exist_ok=True)
+            counts[technique] = 0
+        counts["errors"] = 0
             
         approved_clips = [c for c in self.clips.values() if c.status == "approved"]
-        print(f"準備匯出 {len(approved_clips)} 個已核准片段...")
+        print(f"準備匯出 {len(approved_clips)} 個已核准片段到技術資料夾...")
         
         for clip in approved_clips:
             try:
-                label = clip.label
-                if label not in folders:
-                    label = "normal"  # 預設
+                # 使用 label 作為技術類別 (現在是 technique_type)
+                technique = clip.label
+                if technique not in all_techniques:
+                    technique = "other"  # 預設
                 
-                target_folder = folders[label]
+                target_folder = os.path.join(training_data_dir, technique)
                 target_filename = f"{clip.clip_id}.mp4"
                 target_path = os.path.join(target_folder, target_filename)
                 
                 # 如果目標檔案已存在，跳過
                 if os.path.exists(target_path):
-                    counts[label] += 1
+                    counts[technique] += 1
                     continue
                 
                 # 取得來源影片路徑
                 source_path = None
                 
+                # 0. 優先使用已切割的片段 (來自選手分析)
+                if hasattr(clip, 'clip_path') and clip.clip_path:
+                    # clip_path 格式: /uploads/clips/VIDEO_ID/loss_1.mp4
+                    # 需要轉換為完整的本地路徑
+                    if clip.clip_path.startswith('/uploads/'):
+                        local_clip_path = os.path.join(self.base_dir, clip.clip_path.lstrip('/'))
+                    else:
+                        local_clip_path = clip.clip_path
+                    
+                    if os.path.exists(local_clip_path):
+                        source_path = local_clip_path
+                        print(f"  📁 使用已切割片段: {clip.clip_path}")
+                
                 # 1. 如果是本地檔案
-                if clip.source_type == "local" and os.path.exists(clip.source_video):
+                if not source_path and clip.source_type == "local" and os.path.exists(clip.source_video):
                     source_path = clip.source_video
                 
-                # 2. 如果是 YouTube，嘗試下載
-                elif clip.source_type == "youtube":
+                # 2. 如果是 YouTube，檢查快取或下載
+                if not source_path and clip.source_type == "youtube":
                     # 檢查是否已經下載在 videos_dir
                     cached_path = os.path.join(self.videos_dir, f"{clip.clip_id}.mp4")
                     if os.path.exists(cached_path):
                         source_path = cached_path
                     else:
                         # 下載
-                        print(f"正在下載片段: {clip.clip_id}")
+                        print(f"  ⬇️ 正在下載片段: {clip.clip_id}")
                         source_path = self.download_and_extract_clip(clip.clip_id)
                 
                 # 複製檔案

@@ -43,8 +43,8 @@ export default function Navbar() {
                   className={`
                     relative px-4 py-2 rounded-full text-sm font-medium
                     transition-all duration-200
-                    ${isActive 
-                      ? 'bg-white text-neutral-900' 
+                    ${isActive
+                      ? 'bg-white text-neutral-900'
                       : 'text-neutral-400 hover:text-white hover:bg-neutral-800'
                     }
                   `}
@@ -84,8 +84,8 @@ export default function Navbar() {
                     className={`
                       px-4 py-3 rounded-lg text-sm font-medium
                       transition-all duration-200
-                      ${isActive 
-                        ? 'bg-white text-neutral-900' 
+                      ${isActive
+                        ? 'bg-white text-neutral-900'
                         : 'text-neutral-400 hover:text-white hover:bg-neutral-800'
                       }
                     `}

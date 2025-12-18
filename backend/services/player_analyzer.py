@@ -10,11 +10,37 @@ from dataclasses import dataclass, asdict
 from enum import Enum
 
 
-class ActionQuality(Enum):
-    """動作品質評級"""
-    GOOD = "good"        # 優秀動作，值得學習
-    NORMAL = "normal"    # 一般動作，可參考
-    BAD = "bad"          # 需改進動作，作為反面教材
+class TechniqueType(Enum):
+    """技術類型分類"""
+    # 攻擊技術 (Offensive)
+    FOREHAND_ATTACK = "forehand_attack"     # 正手進攻
+    BACKHAND_ATTACK = "backhand_attack"     # 反手進攻
+    SMASH = "smash"                         # 扣殺
+    LOOP_DRIVE = "loop_drive"               # 弧圈球
+    
+    # 防守技術 (Defensive)
+    BLOCK = "block"                         # 擋球
+    CHOP = "chop"                           # 削球
+    LOB = "lob"                             # 挑高球
+    
+    # 發球接發 (Serve & Return)
+    SERVE_ACE = "serve_ace"                 # 發球得分
+    SERVE_ATTACK = "serve_attack"           # 發球搶攻
+    RECEIVE_ATTACK = "receive_attack"       # 接發搶攻
+    RECEIVE_CONTROL = "receive_control"     # 接發控制
+    
+    # 失誤類型 (Errors)
+    FOREHAND_ERROR = "forehand_error"       # 正手失誤
+    BACKHAND_ERROR = "backhand_error"       # 反手失誤
+    SERVE_ERROR = "serve_error"             # 發球失誤
+    RECEIVE_ERROR = "receive_error"         # 接發失誤
+    NET_ERROR = "net_error"                 # 掛網
+    OUT_OF_BOUNDS = "out_of_bounds"         # 出界
+    FOOTWORK_ERROR = "footwork_error"       # 腳步不到位
+    JUDGMENT_ERROR = "judgment_error"       # 判斷失誤
+    
+    # 其他
+    OTHER = "other"                         # 其他
 
 
 @dataclass
@@ -121,110 +147,104 @@ class PlayerPerformanceAnalyzer:
         return result
     
     def _build_player_analysis_prompt(self, player_name: str, player_description: str = None) -> str:
-        """建立選手分析提示詞"""
+        """建立選手分析提示詞 - 專注於慢動作回放片段"""
         
         player_identify = f"（{player_description}）" if player_description else ""
         
         return f"""你是一位專業的桌球教練和動作分析專家。請仔細觀看這段桌球比賽影片，
-針對選手 **{player_name}** {player_identify} 進行詳細的表現分析。
+針對選手 **{player_name}** {player_identify} 進行表現分析。
 
-## 分析任務
+## 🎯 核心任務：識別「慢動作回放」片段
 
-請識別 {player_name} 在比賽中的：
-1. **得分片段** - {player_name} 成功得分的回合
-2. **失分片段** - {player_name} 失誤或被對手得分的回合
+⚠️ **非常重要**：我需要的是比賽中的「**慢動作回放**」(Instant Replay) 片段，而**不是**完整的對打過程。
 
-## 重要：動作品質評估標準
+### 什麼是慢動作回放？
+- 通常在得分/失分後，轉播會播放**慢動作重播**
+- 這些片段通常是**近距離特寫**，不是第三視角俯視圖
+- 可以清楚看到球的落點、選手的動作細節
+- 畫面可能會有慢動作效果
 
-對於每個片段，請根據 **動作本身的品質** 進行評估（而非僅依據結果）：
+### 如何識別慢動作回放？
+1. 畫面從俯視全景**切換到近距離特寫**
+2. 播放速度變**慢**
+3. 可能有字幕標示 "REPLAY" 或比分
+4. camera 角度通常是**側面或斜角**，可以看清動作
 
-### 🟢 GOOD（優秀）- 適合作為正面訓練教材
-- 動作流暢、技術標準
-- 腳步到位、重心穩定
-- 擊球時機準確
-- 戰術選擇正確
-- 即使失分，動作本身仍然標準值得學習
+## 請標記的內容
 
-### 🟡 NORMAL（一般）- 作為參考素材
-- 動作基本正確但不夠精煉
-- 有小瑕疵但整體可接受
-- 一般水平的技術表現
+對於每個**慢動作回放片段**，請標記：
+- `start_seconds`: 回放開始的時間（畫面切換到特寫的那一刻）
+- `end_seconds`: 回放結束的時間（畫面切回正常比賽的那一刻）
 
-### 🔴 BAD（需改進）- 作為反面教材
-- 明顯的技術錯誤
-- 腳步混亂、重心失衡
-- 擊球動作變形
-- 時機判斷嚴重失誤
-- 這類動作需要避免
+## 技術類型分類
 
-請按照以下 JSON 格式輸出：
+### 攻擊技術 (得分)
+- `forehand_attack` - 正手進攻
+- `backhand_attack` - 反手進攻
+- `smash` - 扣殺
+- `loop_drive` - 弧圈球
+
+### 發球接發
+- `serve_ace` - 發球得分
+- `serve_attack` - 發球搶攻
+- `receive_attack` - 接發搶攻
+
+### 失誤類型 (失分)
+- `forehand_error` - 正手失誤
+- `backhand_error` - 反手失誤
+- `serve_error` - 發球失誤
+- `receive_error` - 接發失誤
+- `net_error` - 掛網
+- `out_of_bounds` - 出界
+
+## JSON 輸出格式
 
 ```json
 {{
   "player_name": "{player_name}",
   "match_summary": {{
-    "total_points_won": 識別到的得分數,
-    "total_points_lost": 識別到的失分數,
-    "overall_performance": "整體表現評價",
-    "key_strengths": ["強項1", "強項2"],
-    "key_weaknesses": ["弱點1", "弱點2"]
+    "total_points_won": 總得分回放數,
+    "total_points_lost": 總失分回放數,
+    "overall_performance": "整體表現評價"
   }},
   "points_won": [
     {{
       "clip_id": 1,
-      "timestamp_seconds": 精確的影片秒數,
+      "start_seconds": 回放開始秒數,
+      "end_seconds": 回放結束秒數,
       "timestamp_display": "MM:SS",
       "is_point_won": true,
-      "point_type": "得分方式（如：正手拉球得分、發球直接得分等）",
-      "description": "這個得分的詳細情況描述",
-      "action_quality": "good/normal/bad",
-      "quality_reason": "為什麼給這個動作品質評級",
-      "technical_score": 技術評分1-10,
-      "footwork_analysis": "腳步分析",
-      "stroke_analysis": "擊球動作分析",
-      "positioning_analysis": "位置和站位分析",
-      "timing_analysis": "時機把握分析",
-      "learning_value": "這個片段對訓練的價值",
-      "training_suggestion": "基於此片段的訓練建議"
+      "is_replay": true,
+      "technique_type": "技術類型代碼",
+      "point_type": "得分方式描述",
+      "description": "這個動作的詳細描述",
+      "quality_score": 動作品質1-10
     }}
   ],
   "points_lost": [
     {{
       "clip_id": 1,
-      "timestamp_seconds": 精確的影片秒數,
+      "start_seconds": 回放開始秒數,
+      "end_seconds": 回放結束秒數,
       "timestamp_display": "MM:SS",
       "is_point_won": false,
-      "point_type": "失分方式（如：反手失誤、接發球出界等）",
-      "description": "這個失分的詳細情況描述",
-      "action_quality": "good/normal/bad",
-      "quality_reason": "為什麼給這個動作品質評級（注意：失分也可能是good動作）",
-      "technical_score": 技術評分1-10,
-      "footwork_analysis": "腳步分析",
-      "stroke_analysis": "擊球動作分析",
-      "positioning_analysis": "位置和站位分析",
-      "timing_analysis": "時機把握分析",
-      "learning_value": "這個片段對訓練的價值（正面或反面教材）",
-      "training_suggestion": "基於此片段的訓練建議"
-    }}
-  ],
-  "training_recommendations": [
-    {{
-      "priority": 1,
-      "area": "需要訓練的領域",
-      "description": "具體的訓練方法",
-      "related_clips": [相關片段的clip_id列表]
+      "is_replay": true,
+      "technique_type": "失誤類型代碼",
+      "point_type": "失分方式描述",
+      "description": "失誤情況描述",
+      "quality_score": 動作品質1-10
     }}
   ]
 }}
 ```
 
-## 重要提醒
+## ⚠️ 關鍵提醒
 
-1. **timestamp_seconds 必須準確** - 這將用於擷取訓練片段
-2. **action_quality 基於動作品質，不是結果** - 失分但動作標準可以是 good，得分但動作很差可以是 bad
-3. **盡可能識別所有明顯的得分和失分** - 至少各 3-5 個
-4. **請使用繁體中文**
-5. **只輸出 JSON，不要有其他文字**
+1. **只標記慢動作回放片段** - 不要標記正常速度的對打過程
+2. **精確時間戳** - start_seconds 是回放開始，end_seconds 是回放結束
+3. **回放通常 3-8 秒** - 如果片段超過 15 秒，可能不是回放
+4. **technique_type 使用英文代碼**
+5. **只輸出 JSON**
 """
 
     def _parse_player_analysis(self, response_text: str, player_name: str) -> Dict[str, Any]:
