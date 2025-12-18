@@ -4,6 +4,7 @@ import { useState, useEffect, Suspense } from 'react';
 import { useSearchParams } from 'next/navigation';
 import Link from 'next/link';
 import Navbar from '../components/Navbar';
+import UnifiedTrainingPanel from '../components/UnifiedTrainingPanel';
 
 interface TrainingConfig {
   model_type: string;
@@ -38,11 +39,13 @@ interface TrainingClip {
 function TrainPageContent() {
   const searchParams = useSearchParams();
   const tabParam = searchParams.get('tab');
-  const [activeTab, setActiveTab] = useState<'train' | 'dataset'>('train');
+  const [activeTab, setActiveTab] = useState<'unified' | 'train' | 'dataset'>('unified');
   
   useEffect(() => {
     if (tabParam === 'dataset') {
       setActiveTab('dataset');
+    } else if (tabParam === 'legacy') {
+      setActiveTab('train');
     }
   }, [tabParam]);
 
@@ -262,6 +265,16 @@ function TrainPageContent() {
           {/* Tabs */}
           <div className="flex bg-white rounded-lg p-1 border border-neutral-200">
             <button
+              onClick={() => setActiveTab('unified')}
+              className={`px-4 py-2 text-sm font-medium rounded-md transition-all ${
+                activeTab === 'unified' 
+                  ? 'bg-neutral-900 text-white shadow-sm' 
+                  : 'text-neutral-500 hover:text-neutral-900'
+              }`}
+            >
+              統一訓練
+            </button>
+            <button
               onClick={() => setActiveTab('train')}
               className={`px-4 py-2 text-sm font-medium rounded-md transition-all ${
                 activeTab === 'train' 
@@ -269,7 +282,7 @@ function TrainPageContent() {
                   : 'text-neutral-500 hover:text-neutral-900'
               }`}
             >
-              模型訓練
+              舊版訓練
             </button>
             <button
               onClick={() => setActiveTab('dataset')}
@@ -284,7 +297,11 @@ function TrainPageContent() {
           </div>
         </div>
 
-        {activeTab === 'train' ? (
+        {activeTab === 'unified' ? (
+          <div className="animate-fade-in">
+            <UnifiedTrainingPanel />
+          </div>
+        ) : activeTab === 'train' ? (
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 animate-fade-in">
             {/* Left Column - Configuration */}
             <div className="space-y-6">

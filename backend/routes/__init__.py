@@ -28,6 +28,9 @@ from . import auto_train_routes
 from . import predict_routes
 from . import action_prediction_routes
 
+# 統一訓練路由 (新增)
+from .unified_training_routes import unified_training_bp
+
 
 def register_blueprints(app):
     """註冊所有藍圖到應用程式"""
@@ -39,5 +42,6 @@ def register_blueprints(app):
     app.register_blueprint(youtube_bp)
     app.register_blueprint(player_bp)
     app.register_blueprint(action_prediction_bp)
+    app.register_blueprint(unified_training_bp)  # 統一訓練路由
     # app.register_blueprint(auto_train_bp)  # 在 app.py 中單獨註冊
     # app.register_blueprint(predict_bp)     # 在 app.py 中單獨註冊

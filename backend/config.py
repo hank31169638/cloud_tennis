@@ -14,9 +14,9 @@ load_dotenv(override=True)
 # Debug: 檢查 API Key (印出前 10 碼)
 _api_key = os.getenv('GEMINI_API_KEY')
 if _api_key:
-    print(f"🔑 Current Loaded API Key: {_api_key[:10]}...")
+    print(f"[KEY] Current Loaded API Key: {_api_key[:10]}...")
 else:
-    print("⚠️ No API Key found in environment!")
+    print("[WARNING] No API Key found in environment!")
 
 
 @dataclass
