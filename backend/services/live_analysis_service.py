@@ -84,8 +84,9 @@ class LiveAnalysisService:
         
         genai.configure(api_key=self.api_key)
         
-        # 使用 Gemini 2.0 Flash 進行即時分析
-        self.model = genai.GenerativeModel('gemini-2.0-flash-exp')
+        # 使用環境變數定義的模型，預設為 gemini-2.0-flash-exp
+        model_name = os.getenv('GEMINI_MODEL', 'gemini-2.0-flash-exp')
+        self.model = genai.GenerativeModel(model_name)
         
         # 初始化 MediaPipe Pose
         self.pose = None

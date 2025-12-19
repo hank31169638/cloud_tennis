@@ -2,7 +2,7 @@
   "record_id": "cf2ee443",
   "video_id": "Rtbt_3Zphow",
   "video_title": "林昀儒 VS Benedikt DUDA｜2025 WTT總決賽 男單16強",
-  "video_url": "https://www.youtube.com/watch?v=Rtbt_3Zphow&t=1s",
+  "video_url": "https://www.youtube.com/watch?v=Rtbt_3Zphow",
   "video_duration": 489,
   "thumbnail_url": "https://img.youtube.com/vi/Rtbt_3Zphow/maxresdefault.jpg",
   "player_focus": "林昀儒",
@@ -15,52 +15,22 @@
         {
           "id": 1,
           "start_seconds": 0.0,
-          "end_seconds": 6.0,
+          "end_seconds": 6.5,
           "timestamp_display": "0:00",
-          "description": "對手失誤",
+          "description": "主動得分",
           "winner": "林昀儒",
-          "win_reason": "對手失誤",
+          "win_reason": "主動得分",
           "key_technique": ""
         },
         {
           "id": 2,
-          "start_seconds": 10.0,
+          "start_seconds": 10.5,
           "end_seconds": 18.5,
           "timestamp_display": "0:10",
-          "description": "DUDA 發反手短球，林昀儒輕推至中路，DUDA 側身反手擰球直接出界失誤。",
-          "winner": "林昀儒",
-          "win_reason": "對手失誤",
-          "key_technique": "線路控制"
-        },
-        {
-          "id": 3,
-          "start_seconds": 29.0,
-          "end_seconds": 36.0,
-          "timestamp_display": "0:29",
-          "description": "雙方進入多拍反手相持，林昀儒率先變線正手進攻，DUDA 防守一板後，在下一板林昀儒再次正手進攻時，DUDA 果斷反手反拉直線得分。",
-          "winner": "Benedikt DUDA",
-          "win_reason": "主動得分",
-          "key_technique": "反手反拉直線"
-        },
-        {
-          "id": 4,
-          "start_seconds": 48.0,
-          "end_seconds": 59.5,
-          "timestamp_display": "0:48",
-          "description": "林昀儒發正手短球，DUDA 反手擰拉，林昀儒迅速側身，以一記極快的反手快撕直線直接得分。",
+          "description": "DUDA 發球，林昀儒接發球後進入相持，第三板正手主動變線攻擊對手中路偏正手位，DUDA 擋球出界。",
           "winner": "林昀儒",
           "win_reason": "主動得分",
-          "key_technique": "反手快撕直線"
-        },
-        {
-          "id": 5,
-          "start_seconds": 111.0,
-          "end_seconds": 119.0,
-          "timestamp_display": "1:51",
-          "description": "DUDA 發長球偷襲，林昀儒反手防守，DUDA 連續正手大角度進攻，將林昀儒調動至遠台。在最後一板進攻時，林昀儒飛身救球，打出一記不可思議的正手大斜線穿越球得分。",
-          "winner": "林昀儒",
-          "win_reason": "主動得分",
-          "key_technique": "遠台正手防守反擊"
+          "key_technique": "正手變線攻擊"
         }
       ],
       "match_overview": {
@@ -80,72 +50,30 @@
       {
         "id": 1,
         "start_seconds": 0.0,
-        "end_seconds": 6.0,
+        "end_seconds": 6.5,
         "timestamp_display": "0:00",
-        "description": "對手失誤",
+        "description": "主動得分",
         "serve_time": null,
         "dead_ball_time": null,
         "winner": "林昀儒",
-        "win_type": "對手失誤",
+        "win_type": "主動得分",
         "key_technique": "",
         "tactical_value": null,
         "clip_path": "/uploads/clips/Rtbt_3Zphow/win_1.mp4"
       },
       {
         "id": 2,
-        "start_seconds": 10.0,
+        "start_seconds": 10.5,
         "end_seconds": 18.5,
         "timestamp_display": "0:10",
-        "description": "DUDA 發反手短球，林昀儒輕推至中路，DUDA 側身反手擰球直接出界失誤。",
+        "description": "DUDA 發球，林昀儒接發球後進入相持，第三板正手主動變線攻擊對手中路偏正手位，DUDA 擋球出界。",
         "serve_time": null,
         "dead_ball_time": null,
         "winner": "林昀儒",
-        "win_type": "對手失誤",
-        "key_technique": "線路控制",
+        "win_type": "主動得分",
+        "key_technique": "正手變線攻擊",
         "tactical_value": null,
         "clip_path": "/uploads/clips/Rtbt_3Zphow/win_2.mp4"
-      },
-      {
-        "id": 3,
-        "start_seconds": 29.0,
-        "end_seconds": 36.0,
-        "timestamp_display": "0:29",
-        "description": "雙方進入多拍反手相持，林昀儒率先變線正手進攻，DUDA 防守一板後，在下一板林昀儒再次正手進攻時，DUDA 果斷反手反拉直線得分。",
-        "serve_time": null,
-        "dead_ball_time": null,
-        "winner": "Benedikt DUDA",
-        "win_type": "主動得分",
-        "key_technique": "反手反拉直線",
-        "tactical_value": null,
-        "clip_path": "/uploads/clips/Rtbt_3Zphow/win_3.mp4"
-      },
-      {
-        "id": 4,
-        "start_seconds": 48.0,
-        "end_seconds": 59.5,
-        "timestamp_display": "0:48",
-        "description": "林昀儒發正手短球，DUDA 反手擰拉，林昀儒迅速側身，以一記極快的反手快撕直線直接得分。",
-        "serve_time": null,
-        "dead_ball_time": null,
-        "winner": "林昀儒",
-        "win_type": "主動得分",
-        "key_technique": "反手快撕直線",
-        "tactical_value": null,
-        "clip_path": "/uploads/clips/Rtbt_3Zphow/win_4.mp4"
-      },
-      {
-        "id": 5,
-        "start_seconds": 111.0,
-        "end_seconds": 119.0,
-        "timestamp_display": "1:51",
-        "description": "DUDA 發長球偷襲，林昀儒反手防守，DUDA 連續正手大角度進攻，將林昀儒調動至遠台。在最後一板進攻時，林昀儒飛身救球，打出一記不可思議的正手大斜線穿越球得分。",
-        "serve_time": null,
-        "dead_ball_time": null,
-        "winner": "林昀儒",
-        "win_type": "主動得分",
-        "key_technique": "遠台正手防守反擊",
-        "tactical_value": null,
-        "clip_path": "/uploads/clips/Rtbt_3Zphow/win_5.mp4"
       }
     ],
     "point_losses": [],
@@ -153,52 +81,22 @@
       {
         "id": 1,
         "start_seconds": 0.0,
-        "end_seconds": 6.0,
+        "end_seconds": 6.5,
         "timestamp_display": "0:00",
-        "description": "對手失誤",
+        "description": "主動得分",
         "winner": "林昀儒",
-        "win_reason": "對手失誤",
+        "win_reason": "主動得分",
         "key_technique": ""
       },
       {
         "id": 2,
-        "start_seconds": 10.0,
+        "start_seconds": 10.5,
         "end_seconds": 18.5,
         "timestamp_display": "0:10",
-        "description": "DUDA 發反手短球，林昀儒輕推至中路，DUDA 側身反手擰球直接出界失誤。",
-        "winner": "林昀儒",
-        "win_reason": "對手失誤",
-        "key_technique": "線路控制"
-      },
-      {
-        "id": 3,
-        "start_seconds": 29.0,
-        "end_seconds": 36.0,
-        "timestamp_display": "0:29",
-        "description": "雙方進入多拍反手相持，林昀儒率先變線正手進攻，DUDA 防守一板後，在下一板林昀儒再次正手進攻時，DUDA 果斷反手反拉直線得分。",
-        "winner": "Benedikt DUDA",
-        "win_reason": "主動得分",
-        "key_technique": "反手反拉直線"
-      },
-      {
-        "id": 4,
-        "start_seconds": 48.0,
-        "end_seconds": 59.5,
-        "timestamp_display": "0:48",
-        "description": "林昀儒發正手短球，DUDA 反手擰拉，林昀儒迅速側身，以一記極快的反手快撕直線直接得分。",
+        "description": "DUDA 發球，林昀儒接發球後進入相持，第三板正手主動變線攻擊對手中路偏正手位，DUDA 擋球出界。",
         "winner": "林昀儒",
         "win_reason": "主動得分",
-        "key_technique": "反手快撕直線"
-      },
-      {
-        "id": 5,
-        "start_seconds": 111.0,
-        "end_seconds": 119.0,
-        "timestamp_display": "1:51",
-        "description": "DUDA 發長球偷襲，林昀儒反手防守，DUDA 連續正手大角度進攻，將林昀儒調動至遠台。在最後一板進攻時，林昀儒飛身救球，打出一記不可思議的正手大斜線穿越球得分。",
-        "winner": "林昀儒",
-        "win_reason": "主動得分",
-        "key_technique": "遠台正手防守反擊"
+        "key_technique": "正手變線攻擊"
       }
     ],
     "player1_analysis": {
@@ -224,5 +122,5 @@
       }
     }
   },
-  "created_at": "2025-12-17T18:23:36.678519"
+  "created_at": "2025-12-20T00:00:58.864289"
 }

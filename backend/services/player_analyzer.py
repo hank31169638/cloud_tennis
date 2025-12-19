@@ -130,6 +130,7 @@ class PlayerPerformanceAnalyzer:
             raise RuntimeError("影片處理失敗")
         
         print(f"🤖 正在分析 {player_name} 的表現...")
+        print(f"📊 [DEBUG] video_duration 傳入分析: {video_duration} 秒")
         
         # 建立分析提示
         prompt = self._build_player_analysis_prompt(player_name, player_description, video_duration)
@@ -173,6 +174,9 @@ class PlayerPerformanceAnalyzer:
 - 所有 `end_seconds` 必須在 0 到 {video_duration} 秒之間。
 - 絕對不可輸出超過 {video_duration} 秒的時間戳！
 """
+            print(f"📝 [DEBUG] 已將影片時長 {video_duration} 秒寫入提示詞")
+        else:
+            print("⚠️ [DEBUG] video_duration 為 None，未寫入提示詞！")
         
         return f"""你是一位專業的桌球教練和動作分析專家。請仔細觀看這段桌球比賽影片，
 針對選手 **{player_name}** {player_identify} 進行表現分析。
@@ -296,9 +300,13 @@ class PlayerPerformanceAnalyzer:
         """解析選手分析結果"""
         import json
         
+        print(f"🔍 [DEBUG] _parse_player_analysis: video_duration={video_duration}")
+        
         def validate_clip_timestamps(clips: list, max_duration: int = None) -> list:
             """驗證並修正時間戳"""
+            print(f"🔧 [DEBUG] validate_clip_timestamps: max_duration={max_duration}, clips={len(clips)}")
             if not max_duration:
+                print("⚠️ [DEBUG] max_duration 為 None，跳過驗證！")
                 return clips
             
             validated = []

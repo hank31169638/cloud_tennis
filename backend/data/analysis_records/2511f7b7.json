@@ -1,0 +1,560 @@
+{
+  "record_id": "2511f7b7",
+  "video_id": "0QgbtsBWZhk",
+  "video_title": "FULL MATCH | Wang Chuqin vs Felix Lebrun | MS Final | #ChinaSmash 2025",
+  "video_url": "https://www.youtube.com/watch?v=0QgbtsBWZhk",
+  "video_duration": 1121,
+  "thumbnail_url": "https://img.youtube.com/vi/0QgbtsBWZhk/maxresdefault.jpg",
+  "player_focus": "林昀儒",
+  "player2_focus": "Benedikt DUDA",
+  "analysis_result": {
+    "success": true,
+    "raw_analysis": "## 📊 比賽概況\n- 比賽類型：未知\n- 比分概況：解析失敗\n- 關鍵轉折：無\n\n## 🏆 總結",
+    "structured_data": {
+      "points": [
+        {
+          "id": 1,
+          "start_seconds": 0.0,
+          "end_seconds": 6.5,
+          "timestamp_display": "0:00",
+          "description": "王楚欽發球，Felix 擺短冒高，王楚欽正手搶拉，Felix 擋球出界。",
+          "winner": "王楚欽",
+          "win_reason": "對手失誤",
+          "key_technique": ""
+        },
+        {
+          "id": 1,
+          "start_seconds": 13.0,
+          "end_seconds": 20.5,
+          "timestamp_display": "0:13",
+          "description": "王楚欽發球，Felix 擺短冒高，王楚欽正手搶拉，Felix 擋球出界。",
+          "winner": "王楚欽",
+          "win_reason": "對手失誤",
+          "key_technique": "發球搶攻"
+        },
+        {
+          "id": 3,
+          "start_seconds": 30.0,
+          "end_seconds": 37.5,
+          "timestamp_display": "0:30",
+          "description": "Felix 發球，王楚欽擺短，Felix 反手直拍橫打起板，王楚欽防守出界。",
+          "winner": "Felix Lebrun",
+          "win_reason": "對手失誤",
+          "key_technique": "直拍橫打"
+        },
+        {
+          "id": 3,
+          "start_seconds": 55.0,
+          "end_seconds": 60.0,
+          "timestamp_display": "0:55",
+          "description": "王楚欽發球，Felix 搓長，王楚欽側身正手拉球，Felix 防守下網。",
+          "winner": "王楚欽",
+          "win_reason": "對手失誤",
+          "key_technique": "側身正手攻"
+        },
+        {
+          "id": 5,
+          "start_seconds": 114.0,
+          "end_seconds": 118.0,
+          "timestamp_display": "1:54",
+          "description": "多拍相持，王楚欽放短球，Felix 上前挑打，王楚欽預判準確正手直線反拉得分。",
+          "winner": "王楚欽",
+          "win_reason": "主動得分",
+          "key_technique": "正手直線反拉"
+        },
+        {
+          "id": 6,
+          "start_seconds": 192.0,
+          "end_seconds": 199.0,
+          "timestamp_display": "3:12",
+          "description": "王楚欽發球，Felix 嘗試反手擰拉但出界。",
+          "winner": "王楚欽",
+          "win_reason": "對手失誤",
+          "key_technique": "發球旋轉控制"
+        },
+        {
+          "id": 6,
+          "start_seconds": 207.0,
+          "end_seconds": 217.0,
+          "timestamp_display": "3:27",
+          "description": "王楚欽發球後正手連續進攻，Felix 防守出界。",
+          "winner": "王楚欽",
+          "win_reason": "對手失誤",
+          "key_technique": "正手連續進攻"
+        },
+        {
+          "id": 8,
+          "start_seconds": 278.0,
+          "end_seconds": 286.0,
+          "timestamp_display": "4:38",
+          "description": "Felix 發球搶攻，王楚欽反手快撕大角，Felix 被迫防守出界。",
+          "winner": "王楚欽",
+          "win_reason": "對手失誤",
+          "key_technique": "反手相持"
+        },
+        {
+          "id": 9,
+          "start_seconds": 291.0,
+          "end_seconds": 300.0,
+          "timestamp_display": "4:51",
+          "description": "第一局局點，王楚欽發球，Felix 擺短，王楚欽正手拉球，Felix 擋球出界，王楚欽拿下第一局。",
+          "winner": "王楚欽",
+          "win_reason": "對手失誤",
+          "key_technique": "關鍵分把握"
+        },
+        {
+          "id": 9,
+          "start_seconds": 309.0,
+          "end_seconds": 317.0,
+          "timestamp_display": "5:09",
+          "description": "第二局開始，王楚欽發球後側身正手暴衝直線得分。",
+          "winner": "王楚欽",
+          "win_reason": "主動得分",
+          "key_technique": "側身正手暴衝"
+        },
+        {
+          "id": 10,
+          "start_seconds": 366.0,
+          "end_seconds": 372.0,
+          "timestamp_display": "6:06",
+          "description": "Felix 拉球，王楚欽近台正手快速反拉得分。",
+          "winner": "王楚欽",
+          "win_reason": "主動得分",
+          "key_technique": "近台快帶"
+        },
+        {
+          "id": 12,
+          "start_seconds": 469.0,
+          "end_seconds": 475.0,
+          "timestamp_display": "7:49",
+          "description": "多拍相持中，王楚欽正手進攻，球擦邊/壓線得分，Felix 示意擦邊但裁判判定得分。",
+          "winner": "王楚欽",
+          "win_reason": "主動得分",
+          "key_technique": "相持能力"
+        },
+        {
+          "id": 12,
+          "start_seconds": 502.0,
+          "end_seconds": 512.0,
+          "timestamp_display": "8:22",
+          "description": "第二局局點，王楚欽發球後正手拉球直接得分，以 11:1 拿下第二局。",
+          "winner": "王楚欽",
+          "win_reason": "主動得分",
+          "key_technique": "發球搶攻"
+        },
+        {
+          "id": 13,
+          "start_seconds": 530.0,
+          "end_seconds": 537.0,
+          "timestamp_display": "8:50",
+          "description": "第三局開始，王楚欽進攻失誤出界。",
+          "winner": "Felix Lebrun",
+          "win_reason": "我方失誤",
+          "key_technique": "防守"
+        },
+        {
+          "id": 14,
+          "start_seconds": 715.0,
+          "end_seconds": 723.0,
+          "timestamp_display": "11:55",
+          "description": "Felix 接發球直接反手擰拉得分。",
+          "winner": "Felix Lebrun",
+          "win_reason": "主動得分",
+          "key_technique": "接發球擰拉"
+        }
+      ],
+      "match_overview": {
+        "match_type": "未知",
+        "score_summary": "解析失敗"
+      },
+      "player1_analysis": {
+        "name": "選手A",
+        "strengths": [],
+        "weaknesses": []
+      },
+      "summary": {
+        "overall_assessment": "由於格式問題，僅提取到時間戳資訊"
+      }
+    },
+    "point_wins": [
+      {
+        "id": 5,
+        "start_seconds": 114.0,
+        "end_seconds": 118.0,
+        "timestamp_display": "1:54",
+        "description": "多拍相持，王楚欽放短球，Felix 上前挑打，王楚欽預判準確正手直線反拉得分。",
+        "serve_time": null,
+        "dead_ball_time": null,
+        "winner": "王楚欽",
+        "win_type": "主動得分",
+        "key_technique": "正手直線反拉",
+        "tactical_value": null,
+        "clip_path": "/uploads/clips/0QgbtsBWZhk/win_5.mp4"
+      },
+      {
+        "id": 9,
+        "start_seconds": 309.0,
+        "end_seconds": 317.0,
+        "timestamp_display": "5:09",
+        "description": "第二局開始，王楚欽發球後側身正手暴衝直線得分。",
+        "serve_time": null,
+        "dead_ball_time": null,
+        "winner": "王楚欽",
+        "win_type": "主動得分",
+        "key_technique": "側身正手暴衝",
+        "tactical_value": null,
+        "clip_path": "/uploads/clips/0QgbtsBWZhk/win_9.mp4"
+      },
+      {
+        "id": 10,
+        "start_seconds": 366.0,
+        "end_seconds": 372.0,
+        "timestamp_display": "6:06",
+        "description": "Felix 拉球，王楚欽近台正手快速反拉得分。",
+        "serve_time": null,
+        "dead_ball_time": null,
+        "winner": "王楚欽",
+        "win_type": "主動得分",
+        "key_technique": "近台快帶",
+        "tactical_value": null,
+        "clip_path": "/uploads/clips/0QgbtsBWZhk/win_10.mp4"
+      },
+      {
+        "id": 12,
+        "start_seconds": 469.0,
+        "end_seconds": 475.0,
+        "timestamp_display": "7:49",
+        "description": "多拍相持中，王楚欽正手進攻，球擦邊/壓線得分，Felix 示意擦邊但裁判判定得分。",
+        "serve_time": null,
+        "dead_ball_time": null,
+        "winner": "王楚欽",
+        "win_type": "主動得分",
+        "key_technique": "相持能力",
+        "tactical_value": null,
+        "clip_path": "/uploads/clips/0QgbtsBWZhk/win_12.mp4"
+      },
+      {
+        "id": 12,
+        "start_seconds": 502.0,
+        "end_seconds": 512.0,
+        "timestamp_display": "8:22",
+        "description": "第二局局點，王楚欽發球後正手拉球直接得分，以 11:1 拿下第二局。",
+        "serve_time": null,
+        "dead_ball_time": null,
+        "winner": "王楚欽",
+        "win_type": "主動得分",
+        "key_technique": "發球搶攻",
+        "tactical_value": null,
+        "clip_path": "/uploads/clips/0QgbtsBWZhk/win_12.mp4"
+      },
+      {
+        "id": 14,
+        "start_seconds": 715.0,
+        "end_seconds": 723.0,
+        "timestamp_display": "11:55",
+        "description": "Felix 接發球直接反手擰拉得分。",
+        "serve_time": null,
+        "dead_ball_time": null,
+        "winner": "Felix Lebrun",
+        "win_type": "主動得分",
+        "key_technique": "接發球擰拉",
+        "tactical_value": null,
+        "clip_path": "/uploads/clips/0QgbtsBWZhk/win_14.mp4"
+      }
+    ],
+    "point_losses": [
+      {
+        "id": 1,
+        "start_seconds": 0.0,
+        "end_seconds": 6.5,
+        "timestamp_display": "0:00",
+        "description": "王楚欽發球，Felix 擺短冒高，王楚欽正手搶拉，Felix 擋球出界。",
+        "serve_time": null,
+        "dead_ball_time": null,
+        "winner": "王楚欽",
+        "loss_type": "對手失誤",
+        "technical_issue": "",
+        "clip_path": "/uploads/clips/0QgbtsBWZhk/loss_1.mp4"
+      },
+      {
+        "id": 1,
+        "start_seconds": 13.0,
+        "end_seconds": 20.5,
+        "timestamp_display": "0:13",
+        "description": "王楚欽發球，Felix 擺短冒高，王楚欽正手搶拉，Felix 擋球出界。",
+        "serve_time": null,
+        "dead_ball_time": null,
+        "winner": "王楚欽",
+        "loss_type": "對手失誤",
+        "technical_issue": "發球搶攻",
+        "clip_path": "/uploads/clips/0QgbtsBWZhk/loss_1.mp4"
+      },
+      {
+        "id": 3,
+        "start_seconds": 30.0,
+        "end_seconds": 37.5,
+        "timestamp_display": "0:30",
+        "description": "Felix 發球，王楚欽擺短，Felix 反手直拍橫打起板，王楚欽防守出界。",
+        "serve_time": null,
+        "dead_ball_time": null,
+        "winner": "Felix Lebrun",
+        "loss_type": "對手失誤",
+        "technical_issue": "直拍橫打",
+        "clip_path": "/uploads/clips/0QgbtsBWZhk/loss_3.mp4"
+      },
+      {
+        "id": 3,
+        "start_seconds": 55.0,
+        "end_seconds": 60.0,
+        "timestamp_display": "0:55",
+        "description": "王楚欽發球，Felix 搓長，王楚欽側身正手拉球，Felix 防守下網。",
+        "serve_time": null,
+        "dead_ball_time": null,
+        "winner": "王楚欽",
+        "loss_type": "對手失誤",
+        "technical_issue": "側身正手攻",
+        "clip_path": "/uploads/clips/0QgbtsBWZhk/loss_3.mp4"
+      },
+      {
+        "id": 6,
+        "start_seconds": 192.0,
+        "end_seconds": 199.0,
+        "timestamp_display": "3:12",
+        "description": "王楚欽發球，Felix 嘗試反手擰拉但出界。",
+        "serve_time": null,
+        "dead_ball_time": null,
+        "winner": "王楚欽",
+        "loss_type": "對手失誤",
+        "technical_issue": "發球旋轉控制",
+        "clip_path": "/uploads/clips/0QgbtsBWZhk/loss_6.mp4"
+      },
+      {
+        "id": 6,
+        "start_seconds": 207.0,
+        "end_seconds": 217.0,
+        "timestamp_display": "3:27",
+        "description": "王楚欽發球後正手連續進攻，Felix 防守出界。",
+        "serve_time": null,
+        "dead_ball_time": null,
+        "winner": "王楚欽",
+        "loss_type": "對手失誤",
+        "technical_issue": "正手連續進攻",
+        "clip_path": "/uploads/clips/0QgbtsBWZhk/loss_6.mp4"
+      },
+      {
+        "id": 8,
+        "start_seconds": 278.0,
+        "end_seconds": 286.0,
+        "timestamp_display": "4:38",
+        "description": "Felix 發球搶攻，王楚欽反手快撕大角，Felix 被迫防守出界。",
+        "serve_time": null,
+        "dead_ball_time": null,
+        "winner": "王楚欽",
+        "loss_type": "對手失誤",
+        "technical_issue": "反手相持",
+        "clip_path": "/uploads/clips/0QgbtsBWZhk/loss_8.mp4"
+      },
+      {
+        "id": 9,
+        "start_seconds": 291.0,
+        "end_seconds": 300.0,
+        "timestamp_display": "4:51",
+        "description": "第一局局點，王楚欽發球，Felix 擺短，王楚欽正手拉球，Felix 擋球出界，王楚欽拿下第一局。",
+        "serve_time": null,
+        "dead_ball_time": null,
+        "winner": "王楚欽",
+        "loss_type": "對手失誤",
+        "technical_issue": "關鍵分把握",
+        "clip_path": "/uploads/clips/0QgbtsBWZhk/loss_9.mp4"
+      },
+      {
+        "id": 13,
+        "start_seconds": 530.0,
+        "end_seconds": 537.0,
+        "timestamp_display": "8:50",
+        "description": "第三局開始，王楚欽進攻失誤出界。",
+        "serve_time": null,
+        "dead_ball_time": null,
+        "winner": "Felix Lebrun",
+        "loss_type": "我方失誤",
+        "technical_issue": "防守",
+        "clip_path": "/uploads/clips/0QgbtsBWZhk/loss_13.mp4"
+      }
+    ],
+    "points": [
+      {
+        "id": 1,
+        "start_seconds": 0.0,
+        "end_seconds": 6.5,
+        "timestamp_display": "0:00",
+        "description": "王楚欽發球，Felix 擺短冒高，王楚欽正手搶拉，Felix 擋球出界。",
+        "winner": "王楚欽",
+        "win_reason": "對手失誤",
+        "key_technique": ""
+      },
+      {
+        "id": 1,
+        "start_seconds": 13.0,
+        "end_seconds": 20.5,
+        "timestamp_display": "0:13",
+        "description": "王楚欽發球，Felix 擺短冒高，王楚欽正手搶拉，Felix 擋球出界。",
+        "winner": "王楚欽",
+        "win_reason": "對手失誤",
+        "key_technique": "發球搶攻"
+      },
+      {
+        "id": 3,
+        "start_seconds": 30.0,
+        "end_seconds": 37.5,
+        "timestamp_display": "0:30",
+        "description": "Felix 發球，王楚欽擺短，Felix 反手直拍橫打起板，王楚欽防守出界。",
+        "winner": "Felix Lebrun",
+        "win_reason": "對手失誤",
+        "key_technique": "直拍橫打"
+      },
+      {
+        "id": 3,
+        "start_seconds": 55.0,
+        "end_seconds": 60.0,
+        "timestamp_display": "0:55",
+        "description": "王楚欽發球，Felix 搓長，王楚欽側身正手拉球，Felix 防守下網。",
+        "winner": "王楚欽",
+        "win_reason": "對手失誤",
+        "key_technique": "側身正手攻"
+      },
+      {
+        "id": 5,
+        "start_seconds": 114.0,
+        "end_seconds": 118.0,
+        "timestamp_display": "1:54",
+        "description": "多拍相持，王楚欽放短球，Felix 上前挑打，王楚欽預判準確正手直線反拉得分。",
+        "winner": "王楚欽",
+        "win_reason": "主動得分",
+        "key_technique": "正手直線反拉"
+      },
+      {
+        "id": 6,
+        "start_seconds": 192.0,
+        "end_seconds": 199.0,
+        "timestamp_display": "3:12",
+        "description": "王楚欽發球，Felix 嘗試反手擰拉但出界。",
+        "winner": "王楚欽",
+        "win_reason": "對手失誤",
+        "key_technique": "發球旋轉控制"
+      },
+      {
+        "id": 6,
+        "start_seconds": 207.0,
+        "end_seconds": 217.0,
+        "timestamp_display": "3:27",
+        "description": "王楚欽發球後正手連續進攻，Felix 防守出界。",
+        "winner": "王楚欽",
+        "win_reason": "對手失誤",
+        "key_technique": "正手連續進攻"
+      },
+      {
+        "id": 8,
+        "start_seconds": 278.0,
+        "end_seconds": 286.0,
+        "timestamp_display": "4:38",
+        "description": "Felix 發球搶攻，王楚欽反手快撕大角，Felix 被迫防守出界。",
+        "winner": "王楚欽",
+        "win_reason": "對手失誤",
+        "key_technique": "反手相持"
+      },
+      {
+        "id": 9,
+        "start_seconds": 291.0,
+        "end_seconds": 300.0,
+        "timestamp_display": "4:51",
+        "description": "第一局局點，王楚欽發球，Felix 擺短，王楚欽正手拉球，Felix 擋球出界，王楚欽拿下第一局。",
+        "winner": "王楚欽",
+        "win_reason": "對手失誤",
+        "key_technique": "關鍵分把握"
+      },
+      {
+        "id": 9,
+        "start_seconds": 309.0,
+        "end_seconds": 317.0,
+        "timestamp_display": "5:09",
+        "description": "第二局開始，王楚欽發球後側身正手暴衝直線得分。",
+        "winner": "王楚欽",
+        "win_reason": "主動得分",
+        "key_technique": "側身正手暴衝"
+      },
+      {
+        "id": 10,
+        "start_seconds": 366.0,
+        "end_seconds": 372.0,
+        "timestamp_display": "6:06",
+        "description": "Felix 拉球，王楚欽近台正手快速反拉得分。",
+        "winner": "王楚欽",
+        "win_reason": "主動得分",
+        "key_technique": "近台快帶"
+      },
+      {
+        "id": 12,
+        "start_seconds": 469.0,
+        "end_seconds": 475.0,
+        "timestamp_display": "7:49",
+        "description": "多拍相持中，王楚欽正手進攻，球擦邊/壓線得分，Felix 示意擦邊但裁判判定得分。",
+        "winner": "王楚欽",
+        "win_reason": "主動得分",
+        "key_technique": "相持能力"
+      },
+      {
+        "id": 12,
+        "start_seconds": 502.0,
+        "end_seconds": 512.0,
+        "timestamp_display": "8:22",
+        "description": "第二局局點，王楚欽發球後正手拉球直接得分，以 11:1 拿下第二局。",
+        "winner": "王楚欽",
+        "win_reason": "主動得分",
+        "key_technique": "發球搶攻"
+      },
+      {
+        "id": 13,
+        "start_seconds": 530.0,
+        "end_seconds": 537.0,
+        "timestamp_display": "8:50",
+        "description": "第三局開始，王楚欽進攻失誤出界。",
+        "winner": "Felix Lebrun",
+        "win_reason": "我方失誤",
+        "key_technique": "防守"
+      },
+      {
+        "id": 14,
+        "start_seconds": 715.0,
+        "end_seconds": 723.0,
+        "timestamp_display": "11:55",
+        "description": "Felix 接發球直接反手擰拉得分。",
+        "winner": "Felix Lebrun",
+        "win_reason": "主動得分",
+        "key_technique": "接發球擰拉"
+      }
+    ],
+    "player1_analysis": {
+      "name": "選手A",
+      "strengths": [],
+      "weaknesses": []
+    },
+    "player2_analysis": null,
+    "match_overview": {
+      "match_type": "未知",
+      "score_summary": "解析失敗"
+    },
+    "sections": {
+      "match_overview": {
+        "match_type": "未知",
+        "score_summary": "解析失敗"
+      },
+      "strengths": [],
+      "weaknesses": [],
+      "training_suggestions": [],
+      "summary": {
+        "overall_assessment": "由於格式問題，僅提取到時間戳資訊"
+      }
+    }
+  },
+  "created_at": "2025-12-20T00:22:45.027391"
+}

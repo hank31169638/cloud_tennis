@@ -20,6 +20,17 @@
   "aggregate_ratings": {},
   "match_history": [
     {
+      "match_id": "2511f7b7",
+      "video_id": "0QgbtsBWZhk",
+      "opponent": "林昀儒",
+      "date": "2025-12-20",
+      "result": "未知",
+      "ratings": {},
+      "strengths": [],
+      "weaknesses": [],
+      "created_at": "2025-12-20T00:22:45.047440"
+    },
+    {
       "match_id": "cf2ee443",
       "video_id": "Rtbt_3Zphow",
       "opponent": "林昀儒",
@@ -29,10 +40,10 @@
       "strengths": [],
       "weaknesses": [],
       "created_at": "2025-12-11T14:32:26.368886",
-      "updated_at": "2025-12-17T18:23:36.695533"
+      "updated_at": "2025-12-20T00:00:58.868155"
     }
   ],
-  "total_matches": 1,
+  "total_matches": 2,
   "created_at": "2025-12-11T14:32:26.368886",
-  "last_updated": "2025-12-17T18:23:36.695541"
+  "last_updated": "2025-12-20T00:22:45.047451"
 }

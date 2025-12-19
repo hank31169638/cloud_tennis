@@ -1,0 +1,761 @@
+{
+  "record_id": "52caea39",
+  "video_id": "GzQRizkp8d4",
+  "video_title": "Top Points of Day 5 | #WTTHongKong 2025",
+  "video_url": "https://www.youtube.com/watch?v=GzQRizkp8d4",
+  "video_duration": 298,
+  "thumbnail_url": "https://img.youtube.com/vi/GzQRizkp8d4/maxresdefault.jpg",
+  "player_focus": "",
+  "player2_focus": "",
+  "analysis_result": {
+    "success": true,
+    "raw_analysis": "## 📊 比賽概況\n- 比賽類型：WTT 總決賽精彩集錦 (多場賽事剪輯)\n- 比分概況：精彩回合集錦 (無單一最終比分)\n- 關鍵轉折：影片收錄了 2025 WTT 香港總決賽的多個神級回合，重點展示了張本智和與 Truls Moregard 之間攻防大戰，以及 Moregard 的創意防守（蛇球/Snake）和張本的近台爆發力。\n\n## 📊 選手能力評分\n### 張本智和 (Tomokazu Harimoto)\n- 發球: 8.0\n- 接發球: 8.5\n- 進攻: 9.5\n- 防守: 7.5\n- 戰術: 8.5\n\n### Truls Moregard\n- 發球: 8.5\n- 接發球: 8.0\n- 進攻: 8.5\n- 防守: 9.5\n- 戰術: 9.0\n\n## 🏆 總結\n- 主要問題：張本智和在面對高球和強烈側旋球時的無謂失誤是其主要丟分點。\n- 張本智和展現了強大的統治力，只要能更冷靜地處理對手的「怪球」，勝率將大幅提升。Moregard 的球風極具觀賞性，是乒乓球運動的寶貴資產。",
+    "structured_data": {
+      "match_overview": {
+        "match_type": "WTT 總決賽精彩集錦 (多場賽事剪輯)",
+        "player1_info": "張本智和 (Tomokazu Harimoto) - 藍色球衣，右手持拍，以標誌性的吼叫和近台快攻聞名 (本分析主要關注對象)",
+        "player2_info": "Truls Moregard (深藍衣/六角拍) & 林詩棟 (黑衣) & 女子組選手",
+        "score_summary": "精彩回合集錦 (無單一最終比分)",
+        "total_points_analyzed": 16,
+        "key_moments": "影片收錄了 2025 WTT 香港總決賽的多個神級回合，重點展示了張本智和與 Truls Moregard 之間攻防大戰，以及 Moregard 的創意防守（蛇球/Snake）和張本的近台爆發力。"
+      },
+      "points": [
+        {
+          "id": 1,
+          "serve_time": 0.0,
+          "dead_ball_time": 11.5,
+          "start_seconds": 0.0,
+          "end_seconds": 13.5,
+          "timestamp_display": "00:00",
+          "server": "N/A (剪輯片段)",
+          "winner": "張本智和",
+          "win_reason": "主動得分",
+          "win_type": "正手挑打",
+          "description": "Moregard 放高球防守，張本智和連續扣殺。張本突然使用吸短（Drop shot）將球放至網前，Moregard 撲救回球，張本隨即跟進正手挑打得分。",
+          "rally_length": 12,
+          "key_technique": "節奏變換 (吸短後進攻)",
+          "tactic": "前後調動對手"
+        },
+        {
+          "id": 2,
+          "serve_time": 19.0,
+          "dead_ball_time": 28.0,
+          "start_seconds": 19.0,
+          "end_seconds": 30.0,
+          "timestamp_display": "00:19",
+          "server": "N/A",
+          "winner": "蒯曼 (Kuai Man)",
+          "win_reason": "主動得分",
+          "win_type": "正手直線進攻",
+          "description": "女子組對決。蒯曼與王曼昱進行多拍相持，蒯曼在正手位變線，打出一記精彩的直線穿越球得分。",
+          "rally_length": 15,
+          "key_technique": "正手變直線",
+          "tactic": "相持中變線"
+        },
+        {
+          "id": 3,
+          "serve_time": 36.0,
+          "dead_ball_time": 48.0,
+          "start_seconds": 36.0,
+          "end_seconds": 50.0,
+          "timestamp_display": "00:36",
+          "server": "N/A",
+          "winner": "張本智和",
+          "win_reason": "主動得分",
+          "win_type": "正手反拉",
+          "description": "極高質量的中遠台對拉。Moregard 嘗試側身反拉，但張本智和展現強大的正手爆發力，最後一板正手重扣直接得分。",
+          "rally_length": 17,
+          "key_technique": "中遠台正手發力",
+          "tactic": "力量壓制"
+        },
+        {
+          "id": 4,
+          "serve_time": 100.0,
+          "dead_ball_time": 107.0,
+          "start_seconds": 100.0,
+          "end_seconds": 109.0,
+          "timestamp_display": "01:40",
+          "server": "N/A",
+          "winner": "蒯曼",
+          "win_reason": "對手失誤",
+          "win_type": "反手相持",
+          "description": "王曼昱防守回球出界。雙方在近台快速反手相持，蒯曼的線路壓制導致王曼昱回球失誤。",
+          "rally_length": 8,
+          "key_technique": "近台快撕",
+          "tactic": "速度壓制"
+        },
+        {
+          "id": 5,
+          "serve_time": 116.0,
+          "dead_ball_time": 124.0,
+          "start_seconds": 116.0,
+          "end_seconds": 126.0,
+          "timestamp_display": "01:56",
+          "server": "N/A",
+          "winner": "林詩棟",
+          "win_reason": "主動得分",
+          "win_type": "反手直線",
+          "description": "張本智和對陣林詩棟。林詩棟在被動防守中，突然反手變直線穿越張本智和，張本反應不及。",
+          "rally_length": 10,
+          "key_technique": "反手變線",
+          "tactic": "防守反擊"
+        },
+        {
+          "id": 6,
+          "serve_time": 154.0,
+          "dead_ball_time": 206.0,
+          "start_seconds": 154.0,
+          "end_seconds": 208.0,
+          "timestamp_display": "02:34",
+          "server": "N/A",
+          "winner": "Truls Moregard",
+          "win_reason": "對手失誤",
+          "win_type": "高球防守 (Lob)",
+          "description": "經典回合。Moregard 被迫退台放高球，張本連續扣殺。Moregard 打出一記帶有極強側旋的高球，張本扣殺時判斷旋轉失誤，球直接飛出界外。",
+          "rally_length": 14,
+          "key_technique": "放高球 (旋轉變化)",
+          "tactic": "死裡逃生/誘敵失誤"
+        },
+        {
+          "id": 7,
+          "serve_time": 219.0,
+          "dead_ball_time": 224.0,
+          "start_seconds": 219.0,
+          "end_seconds": 226.0,
+          "timestamp_display": "03:39",
+          "server": "N/A",
+          "winner": "王曼昱",
+          "win_reason": "主動得分",
+          "win_type": "反手彈擊",
+          "description": "王曼昱在相持中反手發力彈擊直線，速度極快，蒯曼無法觸球。",
+          "rally_length": 6,
+          "key_technique": "反手彈擊",
+          "tactic": "速度突破"
+        },
+        {
+          "id": 8,
+          "serve_time": 231.0,
+          "dead_ball_time": 242.0,
+          "start_seconds": 231.0,
+          "end_seconds": 244.0,
+          "timestamp_display": "03:51",
+          "server": "N/A",
+          "winner": "Truls Moregard",
+          "win_reason": "對手失誤",
+          "win_type": "蛇球 (Snake Shot)",
+          "description": "Moregard 再次展現標誌性的「蛇球」防守。他在遠台削出一記強烈側下旋的低弧線球，張本智和試圖輕拉過渡但下網。這球旋轉極其詭異。",
+          "rally_length": 10,
+          "key_technique": "遠台側旋削球 (Snake)",
+          "tactic": "旋轉干擾"
+        },
+        {
+          "id": 9,
+          "serve_time": 304.0,
+          "dead_ball_time": 315.0,
+          "start_seconds": 304.0,
+          "end_seconds": 317.0,
+          "timestamp_display": "05:04",
+          "server": "N/A",
+          "winner": "張本智和",
+          "win_reason": "主動得分",
+          "win_type": "正手大角",
+          "description": "張本智和進攻，Moregard 防守。張本再次使用吸短戰術將 Moregard 調動到網前，隨後張本快速推正手大角得分。",
+          "rally_length": 16,
+          "key_technique": "吸短配合進攻",
+          "tactic": "前後調動"
+        },
+        {
+          "id": 10,
+          "serve_time": 340.0,
+          "dead_ball_time": 345.0,
+          "start_seconds": 340.0,
+          "end_seconds": 347.0,
+          "timestamp_display": "05:40",
+          "server": "N/A",
+          "winner": "林詩棟",
+          "win_reason": "主動得分",
+          "win_type": "運氣球後反擊",
+          "description": "林詩棟回球擦網，改變了節奏。張本智和雖然救起擦網球，但林詩棟隨即跟進一板反手快撕得分。",
+          "rally_length": 8,
+          "key_technique": "擦網後銜接",
+          "tactic": "運氣成分/快速反應"
+        },
+        {
+          "id": 11,
+          "serve_time": 410.0,
+          "dead_ball_time": 420.0,
+          "start_seconds": 410.0,
+          "end_seconds": 422.0,
+          "timestamp_display": "06:50",
+          "server": "N/A",
+          "winner": "林詩棟",
+          "win_reason": "主動得分",
+          "win_type": "反手快撕",
+          "description": "極快節奏的近台反手對抗。張本智和試圖加力，但林詩棟借力打力，反手快撕大角得分。",
+          "rally_length": 14,
+          "key_technique": "反手借力",
+          "tactic": "近台快攻"
+        },
+        {
+          "id": 12,
+          "serve_time": 432.0,
+          "dead_ball_time": 443.0,
+          "start_seconds": 432.0,
+          "end_seconds": 445.0,
+          "timestamp_display": "07:12",
+          "server": "N/A",
+          "winner": "Truls Moregard",
+          "win_reason": "主動得分",
+          "win_type": "側切 (Side-spin Block)",
+          "description": "本影片最佳進球之一。張本智和正手暴衝，Moregard 在被動防守中，突然切出一記極強的側旋球（Inside-out），球落地後向外側劇烈拐彎，張本完全無法觸及。",
+          "rally_length": 9,
+          "key_technique": "神級側切",
+          "tactic": "手感天賦/出其不意"
+        }
+      ],
+      "player1_analysis": {
+        "name": "張本智和 (Tomokazu Harimoto)",
+        "ratings": {
+          "serve": 8.0,
+          "receive": 8.5,
+          "attack": 9.5,
+          "defense": 7.5,
+          "tactics": 8.5
+        },
+        "strengths": [
+          {
+            "title": "近台爆發力",
+            "description": "在與 Moregard 的對拉中展現了極強的正手爆發力，擊球點早，速度極快。"
+          },
+          {
+            "title": "戰術意識 (吸短)",
+            "description": "多次成功使用「吸短 (Drop shot)」戰術，將擅長中遠台的 Moregard 調動至網前，破壞對手節奏。"
+          }
+        ],
+        "weaknesses": [
+          {
+            "title": "應對怪異旋轉",
+            "description": "在面對 Moregard 的「蛇球」和強烈側旋高球時，判斷出現失誤，導致扣殺出界或下網。"
+          }
+        ],
+        "suggestions": [
+          {
+            "title": "加強對旋轉變化的適應",
+            "description": "針對非常規旋轉（如側下旋高球）進行專項訓練，避免在優勢局面下因判斷失誤丟分。"
+          }
+        ]
+      },
+      "player2_analysis": {
+        "name": "Truls Moregard",
+        "ratings": {
+          "serve": 8.5,
+          "receive": 8.0,
+          "attack": 8.5,
+          "defense": 9.5,
+          "tactics": 9.0
+        },
+        "strengths": [
+          {
+            "title": "創意防守",
+            "description": "擁有世界頂級的手感，能夠打出蛇球 (Snake)、側切等極具觀賞性且實用的非常規防守球。"
+          },
+          {
+            "title": "中遠台周旋能力",
+            "description": "即使被逼退到遠台，仍能通過放高球和旋轉變化與對手周旋，並尋找反擊機會。"
+          }
+        ],
+        "weaknesses": [
+          {
+            "title": "網前移動",
+            "description": "雖然手感極佳，但在被張本智和吸短調動到網前時，有時會顯得被動，容易被對手打回頭。"
+          }
+        ],
+        "suggestions": [
+          {
+            "title": "保持進攻主動性",
+            "description": "雖然防守反擊精彩，但應盡量避免過早退台，以免給予對手過多連續進攻的機會。"
+          }
+        ]
+      },
+      "summary": {
+        "overall_assessment": "這段集錦展示了當今乒壇兩種極致風格的碰撞：張本智和代表了極致的速度與力量，強調近台壓制；而 Truls Moregard 則代表了創意與手感，將乒乓球的旋轉變化發揮到極致。林詩棟與女子組的片段同樣展示了極高的競技水平。",
+        "tactical_analysis": "張本智和對陣 Moregard 的策略非常明確：利用速度壓制，並結合吸短戰術破壞 Moregard 的遠台節奏。然而，Moregard 利用其獨特的六角球拍和天才般的手感，通過製造強烈的側旋（蛇球）來干擾張本的進攻節奏，成功在多個被動回合中反敗為勝。這是一場力量與魔法的對決。",
+        "encouragement": "張本智和展現了強大的統治力，只要能更冷靜地處理對手的「怪球」，勝率將大幅提升。Moregard 的球風極具觀賞性，是乒乓球運動的寶貴資產。",
+        "main_issue": "張本智和在面對高球和強烈側旋球時的無謂失誤是其主要丟分點。"
+      }
+    },
+    "point_wins": [
+      {
+        "id": 1,
+        "start_seconds": 0.0,
+        "end_seconds": 13.5,
+        "timestamp_display": "00:00",
+        "description": "Moregard 放高球防守，張本智和連續扣殺。張本突然使用吸短（Drop shot）將球放至網前，Moregard 撲救回球，張本隨即跟進正手挑打得分。",
+        "serve_time": 0.0,
+        "dead_ball_time": 11.5,
+        "winner": "張本智和",
+        "win_type": "主動得分",
+        "key_technique": "節奏變換 (吸短後進攻)",
+        "tactical_value": "前後調動對手",
+        "clip_path": "/uploads/clips/GzQRizkp8d4/win_1.mp4"
+      },
+      {
+        "id": 2,
+        "start_seconds": 19.0,
+        "end_seconds": 30.0,
+        "timestamp_display": "00:19",
+        "description": "女子組對決。蒯曼與王曼昱進行多拍相持，蒯曼在正手位變線，打出一記精彩的直線穿越球得分。",
+        "serve_time": 19.0,
+        "dead_ball_time": 28.0,
+        "winner": "蒯曼 (Kuai Man)",
+        "win_type": "主動得分",
+        "key_technique": "正手變直線",
+        "tactical_value": "相持中變線",
+        "clip_path": "/uploads/clips/GzQRizkp8d4/win_2.mp4"
+      },
+      {
+        "id": 3,
+        "start_seconds": 36.0,
+        "end_seconds": 50.0,
+        "timestamp_display": "00:36",
+        "description": "極高質量的中遠台對拉。Moregard 嘗試側身反拉，但張本智和展現強大的正手爆發力，最後一板正手重扣直接得分。",
+        "serve_time": 36.0,
+        "dead_ball_time": 48.0,
+        "winner": "張本智和",
+        "win_type": "主動得分",
+        "key_technique": "中遠台正手發力",
+        "tactical_value": "力量壓制",
+        "clip_path": "/uploads/clips/GzQRizkp8d4/win_3.mp4"
+      },
+      {
+        "id": 5,
+        "start_seconds": 116.0,
+        "end_seconds": 126.0,
+        "timestamp_display": "01:56",
+        "description": "張本智和對陣林詩棟。林詩棟在被動防守中，突然反手變直線穿越張本智和，張本反應不及。",
+        "serve_time": 116.0,
+        "dead_ball_time": 124.0,
+        "winner": "林詩棟",
+        "win_type": "主動得分",
+        "key_technique": "反手變線",
+        "tactical_value": "防守反擊",
+        "clip_path": "/uploads/clips/GzQRizkp8d4/win_5.mp4"
+      },
+      {
+        "id": 7,
+        "start_seconds": 219.0,
+        "end_seconds": 226.0,
+        "timestamp_display": "03:39",
+        "description": "王曼昱在相持中反手發力彈擊直線，速度極快，蒯曼無法觸球。",
+        "serve_time": 219.0,
+        "dead_ball_time": 224.0,
+        "winner": "王曼昱",
+        "win_type": "主動得分",
+        "key_technique": "反手彈擊",
+        "tactical_value": "速度突破",
+        "clip_path": "/uploads/clips/GzQRizkp8d4/win_7.mp4"
+      },
+      {
+        "id": 9,
+        "start_seconds": 304.0,
+        "end_seconds": 317.0,
+        "timestamp_display": "05:04",
+        "description": "張本智和進攻，Moregard 防守。張本再次使用吸短戰術將 Moregard 調動到網前，隨後張本快速推正手大角得分。",
+        "serve_time": 304.0,
+        "dead_ball_time": 315.0,
+        "winner": "張本智和",
+        "win_type": "主動得分",
+        "key_technique": "吸短配合進攻",
+        "tactical_value": "前後調動",
+        "clip_path": "/uploads/clips/GzQRizkp8d4/win_9.mp4"
+      },
+      {
+        "id": 10,
+        "start_seconds": 340.0,
+        "end_seconds": 347.0,
+        "timestamp_display": "05:40",
+        "description": "林詩棟回球擦網，改變了節奏。張本智和雖然救起擦網球，但林詩棟隨即跟進一板反手快撕得分。",
+        "serve_time": 340.0,
+        "dead_ball_time": 345.0,
+        "winner": "林詩棟",
+        "win_type": "主動得分",
+        "key_technique": "擦網後銜接",
+        "tactical_value": "運氣成分/快速反應",
+        "clip_path": "/uploads/clips/GzQRizkp8d4/win_10.mp4"
+      },
+      {
+        "id": 11,
+        "start_seconds": 410.0,
+        "end_seconds": 422.0,
+        "timestamp_display": "06:50",
+        "description": "極快節奏的近台反手對抗。張本智和試圖加力，但林詩棟借力打力，反手快撕大角得分。",
+        "serve_time": 410.0,
+        "dead_ball_time": 420.0,
+        "winner": "林詩棟",
+        "win_type": "主動得分",
+        "key_technique": "反手借力",
+        "tactical_value": "近台快攻",
+        "clip_path": "/uploads/clips/GzQRizkp8d4/win_11.mp4"
+      }
+    ],
+    "point_losses": [
+      {
+        "id": 4,
+        "start_seconds": 100.0,
+        "end_seconds": 109.0,
+        "timestamp_display": "01:40",
+        "description": "王曼昱防守回球出界。雙方在近台快速反手相持，蒯曼的線路壓制導致王曼昱回球失誤。",
+        "serve_time": 100.0,
+        "dead_ball_time": 107.0,
+        "winner": "蒯曼",
+        "loss_type": "對手失誤",
+        "technical_issue": "近台快撕",
+        "clip_path": "/uploads/clips/GzQRizkp8d4/loss_4.mp4"
+      },
+      {
+        "id": 6,
+        "start_seconds": 154.0,
+        "end_seconds": 208.0,
+        "timestamp_display": "02:34",
+        "description": "經典回合。Moregard 被迫退台放高球，張本連續扣殺。Moregard 打出一記帶有極強側旋的高球，張本扣殺時判斷旋轉失誤，球直接飛出界外。",
+        "serve_time": 154.0,
+        "dead_ball_time": 206.0,
+        "winner": "Truls Moregard",
+        "loss_type": "對手失誤",
+        "technical_issue": "放高球 (旋轉變化)",
+        "clip_path": "/uploads/clips/GzQRizkp8d4/loss_6.mp4"
+      },
+      {
+        "id": 8,
+        "start_seconds": 231.0,
+        "end_seconds": 244.0,
+        "timestamp_display": "03:51",
+        "description": "Moregard 再次展現標誌性的「蛇球」防守。他在遠台削出一記強烈側下旋的低弧線球，張本智和試圖輕拉過渡但下網。這球旋轉極其詭異。",
+        "serve_time": 231.0,
+        "dead_ball_time": 242.0,
+        "winner": "Truls Moregard",
+        "loss_type": "對手失誤",
+        "technical_issue": "遠台側旋削球 (Snake)",
+        "clip_path": "/uploads/clips/GzQRizkp8d4/loss_8.mp4"
+      },
+      {
+        "id": 12,
+        "start_seconds": 432.0,
+        "end_seconds": 445.0,
+        "timestamp_display": "07:12",
+        "description": "本影片最佳進球之一。張本智和正手暴衝，Moregard 在被動防守中，突然切出一記極強的側旋球（Inside-out），球落地後向外側劇烈拐彎，張本完全無法觸及。",
+        "serve_time": 432.0,
+        "dead_ball_time": 443.0,
+        "winner": "Truls Moregard",
+        "loss_type": "主動得分",
+        "technical_issue": "神級側切",
+        "clip_path": "/uploads/clips/GzQRizkp8d4/loss_12.mp4"
+      }
+    ],
+    "points": [
+      {
+        "id": 1,
+        "serve_time": 0.0,
+        "dead_ball_time": 11.5,
+        "start_seconds": 0.0,
+        "end_seconds": 13.5,
+        "timestamp_display": "00:00",
+        "server": "N/A (剪輯片段)",
+        "winner": "張本智和",
+        "win_reason": "主動得分",
+        "win_type": "正手挑打",
+        "description": "Moregard 放高球防守，張本智和連續扣殺。張本突然使用吸短（Drop shot）將球放至網前，Moregard 撲救回球，張本隨即跟進正手挑打得分。",
+        "rally_length": 12,
+        "key_technique": "節奏變換 (吸短後進攻)",
+        "tactic": "前後調動對手"
+      },
+      {
+        "id": 2,
+        "serve_time": 19.0,
+        "dead_ball_time": 28.0,
+        "start_seconds": 19.0,
+        "end_seconds": 30.0,
+        "timestamp_display": "00:19",
+        "server": "N/A",
+        "winner": "蒯曼 (Kuai Man)",
+        "win_reason": "主動得分",
+        "win_type": "正手直線進攻",
+        "description": "女子組對決。蒯曼與王曼昱進行多拍相持，蒯曼在正手位變線，打出一記精彩的直線穿越球得分。",
+        "rally_length": 15,
+        "key_technique": "正手變直線",
+        "tactic": "相持中變線"
+      },
+      {
+        "id": 3,
+        "serve_time": 36.0,
+        "dead_ball_time": 48.0,
+        "start_seconds": 36.0,
+        "end_seconds": 50.0,
+        "timestamp_display": "00:36",
+        "server": "N/A",
+        "winner": "張本智和",
+        "win_reason": "主動得分",
+        "win_type": "正手反拉",
+        "description": "極高質量的中遠台對拉。Moregard 嘗試側身反拉，但張本智和展現強大的正手爆發力，最後一板正手重扣直接得分。",
+        "rally_length": 17,
+        "key_technique": "中遠台正手發力",
+        "tactic": "力量壓制"
+      },
+      {
+        "id": 4,
+        "serve_time": 100.0,
+        "dead_ball_time": 107.0,
+        "start_seconds": 100.0,
+        "end_seconds": 109.0,
+        "timestamp_display": "01:40",
+        "server": "N/A",
+        "winner": "蒯曼",
+        "win_reason": "對手失誤",
+        "win_type": "反手相持",
+        "description": "王曼昱防守回球出界。雙方在近台快速反手相持，蒯曼的線路壓制導致王曼昱回球失誤。",
+        "rally_length": 8,
+        "key_technique": "近台快撕",
+        "tactic": "速度壓制"
+      },
+      {
+        "id": 5,
+        "serve_time": 116.0,
+        "dead_ball_time": 124.0,
+        "start_seconds": 116.0,
+        "end_seconds": 126.0,
+        "timestamp_display": "01:56",
+        "server": "N/A",
+        "winner": "林詩棟",
+        "win_reason": "主動得分",
+        "win_type": "反手直線",
+        "description": "張本智和對陣林詩棟。林詩棟在被動防守中，突然反手變直線穿越張本智和，張本反應不及。",
+        "rally_length": 10,
+        "key_technique": "反手變線",
+        "tactic": "防守反擊"
+      },
+      {
+        "id": 6,
+        "serve_time": 154.0,
+        "dead_ball_time": 206.0,
+        "start_seconds": 154.0,
+        "end_seconds": 208.0,
+        "timestamp_display": "02:34",
+        "server": "N/A",
+        "winner": "Truls Moregard",
+        "win_reason": "對手失誤",
+        "win_type": "高球防守 (Lob)",
+        "description": "經典回合。Moregard 被迫退台放高球，張本連續扣殺。Moregard 打出一記帶有極強側旋的高球，張本扣殺時判斷旋轉失誤，球直接飛出界外。",
+        "rally_length": 14,
+        "key_technique": "放高球 (旋轉變化)",
+        "tactic": "死裡逃生/誘敵失誤"
+      },
+      {
+        "id": 7,
+        "serve_time": 219.0,
+        "dead_ball_time": 224.0,
+        "start_seconds": 219.0,
+        "end_seconds": 226.0,
+        "timestamp_display": "03:39",
+        "server": "N/A",
+        "winner": "王曼昱",
+        "win_reason": "主動得分",
+        "win_type": "反手彈擊",
+        "description": "王曼昱在相持中反手發力彈擊直線，速度極快，蒯曼無法觸球。",
+        "rally_length": 6,
+        "key_technique": "反手彈擊",
+        "tactic": "速度突破"
+      },
+      {
+        "id": 8,
+        "serve_time": 231.0,
+        "dead_ball_time": 242.0,
+        "start_seconds": 231.0,
+        "end_seconds": 244.0,
+        "timestamp_display": "03:51",
+        "server": "N/A",
+        "winner": "Truls Moregard",
+        "win_reason": "對手失誤",
+        "win_type": "蛇球 (Snake Shot)",
+        "description": "Moregard 再次展現標誌性的「蛇球」防守。他在遠台削出一記強烈側下旋的低弧線球，張本智和試圖輕拉過渡但下網。這球旋轉極其詭異。",
+        "rally_length": 10,
+        "key_technique": "遠台側旋削球 (Snake)",
+        "tactic": "旋轉干擾"
+      },
+      {
+        "id": 9,
+        "serve_time": 304.0,
+        "dead_ball_time": 315.0,
+        "start_seconds": 304.0,
+        "end_seconds": 317.0,
+        "timestamp_display": "05:04",
+        "server": "N/A",
+        "winner": "張本智和",
+        "win_reason": "主動得分",
+        "win_type": "正手大角",
+        "description": "張本智和進攻，Moregard 防守。張本再次使用吸短戰術將 Moregard 調動到網前，隨後張本快速推正手大角得分。",
+        "rally_length": 16,
+        "key_technique": "吸短配合進攻",
+        "tactic": "前後調動"
+      },
+      {
+        "id": 10,
+        "serve_time": 340.0,
+        "dead_ball_time": 345.0,
+        "start_seconds": 340.0,
+        "end_seconds": 347.0,
+        "timestamp_display": "05:40",
+        "server": "N/A",
+        "winner": "林詩棟",
+        "win_reason": "主動得分",
+        "win_type": "運氣球後反擊",
+        "description": "林詩棟回球擦網，改變了節奏。張本智和雖然救起擦網球，但林詩棟隨即跟進一板反手快撕得分。",
+        "rally_length": 8,
+        "key_technique": "擦網後銜接",
+        "tactic": "運氣成分/快速反應"
+      },
+      {
+        "id": 11,
+        "serve_time": 410.0,
+        "dead_ball_time": 420.0,
+        "start_seconds": 410.0,
+        "end_seconds": 422.0,
+        "timestamp_display": "06:50",
+        "server": "N/A",
+        "winner": "林詩棟",
+        "win_reason": "主動得分",
+        "win_type": "反手快撕",
+        "description": "極快節奏的近台反手對抗。張本智和試圖加力，但林詩棟借力打力，反手快撕大角得分。",
+        "rally_length": 14,
+        "key_technique": "反手借力",
+        "tactic": "近台快攻"
+      },
+      {
+        "id": 12,
+        "serve_time": 432.0,
+        "dead_ball_time": 443.0,
+        "start_seconds": 432.0,
+        "end_seconds": 445.0,
+        "timestamp_display": "07:12",
+        "server": "N/A",
+        "winner": "Truls Moregard",
+        "win_reason": "主動得分",
+        "win_type": "側切 (Side-spin Block)",
+        "description": "本影片最佳進球之一。張本智和正手暴衝，Moregard 在被動防守中，突然切出一記極強的側旋球（Inside-out），球落地後向外側劇烈拐彎，張本完全無法觸及。",
+        "rally_length": 9,
+        "key_technique": "神級側切",
+        "tactic": "手感天賦/出其不意"
+      }
+    ],
+    "player1_analysis": {
+      "name": "張本智和 (Tomokazu Harimoto)",
+      "ratings": {
+        "serve": 8.0,
+        "receive": 8.5,
+        "attack": 9.5,
+        "defense": 7.5,
+        "tactics": 8.5
+      },
+      "strengths": [
+        {
+          "title": "近台爆發力",
+          "description": "在與 Moregard 的對拉中展現了極強的正手爆發力，擊球點早，速度極快。"
+        },
+        {
+          "title": "戰術意識 (吸短)",
+          "description": "多次成功使用「吸短 (Drop shot)」戰術，將擅長中遠台的 Moregard 調動至網前，破壞對手節奏。"
+        }
+      ],
+      "weaknesses": [
+        {
+          "title": "應對怪異旋轉",
+          "description": "在面對 Moregard 的「蛇球」和強烈側旋高球時，判斷出現失誤，導致扣殺出界或下網。"
+        }
+      ],
+      "suggestions": [
+        {
+          "title": "加強對旋轉變化的適應",
+          "description": "針對非常規旋轉（如側下旋高球）進行專項訓練，避免在優勢局面下因判斷失誤丟分。"
+        }
+      ]
+    },
+    "player2_analysis": {
+      "name": "Truls Moregard",
+      "ratings": {
+        "serve": 8.5,
+        "receive": 8.0,
+        "attack": 8.5,
+        "defense": 9.5,
+        "tactics": 9.0
+      },
+      "strengths": [
+        {
+          "title": "創意防守",
+          "description": "擁有世界頂級的手感，能夠打出蛇球 (Snake)、側切等極具觀賞性且實用的非常規防守球。"
+        },
+        {
+          "title": "中遠台周旋能力",
+          "description": "即使被逼退到遠台，仍能通過放高球和旋轉變化與對手周旋，並尋找反擊機會。"
+        }
+      ],
+      "weaknesses": [
+        {
+          "title": "網前移動",
+          "description": "雖然手感極佳，但在被張本智和吸短調動到網前時，有時會顯得被動，容易被對手打回頭。"
+        }
+      ],
+      "suggestions": [
+        {
+          "title": "保持進攻主動性",
+          "description": "雖然防守反擊精彩，但應盡量避免過早退台，以免給予對手過多連續進攻的機會。"
+        }
+      ]
+    },
+    "match_overview": {
+      "match_type": "WTT 總決賽精彩集錦 (多場賽事剪輯)",
+      "player1_info": "張本智和 (Tomokazu Harimoto) - 藍色球衣，右手持拍，以標誌性的吼叫和近台快攻聞名 (本分析主要關注對象)",
+      "player2_info": "Truls Moregard (深藍衣/六角拍) & 林詩棟 (黑衣) & 女子組選手",
+      "score_summary": "精彩回合集錦 (無單一最終比分)",
+      "total_points_analyzed": 16,
+      "key_moments": "影片收錄了 2025 WTT 香港總決賽的多個神級回合，重點展示了張本智和與 Truls Moregard 之間攻防大戰，以及 Moregard 的創意防守（蛇球/Snake）和張本的近台爆發力。"
+    },
+    "sections": {
+      "match_overview": {
+        "match_type": "WTT 總決賽精彩集錦 (多場賽事剪輯)",
+        "player1_info": "張本智和 (Tomokazu Harimoto) - 藍色球衣，右手持拍，以標誌性的吼叫和近台快攻聞名 (本分析主要關注對象)",
+        "player2_info": "Truls Moregard (深藍衣/六角拍) & 林詩棟 (黑衣) & 女子組選手",
+        "score_summary": "精彩回合集錦 (無單一最終比分)",
+        "total_points_analyzed": 16,
+        "key_moments": "影片收錄了 2025 WTT 香港總決賽的多個神級回合，重點展示了張本智和與 Truls Moregard 之間攻防大戰，以及 Moregard 的創意防守（蛇球/Snake）和張本的近台爆發力。"
+      },
+      "strengths": [
+        {
+          "title": "近台爆發力",
+          "description": "在與 Moregard 的對拉中展現了極強的正手爆發力，擊球點早，速度極快。"
+        },
+        {
+          "title": "戰術意識 (吸短)",
+          "description": "多次成功使用「吸短 (Drop shot)」戰術，將擅長中遠台的 Moregard 調動至網前，破壞對手節奏。"
+        }
+      ],
+      "weaknesses": [
+        {
+          "title": "應對怪異旋轉",
+          "description": "在面對 Moregard 的「蛇球」和強烈側旋高球時，判斷出現失誤，導致扣殺出界或下網。"
+        }
+      ],
+      "training_suggestions": [
+        {
+          "title": "加強對旋轉變化的適應",
+          "description": "針對非常規旋轉（如側下旋高球）進行專項訓練，避免在優勢局面下因判斷失誤丟分。"
+        }
+      ],
+      "summary": {
+        "overall_assessment": "這段集錦展示了當今乒壇兩種極致風格的碰撞：張本智和代表了極致的速度與力量，強調近台壓制；而 Truls Moregard 則代表了創意與手感，將乒乓球的旋轉變化發揮到極致。林詩棟與女子組的片段同樣展示了極高的競技水平。",
+        "tactical_analysis": "張本智和對陣 Moregard 的策略非常明確：利用速度壓制，並結合吸短戰術破壞 Moregard 的遠台節奏。然而，Moregard 利用其獨特的六角球拍和天才般的手感，通過製造強烈的側旋（蛇球）來干擾張本的進攻節奏，成功在多個被動回合中反敗為勝。這是一場力量與魔法的對決。",
+        "encouragement": "張本智和展現了強大的統治力，只要能更冷靜地處理對手的「怪球」，勝率將大幅提升。Moregard 的球風極具觀賞性，是乒乓球運動的寶貴資產。",
+        "main_issue": "張本智和在面對高球和強烈側旋球時的無謂失誤是其主要丟分點。"
+      }
+    }
+  },
+  "created_at": "2025-12-20T00:39:58.587923"
+}
