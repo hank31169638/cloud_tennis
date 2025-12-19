@@ -91,7 +91,7 @@ def import_player_analysis():
         analysis_result = data.get('analysis_result')
         player_name = data.get('player_name', '未知選手')
         auto_approve = data.get('auto_approve', True)  # 預設改為 True
-        auto_process = data.get('auto_process', True)  # 新增: 預設 True
+        auto_process = data.get('auto_process', False)  # 改為 False，避免自動切片
         confidence_threshold = data.get('confidence_threshold', 0.7)
         
         if not analysis_result:

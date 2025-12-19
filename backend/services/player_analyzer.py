@@ -64,9 +64,15 @@ class AnalyzedClip:
     positioning_analysis: str    # 位置分析
     timing_analysis: str         # 時機分析
     
-    # 學習價值
+    # 學習價值與訓練適合度
     learning_value: str          # 這個片段的學習價值
     training_suggestion: str     # 訓練建議
+    
+    # 訓練模型適合度分析
+    is_suitable_for_training: bool # 是否適合訓練模型
+    suitability_score: int         # 適合度評分 1-10
+    suitability_reason: str        # 適合或不適合的原因 (如：畫面晃動、視角不佳)
+    camera_angle: str              # 鏡頭視角 (front/side/top/back/unknown)
     
     def to_dict(self) -> Dict[str, Any]:
         return asdict(self)
@@ -86,13 +92,15 @@ class PlayerPerformanceAnalyzer:
             raise ValueError("需要 GEMINI_API_KEY")
         
         genai.configure(api_key=self.api_key)
-        self.model = genai.GenerativeModel('gemini-2.0-flash')
+        model_name = os.getenv('GEMINI_MODEL', 'gemini-2.0-flash')
+        self.model = genai.GenerativeModel(model_name)
     
     def analyze_player_performance(
         self, 
         video_path: str, 
         player_name: str,
-        player_description: str = None
+        player_description: str = None,
+        video_duration: int = None
     ) -> Dict[str, Any]:
         """
         分析特定選手的完整表現
@@ -124,19 +132,20 @@ class PlayerPerformanceAnalyzer:
         print(f"🤖 正在分析 {player_name} 的表現...")
         
         # 建立分析提示
-        prompt = self._build_player_analysis_prompt(player_name, player_description)
+        prompt = self._build_player_analysis_prompt(player_name, player_description, video_duration)
         
-        # 呼叫 Gemini
+        # 呼叫 Gemini（使用結構化 JSON 輸出模式）
         response = self.model.generate_content(
             [video_file, prompt],
             generation_config={
                 "max_output_tokens": 12000,
                 "temperature": 0.3,
+                "response_mime_type": "application/json",  # 強制 JSON 輸出
             }
         )
         
         # 解析結果
-        result = self._parse_player_analysis(response.text, player_name)
+        result = self._parse_player_analysis(response.text, player_name, video_duration)
         
         # 清理
         try:
@@ -146,23 +155,39 @@ class PlayerPerformanceAnalyzer:
         
         return result
     
-    def _build_player_analysis_prompt(self, player_name: str, player_description: str = None) -> str:
-        """建立選手分析提示詞 - 專注於慢動作回放片段"""
+    def _build_player_analysis_prompt(self, player_name: str, player_description: str = None, video_duration: int = None) -> str:
+        """建立選手分析提示詞 - 專注於得分/失分片段"""
         
         player_identify = f"（{player_description}）" if player_description else ""
         
+        # 計算影片時長描述
+        duration_info = ""
+        if video_duration:
+            minutes = video_duration // 60
+            seconds = video_duration % 60
+            duration_info = f"""
+## ⚠️ 影片時長限制 (CRITICAL)
+
+此影片總長度為 **{minutes} 分 {seconds} 秒** (共 {video_duration} 秒)。
+- 所有 `start_seconds` 必須在 0 到 {video_duration} 秒之間。
+- 所有 `end_seconds` 必須在 0 到 {video_duration} 秒之間。
+- 絕對不可輸出超過 {video_duration} 秒的時間戳！
+"""
+        
         return f"""你是一位專業的桌球教練和動作分析專家。請仔細觀看這段桌球比賽影片，
 針對選手 **{player_name}** {player_identify} 進行表現分析。
+{duration_info}
+## 🎯 核心任務：識別得分與失分片段
 
-## 🎯 核心任務：識別「慢動作回放」片段
+請標註影片中所有明顯的得分或失分瞬間，包括：
+1. **慢動作回放 (Instant Replay)** - 這是最有價值的片段
+2. **正常速度的得分/失分瞬間** - 如果沒有慢動作回放，也請標註
 
-⚠️ **非常重要**：我需要的是比賽中的「**慢動作回放**」(Instant Replay) 片段，而**不是**完整的對打過程。
-
-### 什麼是慢動作回放？
-- 通常在得分/失分後，轉播會播放**慢動作重播**
-- 這些片段通常是**近距離特寫**，不是第三視角俯視圖
-- 可以清楚看到球的落點、選手的動作細節
-- 畫面可能會有慢動作效果
+### 識別特徵
+- 比分變化 (如果可見)
+- 球落地或出界
+- 選手慶祝或失望的肢體語言
+- 裁判手勢或判定
 
 ### 如何識別慢動作回放？
 1. 畫面從俯視全景**切換到近距離特寫**
@@ -173,8 +198,17 @@ class PlayerPerformanceAnalyzer:
 ## 請標記的內容
 
 對於每個**慢動作回放片段**，請標記：
-- `start_seconds`: 回放開始的時間（畫面切換到特寫的那一刻）
-- `end_seconds`: 回放結束的時間（畫面切回正常比賽的那一刻）
+- `start_seconds`: 回放開始的時間（畫面切換到特寫的那一刻）。請精確到秒，確保該時間點確實落在影片總長度之內。
+- `end_seconds`: 回放結束的時間（畫面切回正常比賽的那一刻）。
+- **⚠️ 嚴格檢查**：所有時間戳 (`start_seconds`, `end_seconds`) 必須為有效數字且不可超過影片的實際總時長。
+
+## 🎬 訓練資料篩選標準 (CRITICAL)
+
+請評估該片段是否適合作為「標準化 AI 訓練素材」：
+1. **穩定度 (Stability)**：鏡頭必須穩定。如果畫面劇烈晃動、模糊或失焦，請標記為不適合。
+2. **視角 (View Angle)**：優先選擇「正面 (Front)」或「清晰側面 (Side)」的特寫，避開純俯視視角。
+3. **慢動作 (Slow Motion)**：強烈建議篩選慢動作回放，這對運動姿態分析最有價值。
+4. **排除干擾**：如果畫面上被大型圖卡遮擋關鍵動作，則不適合。
 
 ## 技術類型分類
 
@@ -210,29 +244,39 @@ class PlayerPerformanceAnalyzer:
   "points_won": [
     {{
       "clip_id": 1,
-      "start_seconds": 回放開始秒數,
-      "end_seconds": 回放結束秒數,
+      "start_seconds": 片段開始秒數,
+      "end_seconds": 片段結束秒數,
       "timestamp_display": "MM:SS",
+      "score": "11:9",
       "is_point_won": true,
       "is_replay": true,
       "technique_type": "技術類型代碼",
       "point_type": "得分方式描述",
       "description": "這個動作的詳細描述",
-      "quality_score": 動作品質1-10
+      "quality_score": 動作品質1-10,
+      "is_suitable_for_training": true/false,
+      "suitability_score": 適合度1-10,
+      "suitability_reason": "為什麼適合或不適合",
+      "camera_angle": "front/side/top/unknown"
     }}
   ],
   "points_lost": [
     {{
       "clip_id": 1,
-      "start_seconds": 回放開始秒數,
-      "end_seconds": 回放結束秒數,
+      "start_seconds": 片段開始秒數,
+      "end_seconds": 片段結束秒數,
       "timestamp_display": "MM:SS",
+      "score": "9:11",
       "is_point_won": false,
       "is_replay": true,
       "technique_type": "失誤類型代碼",
       "point_type": "失分方式描述",
       "description": "失誤情況描述",
-      "quality_score": 動作品質1-10
+      "quality_score": 動作品質1-10,
+      "is_suitable_for_training": true/false,
+      "suitability_score": 適合度1-10,
+      "suitability_reason": "說明原因",
+      "camera_angle": "front/side/top/unknown"
     }}
   ]
 }}
@@ -240,16 +284,41 @@ class PlayerPerformanceAnalyzer:
 
 ## ⚠️ 關鍵提醒
 
-1. **只標記慢動作回放片段** - 不要標記正常速度的對打過程
-2. **精確時間戳** - start_seconds 是回放開始，end_seconds 是回放結束
-3. **回放通常 3-8 秒** - 如果片段超過 15 秒，可能不是回放
+1. **標註所有得分/失分片段** - 包括慢動作回放和正常速度片段
+2. **精確時間戳** - start_seconds 是片段開始，end_seconds 是片段結束
+3. **片段通常 3-15 秒**
 4. **technique_type 使用英文代碼**
-5. **只輸出 JSON**
+5. **時間戳極限** - 絕對不可以標註超過影片結束的時間點
+6. **只輸出 JSON**
 """
 
-    def _parse_player_analysis(self, response_text: str, player_name: str) -> Dict[str, Any]:
+    def _parse_player_analysis(self, response_text: str, player_name: str, video_duration: int = None) -> Dict[str, Any]:
         """解析選手分析結果"""
         import json
+        
+        def validate_clip_timestamps(clips: list, max_duration: int = None) -> list:
+            """驗證並修正時間戳"""
+            if not max_duration:
+                return clips
+            
+            validated = []
+            for clip in clips:
+                start = clip.get('start_seconds', 0)
+                end = clip.get('end_seconds', start + 5)
+                
+                # 如果超過總長度，跳過這個 clip
+                if start >= max_duration:
+                    print(f"⚠️ 跳過無效片段: start_seconds={start} > video_duration={max_duration}")
+                    continue
+                
+                # 修正 end 時間
+                if end > max_duration:
+                    clip['end_seconds'] = max_duration
+                    print(f"ℹ️ 修正 end_seconds: {end} -> {max_duration}")
+                
+                validated.append(clip)
+            
+            return validated
         
         try:
             # 清理 markdown 標記
@@ -262,24 +331,34 @@ class PlayerPerformanceAnalyzer:
                 clean_text = clean_text[:-3]
             clean_text = clean_text.strip()
             
+            # DEBUG: 輸出 AI 回傳的原始資料
+            print("=" * 60)
+            print("🔍 [DEBUG] AI 回傳原始資料:")
+            print("-" * 60)
+            print(response_text[:2000])  # 只印前 2000 字元避免過長
+            if len(response_text) > 2000:
+                print(f"... (共 {len(response_text)} 字元，已截斷)")
+            print("=" * 60)
+            
             parsed = json.loads(clean_text)
+            
+            # DEBUG: 輸出解析後的片段數量
+            print(f"📊 [DEBUG] 解析結果: points_won={len(parsed.get('points_won', []))}, points_lost={len(parsed.get('points_lost', []))}")
+            
+            # 驗證時間戳
+            points_won = validate_clip_timestamps(parsed.get("points_won", []), video_duration)
+            points_lost = validate_clip_timestamps(parsed.get("points_lost", []), video_duration)
             
             # 標準化輸出
             return {
                 "success": True,
                 "player_name": player_name,
                 "match_summary": parsed.get("match_summary", {}),
-                "points_won": parsed.get("points_won", []),
-                "points_lost": parsed.get("points_lost", []),
-                "all_clips": self._merge_and_sort_clips(
-                    parsed.get("points_won", []),
-                    parsed.get("points_lost", [])
-                ),
+                "points_won": points_won,
+                "points_lost": points_lost,
+                "all_clips": self._merge_and_sort_clips(points_won, points_lost),
                 "training_recommendations": parsed.get("training_recommendations", []),
-                "quality_distribution": self._calculate_quality_distribution(
-                    parsed.get("points_won", []),
-                    parsed.get("points_lost", [])
-                ),
+                "quality_distribution": self._calculate_quality_distribution(points_won, points_lost),
                 "raw_response": response_text
             }
             
@@ -370,7 +449,8 @@ def analyze_player_from_youtube(
     result = analyzer.analyze_player_performance(
         download_result["file_path"],
         player_name,
-        player_description
+        player_description,
+        video_duration=download_result.get("duration")
     )
     
     # 加入影片資訊

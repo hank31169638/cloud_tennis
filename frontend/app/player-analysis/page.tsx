@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect, Suspense } from "react";
+import React, { useState, useEffect, Suspense } from "react";
 import { useSearchParams } from "next/navigation";
 import Navbar from "../components/Navbar";
 import PlayerProfileCard from "../../components/PlayerProfileCard";
@@ -126,6 +126,150 @@ const getPlayerAvatar = (name: string) => {
   return `https://ui-avatars.com/api/?name=${encodeURIComponent(name)}&background=random`;
 };
 
+
+// --- Video Player with Timestamp Seeking ---
+function VideoWithTimestamps({
+  videoUrl,
+  scoringClips,
+  losingClips
+}: {
+  videoUrl: string;
+  scoringClips: PerformanceClip[];
+  losingClips: PerformanceClip[];
+}) {
+  const [currentTime, setCurrentTime] = useState<number | null>(null);
+  const iframeRef = React.useRef<HTMLIFrameElement>(null);
+  const videoId = getVideoId(videoUrl);
+
+  // Function to seek the YouTube player
+  const seekTo = (seconds: number) => {
+    setCurrentTime(seconds);
+    if (iframeRef.current && iframeRef.current.contentWindow) {
+      iframeRef.current.contentWindow.postMessage(
+        JSON.stringify({
+          event: 'command',
+          func: 'seekTo',
+          args: [seconds, true]
+        }),
+        '*'
+      );
+    }
+  };
+
+  // Format seconds to MM:SS
+  const formatTime = (seconds: number) => {
+    const mins = Math.floor(seconds / 60);
+    const secs = Math.floor(seconds % 60);
+    return `${mins}:${secs.toString().padStart(2, '0')}`;
+  };
+
+  if (!videoId) {
+    return (
+      <div className="bg-neutral-100 rounded-xl p-8 text-center text-neutral-500">
+        無法識別 YouTube 影片
+      </div>
+    );
+  }
+
+  return (
+    <div className="bg-white border border-neutral-200 rounded-2xl p-6 mb-8">
+      <h3 className="text-lg font-semibold text-neutral-900 mb-4 flex items-center gap-2">
+        <span>🎬</span> 影片回放與時間標註
+      </h3>
+
+      <div className="flex gap-6">
+        {/* Main Video Player */}
+        <div className="flex-1">
+          <div className="aspect-video w-full rounded-xl overflow-hidden bg-neutral-900">
+            <iframe
+              ref={iframeRef}
+              width="100%"
+              height="100%"
+              src={`https://www.youtube.com/embed/${videoId}?enablejsapi=1&start=${currentTime ?? 0}`}
+              title="YouTube video player"
+              frameBorder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+            />
+          </div>
+        </div>
+
+        {/* Timestamp Sidebar */}
+        <div className="w-80 flex-shrink-0">
+          <div className="max-h-[400px] overflow-y-auto space-y-4 pr-2">
+            {/* Scoring Clips */}
+            {scoringClips.length > 0 && (
+              <div>
+                <h4 className="text-sm font-bold text-emerald-700 mb-2 flex items-center gap-1">
+                  <span>🏆</span> 得分片段 ({scoringClips.length})
+                </h4>
+                <div className="space-y-1">
+                  {scoringClips.map((clip, idx) => {
+                    const startSec = clip.start_seconds ?? timeToSeconds(clip.timestamp);
+                    return (
+                      <button
+                        key={`score-${idx}`}
+                        onClick={() => seekTo(startSec)}
+                        className="w-full text-left px-3 py-2 rounded-lg hover:bg-emerald-50 border border-transparent hover:border-emerald-200 transition-colors group"
+                      >
+                        <div className="flex items-center gap-2">
+                          <span className="w-2 h-2 rounded-full bg-emerald-500" />
+                          <span className="font-mono text-sm text-neutral-600 group-hover:text-emerald-700">
+                            {formatTime(startSec)}
+                          </span>
+                          <span className="text-sm text-neutral-500 truncate">
+                            {clip.technique}
+                          </span>
+                        </div>
+                      </button>
+                    );
+                  })}
+                </div>
+              </div>
+            )}
+
+            {/* Losing Clips */}
+            {losingClips.length > 0 && (
+              <div>
+                <h4 className="text-sm font-bold text-rose-700 mb-2 flex items-center gap-1">
+                  <span>❌</span> 失分片段 ({losingClips.length})
+                </h4>
+                <div className="space-y-1">
+                  {losingClips.map((clip, idx) => {
+                    const startSec = clip.start_seconds ?? timeToSeconds(clip.timestamp);
+                    return (
+                      <button
+                        key={`lose-${idx}`}
+                        onClick={() => seekTo(startSec)}
+                        className="w-full text-left px-3 py-2 rounded-lg hover:bg-rose-50 border border-transparent hover:border-rose-200 transition-colors group"
+                      >
+                        <div className="flex items-center gap-2">
+                          <span className="w-2 h-2 rounded-full bg-rose-500" />
+                          <span className="font-mono text-sm text-neutral-600 group-hover:text-rose-700">
+                            {formatTime(startSec)}
+                          </span>
+                          <span className="text-sm text-neutral-500 truncate">
+                            {clip.technique}
+                          </span>
+                        </div>
+                      </button>
+                    );
+                  })}
+                </div>
+              </div>
+            )}
+
+            {scoringClips.length === 0 && losingClips.length === 0 && (
+              <div className="text-center text-neutral-400 py-8">
+                尚無標註片段
+              </div>
+            )}
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
 
 
 // --- Match Dashboard Component (Two-Player Layout) ---
@@ -1026,6 +1170,13 @@ function PlayerAnalysisContent() {
           <div className="animate-fade-in">
             {/* Advanced Dashboard */}
             <MatchDashboard result={result} onPlayerClick={setSelectedPlayerProfile} />
+
+            {/* Video Player with Timestamp Seeking */}
+            <VideoWithTimestamps
+              videoUrl={url}
+              scoringClips={result.scoring_clips}
+              losingClips={result.losing_clips}
+            />
 
             {/* Tabs */}
             <div className="flex gap-1 border-b border-neutral-200 mb-8">

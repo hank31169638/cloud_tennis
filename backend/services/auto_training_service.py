@@ -63,6 +63,12 @@ class TrainingClip:
     skeleton_path: Optional[str]  # 骨架資料路徑
     clip_path: Optional[str] = None  # 已切割的片段路徑 (來自選手分析)
     
+    # 訓練適合度 (由 AI 評核)
+    is_suitable_for_training: bool = False
+    suitability_score: int = 0
+    suitability_reason: str = ""
+    camera_angle: str = "unknown"
+    
     def to_dict(self) -> Dict[str, Any]:
         return asdict(self)
 
@@ -157,7 +163,13 @@ class AutoTrainingService:
                 status="approved" if (auto_approve and confidence >= confidence_threshold) else "pending",
                 created_at=datetime.now().isoformat(),
                 processed_at=None,
-                skeleton_path=None
+                skeleton_path=None,
+                
+                # 填入適合度資訊
+                is_suitable_for_training=point.get('is_suitable_for_training', False),
+                suitability_score=point.get('suitability_score', 0),
+                suitability_reason=point.get('suitability_reason', ""),
+                camera_angle=point.get('camera_angle', "unknown")
             )
             
             self.clips[clip.clip_id] = clip
@@ -192,7 +204,13 @@ class AutoTrainingService:
                 status="approved" if auto_approve else "pending",
                 created_at=datetime.now().isoformat(),
                 processed_at=None,
-                skeleton_path=None
+                skeleton_path=None,
+                
+                # 填入適合度資訊
+                is_suitable_for_training=point.get('is_suitable_for_training', False),
+                suitability_score=point.get('suitability_score', 0),
+                suitability_reason=point.get('suitability_reason', ""),
+                camera_angle=point.get('camera_angle', "unknown")
             )
             
             self.clips[clip.clip_id] = clip
@@ -206,7 +224,7 @@ class AutoTrainingService:
         analysis_result: Dict[str, Any],
         player_name: str,
         auto_approve: bool = True,
-        auto_process: bool = True,
+        auto_process: bool = False,
         confidence_threshold: float = 0.7
     ) -> List[TrainingClip]:
         """
@@ -338,7 +356,13 @@ class AutoTrainingService:
             created_at=datetime.now().isoformat(),
             processed_at=None,
             skeleton_path=None,
-            clip_path=clip_data.get('clip_path')  # 使用已切割的片段路徑
+            clip_path=clip_data.get('clip_path'),  # 使用已切割的片段路徑
+            
+            # 填入適合度資訊
+            is_suitable_for_training=clip_data.get('is_suitable_for_training', False),
+            suitability_score=clip_data.get('suitability_score', 0),
+            suitability_reason=clip_data.get('suitability_reason', ""),
+            camera_angle=clip_data.get('camera_angle', "unknown")
         )
     
     def _parse_timestamp(self, timestamp: str) -> float:
